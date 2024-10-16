@@ -1,9 +1,9 @@
 using System.Security.Authentication;
 using System.Text;
 using backend.Data;
-//using backend.Interfaces;
+using backend.Interfaces;
 using backend.Models;
-//using backend.Services;
+using backend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -200,10 +200,10 @@ namespace backend
         // Dodanie serwisów
         private static void RegisterServices(IServiceCollection services)
         {
-            // services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IAuthService, AuthService>();
             // services.AddScoped<IDecryptionService, DecryptionService>();
-            // services.AddScoped<IEmailService, EmailService>();
-            // services.AddScoped<IEmailBodyService, EmailBodyService>();
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IEmailBodyService, EmailBodyService>();
             // services.AddScoped<IFilesService, FilesService>();
             // services.AddScoped<IIncidentActionsService, IncidentActionsService>();
             // services.AddScoped<IIncidentService, IncidentService>();
