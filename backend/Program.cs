@@ -102,7 +102,7 @@ namespace backend
             // Konfiguracja bazy danych
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("IIS"));
+                options.UseSqlServer(configuration.GetConnectionString("azure"));
             });
         }
 
@@ -201,15 +201,8 @@ namespace backend
         private static void RegisterServices(IServiceCollection services)
         {
             services.AddScoped<IAuthService, AuthService>();
-            // services.AddScoped<IDecryptionService, DecryptionService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IEmailBodyService, EmailBodyService>();
-            // services.AddScoped<IFilesService, FilesService>();
-            // services.AddScoped<IIncidentActionsService, IncidentActionsService>();
-            // services.AddScoped<IIncidentService, IncidentService>();
-            // services.AddScoped<IIncidentPlacesService, IncidentPlacesService>();
-            // services.AddScoped<IIncidentTypesService, IncidentTypesService>();
-            // services.AddScoped<IMessageService, MessageService>();
         }
 
 
@@ -228,7 +221,7 @@ namespace backend
                     using (var scope = app.Services.CreateScope())
                     {
                         var services = scope.ServiceProvider;
-                        //RoleInitializer.CreateRoles(services).Wait();
+                        RoleInitializer.CreateRoles(services).Wait();
                     }
                 }
             }
