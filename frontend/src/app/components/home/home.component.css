@@ -1,0 +1,9 @@
+.container {
+    margin-top: 15vh;
+}
+
+.icon {
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
