@@ -2,7 +2,7 @@
     <div class="container-fluid">
 
         <button mat-raised-button class="m-2 login" routerLink="/home">
-            <img src="./images/home.png" alt="person" class="icon">
+            <img src="./images/airplane.png" alt="airplane" class="icon">
             STRONA GŁÓWNA
         </button>
 
@@ -18,7 +18,7 @@
             <ul class="navbar-nav flex-grow-2">
                 <li class="nav-item" *ngIf="!authService.isLoggedIn()">
                     <button mat-raised-button class="m-2" routerLink="/login">
-                        <img src="./images/login.png" alt="person" class="icon">
+                        <img src="./images/auth-login.png" alt="login" class="icon">
                         ZALOGUJ
                     </button>
                 </li>
