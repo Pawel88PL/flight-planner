@@ -1,0 +1,41 @@
+.icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.sigid-sign {
+    max-width: 150px;
+    margin-top: 3px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+}
+
+.login {
+    background-color: blue;
+    color: white;
+}
+
+.mainPage {
+    background-color: yellow;
+    color: black;
+}
+
+img {
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    /* Dodano transition w stylu podstawowym */
+}
+
+img:hover,
+button:hover {
+    transform: scale(1.05);
+    /* Powiększa obraz o 5% */
+    opacity: 0.9;
+    /* Nieco mniejsza zmiana przezroczystości, aby poprawić czytelność */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    /* Dodaje cień, aby obraz wyglądał na unoszący się */
+}
