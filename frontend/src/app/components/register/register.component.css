@@ -1,0 +1,25 @@
+.alert-primary {
+    margin: auto;
+    width: 90%;
+}
+
+.btn-proceed {
+    height: 4vh;
+    font-size: 1.3rem;
+    color: white;
+    background-color: green;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-proceed:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 10vh auto;
+}
+
+p {
+    font-size: 1.3rem;
+}

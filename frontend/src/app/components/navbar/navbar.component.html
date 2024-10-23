@@ -17,6 +17,12 @@
 
             <ul class="navbar-nav flex-grow-2">
                 <li class="nav-item" *ngIf="!authService.isLoggedIn()">
+                    <button mat-raised-button class="m-2" routerLink="/register">
+                        <img src="./images/register.png" alt="login" class="icon">
+                        ZAŁÓŻ KONTO
+                    </button>
+                </li>
+                <li class="nav-item" *ngIf="!authService.isLoggedIn()">
                     <button mat-raised-button class="m-2" routerLink="/login">
                         <img src="./images/auth-login.png" alt="login" class="icon">
                         ZALOGUJ
