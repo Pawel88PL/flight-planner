@@ -6,9 +6,18 @@
                 <img src="./images/airplane.png" alt="airplane" class="icon airplane">
             </div>
 
-            <hr>
+            <hr class="my-5">
 
             <div>
+                <div class="mb-3">
+                    <div *ngIf="errorMessage" class="alert alert-danger">
+                        {{ errorMessage }}
+                    </div>
+                    <div *ngIf="successMessage" class="alert alert-success">
+                        {{ successMessage }}
+                    </div>
+                </div>
+
                 <app-insert-fly-data></app-insert-fly-data>
             </div>
         </mat-card-content>

@@ -195,7 +195,7 @@ namespace backend.Services
                 Email = userRegisterData.Email!,
                 DateAdded = DateTime.Now,
                 IsActive = true,
-                TwoFactorEnabled = userRegisterData.Role == "Administrator" || userRegisterData.Role == "Operator"
+                TwoFactorEnabled = userRegisterData.Role == "Admin"
             };
 
             var result = await _userManager.CreateAsync(newUser, userRegisterData.Password!);

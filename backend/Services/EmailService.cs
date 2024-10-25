@@ -13,6 +13,7 @@ namespace backend.Services
         private readonly IConfiguration _configuration;
         private readonly IEmailBodyService _emailBodyService;
         private readonly string? _baseUrl;
+        private readonly string? _devUrl;
 
         public EmailService(
             ApplicationDbContext context,
@@ -23,6 +24,7 @@ namespace backend.Services
             _context = context;
             _emailBodyService = emailBodyService;
             _baseUrl = _configuration["EmailSettings:ActivationURL"];
+            _devUrl = _configuration["EmailSettings:DevURL"];
         }
 
         public async Task SendActivationEmail(string userId, string token)
@@ -36,7 +38,7 @@ namespace backend.Services
                 var email = user.Email;
 
                 var activationLink = $"{_baseUrl}/auth/activate?userId={userId}&token={encodedToken}";
-                var subject = "Aktywacja konta ZION SIGID";
+                var subject = "Aktywacja konta Flight Planner";
                 string emailBody = _emailBodyService.ActivationEmailBody(name, activationLink);
 
                 if (!string.IsNullOrEmpty(email))

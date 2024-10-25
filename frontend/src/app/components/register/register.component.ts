@@ -9,6 +9,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { Router, RouterModule } from '@angular/router';
 import { Role } from '../../models/user-model';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-register',
@@ -37,13 +38,14 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   successMessage: string | null = null;
 
   roles: Role[] = [
-    { id: 1, name: 'Administrator' },
-    { id: 2, name: 'Operator' }
+    { id: 1, name: 'Admin' },
+    { id: 2, name: 'Pilot' }
   ];
 
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
+    private dataService: DataService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -111,7 +113,8 @@ export class RegisterComponent implements OnInit, AfterViewInit {
           this.isLoading = false;
           this.errorMessage = null;
           // Ustaw widok na listę użytkowników i wiadomość o sukcesie
-          this.successMessage = 'Dodano nowego użytkownika';
+          this.dataService.setSuccessMessage('Dodano nowego użytkownika');
+          this.router.navigate(['/home']);
         },
         error: error => {
           this.isLoading = false;

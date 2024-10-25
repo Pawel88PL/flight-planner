@@ -9,9 +9,11 @@
 
     <div *ngIf="!isLoading">
         <div class="card my-4">
+
             <div class="card-header">
-                <h3 class="text-center">Załóż konto</h3>
+                <h4 class="text-center">Zarejestruj się</h4>
             </div>
+            
             <div class="card-body">
                 <div class="alert alert-danger mb-5" *ngIf="errorMessage">
                     {{ errorMessage }}
@@ -114,18 +116,9 @@
 
 
                         </div>
-
-                        <div class="alert alert-primary m-3">
-                            <p>Uważnie wpisz adres e-mail użytkownika ponieważ ze względów bezpieczeństwa nie można go
-                                zmienić.
-                                <br>
-                                Na adres e-mail zostanie wysłany link do aktywacji konta jak i będą przychodziły kody do
-                                dwuetapowej weryfikacji podczas logowania.
-                            </p>
-                        </div>
                     </div>
 
-                    <button class="btn btn-proceed" [disabled]="isLoading" type="submit">
+                    <button mat-raised-button class="btn btn-proceed" [disabled]="isLoading" type="submit">
                         ZAŁÓŻ KONTO
                     </button>
 
