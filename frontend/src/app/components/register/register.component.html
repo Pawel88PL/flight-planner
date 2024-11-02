@@ -68,7 +68,9 @@
                                     Nieprawidłowy format adresu email
                                 </mat-error>
                             </mat-form-field>
+                        </div>
 
+                        <div class="col-md-6">
                             <mat-form-field appearance="outline" class="mb-5">
                                 <mat-label>Potwierdź adres e-mail</mat-label>
                                 <input matInput type="email" formControlName="confirmEmail">
@@ -80,9 +82,7 @@
                                     Adresy e-mail nie są identyczne
                                 </mat-error>
                             </mat-form-field>
-                        </div>
 
-                        <div class="col-md-6">
                             <mat-form-field appearance="outline" class="mb-5">
                                 <mat-label>Hasło</mat-label>
                                 <input matInput type="password" formControlName="password">
@@ -104,20 +104,6 @@
                                     Hasła nie są identyczne
                                 </mat-error>
                             </mat-form-field>
-
-                            <mat-form-field appearance="outline" class="mb-5">
-                                <mat-label>Rola</mat-label>
-                                <mat-select formControlName="role">
-                                    <mat-option *ngFor="let role of roles" [value]="role.name">
-                                        {{ role.name }}
-                                    </mat-option>
-                                </mat-select>
-                                <mat-error *ngIf="registerForm.controls['role'].hasError('required')">
-                                    Rola użytkownika jest wymagana
-                                </mat-error>
-                            </mat-form-field>
-
-
                         </div>
                     </div>
 

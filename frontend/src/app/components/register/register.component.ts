@@ -1,7 +1,7 @@
 import { AuthService } from '../../services/auth.service';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, AbstractControl, ValidationErrors } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 
 import { MatButton } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
