@@ -1,0 +1,33 @@
+2024-11-02 08:08:08.731 +01:00 [INF] Application is starting
+2024-11-02 08:08:08.764 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-02 08:08:08.783 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-11-02 08:08:08.804 +01:00 [INF] Now listening on: http://localhost:5139
+2024-11-02 08:08:08.805 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-02 08:08:08.805 +01:00 [INF] Hosting environment: Development
+2024-11-02 08:08:08.805 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-11-02 08:09:08.804 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-02 08:09:38.185 +01:00 [ERR] Wystąpił błąd podczas wykonywania zapytania keep-alive: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1422; handshake=369; [Login] initialization=2; authentication=4; [Post-Login] complete=28898; 
+2024-11-02 08:09:38.186 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-11-02 08:10:38.188 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-02 08:10:40.167 +01:00 [ERR] Wystąpił błąd podczas wykonywania zapytania keep-alive: Cannot open server 'pstaniul' requested by the login. Client with IP address '31.0.49.52' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2024-11-02 08:10:40.167 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-11-02 08:11:40.168 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-02 08:11:40.609 +01:00 [ERR] Wystąpił błąd podczas wykonywania zapytania keep-alive: Cannot open server 'pstaniul' requested by the login. Client with IP address '31.0.49.52' is not allowed to access the server.  To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range.  It may take up to five minutes for this change to take effect.
+2024-11-02 08:11:40.610 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-11-02 08:12:40.610 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-02 08:12:41.193 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-11-02 08:12:41.193 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-11-02 08:13:41.194 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-02 08:13:41.256 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-11-02 08:13:41.256 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-11-02 08:14:41.256 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-02 08:14:41.322 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-11-02 08:14:41.322 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-11-02 08:15:23.483 +01:00 [INF] Application is shutting down...
+2024-11-02 08:15:28.478 +01:00 [INF] Application is starting
+2024-11-02 08:15:28.511 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-02 08:15:28.527 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "01:00:00"
+2024-11-02 08:15:28.551 +01:00 [INF] Now listening on: http://localhost:5139
+2024-11-02 08:15:28.552 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-02 08:15:28.552 +01:00 [INF] Hosting environment: Development
+2024-11-02 08:15:28.552 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend

@@ -1,0 +1,36 @@
+2024-10-30 17:28:46.754 +01:00 [INF] Application is shutting down...
+2024-10-30 17:29:53.044 +01:00 [INF] Application is starting
+2024-10-30 17:29:53.079 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-10-30 17:29:53.098 +01:00 [INF] Zadanie keep-alive zaplanowane na: "01:00:00"
+2024-10-30 17:29:53.115 +01:00 [WRN] The WebRootPath was not found: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/wwwroot. Static files may be unavailable.
+2024-10-30 17:29:53.125 +01:00 [INF] Now listening on: http://localhost:5139
+2024-10-30 17:29:53.126 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-30 17:29:53.126 +01:00 [INF] Hosting environment: Development
+2024-10-30 17:29:53.126 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-10-30 17:31:00.298 +01:00 [INF] Application is shutting down...
+2024-10-30 17:31:23.058 +01:00 [INF] Application is starting
+2024-10-30 17:31:23.092 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-10-30 17:31:23.109 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-10-30 17:31:23.131 +01:00 [INF] Now listening on: http://localhost:5139
+2024-10-30 17:31:23.132 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-30 17:31:23.132 +01:00 [INF] Hosting environment: Development
+2024-10-30 17:31:23.132 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-10-30 17:32:23.131 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-10-30 17:32:52.833 +01:00 [ERR] Wystąpił błąd podczas wykonywania zapytania keep-alive: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=231; handshake=146; [Login] initialization=2; authentication=3; [Post-Login] complete=29349; 
+2024-10-30 17:32:52.833 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-10-30 17:33:52.902 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-10-30 17:33:53.408 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-10-30 17:33:53.409 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-10-30 17:34:53.412 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-10-30 17:34:53.441 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-10-30 17:34:53.442 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-10-30 17:35:53.443 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-10-30 17:35:53.470 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-10-30 17:35:53.471 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-10-30 17:36:53.472 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-10-30 17:36:53.514 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-10-30 17:36:53.514 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-10-30 17:37:53.515 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-10-30 17:37:53.544 +01:00 [INF] Zapytanie keep-alive wykonane pomyślnie.
+2024-10-30 17:37:53.544 +01:00 [INF] Zadanie keep-alive zaplanowane za "00:01:00"
+2024-10-30 17:38:32.900 +01:00 [INF] Application is shutting down...
