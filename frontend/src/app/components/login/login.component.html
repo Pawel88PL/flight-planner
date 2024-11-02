@@ -1,27 +1,25 @@
 <div class="container">
+
     <mat-card *ngIf="isLoading">
         <mat-card-header>
-            <h4 class="text-center"><img src="./images/auth-login.png" alt="person" class="icon"> Sprawdzanie uprawnień
-                użytkownika...</h4>
+            <h4 class="text-center">
+                <img src="./images/auth-login.png" alt="person" class="icon">
+                Sprawdzanie uprawnień użytkownika...
+            </h4>
         </mat-card-header>
         <mat-card-content class="my-4">
             <mat-progress-bar mode="query"></mat-progress-bar>
         </mat-card-content>
     </mat-card>
-    <mat-card *ngIf="sendingMail">
-        <mat-card-header>
-            <h4 class="text-center"><img src="./images/login-mail.png" alt="person" class="icon"> Wysyłanie e-maila z
-                kodem do
-                dwuetapowej weryfikacji ...</h4>
-        </mat-card-header>
-        <mat-card-content class="my-4">
-            <mat-progress-bar mode="query"></mat-progress-bar>
-        </mat-card-content>
-    </mat-card>
-    <mat-card *ngIf="!isLoading && !sendingMail" class="loginForm">
+
+    <mat-card *ngIf="!isLoading" class="loginForm">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <mat-card-content>
-                <h3 class="text-center mb-4">Logowanie do aplikacji</h3>
+                <h3 class="text-center mb-4">
+                    <img src="./images/auth-login.png" alt="login" class="icon">
+                    Logowanie do aplikacji
+                </h3>
+                
                 <hr class="mb-5">
 
                 <div *ngIf="errorMessage" class="alert alert-danger mb-5">
@@ -32,10 +30,10 @@
                     <mat-label>Adres e-mail</mat-label>
                     <input matInput type="email" formControlName="username" #emailInput>
                     <mat-error *ngIf="loginForm.get('username')?.hasError('required')">
-                        Adres e-mail użytkownika jest wymagany
+                        * Adres e-mail użytkownika jest wymagany
                     </mat-error>
                     <mat-error *ngIf="loginForm.get('username')?.hasError('email')">
-                        Niepoprawny format adresu e-mail
+                        * Niepoprawny format adresu e-mail
                     </mat-error>
                 </mat-form-field>
 
@@ -43,11 +41,10 @@
                     <mat-label>Hasło</mat-label>
                     <input matInput type="password" formControlName="password">
                     <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
-                        Hasło jest wymagane
+                        * Hasło jest wymagane
                     </mat-error>
                     <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">
-                        Hasło musi zawierać co
-                        najmniej 6 znaków
+                        * Za krótkie hasło
                     </mat-error>
                 </mat-form-field>
 
@@ -58,4 +55,5 @@
             </mat-card-footer>
         </form>
     </mat-card>
+
 </div>

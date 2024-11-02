@@ -21,27 +21,6 @@ namespace backend.Controllers
             _roleManager = roleManager;
         }
 
-
-        [HttpGet("activate")]
-        public async Task<IActionResult> ActivateAccount(string userId, string token)
-        {
-            var user = await _authService.FindByIdAsync(userId);
-            if (user == null)
-            {
-                return NotFound("Nie znaleziono użytkownika.");
-            }
-
-            var result = await _authService.ConfirmEmailAsync(user, token);
-            if (result.Succeeded)
-            {
-                return Redirect("https://zion.sigid.pl/login");
-            }
-            else
-            {
-                return BadRequest("Nie udało się aktywować konta.");
-            }
-        }
-
         [Authorize]
         [HttpGet("roles")]
         public async Task<IActionResult> GetRoles()
@@ -66,46 +45,23 @@ namespace backend.Controllers
                 return BadRequest(ModelState);
             }
 
-            // Próba logowania
             var signInResult = await _authService.PasswordSignInAsync(userLoginData.UserName!, userLoginData.Password!);
 
-            // Pobierz użytkownika
             var user = await _authService.FindByNameAsync(userLoginData.UserName);
+
             if (user == null)
             {
-                var message = "Podany identyfikator lub hasło są nieprawidłowe.";
+                var message = "Nie znaleziono użytkownika o podanym identyfikatorze.";
                 return NotFound(new { message });
             }
 
-            // Sprawdź czy użytkownik jest administratorem lub operatorem
-            var isAdminOrOperator = await _authService.CheckUserRoleAsync(user);
-            if (isAdminOrOperator)
+            if (!user.IsActive)
             {
-                if (!user.EmailConfirmed)
-                {
-                    var message = "Konto nie jest aktywne. Sprawdź swoją skrzynkę mailową w celu aktywacji konta.";
-                    return Unauthorized(new { message });
-                }
-
-                if (!user.IsActive)
-                {
-                    var message = "Konto jest zablokowane. Skontaktuj się z administratorem.";
-                    return Unauthorized(new { message });
-                }
+                var message = "Konto jest zablokowane. Skontaktuj się z administratorem.";
+                return Unauthorized(new { message });
             }
-
-            // Obsługa różnych wyników logowania
-            if (signInResult.RequiresTwoFactor)
-            {
-                // Użytkownik musi przejść przez drugi etap logowania (2FA)
-                if (user.TwoFactorEnabled)
-                {
-                    // Generowanie kodu 2FA i wysyłanie do użytkownika
-                    await _authService.GenerateTwoFactorTokenAsync(user);
-                    return Ok(new { Message = "2FA", Id = user.Id });
-                }
-            }
-            else if (!signInResult.Succeeded)
+        
+            if (!signInResult.Succeeded)
             {
                 var message = "Podany identyfikator lub hasło są nieprawidłowe.";
                 return Unauthorized(new { message });
@@ -170,25 +126,6 @@ namespace backend.Controllers
                 Log.Error(ex, "Wystąpił błąd podczas aktualizacji użytkownika.");
                 return StatusCode(500, "Wystąpił błąd podczas aktualizacji użytkownika.");
             }
-        }
-
-        [HttpPost("verify-2fa")]
-        public async Task<IActionResult> VerifyTwoFactor([FromBody] TwoFactorRequest request)
-        {
-            var user = await _authService.FindByIdAsync(request.Id!);
-            if (user == null)
-            {
-                return NotFound("Nie znaleziono użytkownika.");
-            }
-
-            var isValid = await _authService.VerifyTwoFactorTokenAsync(user, request.Code!);
-            if (!isValid)
-            {
-                return Unauthorized(new { message = "Nieprawidłowy kod 2FA." });
-            }
-
-            var token = _authService.GenerateJwtTokenForUser(user);
-            return Ok(new { Token = token });
         }
     }
 }

@@ -2,11 +2,13 @@ import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
 import { MatButton } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import gsap from 'gsap';
@@ -16,11 +18,13 @@ import gsap from 'gsap';
   standalone: true,
   imports: [
     CommonModule,
+    
     MatButton,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatProgressBarModule,
+    
     RouterModule,
     ReactiveFormsModule,
   ],
@@ -31,7 +35,6 @@ import gsap from 'gsap';
 export class LoginComponent implements OnInit, AfterViewInit {
 
   isLoading: boolean = false;
-  sendingMail: boolean = false;
   errorMessage: string | null = null;
   loginForm!: FormGroup;
 
@@ -65,19 +68,15 @@ export class LoginComponent implements OnInit, AfterViewInit {
   onSubmit() {
     if (this.loginForm.valid) {
       this.isLoading = true;
-      setTimeout(() => {
-        this.isLoading = false;
-        this.sendingMail = true;
-      }, 2000);
       const loginData = this.loginForm.value;
       this.authService.login(loginData.username, loginData.password).subscribe({
         next: () => {
           this.errorMessage = null;
-          // Przekierowanie obsługiwane w serwisie
+          this.isLoading = false;
+          this.router.navigate(['/home']);
         },
         error: (message) => {
           this.isLoading = false;
-          this.sendingMail = false;
           this.errorMessage = message;
         }
       });

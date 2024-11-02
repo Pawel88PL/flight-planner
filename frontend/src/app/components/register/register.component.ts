@@ -2,21 +2,28 @@ import { AuthService } from '../../services/auth.service';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, AbstractControl, ValidationErrors } from '@angular/forms';
+
 import { MatButton } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
+
 import { Router, RouterModule } from '@angular/router';
 import { Role } from '../../models/user-model';
 import { DataService } from '../../services/data.service';
+
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [
     CommonModule,
+
     MatButton,
+    MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatProgressBarModule,
@@ -55,6 +62,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.autoFocusInput.nativeElement.focus();
+      gsap.from('.registerForm', { duration: 0.5, y: -100, opacity: 0, stagger: 0.2 });
     }, 0);
   }
 
@@ -75,19 +83,14 @@ export class RegisterComponent implements OnInit, AfterViewInit {
 
   initialeRegisterForm(): void {
     this.registerForm = this.fb.group({
-      firstName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50), this.lettersOnly]],
-      lastName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50), this.lettersOnly]],
+      firstName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+      lastName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
       email: ['', [Validators.required, Validators.email]],
       confirmEmail: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
       role: ['', Validators.required]
     }, { validator: [this.passwordMatchValidator, this.emailMatchValidator] });
-  }
-
-  lettersOnly(control: AbstractControl): ValidationErrors | null {
-    const letters = /^[A-Za-ząćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/;
-    return letters.test(control.value) ? null : { 'lettersOnly': true };
   }
 
   passwordMatchValidator(form: FormGroup): ValidationErrors | null {
