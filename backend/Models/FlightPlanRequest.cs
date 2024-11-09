@@ -1,0 +1,41 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace backend.Models
+{
+    public class FlightPlanRequest
+    {
+        // Informacje o lotniskach
+        [Required(ErrorMessage = "Departure ICAO code is required")]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = "Departure ICAO code must be exactly 4 characters")]
+        [RegularExpression(@"^[A-Z]{4}$", ErrorMessage = "Departure ICAO code must contain only uppercase letters")]
+        public string? DepartureICAO { get; set; }
+
+        [Required(ErrorMessage = "Arrival ICAO code is required")]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = "Arrival ICAO code must be exactly 4 characters")]
+        [RegularExpression(@"^[A-Z]{4}$", ErrorMessage = "Arrival ICAO code must contain only uppercase letters")]
+        public string? ArrivalICAO { get; set; }
+
+        // Informacje o czasie
+        [Required(ErrorMessage = "Departure time is required")]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = "Departure time must be exactly 4 digits")]
+        [RegularExpression(@"^[0-9]{4}$", ErrorMessage = "Departure time must be in the format HHMM")]
+        public string? DepartureTime { get; set; }
+
+        [Required(ErrorMessage = "Flight day is required")]
+        [RegularExpression(@"^(today|tomorrow)$", ErrorMessage = "Flight day must be either 'today' or 'tomorrow'")]
+        public string? FlightDay { get; set; }
+
+        [Required(ErrorMessage = "Flight duration is required")]
+        [StringLength(4, MinimumLength = 4, ErrorMessage = "Flight duration must be exactly 4 digits")]
+        [RegularExpression(@"^[0-9]{4}$", ErrorMessage = "Flight duration must be in the format HHMM")]
+        public string? FlightDuration { get; set; }
+
+        // Informacje o samolocie
+        [Required(ErrorMessage = "Aircraft ID is required")]
+        [Range(1, int.MaxValue, ErrorMessage = "Aircraft ID must be a positive integer")]
+        public int AircraftId { get; set; }
+
+        // Dodatkowe informacje
+        public bool FetchWeatherData { get; set; } = true; // Domyślnie pobieramy dane pogodowe
+    }
+}
