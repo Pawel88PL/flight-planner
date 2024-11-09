@@ -1,0 +1,3 @@
+2024-11-08 08:30:46.943 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-08 08:31:16.422 +01:00 [ERR] Wystąpił błąd podczas wykonywania zapytania 'keep alive database': Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=150; handshake=124; [Login] initialization=0; authentication=0; [Post-Login] complete=29276; 
+2024-11-08 08:31:16.423 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "01:00:00"

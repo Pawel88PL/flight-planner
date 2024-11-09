@@ -46,6 +46,13 @@ export class InsertFlyDataComponent implements OnInit {
   isLoading: boolean = false;
   successMessage: string | null = null;
 
+  aircrafts = [
+    { id: 1, name: 'Cessna 172' },
+    { id: 2, name: 'Piper PA-28' },
+    { id: 3, name: 'Diamond DA40' },
+    { id: 4, name: 'Beechcraft Bonanza' }
+  ];
+
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -83,7 +90,8 @@ export class InsertFlyDataComponent implements OnInit {
         Validators.minLength(4),
         Validators.maxLength(4),
         Validators.pattern(/^[0-9]{4}$/)
-      ]]
+      ]],
+      aircraft: ['', Validators.required]
     });
   }
 
@@ -95,8 +103,14 @@ export class InsertFlyDataComponent implements OnInit {
 
   onTimeInput(event: Event): void {
     let input = (event.target as HTMLInputElement).value;
-    input = input.replace(/[^0-9]/g, '').slice(0, 4);  // Tylko cyfry, maksymalnie 4 znaki
+    input = input.replace(/[^0-9]/g, '').slice(0, 4);
     this.flyDataForm.controls['departureTime'].setValue(input, { emitEvent: false });
+  }
+
+  onFlightDurationInput(event: Event): void {
+    let input = (event.target as HTMLInputElement).value;
+    input = input.replace(/[^0-9]/g, '').slice(0, 4);
+    this.flyDataForm.controls['flightDuration'].setValue(input, { emitEvent: false });
   }
 
   onSubmit(): void { }

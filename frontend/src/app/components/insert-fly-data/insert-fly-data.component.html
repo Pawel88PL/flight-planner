@@ -6,9 +6,9 @@
 
 <div class="alert alert-light">
     <form (ngSubmit)="onSubmit()" [formGroup]="flyDataForm">
-        <div class="row">
+        <div class="row my-5">
             <div class="col-lg-2">
-                <mat-form-field appearance="outline" class="mt-5">
+                <mat-form-field appearance="outline">
                     <mat-label>Lotnisko startu</mat-label>
                     <input (input)="onICAOInput('departure', $event)" matInput type="text" formControlName="departure"
                         maxlength="4" placeholder="Np. EPPO">
@@ -25,7 +25,7 @@
             </div>
 
             <div class="col-lg-2">
-                <mat-form-field appearance="outline" class="mt-5">
+                <mat-form-field appearance="outline">
                     <mat-label>Lotnisko docelowe</mat-label>
                     <input (input)="onICAOInput('arrival', $event)" matInput type="text" formControlName="arrival"
                         maxlength="4" placeholder="Np. EPWA">
@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-lg-2">
-                <mat-form-field appearance="outline" class="mt-5">
+                <mat-form-field appearance="outline">
                     <mat-label>Godzina startu (UTC)</mat-label>
                     <input (input)="onTimeInput($event)" matInput type="text" formControlName="departureTime"
                         maxlength="4" placeholder="Np. 1345">
@@ -62,9 +62,9 @@
             </div>
 
             <div class="col-lg-2">
-                <mat-form-field appearance="outline" class="mt-5">
+                <mat-form-field appearance="outline">
                     <mat-label>Planowany czas lotu (HHMM)</mat-label>
-                    <input (input)="onTimeInput($event)" matInput type="text" formControlName="flightDuration"
+                    <input (input)="onFlightDurationInput($event)" matInput type="text" formControlName="flightDuration"
                         maxlength="4" placeholder="Np. 0300">
                     <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('required')">
                         Podaj planowany czas lotu
@@ -76,11 +76,27 @@
             </div>
 
             <div class="col-lg-2">
-                <label id="radio-group-label">Planowany dzień lotu</label>
-                <mat-radio-group formControlName="flightDay" class="radio-group" aria-labelledby="radio-group-label">
-                    <mat-radio-button class="radio-button" value="today">Dzisiaj</mat-radio-button>
-                    <mat-radio-button class="radio-button" value="tomorrow">Jutro</mat-radio-button>
-                </mat-radio-group>
+                <mat-form-field appearance="outline">
+                    <mat-label>Wybierz samolot</mat-label>
+                    <mat-select formControlName="aircraft">
+                        <mat-option *ngFor="let aircraft of aircrafts" [value]="aircraft.id">
+                            {{ aircraft.name }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="flyDataForm.controls['aircraft'].hasError('required')">
+                        Wybierz samolot
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-2">
+                <div>
+                    <p class="text-center">Planowany dzień lotu</p>
+                    <mat-radio-group formControlName="flightDay" aria-labelledby="radio-group-label">
+                        <mat-radio-button class="radio-button" value="today">Dzisiaj</mat-radio-button>
+                        <mat-radio-button class="radio-button" value="tomorrow">Jutro</mat-radio-button>
+                    </mat-radio-group>
+                </div>
             </div>
         </div>
 
