@@ -131,9 +131,8 @@ export class InsertFlyDataComponent implements OnInit {
       next: () => {
         this.successMessage = 'Udało się zapisać nowe zapytanie o lot w bazie danych.';
         this.isLoading = false;
-        setTimeout(() => {
-          this.clearSuccessMessage();
-        }, 5000);
+        this.dataService.setSuccessMessage(this.successMessage);
+        this.router.navigate(['/response']);
       },
       error: (error) => {
         this.errorMessage = error.error.message;

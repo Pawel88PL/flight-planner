@@ -1,0 +1,24 @@
+<div class="container">
+    <mat-card class="main-card">
+        <mat-card-content>
+            <div class="row">
+                <div class="col-lg-11">
+                    <h1 class="text-center mt-3">FLIGHT PLANNER</h1>
+                </div>
+                <div class="col-lg-1 text-center">
+                    <img src="./images/airplane.png" alt="airplane" class="icon airplane">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div *ngIf="errorMessage" class="alert alert-danger">
+                    {{ errorMessage }}
+                </div>
+                <div *ngIf="successMessage" class="alert alert-success">
+                    {{ successMessage }}
+                </div>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>

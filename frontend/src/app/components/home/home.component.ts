@@ -1,13 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { MatCardModule } from '@angular/material/card';
 
 import { InsertFlyDataComponent } from '../insert-fly-data/insert-fly-data.component';
-import { Router, RouterModule } from '@angular/router';
-import gsap from 'gsap';
-import { CommonModule } from '@angular/common';
+
 import { DataService } from '../../services/data.service';
-import { Subscription } from 'rxjs';
+
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-home',
