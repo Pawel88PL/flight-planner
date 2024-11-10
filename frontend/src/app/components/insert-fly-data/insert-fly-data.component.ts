@@ -16,6 +16,7 @@ import { Router, RouterModule } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
 import { DataService } from '../../services/data.service';
+import { FlightPlanRequestService } from '../../services/flight-plan-request.service';
 
 @Component({
   selector: 'app-insert-fly-data',
@@ -57,6 +58,7 @@ export class InsertFlyDataComponent implements OnInit {
     private fb: FormBuilder,
     private authService: AuthService,
     private dataService: DataService,
+    private flightPlanRequestService: FlightPlanRequestService,
     private router: Router
   ) { }
 
@@ -64,34 +66,39 @@ export class InsertFlyDataComponent implements OnInit {
     this.initializeRegisterForm();
   }
 
+  clearSuccessMessage() {
+    if (this.successMessage)
+      this.successMessage = null;
+  }
+
   initializeRegisterForm(): void {
     this.flyDataForm = this.fb.group({
-      departure: ['', [
+      departureICAO: ['', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(4),
         Validators.pattern(/^[A-Z]{4}$/)
       ]],
-      arrival: ['', [
+      arrivalICAO: ['', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(4),
         Validators.pattern(/^[A-Z]{4}$/)
       ]],
-      flightDay: ['today', Validators.required],
       departureTime: ['', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(4),
         Validators.pattern(/^[0-9]{4}$/)
       ]],
+      flightDay: ['today', Validators.required],
       flightDuration: ['', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(4),
         Validators.pattern(/^[0-9]{4}$/)
       ]],
-      aircraft: ['', Validators.required]
+      aircraftId: ['', Validators.required]
     });
   }
 
@@ -113,5 +120,23 @@ export class InsertFlyDataComponent implements OnInit {
     this.flyDataForm.controls['flightDuration'].setValue(input, { emitEvent: false });
   }
 
-  onSubmit(): void { }
+  onSubmit(): void {
+    if (this.flyDataForm.invalid) {
+      return;
+    }
+    this.isLoading = true;
+    this.flightPlanRequestService.addNewFlightPlanRequest(this.flyDataForm.value).subscribe({
+      next: () => {
+        this.successMessage = 'Udało się zapisać nowe zapytanie o lot w bazie danych.';
+        this.isLoading = false;
+        setTimeout(() => {
+          this.clearSuccessMessage();
+        }, 5000);
+      },
+      error: (error) => {
+        this.errorMessage = error.error.message;
+        this.isLoading = false;
+      }
+    });
+  }
 }

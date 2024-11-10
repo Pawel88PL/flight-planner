@@ -4,6 +4,8 @@ namespace backend.Models
 {
     public class FlightPlanRequest
     {
+        public int Id { get; set; }
+        
         // Informacje o lotniskach
         [Required(ErrorMessage = "Departure ICAO code is required")]
         [StringLength(4, MinimumLength = 4, ErrorMessage = "Departure ICAO code must be exactly 4 characters")]
@@ -22,6 +24,7 @@ namespace backend.Models
         public string? DepartureTime { get; set; }
 
         [Required(ErrorMessage = "Flight day is required")]
+        [StringLength(8, MinimumLength = 5, ErrorMessage = "Flight day must be either 'today' or 'tomorrow'")]
         [RegularExpression(@"^(today|tomorrow)$", ErrorMessage = "Flight day must be either 'today' or 'tomorrow'")]
         public string? FlightDay { get; set; }
 

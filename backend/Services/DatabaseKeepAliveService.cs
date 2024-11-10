@@ -23,7 +23,7 @@ namespace backend.Services
 
         private void ScheduleNextRun()
         {
-            var timeToNextRun = TimeSpan.FromHours(1);
+            var timeToNextRun = TimeSpan.FromMinutes(1);
             _timer = new Timer(async state => await SendKeepAliveQuery(state), null, timeToNextRun, Timeout.InfiniteTimeSpan);
             Log.Information("Zadanie 'keep alive database' zaplanowane za {TimeToNextRun}", timeToNextRun);
         }

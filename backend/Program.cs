@@ -203,6 +203,7 @@ namespace backend
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IEmailBodyService, EmailBodyService>();
+            services.AddScoped<IFlightPlanRequestService, FlightPlanRequestService>();
 
             // Serwis odpowiedzialny za utrzymywanie połączenia z bazą danych azure (darmowa baza wyłącza się po godzinie bezczynności)
             services.AddHostedService<DatabaseKeepAliveService>();

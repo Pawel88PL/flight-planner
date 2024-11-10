@@ -4,21 +4,33 @@
         pobrania aktualnej obserwacji pogodowej METAR oraz prognozy TAF dla wybranych lotnisk.</p>
 </div>
 
-<div class="alert alert-light">
+<div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+</div>
+<div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+</div>
+
+<div *ngIf="isLoading" class="alert alert-light text-center shadow">
+    <h4>Trwa przetwarzanie zapytania...</h4>
+    <mat-progress-bar mode="query" class="my-5"></mat-progress-bar>
+</div>
+
+<div *ngIf="!isLoading" class="alert alert-light">
     <form (ngSubmit)="onSubmit()" [formGroup]="flyDataForm">
         <div class="row my-5">
             <div class="col-lg-2">
                 <mat-form-field appearance="outline">
                     <mat-label>Lotnisko startu</mat-label>
-                    <input (input)="onICAOInput('departure', $event)" matInput type="text" formControlName="departure"
-                        maxlength="4" placeholder="Np. EPPO">
-                    <mat-error *ngIf="flyDataForm.controls['departure'].hasError('required')">
+                    <input (input)="onICAOInput('departureICAO', $event)" matInput type="text"
+                        formControlName="departureICAO" maxlength="4" placeholder="Np. EPPO">
+                    <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('required')">
                         Podaj nazwę lotniska w kodzie ICAO
                     </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departure'].hasError('minlength')">
+                    <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('minlength')">
                         Wprowadź czteroznakowy kod ICAO lotniska
                     </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departure'].hasError('maxlength')">
+                    <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('maxlength')">
                         Kod ICAO lotniska może zawierać maksymalnie 4 znaki
                     </mat-error>
                 </mat-form-field>
@@ -27,15 +39,15 @@
             <div class="col-lg-2">
                 <mat-form-field appearance="outline">
                     <mat-label>Lotnisko docelowe</mat-label>
-                    <input (input)="onICAOInput('arrival', $event)" matInput type="text" formControlName="arrival"
-                        maxlength="4" placeholder="Np. EPWA">
-                    <mat-error *ngIf="flyDataForm.controls['arrival'].hasError('required')">
+                    <input (input)="onICAOInput('arrivalICAO', $event)" matInput type="text"
+                        formControlName="arrivalICAO" maxlength="4" placeholder="Np. EPWA">
+                    <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('required')">
                         Podaj nazwę lotniska w kodzie ICAO
                     </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['arrival'].hasError('minlength')">
+                    <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('minlength')">
                         Wprowadź czteroznakowy kod ICAO lotniska
                     </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['arrival'].hasError('maxlength')">
+                    <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('maxlength')">
                         Kod ICAO lotniska może zawierać maksymalnie 4 znaki
                     </mat-error>
                 </mat-form-field>
@@ -78,12 +90,12 @@
             <div class="col-lg-2">
                 <mat-form-field appearance="outline">
                     <mat-label>Wybierz samolot</mat-label>
-                    <mat-select formControlName="aircraft">
+                    <mat-select formControlName="aircraftId">
                         <mat-option *ngFor="let aircraft of aircrafts" [value]="aircraft.id">
                             {{ aircraft.name }}
                         </mat-option>
                     </mat-select>
-                    <mat-error *ngIf="flyDataForm.controls['aircraft'].hasError('required')">
+                    <mat-error *ngIf="flyDataForm.controls['aircraftId'].hasError('required')">
                         Wybierz samolot
                     </mat-error>
                 </mat-form-field>
