@@ -384,3 +384,88 @@ Error Number:-2,State:0,Class:11
 2024-11-10 15:50:13.037 +01:00 [INF] Executed action backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend) in 65.2571ms
 2024-11-10 15:50:13.038 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend)'
 2024-11-10 15:50:13.038 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan-request/create - 200 0 null 66.8955ms
+2024-11-10 15:50:47.260 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:50:47.379 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:50:47.379 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:51:47.379 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:51:47.441 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:51:47.442 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:52:47.441 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:52:47.628 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:52:47.628 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:53:47.626 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:53:47.689 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:53:47.689 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:54:47.691 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:54:47.758 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:54:47.759 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:55:47.760 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:55:47.817 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:55:47.817 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:56:47.817 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:56:47.964 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:56:47.965 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:57:47.964 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:57:48.032 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:57:48.032 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:58:48.031 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:58:48.163 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:58:48.164 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 15:59:48.164 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 15:59:48.211 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 15:59:48.212 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:00:48.212 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:00:48.275 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:00:48.275 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:01:48.274 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:01:48.356 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:01:48.356 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:02:32.468 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan-request/create - null null
+2024-11-10 16:02:32.474 +01:00 [INF] CORS policy execution successful.
+2024-11-10 16:02:32.476 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan-request/create - 204 null null 7.5249ms
+2024-11-10 16:02:32.477 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan-request/create - application/json 128
+2024-11-10 16:02:32.478 +01:00 [INF] CORS policy execution successful.
+2024-11-10 16:02:32.479 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend)'
+2024-11-10 16:02:32.480 +01:00 [INF] Route matched with {action = "AddFlightPlanRequest", controller = "FlightPlanRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddFlightPlanRequestAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanRequestController (backend).
+2024-11-10 16:02:32.510 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-10 16:02:32.543 +01:00 [INF] Executed action backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend) in 62.1533ms
+2024-11-10 16:02:32.543 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend)'
+2024-11-10 16:02:32.544 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan-request/create - 400 null application/problem+json; charset=utf-8 66.9687ms
+2024-11-10 16:02:48.356 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:02:48.476 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:02:48.476 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:03:48.475 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:03:48.624 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:03:48.624 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:04:48.723 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:04:48.808 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:04:48.808 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:05:48.807 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:05:49.058 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:05:49.059 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:06:49.058 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:06:49.274 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:06:49.274 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:07:49.275 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:07:49.365 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:07:49.365 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:08:49.367 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:08:49.508 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:08:49.508 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:09:49.508 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:09:49.572 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:09:49.572 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"
+2024-11-10 16:10:41.964 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan-request/create - null null
+2024-11-10 16:10:41.976 +01:00 [INF] CORS policy execution successful.
+2024-11-10 16:10:41.984 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan-request/create - 204 null null 20.9815ms
+2024-11-10 16:10:41.986 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan-request/create - application/json 127
+2024-11-10 16:10:41.987 +01:00 [INF] CORS policy execution successful.
+2024-11-10 16:10:41.989 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend)'
+2024-11-10 16:10:41.991 +01:00 [INF] Route matched with {action = "AddFlightPlanRequest", controller = "FlightPlanRequest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddFlightPlanRequestAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanRequestController (backend).
+2024-11-10 16:10:42.141 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-11-10 16:10:42.141 +01:00 [INF] Executed action backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend) in 149.0459ms
+2024-11-10 16:10:42.141 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanRequestController.AddFlightPlanRequestAsync (backend)'
+2024-11-10 16:10:42.141 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan-request/create - 200 0 null 155.1357ms
+2024-11-10 16:10:49.572 +01:00 [INF] Wykonywanie zapytania keep-alive do bazy danych...
+2024-11-10 16:10:49.642 +01:00 [INF] Zapytanie 'keep alive database' wykonane pomyślnie.
+2024-11-10 16:10:49.642 +01:00 [INF] Zadanie 'keep alive database' zaplanowane za "00:01:00"

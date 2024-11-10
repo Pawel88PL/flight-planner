@@ -70,6 +70,9 @@
                     <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('pattern')">
                         Wprowadź godzinę w formacie HHMM, np. 1345
                     </mat-error>
+                    <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('invalidTime')">
+                        Godzina musi być w zakresie 0000 - 2359
+                    </mat-error>
                 </mat-form-field>
             </div>
 
@@ -81,8 +84,14 @@
                     <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('required')">
                         Podaj planowany czas lotu
                     </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('pattern')">
-                        Wprowadź czas lotu w formacie HHMM, np. 0300
+                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('invalidFormat')">
+                        Wprowadź czas w formacie HHMM, np. 0300
+                    </mat-error>
+                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('invalidDuration')">
+                        Czas lotu może wynosić maksymalnie 6 godzin i 59 minut
+                    </mat-error>
+                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('zeroDuration')">
+                        Czas lotu nie może wynosić 0 minut
                     </mat-error>
                 </mat-form-field>
             </div>

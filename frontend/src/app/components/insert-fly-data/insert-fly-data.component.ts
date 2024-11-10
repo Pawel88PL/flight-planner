@@ -89,14 +89,16 @@ export class InsertFlyDataComponent implements OnInit {
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(4),
-        Validators.pattern(/^[0-9]{4}$/)
+        Validators.pattern(/^[0-9]{4}$/),
+        this.validateTime
       ]],
       flightDay: ['today', Validators.required],
       flightDuration: ['', [
         Validators.required,
         Validators.minLength(4),
         Validators.maxLength(4),
-        Validators.pattern(/^[0-9]{4}$/)
+        Validators.pattern(/^[0-9]{4}$/),
+        this.validateFlightDuration
       ]],
       aircraftId: ['', Validators.required]
     });
@@ -139,4 +141,51 @@ export class InsertFlyDataComponent implements OnInit {
       }
     });
   }
+
+  validateFlightDuration(control: any): { [key: string]: boolean } | null {
+    const value = control.value;
+
+    // Sprawdzenie, czy wartość jest czterocyfrową liczbą
+    if (!/^[0-9]{4}$/.test(value)) {
+      return { invalidFormat: true };
+    }
+
+    // Pobranie godzin i minut z wartości
+    const hours = parseInt(value.substring(0, 2), 10);
+    const minutes = parseInt(value.substring(2, 4), 10);
+
+    // Sprawdzenie, czy godziny są w zakresie 0-5 i minuty w zakresie 00-59
+    if (hours < 0 || hours > 6 || minutes < 0 || minutes > 59) {
+      return { invalidDuration: true };
+    }
+
+    // Sprawdzenie, czy wartość nie jest 0000
+    if (hours === 0 && minutes === 0) {
+      return { zeroDuration: true };
+    }
+
+    return null;
+  }
+
+
+  validateTime(control: any): { [key: string]: boolean } | null {
+    const value = control.value;
+
+    // Sprawdzenie, czy wartość jest czterocyfrową liczbą
+    if (!/^[0-9]{4}$/.test(value)) {
+      return { invalidFormat: true };
+    }
+
+    // Pobranie godzin i minut z wartości
+    const hours = parseInt(value.substring(0, 2), 10);
+    const minutes = parseInt(value.substring(2, 4), 10);
+
+    // Sprawdzenie, czy godziny są w zakresie 00-23 i minuty w zakresie 00-59
+    if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+      return { invalidTime: true };
+    }
+
+    return null;
+  }
+
 }
