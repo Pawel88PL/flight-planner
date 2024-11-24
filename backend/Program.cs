@@ -102,7 +102,7 @@ namespace backend
             // Konfiguracja bazy danych
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("azure"));
+                options.UseSqlServer(configuration.GetConnectionString("sigid_db"));
             });
         }
 
@@ -204,9 +204,6 @@ namespace backend
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IEmailBodyService, EmailBodyService>();
             services.AddScoped<IFlightPlanRequestService, FlightPlanRequestService>();
-
-            // Serwis odpowiedzialny za utrzymywanie połączenia z bazą danych azure (darmowa baza wyłącza się po godzinie bezczynności)
-            services.AddHostedService<DatabaseKeepAliveService>();
         }
 
 

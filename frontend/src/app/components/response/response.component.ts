@@ -32,6 +32,10 @@ export class ResponseComponent implements OnInit, OnDestroy {
     this.subscription = this.dataService.successMessage$.subscribe(message => {
       this.successMessage = message;
     });
+
+    setTimeout(() => {
+      this.dataService.clearSuccessMessage();
+    }, 5000);
   }
 
   ngOnDestroy() {
