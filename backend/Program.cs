@@ -1,6 +1,7 @@
 using System.Security.Authentication;
 using System.Text;
 using backend.Data;
+using backend.Helpers;
 using backend.Interfaces;
 using backend.Models;
 using backend.Services;
@@ -204,6 +205,7 @@ namespace backend
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IEmailBodyService, EmailBodyService>();
             services.AddScoped<IFlightPlanRequestService, FlightPlanRequestService>();
+            services.AddScoped<IWeatherApiHelper, WeatherApiHelper>();
         }
 
 
