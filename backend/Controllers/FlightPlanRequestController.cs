@@ -19,17 +19,23 @@ namespace backend.Controllers
 
         [HttpPost]
         [Route("create")]
-        public async Task<IActionResult> AddFlightPlanRequestAsync(FlightPlanRequest flightPlanRequest)
+        public async Task<IActionResult> CreateFlightPlanRequestAsync(FlightPlanRequest flightPlanRequest)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
-                await _flightPlanRequestService.AddFlightPlanRequestAsync(flightPlanRequest);
-                return Ok();
+                var response = await _flightPlanRequestService.CreateFlightPlanRequest(flightPlanRequest);
+                return Ok(response);
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Wystąpił błąd podczas dodawania nowego zapytania o plan lotu");
-                return BadRequest(ex.Message);
+                var message = "Wystąpił błąd podczas dodawania nowego zapytania o plan lotu. " + ex.Message;
+                Log.Error(message);
+                return BadRequest(new { message });
             }
         }
     }

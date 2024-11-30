@@ -4,6 +4,6 @@ namespace backend.Interfaces
 {
     public interface IFlightPlanRequestService
     {
-        Task AddFlightPlanRequestAsync(FlightPlanRequest flightPlanRequest);
+        Task<string> CreateFlightPlanRequest(FlightPlanRequest flightPlanRequest);
     }
 }
