@@ -19,16 +19,16 @@ namespace backend.Helpers
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
+            // Dodaj nagłówek autoryzacji
+            AddApiKeyHeader();
         }
 
-        public async Task<T> GetAsync<T>(string departureICAO, string arrivalICAO)
+        public async Task<T> GetAsync<T>(string metarOrTaf, string departureICAO, string arrivalICAO)
         {
             try
             {
-                // Dodaj nagłówek autoryzacji
-                AddApiKeyHeader();
 
-                var url = $"https://api.checkwx.com/taf/{departureICAO},{arrivalICAO}";
+                var url = $"https://api.checkwx.com/{metarOrTaf}/{departureICAO},{arrivalICAO}";
 
                 var response = await _httpClient.GetAsync(url);
 

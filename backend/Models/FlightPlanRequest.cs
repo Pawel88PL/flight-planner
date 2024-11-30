@@ -40,6 +40,18 @@ namespace backend.Models
 
         // Dodatkowe informacje
         public bool FetchWeatherData { get; set; } = true; // Domyślnie pobieramy dane pogodowe
+
+        // METAR dla lotniska startu
+        public string? DepartureMETAR { get; set; }
+
+        // METAR dla lotniska docelowego
+        public string? ArrivalMETAR { get; set; }
+
+        // TAF dla lotniska startu
+        public string? DepartureTAF { get; set; }
+
+        // TAF dla lotniska docelowego
+        public string? ArrivalTAF { get; set; }
     }
 
     public class FlightPlanRequestDto
