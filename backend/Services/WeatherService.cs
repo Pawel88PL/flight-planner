@@ -44,7 +44,6 @@ namespace backend.Services
             };
         }
 
-
         private async Task<WeatherResponse> GetTafForDepartureAndArrival(string departureICAO, string arrivalICAO)
         {
             // Pobranie danych TAF z API
@@ -77,8 +76,13 @@ namespace backend.Services
 
         public async Task<WeatherResponse> GetWeatherDataForDepartureAndArrival(string departureICAO, string arrivalICAO)
         {
-            var metar = await GetMetarForDepartureAndArrival(departureICAO, arrivalICAO);
-            var taf = await GetTafForDepartureAndArrival(departureICAO, arrivalICAO);
+            var metarTask = GetMetarForDepartureAndArrival(departureICAO, arrivalICAO);
+            var tafTask = GetTafForDepartureAndArrival(departureICAO, arrivalICAO);
+
+            await Task.WhenAll(metarTask, tafTask);
+
+            var metar = await metarTask;
+            var taf = await tafTask;
 
             return new WeatherResponse
             {
