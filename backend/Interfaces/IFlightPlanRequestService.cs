@@ -2,8 +2,9 @@ using backend.Models;
 
 namespace backend.Interfaces
 {
-    public interface IFlightPlanRequestService
+    public interface IFlightPlanService
     {
-        Task<FlightPlanResponse> CreateFlightPlanRequest(FlightPlanRequest flightPlanRequest);
+        Task<int> CreateFlightPlan(FlightPlanRequest request);
+        Task<FlightPlanResponseDto> GetFlightPlan(int id);
     }
 }

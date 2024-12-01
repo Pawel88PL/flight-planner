@@ -16,7 +16,7 @@ import { Router, RouterModule } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
 import { DataService } from '../../services/data.service';
-import { FlightPlanRequestService } from '../../services/flight-plan-request.service';
+import { FlightPlanService } from '../../services/flight-plan.service';
 
 @Component({
   selector: 'app-insert-fly-data',
@@ -58,7 +58,7 @@ export class InsertFlyDataComponent implements OnInit {
     private fb: FormBuilder,
     private authService: AuthService,
     private dataService: DataService,
-    private flightPlanRequestService: FlightPlanRequestService,
+    private flightPlanService: FlightPlanService,
     private router: Router
   ) { }
 
@@ -126,13 +126,13 @@ export class InsertFlyDataComponent implements OnInit {
     if (this.flyDataForm.invalid) {
       return;
     }
+    
     this.isLoading = true;
-    this.flightPlanRequestService.addNewFlightPlanRequest(this.flyDataForm.value).subscribe({
-      next: () => {
-        this.successMessage = 'Udało się zapisać nowe zapytanie o lot w bazie danych.';
+    this.flightPlanService.createFlightPlan(this.flyDataForm.value).subscribe({
+      next: (response) => {
         this.isLoading = false;
-        this.dataService.setSuccessMessage(this.successMessage);
-        this.router.navigate(['/response']);
+        const responseId = response.responseId;
+        this.router.navigate(['/response', responseId]);
       },
       error: (error) => {
         this.errorMessage = error.error.message;

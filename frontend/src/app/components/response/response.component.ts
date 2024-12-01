@@ -1,10 +1,13 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Subscription } from 'rxjs';
 
 import { MatCardModule } from '@angular/material/card';
-import { Subscription } from 'rxjs';
+
 import { DataService } from '../../services/data.service';
+import { FlightPlanResponse } from '../../models/response-model';
+import { ActivatedRoute } from '@angular/router';
+import { FlightPlanService } from '../../services/flight-plan.service';
 
 @Component({
   selector: 'app-response',
@@ -17,31 +20,41 @@ import { DataService } from '../../services/data.service';
   styleUrl: './response.component.css'
 })
 
-export class ResponseComponent implements OnInit, OnDestroy {
+export class ResponseComponent implements OnInit {
 
   errorMessage: string | null = null;
   successMessage: string | null = null
 
-  private subscription: Subscription | null = null;
-  
-  constructor(
-    private dataService: DataService
-  ) { }
+  flightPlanId: string | null = null;
+  flightPlan: FlightPlanResponse | null = null;
+
+
+  constructor(private route: ActivatedRoute, private flightPlanService: FlightPlanService) { }
 
   ngOnInit() {
-    this.subscription = this.dataService.successMessage$.subscribe(message => {
-      this.successMessage = message;
-    });
-
-    setTimeout(() => {
-      this.dataService.clearSuccessMessage();
-    }, 5000);
+    this.setFlightPlanId();
+    this.getFlightPlan();
   }
 
-  ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
+  getFlightPlan() {
+    if (!this.flightPlanId) {
+      console.error('Flight Plan ID is not set');
+      return
     }
+
+    this.flightPlanService.getFlightPlanById(this.flightPlanId).subscribe({
+      next: (response) => {
+        this.flightPlan = response;
+      },
+      error: (error) => {
+        this.errorMessage = error.error.message;
+      }
+    });
   }
 
+  
+  
+  setFlightPlanId() {
+    this.flightPlanId = this.route.snapshot.paramMap.get('id'); 
+  }
 }

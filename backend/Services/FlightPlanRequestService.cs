@@ -1,24 +1,23 @@
-using System.Text.Json;
 using backend.Data;
 using backend.Interfaces;
 using backend.Models;
 
 namespace backend.Services
 {
-    public class FlightPlanRequestService : IFlightPlanRequestService
+    public class FlightPlanService : IFlightPlanService
     {
         private readonly ApplicationDbContext _context;
         private readonly IWeatherService _weatherService;
 
-        public FlightPlanRequestService(ApplicationDbContext context, IWeatherService weatherService)
+        public FlightPlanService(ApplicationDbContext context, IWeatherService weatherService)
         {
             _context = context;
             _weatherService = weatherService;
         }
 
-        private async Task<FlightPlanResponse> AddFlightPlanRequestAsync(FlightPlanRequest flightPlanRequest, WeatherResponse weather)
+        private async Task<int> AddFlightPlanToDataBaseAsync(FlightPlanRequest flightPlanRequest, WeatherResponse weather)
         {
-            var newFlightPlanRequest = new FlightPlanRequest
+            var newFlightPlan = new FlightPlanResponse
             {
                 DepartureICAO = flightPlanRequest.DepartureICAO,
                 ArrivalICAO = flightPlanRequest.ArrivalICAO,
@@ -26,46 +25,54 @@ namespace backend.Services
                 FlightDay = flightPlanRequest.FlightDay,
                 FlightDuration = flightPlanRequest.FlightDuration,
                 AircraftId = flightPlanRequest.AircraftId,
-                FetchWeatherData = flightPlanRequest.FetchWeatherData,
                 DepartureMETAR = weather.DepartureMETAR,
                 ArrivalMETAR = weather.ArrivalMETAR,
                 DepartureTAF = weather.DepartureTAF,
                 ArrivalTAF = weather.ArrivalTAF
             };
 
-            _context.FlightPlanRequests.Add(newFlightPlanRequest);
+            _context.FlightPlanResponses.Add(newFlightPlan);
 
             await _context.SaveChangesAsync();
 
-            return MapFlightPlanRequestToFlightPlanResponse(newFlightPlanRequest);
+            return newFlightPlan.Id;
         }
 
-        public async Task<FlightPlanResponse> CreateFlightPlanRequest(FlightPlanRequest flightPlanRequest)
+        public async Task<int> CreateFlightPlan(FlightPlanRequest request)
         {
-            if (string.IsNullOrEmpty(flightPlanRequest.DepartureICAO)
-                || string.IsNullOrEmpty(flightPlanRequest.ArrivalICAO))
+            if (string.IsNullOrEmpty(request.DepartureICAO) || string.IsNullOrEmpty(request.ArrivalICAO))
             {
                 throw new Exception("Departure and Arrival ICAO codes are required.");
             }
 
-            var weatherData = await _weatherService.GetWeatherDataForDepartureAndArrival(flightPlanRequest.DepartureICAO, flightPlanRequest.ArrivalICAO);
+            var weatherData = await _weatherService.GetWeatherDataForDepartureAndArrival(request.DepartureICAO, request.ArrivalICAO);
 
-            var newFlightPlanResponse = await AddFlightPlanRequestAsync(flightPlanRequest, weatherData);
+            var flightPlanResponseId = await AddFlightPlanToDataBaseAsync(request, weatherData);
 
-            return newFlightPlanResponse;
+            return flightPlanResponseId;
         }
 
-        private static FlightPlanResponse MapFlightPlanRequestToFlightPlanResponse(FlightPlanRequest flightPlanRequest)
+        public async Task<FlightPlanResponseDto> GetFlightPlan(int id)
         {
-            return new FlightPlanResponse
+            var flightPlanResponse = await _context.FlightPlanResponses.FindAsync(id);
+
+            if (flightPlanResponse == null)
             {
-                ResponseId = flightPlanRequest.Id,
+                throw new Exception("Flight plan request not found.");
+            }
+
+            return MapFlightPlanResponseToDto(flightPlanResponse);
+        }
+
+        private static FlightPlanResponseDto MapFlightPlanResponseToDto(FlightPlanResponse flightPlanRequest)
+        {
+            return new FlightPlanResponseDto
+            {
                 DepartureICAO = flightPlanRequest.DepartureICAO,
                 ArrivalICAO = flightPlanRequest.ArrivalICAO,
                 DepartureTime = flightPlanRequest.DepartureTime,
                 FlightDay = flightPlanRequest.FlightDay,
                 FlightDuration = flightPlanRequest.FlightDuration,
-                FetchWeatherData = flightPlanRequest.FetchWeatherData,
                 DepartureMETAR = flightPlanRequest.DepartureMETAR,
                 ArrivalMETAR = flightPlanRequest.ArrivalMETAR,
                 DepartureTAF = flightPlanRequest.DepartureTAF,

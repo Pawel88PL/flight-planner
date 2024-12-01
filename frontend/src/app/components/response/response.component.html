@@ -19,6 +19,17 @@
                 </div>
             </div>
 
+            <div *ngIf="flightPlan">
+                <h2>Flight Plan Response</h2>
+                <p><strong>Departure ICAO:</strong> {{ flightPlan.departureICAO }}</p>
+                <p><strong>Arrival ICAO:</strong> {{ flightPlan.arrivalICAO }}</p>
+                <p><strong>Departure METAR:</strong> {{ flightPlan.departureMETAR }}</p>
+                <p><strong>Arrival METAR:</strong> {{ flightPlan.arrivalMETAR }}</p>
+                <p><strong>Departure TAF:</strong> {{ flightPlan.departureTAF }}</p>
+                <p><strong>Arrival TAF:</strong> {{ flightPlan.arrivalTAF }}</p>
+            </div>
+
+
         </mat-card-content>
     </mat-card>
 </div>

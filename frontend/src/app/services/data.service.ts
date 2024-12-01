@@ -6,18 +6,25 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataService {
 
-  // BehaviorSubject do przechowywania wiadomości sukcesu
+  private responseData: any;
+
   private successMessage = new BehaviorSubject<string | null>(null);
   successMessage$ = this.successMessage.asObservable();
 
   constructor() { }
 
-  // Metoda do pobierania i czyszczenia wiadomości sukcesu (opcjonalnie)
   clearSuccessMessage() {
     this.successMessage.next(null);
   }
 
-  // Metoda do ustawiania wiadomości sukcesu
+  getResponseData(): any {
+    return this.responseData;
+  }
+
+  setResponseData(data: any): void {
+    this.responseData = data;
+  }
+
   setSuccessMessage(message: string | null) {
     this.successMessage.next(message);
   }
