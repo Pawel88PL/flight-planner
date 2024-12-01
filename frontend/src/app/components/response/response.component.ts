@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
-import { DataService } from '../../services/data.service';
+
 import { FlightPlanResponse } from '../../models/response-model';
 import { ActivatedRoute } from '@angular/router';
 import { FlightPlanService } from '../../services/flight-plan.service';
@@ -14,7 +14,8 @@ import { FlightPlanService } from '../../services/flight-plan.service';
   standalone: true,
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressBarModule
   ],
   templateUrl: './response.component.html',
   styleUrl: './response.component.css'
@@ -28,6 +29,7 @@ export class ResponseComponent implements OnInit {
   flightPlanId: string | null = null;
   flightPlan: FlightPlanResponse | null = null;
 
+  isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute, private flightPlanService: FlightPlanService) { }
 
@@ -45,6 +47,7 @@ export class ResponseComponent implements OnInit {
     this.flightPlanService.getFlightPlanById(this.flightPlanId).subscribe({
       next: (response) => {
         this.flightPlan = response;
+        this.isLoading = false;
       },
       error: (error) => {
         this.errorMessage = error.error.message;
