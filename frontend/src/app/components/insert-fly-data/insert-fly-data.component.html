@@ -19,104 +19,108 @@
 <div *ngIf="!isLoading" class="alert alert-light">
     <form (ngSubmit)="onSubmit()" [formGroup]="flyDataForm">
         <div class="row my-5">
-            <div class="col-lg-2">
-                <mat-form-field appearance="outline">
-                    <mat-label>Lotnisko startu</mat-label>
-                    <input (input)="onICAOInput('departureICAO', $event)" matInput type="text"
-                        formControlName="departureICAO" maxlength="4" placeholder="Np. EPPO">
-                    <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('required')">
-                        Podaj nazwę lotniska w kodzie ICAO
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('minlength')">
-                        Wprowadź czteroznakowy kod ICAO lotniska
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('maxlength')">
-                        Kod ICAO lotniska może zawierać maksymalnie 4 znaki
-                    </mat-error>
-                </mat-form-field>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Lotnisko startu</mat-label>
+                            <input (input)="onICAOInput('departureICAO', $event)" matInput type="text"
+                                formControlName="departureICAO" maxlength="4" placeholder="Np. EPPO">
+                            <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('required')">
+                                Podaj nazwę lotniska w kodzie ICAO
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('minlength')">
+                                Wprowadź czteroznakowy kod ICAO lotniska
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureICAO'].hasError('maxlength')">
+                                Kod ICAO lotniska może zawierać maksymalnie 4 znaki
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Lotnisko docelowe</mat-label>
+                            <input (input)="onICAOInput('arrivalICAO', $event)" matInput type="text"
+                                formControlName="arrivalICAO" maxlength="4" placeholder="Np. EPWA">
+                            <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('required')">
+                                Podaj nazwę lotniska w kodzie ICAO
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('minlength')">
+                                Wprowadź czteroznakowy kod ICAO lotniska
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('maxlength')">
+                                Kod ICAO lotniska może zawierać maksymalnie 4 znaki
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Godzina startu (UTC)</mat-label>
+                            <input (input)="onTimeInput($event)" matInput type="text" formControlName="departureTime"
+                                maxlength="4" placeholder="Np. 1345">
+                            <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('required')">
+                                Podaj godzinę startu
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('minlength')">
+                                Wprowadź czterocyfrowy format godziny
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('maxlength')">
+                                Godzina może zawierać maksymalnie 4 cyfry
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('pattern')">
+                                Wprowadź godzinę w formacie HHMM, np. 1345
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('invalidTime')">
+                                Godzina musi być w zakresie 0000 - 2359
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-2">
-                <mat-form-field appearance="outline">
-                    <mat-label>Lotnisko docelowe</mat-label>
-                    <input (input)="onICAOInput('arrivalICAO', $event)" matInput type="text"
-                        formControlName="arrivalICAO" maxlength="4" placeholder="Np. EPWA">
-                    <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('required')">
-                        Podaj nazwę lotniska w kodzie ICAO
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('minlength')">
-                        Wprowadź czteroznakowy kod ICAO lotniska
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['arrivalICAO'].hasError('maxlength')">
-                        Kod ICAO lotniska może zawierać maksymalnie 4 znaki
-                    </mat-error>
-                </mat-form-field>
-            </div>
-
-            <div class="col-lg-2">
-                <mat-form-field appearance="outline">
-                    <mat-label>Godzina startu (UTC)</mat-label>
-                    <input (input)="onTimeInput($event)" matInput type="text" formControlName="departureTime"
-                        maxlength="4" placeholder="Np. 1345">
-                    <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('required')">
-                        Podaj godzinę startu
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('minlength')">
-                        Wprowadź czterocyfrowy format godziny
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('maxlength')">
-                        Godzina może zawierać maksymalnie 4 cyfry
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('pattern')">
-                        Wprowadź godzinę w formacie HHMM, np. 1345
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('invalidTime')">
-                        Godzina musi być w zakresie 0000 - 2359
-                    </mat-error>
-                </mat-form-field>
-            </div>
-
-            <div class="col-lg-2">
-                <mat-form-field appearance="outline">
-                    <mat-label>Planowany czas lotu (HHMM)</mat-label>
-                    <input (input)="onFlightDurationInput($event)" matInput type="text" formControlName="flightDuration"
-                        maxlength="4" placeholder="Np. 0300">
-                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('required')">
-                        Podaj planowany czas lotu
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('invalidFormat')">
-                        Wprowadź czas w formacie HHMM, np. 0300
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('invalidDuration')">
-                        Czas lotu może wynosić maksymalnie 6 godzin i 59 minut
-                    </mat-error>
-                    <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('zeroDuration')">
-                        Czas lotu nie może wynosić 0 minut
-                    </mat-error>
-                </mat-form-field>
-            </div>
-
-            <div class="col-lg-2">
-                <mat-form-field appearance="outline">
-                    <mat-label>Wybierz samolot</mat-label>
-                    <mat-select formControlName="aircraftId">
-                        <mat-option *ngFor="let aircraft of aircrafts" [value]="aircraft.id">
-                            {{ aircraft.name }}
-                        </mat-option>
-                    </mat-select>
-                    <mat-error *ngIf="flyDataForm.controls['aircraftId'].hasError('required')">
-                        Wybierz samolot
-                    </mat-error>
-                </mat-form-field>
-            </div>
-
-            <div class="col-lg-2">
-                <div>
-                    <p class="text-center">Planowany dzień lotu</p>
-                    <mat-radio-group formControlName="flightDay" aria-labelledby="radio-group-label">
-                        <mat-radio-button class="radio-button" value="today">Dzisiaj</mat-radio-button>
-                        <mat-radio-button class="radio-button" value="tomorrow">Jutro</mat-radio-button>
-                    </mat-radio-group>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Planowany czas lotu (HHMM)</mat-label>
+                            <input (input)="onFlightDurationInput($event)" matInput type="text"
+                                formControlName="flightDuration" maxlength="4" placeholder="Np. 0300">
+                            <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('required')">
+                                Podaj planowany czas lotu
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('invalidFormat')">
+                                Wprowadź czas w formacie HHMM, np. 0300
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('invalidDuration')">
+                                Czas lotu może wynosić maksymalnie 6 godzin i 59 minut
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['flightDuration'].hasError('zeroDuration')">
+                                Czas lotu nie może wynosić 0 minut
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Wybierz samolot</mat-label>
+                            <mat-select formControlName="aircraftId">
+                                <mat-option *ngFor="let aircraft of aircrafts" [value]="aircraft.id">
+                                    {{ aircraft.name }}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="flyDataForm.controls['aircraftId'].hasError('required')">
+                                Wybierz samolot
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <p class="text-center">Planowany dzień lotu</p>
+                            <mat-radio-group formControlName="flightDay" aria-labelledby="radio-group-label">
+                                <mat-radio-button class="radio-button" value="today">Dzisiaj</mat-radio-button>
+                                <mat-radio-button class="radio-button" value="tomorrow">Jutro</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
