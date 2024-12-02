@@ -10,4 +10,10 @@ export interface FlightPlanResponse {
     arrivalMETAR: string;
     departureTAF: string;
     arrivalTAF: string;
+    departureAirportName: string;
+    departureCity: string;
+    departureCountry: string;
+    arrivalAirportName: string;
+    arrivalCity: string;
+    arrivalCountry: string;
 }

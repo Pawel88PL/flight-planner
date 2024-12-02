@@ -53,12 +53,23 @@ namespace backend.Services
                 throw new Exception("Departure and Arrival ICAO codes are required.");
             }
 
-            var weatherData = await _weatherService.GetWeatherDataForDepartureAndArrival(request.DepartureICAO, request.ArrivalICAO);
-            var airports = await _airportService.GetDepartureAndArrivalAirports(request.DepartureICAO, request.ArrivalICAO);
+            var weatherTask = _weatherService.GetWeatherDataForDepartureAndArrival(request.DepartureICAO, request.ArrivalICAO);
+            var airportsTask = _airportService.GetDepartureAndArrivalAirports(request.DepartureICAO, request.ArrivalICAO);
 
-            var flightPlanResponseId = await AddFlightPlanToDataBaseAsync(request, airports, weatherData);
+            try
+            {
+                await Task.WhenAll(weatherTask, airportsTask);
+            }
+            catch (Exception ex)
+            {
+                // Obsłuż wyjątki (np. logowanie lub ponowne próby)
+                throw new Exception("Failed to fetch data from external services.", ex);
+            }
 
-            return flightPlanResponseId;
+            var weatherData = await weatherTask;
+            var airports = await airportsTask;
+            
+            return await AddFlightPlanToDataBaseAsync(request, airports, weatherData);
         }
 
         public async Task<FlightPlanResponseDto> GetFlightPlan(int id)

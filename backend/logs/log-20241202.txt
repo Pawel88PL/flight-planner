@@ -132,3 +132,180 @@ Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
 2024-12-02 19:38:14.939 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 177.6084ms
 2024-12-02 19:38:14.939 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
 2024-12-02 19:38:14.939 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/13 - 200 null application/json; charset=utf-8 187.5047ms
+2024-12-02 19:41:03.996 +01:00 [INF] Application is starting
+2024-12-02 19:41:04.061 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-02 19:41:04.121 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-02 19:41:04.122 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 19:41:04.123 +01:00 [INF] Hosting environment: Development
+2024-12-02 19:41:04.123 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-02 19:41:04.286 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-02 19:41:04.324 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 38.7597ms
+2024-12-02 19:41:04.610 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-02 19:41:04.655 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.0906ms
+2024-12-02 19:41:27.682 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-02 19:41:27.698 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-02 19:41:27.737 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:41:27.739 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 57.3125ms
+2024-12-02 19:41:27.742 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-02 19:41:27.745 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:41:27.785 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:41:27.801 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:41:27.926 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-02 19:41:27.927 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-02 19:41:27.941 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-02 19:41:27.941 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-02 19:41:27.990 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-02 19:41:27.990 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-02 19:41:28.462 +01:00 [INF] Received HTTP response headers after 532.6124ms - 200
+2024-12-02 19:41:28.462 +01:00 [INF] Received HTTP response headers after 517.9682ms - 200
+2024-12-02 19:41:28.463 +01:00 [INF] End processing HTTP request after 537.8085ms - 200
+2024-12-02 19:41:28.463 +01:00 [INF] End processing HTTP request after 521.6398ms - 200
+2024-12-02 19:41:28.473 +01:00 [INF] Received HTTP response headers after 482.8047ms - 200
+2024-12-02 19:41:28.473 +01:00 [INF] End processing HTTP request after 483.2799ms - 200
+2024-12-02 19:41:29.240 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-02 19:41:29.244 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 1442.2496ms
+2024-12-02 19:41:29.244 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:41:29.248 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 1505.4691ms
+2024-12-02 19:41:29.262 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/14 - null null
+2024-12-02 19:41:29.267 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:41:29.269 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:41:29.278 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:41:29.544 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:41:29.547 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 268.3315ms
+2024-12-02 19:41:29.547 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:41:29.548 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/14 - 200 null application/json; charset=utf-8 285.423ms
+2024-12-02 19:54:21.928 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-02 19:54:21.940 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:54:21.985 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 17.9635ms
+2024-12-02 19:54:21.988 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-02 19:54:21.989 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:54:22.000 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:54:22.006 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:54:22.022 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-02 19:54:22.022 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-02 19:54:22.129 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-02 19:54:22.129 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-02 19:54:22.131 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-02 19:54:22.132 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-02 19:54:22.608 +01:00 [INF] Received HTTP response headers after 476.4091ms - 200
+2024-12-02 19:54:22.608 +01:00 [INF] Received HTTP response headers after 479.0815ms - 200
+2024-12-02 19:54:22.608 +01:00 [INF] End processing HTTP request after 476.8999ms - 200
+2024-12-02 19:54:22.608 +01:00 [INF] End processing HTTP request after 479.7637ms - 200
+2024-12-02 19:54:22.615 +01:00 [INF] Received HTTP response headers after 592.5995ms - 200
+2024-12-02 19:54:22.615 +01:00 [INF] End processing HTTP request after 593.0192ms - 200
+2024-12-02 19:54:22.859 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-02 19:54:22.859 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 852.5367ms
+2024-12-02 19:54:22.859 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:54:22.859 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 871.0387ms
+2024-12-02 19:54:22.885 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:54:22.898 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:54:22.899 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:54:22.899 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:54:22.937 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:54:22.938 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 37.7699ms
+2024-12-02 19:54:22.938 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:54:22.938 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 52.9919ms
+2024-12-02 19:56:55.228 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:56:55.232 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:56:55.233 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:56:55.234 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:56:55.327 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:56:55.327 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 92.8902ms
+2024-12-02 19:56:55.327 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:56:55.328 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 102.2176ms
+2024-12-02 19:57:08.844 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:57:08.859 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:57:08.862 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:57:08.863 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:57:08.961 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:57:08.964 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 97.4436ms
+2024-12-02 19:57:08.964 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:57:08.965 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 120.3372ms
+2024-12-02 19:57:33.374 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:57:33.376 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:57:33.377 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:57:33.378 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:57:33.588 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:57:33.589 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 210.841ms
+2024-12-02 19:57:33.589 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:57:33.589 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 215.881ms
+2024-12-02 19:58:00.528 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:58:00.530 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:58:00.531 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:58:00.531 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:58:00.566 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:58:00.568 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 36.2111ms
+2024-12-02 19:58:00.568 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:58:00.568 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 40.686ms
+2024-12-02 19:58:23.115 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:58:23.117 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:58:23.120 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:58:23.122 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:58:23.191 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:58:23.192 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 70.2437ms
+2024-12-02 19:58:23.192 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:58:23.193 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 77.7458ms
+2024-12-02 19:59:04.582 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:59:04.595 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:59:04.598 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:59:04.601 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:59:04.644 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:59:04.645 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 44.1407ms
+2024-12-02 19:59:04.646 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:59:04.647 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 124.9731ms
+2024-12-02 19:59:22.479 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 19:59:22.482 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:59:22.494 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:59:22.503 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:59:22.560 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:59:22.561 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 56.8675ms
+2024-12-02 19:59:22.561 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:59:22.561 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 83.3435ms
+2024-12-02 20:00:15.400 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 20:00:15.403 +01:00 [INF] CORS policy execution successful.
+2024-12-02 20:00:15.405 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:00:15.406 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 20:00:15.451 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 20:00:15.451 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 45.6432ms
+2024-12-02 20:00:15.452 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:00:15.452 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 52.5601ms
+2024-12-02 20:00:45.513 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 20:00:45.516 +01:00 [INF] CORS policy execution successful.
+2024-12-02 20:00:45.516 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:00:45.521 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 20:00:45.654 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 20:00:45.655 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 133.348ms
+2024-12-02 20:00:45.656 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:00:45.656 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 146.278ms
+2024-12-02 20:01:06.447 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 20:01:06.459 +01:00 [INF] CORS policy execution successful.
+2024-12-02 20:01:06.464 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:06.467 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 20:01:06.513 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 20:01:06.514 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 46.7655ms
+2024-12-02 20:01:06.514 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:06.514 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 68.2203ms
+2024-12-02 20:01:24.712 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 20:01:24.714 +01:00 [INF] CORS policy execution successful.
+2024-12-02 20:01:24.715 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:24.717 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 20:01:24.765 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 20:01:24.766 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 44.176ms
+2024-12-02 20:01:24.766 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:24.766 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 54.7506ms
+2024-12-02 20:01:31.128 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 20:01:31.130 +01:00 [INF] CORS policy execution successful.
+2024-12-02 20:01:31.131 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:31.132 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 20:01:31.160 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 20:01:31.161 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 28.4459ms
+2024-12-02 20:01:31.161 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:31.161 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 33.6468ms
+2024-12-02 20:01:34.049 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-02 20:01:34.056 +01:00 [INF] CORS policy execution successful.
+2024-12-02 20:01:34.057 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:34.058 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 20:01:34.109 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 20:01:34.110 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 51.891ms
+2024-12-02 20:01:34.110 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 20:01:34.110 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 60.8545ms

@@ -1,5 +1,5 @@
-.airport-card {
-    min-height: 200px;
+.alert-info {
+    min-height: 150px;
 }
 
 .alert-primary {
@@ -18,4 +18,8 @@
 
 .main-card {
     margin: auto 20px;
+}
+
+mat-card {
+    background-color: white;
 }
