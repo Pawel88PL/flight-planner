@@ -1,0 +1,134 @@
+2024-12-02 19:22:24.070 +01:00 [INF] Application is starting
+2024-12-02 19:22:24.126 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-02 19:22:24.238 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-02 19:22:24.239 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 19:22:24.239 +01:00 [INF] Hosting environment: Development
+2024-12-02 19:22:24.239 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-02 19:22:24.665 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-02 19:22:25.011 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 325.6293ms
+2024-12-02 19:22:25.493 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-02 19:22:25.595 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.3292ms
+2024-12-02 19:25:18.573 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-02 19:26:52.509 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-02 19:27:22.630 +01:00 [INF] Application is starting
+2024-12-02 19:27:22.707 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-02 19:27:22.773 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-02 19:27:22.785 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 19:27:22.791 +01:00 [INF] Hosting environment: Development
+2024-12-02 19:27:22.791 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-02 19:27:23.146 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-02 19:27:23.189 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 43.7738ms
+2024-12-02 19:27:23.795 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-02 19:27:23.842 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.6359ms
+2024-12-02 19:30:25.442 +01:00 [INF] Application is starting
+2024-12-02 19:30:25.503 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-02 19:30:25.569 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-02 19:30:25.570 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 19:30:25.570 +01:00 [INF] Hosting environment: Development
+2024-12-02 19:30:25.570 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-02 19:30:25.905 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-02 19:30:26.028 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 123.5388ms
+2024-12-02 19:30:26.505 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-02 19:30:26.548 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.9145ms
+2024-12-02 19:30:52.524 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-02 19:30:52.534 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-02 19:30:52.565 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:30:52.566 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 42.423ms
+2024-12-02 19:30:52.620 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-02 19:30:52.621 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:30:52.671 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:30:52.768 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:30:52.911 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPWR,EPGD
+2024-12-02 19:30:52.911 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPWR,EPGD
+2024-12-02 19:30:52.929 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPWR,EPGD
+2024-12-02 19:30:52.929 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPWR,EPGD
+2024-12-02 19:30:53.615 +01:00 [INF] Received HTTP response headers after 683.1657ms - 200
+2024-12-02 19:30:53.615 +01:00 [INF] Received HTTP response headers after 701.1452ms - 200
+2024-12-02 19:30:53.616 +01:00 [INF] End processing HTTP request after 706.1876ms - 200
+2024-12-02 19:30:53.616 +01:00 [INF] End processing HTTP request after 686.4798ms - 200
+2024-12-02 19:30:59.457 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPWR,EPGD
+2024-12-02 19:30:59.458 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPWR,EPGD
+2024-12-02 19:30:59.570 +01:00 [INF] Received HTTP response headers after 111.6102ms - 200
+2024-12-02 19:30:59.570 +01:00 [INF] End processing HTTP request after 113.1951ms - 200
+2024-12-02 19:31:18.570 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-02 19:31:18.581 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 25811.1622ms
+2024-12-02 19:31:18.582 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:31:18.589 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 25969.921ms
+2024-12-02 19:31:18.634 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/12 - null null
+2024-12-02 19:31:18.661 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:31:18.668 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:31:18.676 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:31:18.886 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:31:18.888 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 211.7016ms
+2024-12-02 19:31:18.889 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:31:18.889 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/12 - 200 null application/json; charset=utf-8 255.0188ms
+2024-12-02 19:36:29.969 +01:00 [INF] Application is starting
+2024-12-02 19:36:30.030 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-02 19:36:30.199 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-02 19:36:30.200 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 19:36:30.201 +01:00 [INF] Hosting environment: Development
+2024-12-02 19:36:30.201 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-02 19:36:30.496 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-02 19:36:30.623 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 127.0934ms
+2024-12-02 19:36:30.742 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-02 19:36:30.800 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.8194ms
+2024-12-02 19:38:13.013 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-02 19:38:13.026 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-02 19:38:13.053 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:38:13.054 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 41.5258ms
+2024-12-02 19:38:13.063 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-02 19:38:13.065 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:38:13.120 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:38:13.135 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:38:13.286 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPWA,EPKK
+2024-12-02 19:38:13.286 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPWA,EPKK
+2024-12-02 19:38:13.302 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPWA,EPKK
+2024-12-02 19:38:13.302 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPWA,EPKK
+2024-12-02 19:38:13.856 +01:00 [INF] Received HTTP response headers after 568.1602ms - 200
+2024-12-02 19:38:13.856 +01:00 [INF] Received HTTP response headers after 552.289ms - 200
+2024-12-02 19:38:13.857 +01:00 [INF] End processing HTTP request after 555.0209ms - 200
+2024-12-02 19:38:13.857 +01:00 [INF] End processing HTTP request after 572.6481ms - 200
+2024-12-02 19:38:13.912 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPWA,EPKK
+2024-12-02 19:38:13.912 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPWA,EPKK
+2024-12-02 19:38:14.029 +01:00 [INF] Received HTTP response headers after 116.9543ms - 200
+2024-12-02 19:38:14.029 +01:00 [INF] End processing HTTP request after 117.3624ms - 200
+2024-12-02 19:38:14.727 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-02 19:38:14.731 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 1595.0597ms
+2024-12-02 19:38:14.731 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-02 19:38:14.735 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 1671.6607ms
+2024-12-02 19:38:14.752 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/13 - null null
+2024-12-02 19:38:14.754 +01:00 [INF] CORS policy execution successful.
+2024-12-02 19:38:14.756 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:38:14.761 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-02 19:38:14.937 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanResponseDto'.
+2024-12-02 19:38:14.939 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 177.6084ms
+2024-12-02 19:38:14.939 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-02 19:38:14.939 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/13 - 200 null application/json; charset=utf-8 187.5047ms

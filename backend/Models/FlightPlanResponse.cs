@@ -53,6 +53,24 @@ namespace backend.Models
         // TAF dla lotniska przylotowego
         [Required(ErrorMessage = "Arrival TAF is required")]
         public string ArrivalTAF { get; set; } = string.Empty;
+
+        // Nazwa lotniska wylotowego
+        public string DepartureAirportName { get; set; } = string.Empty;
+
+        // Miasto lotniska wylotowego
+        public string DepartureCity { get; set; } = string.Empty;
+
+        // Kraj lotniska wylotowego
+        public string DepartureCountry { get; set; } = string.Empty;
+
+        // Nazwa lotniska przylotowego
+        public string ArrivalAirportName { get; set; } = string.Empty;
+
+        // Miasto lotniska przylotowego
+        public string ArrivalCity { get; set; } = string.Empty;
+
+        // Kraj lotniska przylotowego
+        public string ArrivalCountry { get; set; } = string.Empty;
     }
 
     public class FlightPlanResponseDto
@@ -67,5 +85,13 @@ namespace backend.Models
         public string ArrivalMETAR { get; set; } = string.Empty;
         public string ArrivalTAF { get; set; } = string.Empty;
         public int AircraftId { get; set; }
+
+        public string DepartureAirportName { get; set; } = string.Empty;
+        public string DepartureCity { get; set; } = string.Empty;
+        public string DepartureCountry { get; set; } = string.Empty;
+
+        public string ArrivalAirportName { get; set; } = string.Empty;
+        public string ArrivalCity { get; set; } = string.Empty;
+        public string ArrivalCountry { get; set; } = string.Empty;
     }
 }

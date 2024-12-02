@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
     });
 
     // Animacja dla głównego nagłówka
-    timeline.from(".main-card h1", {
+    timeline.from(".main-card h2", {
       duration: 0.6,  // Skrócony czas trwania
       opacity: 0,
       y: -20,
