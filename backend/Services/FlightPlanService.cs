@@ -7,12 +7,18 @@ namespace backend.Services
     public class FlightPlanService : IFlightPlanService
     {
         private readonly IAirportService _airportService;
+        private readonly IAIService _aiService;
         private readonly ApplicationDbContext _context;
         private readonly IWeatherService _weatherService;
 
-        public FlightPlanService(ApplicationDbContext context, IAirportService airportService, IWeatherService weatherService)
+        public FlightPlanService(
+            ApplicationDbContext context,
+            IAirportService airportService,
+            IAIService aiService,
+            IWeatherService weatherService)
         {
             _context = context;
+            _aiService = aiService;
             _airportService = airportService;
             _weatherService = weatherService;
         }

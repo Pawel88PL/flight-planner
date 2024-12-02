@@ -202,6 +202,7 @@ namespace backend
         private static void RegisterServices(IServiceCollection services)
         {
             services.AddScoped<IAirportService, AirportService>();
+            services.AddScoped<IAIService, AIService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IEmailBodyService, EmailBodyService>();
