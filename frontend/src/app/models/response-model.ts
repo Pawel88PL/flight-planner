@@ -16,4 +16,5 @@ export interface FlightPlanResponse {
     arrivalAirportName: string;
     arrivalCity: string;
     arrivalCountry: string;
+    aiJustification: string;
 }

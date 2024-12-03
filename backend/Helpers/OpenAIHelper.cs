@@ -62,13 +62,12 @@ namespace backend.Helpers
 
             try
             {
-                // Usuń niepotrzebne znaki formatowania
-                responseData = responseData.Replace("```json", "").Replace("```", "").Trim();
-
                 var result = JsonConvert.DeserializeObject<dynamic>(responseData)
                     ?? throw new Exception("Failed to deserialize OpenAI response");
 
-                return result.choices[0].message.content;
+                
+                var contentResult = result.choices[0].message.content.ToString();
+                return contentResult.Trim();
             }
             catch (Exception ex)
             {

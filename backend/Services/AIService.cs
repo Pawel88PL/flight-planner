@@ -35,26 +35,29 @@ namespace backend.Services
                     new AIMessages
                     {
                         role = "system",
-                        content = "Jesteś ekspertem w dziedzinie lotnictwa. Analizujesz dane pogodowe lotniska startu i docelowego. "
-                                + "Na podstawie tych danych trzeba podjąć decyzję czy lot VFR jest bezpieczny stosując się do przepisów VFR."
+                        content = "Jesteś ekspertem w dziedzinie lotnictwa i specjalizujesz się w analizie danych pogodowych. "
+                                + "Twoim zadaniem jest ocenić bezpieczeństwo lotu VFR (Visual Flight Rules) na podstawie danych METAR i TAF. "
+                                + "Przeanalizuj warunki pogodowe, takie jak widoczność, podstawa chmur, wiatr oraz inne kluczowe parametry. "
+                                + "Na podstawie podanych danych oceń, czy lot VFR może zostać wykonany w bezpieczny sposób, stosując się do przepisów VFR. "
+                                + "Podaj jednoznaczną decyzję (czy lot jest możliwy) oraz uzasadnij swoją decyzję. Odpowiedź ma być w języku polskim."
                     },
                     new AIMessages
                     {
                         role = "user",
-                        content = $"Departure METAR: {departureMetar} Arrival METAR: {arrivalMetar} Departure TAF: {departureTaf} Arrival TAF: {arrivalTaf}"
+                        content = $"Oto dane pogodowe do analizy:\n"
+                                + $"METAR lotniska wylotu: {departureMetar}\n"
+                                + $"METAR lotniska docelowego: {arrivalMetar}\n"
+                                + $"TAF lotniska wylotu: {departureTaf}\n"
+                                + $"TAF lotniska docelowego: {arrivalTaf}\n\n"
+                                + "Czy lot VFR jest możliwy? Proszę podać szczegółowe uzasadnienie w języku polskim."
                     }
                 }
             };
 
-
             var responseData = await _openAIHelper.SentRequestToOpenAI(justificationRequest);
 
-
-            var response = JsonConvert.DeserializeObject<string>(responseData)
-                ?? throw new JsonSerializationException("Invalid JSON response from AI");
-
-            Log.Information("Uzasadnienie wygenerowane przez AI: ", response);
-            return response;
+            Log.Information("Uzasadnienie wygenerowane przez AI (PL): {Response}", responseData);
+            return responseData;
         }
     }
 }

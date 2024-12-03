@@ -71,6 +71,9 @@ namespace backend.Models
 
         // Kraj lotniska przylotowego
         public string ArrivalCountry { get; set; } = string.Empty;
+
+        // Uzasadnienie AI dla lotu 
+        public string AIJustification { get; set; } = string.Empty;
     }
 
     public class FlightPlanResponseDto
@@ -93,5 +96,7 @@ namespace backend.Models
         public string ArrivalAirportName { get; set; } = string.Empty;
         public string ArrivalCity { get; set; } = string.Empty;
         public string ArrivalCountry { get; set; } = string.Empty;
+
+        public string AIJustification { get; set; } = string.Empty;
     }
 }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-
+import { MarkdownModule } from 'ngx-markdown';
 
 import { FlightPlanResponse } from '../../models/response-model';
 import { ActivatedRoute } from '@angular/router';
@@ -15,7 +15,8 @@ import { FlightPlanService } from '../../services/flight-plan.service';
   imports: [
     CommonModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MarkdownModule
   ],
   templateUrl: './response.component.html',
   styleUrl: './response.component.css'

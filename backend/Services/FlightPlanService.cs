@@ -23,7 +23,7 @@ namespace backend.Services
             _weatherService = weatherService;
         }
 
-        private async Task<int> AddFlightPlanToDataBaseAsync(FlightPlanRequest flightPlanRequest, List<AirportData> airportDatas, WeatherResponse weather)
+        private async Task<int> AddFlightPlanToDataBaseAsync(FlightPlanRequest flightPlanRequest, List<AirportData> airportDatas, WeatherResponse weather, string justification)
         {
             var newFlightPlan = new FlightPlanResponse
             {
@@ -42,7 +42,8 @@ namespace backend.Services
                 DepartureCountry = airportDatas[0].Country.Name,
                 ArrivalAirportName = airportDatas[1].Name,
                 ArrivalCity = airportDatas[1].City,
-                ArrivalCountry = airportDatas[1].Country.Name
+                ArrivalCountry = airportDatas[1].Country.Name,
+                AIJustification = justification
             };
 
             _context.FlightPlanResponses.Add(newFlightPlan);
@@ -74,8 +75,10 @@ namespace backend.Services
 
             var weatherData = await weatherTask;
             var airports = await airportsTask;
+
+            var justification = await _aiService.CreateJustification(weatherData);
             
-            return await AddFlightPlanToDataBaseAsync(request, airports, weatherData);
+            return await AddFlightPlanToDataBaseAsync(request, airports, weatherData, justification);
         }
 
         public async Task<FlightPlanResponseDto> GetFlightPlan(int id)
@@ -109,7 +112,8 @@ namespace backend.Services
                 DepartureCountry = response.DepartureCountry,
                 ArrivalAirportName = response.ArrivalAirportName,
                 ArrivalCity = response.ArrivalCity,
-                ArrivalCountry = response.ArrivalCountry
+                ArrivalCountry = response.ArrivalCountry,
+                AIJustification = response.AIJustification
             };
         }
     }

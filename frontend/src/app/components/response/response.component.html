@@ -22,28 +22,9 @@
             </div>
 
             <div *ngIf="!isLoading && flightPlan">
-                <div class="alert alert-success text-center">
-                    <h4 class="mt-2">Dane dotyczące planowanego lotu:</h4>
-                </div>
-                <div class="alert alert-light">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="text-center">
-                                <strong>Planowana data startu:</strong>
-                                {{ flightPlan.flightDay }} - {{ flightPlan.departureTime }}
-                            </p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="text-center">
-                                <strong>Zadeklarowana długość lotu:</strong>
-                                {{ flightPlan.flightDuration }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-lg-6">
-                        <mat-card class="airport-card">
+                        <mat-card class="airport-card my-2">
                             <mat-card-content>
                                 <h3 class="text-center">{{ flightPlan.departureAirportName }}</h3>
                                 <h5 class="text-center">{{ flightPlan.departureCity }} {{ flightPlan.departureCountry}},
@@ -60,7 +41,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <mat-card class="airport-card">
+                        <mat-card class="airport-card my-2">
                             <mat-card-content>
                                 <h3 class="text-center">{{ flightPlan.arrivalAirportName }}</h3>
                                 <h5 class="text-center">{{ flightPlan.arrivalCity }} {{ flightPlan.arrivalCountry}},
@@ -75,6 +56,30 @@
                         </mat-card>
                     </div>
                 </div>
+
+                <mat-card class="my-3">
+                    <mat-card-content>
+                        <markdown class="markdown" [data]="flightPlan.aiJustification"></markdown>
+                    </mat-card-content>
+                </mat-card>
+
+                <div class="alert alert-light">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-center">
+                                <strong>Planowana data startu:</strong>
+                                {{ flightPlan.flightDay }} - {{ flightPlan.departureTime }}
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-center">
+                                <strong>Zadeklarowana długość lotu:</strong>
+                                {{ flightPlan.flightDuration }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </mat-card-content>
     </mat-card>

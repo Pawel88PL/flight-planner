@@ -6,12 +6,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MarkdownModule } from 'ngx-markdown';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi(), withFetch()),
-    importProvidersFrom(ReactiveFormsModule), provideAnimationsAsync()
+    importProvidersFrom(ReactiveFormsModule), provideAnimationsAsync(),
+    importProvidersFrom(MarkdownModule.forRoot())
+
   ]
 };
