@@ -8,6 +8,10 @@ namespace backend.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
+        public DbSet<Aircraft> Aircrafts { get; set; } = default!;
+        public DbSet<AIResponse> AIResponses { get; set; } = default!;
+        public DbSet<ArrivalAirport> ArrivalAirports { get; set; } = default!;
+        public DbSet<DepartureAirport> DepartureAirports { get; set; } = default!;
         public DbSet<FlightPlanResponse> FlightPlanResponses { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder builder)
