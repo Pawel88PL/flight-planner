@@ -14,7 +14,7 @@ namespace backend.Services
             _context = context;
         }
 
-        public async Task<List<int>> AddAirportsToDatabase(List<AirportData> airports)
+        public async Task<List<int>> AddAirportsToDatabase(List<AirportData> airports, WeatherResponse weather)
         {
             var departureAirport = new DepartureAirport
             {
@@ -22,6 +22,8 @@ namespace backend.Services
                 Name = airports[0].Name,
                 City = airports[0].City,
                 Country = airports[0].Country.Name,
+                METAR = weather.DepartureMETAR,
+                TAF = weather.DepartureTAF
             };
 
             var arrivalAirport = new ArrivalAirport
@@ -30,6 +32,8 @@ namespace backend.Services
                 Name = airports[1].Name,
                 City = airports[1].City,
                 Country = airports[1].Country.Name,
+                METAR = weather.ArrivalMETAR,
+                TAF = weather.ArrivalTAF
             };
 
             _context.DepartureAirports.Add(departureAirport);
