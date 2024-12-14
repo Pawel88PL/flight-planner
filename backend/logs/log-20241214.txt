@@ -1149,3 +1149,4 @@ Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
 2024-12-14 15:53:13.139 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 28.2315ms
 2024-12-14 15:53:13.139 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
 2024-12-14 15:53:13.139 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/13 - 200 null application/json; charset=utf-8 29.7081ms
+2024-12-14 17:05:44.462 +01:00 [INF] Application is shutting down...

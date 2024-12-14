@@ -4,6 +4,6 @@ namespace backend.Interfaces
 {
     public interface IAIService
     {
-        Task<string> CreateJustification(WeatherResponse weatherResponse);
+        Task<AIResponseDto> GetAIResponseByFlightPlanId(int flightPlanId);
     }
 }

@@ -203,6 +203,7 @@ namespace backend
         {
             services.AddScoped<IAirportRepository, AirportRepository>();
             services.AddScoped<IAirportService, AirportService>();
+            services.AddScoped<IAIRepository, AIRepository>();
             services.AddScoped<IAIService, AIService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailService, EmailService>();
