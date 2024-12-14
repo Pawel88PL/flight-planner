@@ -7,12 +7,6 @@ namespace backend.Models
         public int Id { get; set; }
 
         [StringLength(4)]
-        public string DepartureICAO { get; set; } = string.Empty;
-
-        [StringLength(4)]
-        public string ArrivalICAO { get; set; } = string.Empty;
-
-        [StringLength(4)]
         public string DepartureTime { get; set; } = string.Empty;
 
         [StringLength(8)]
@@ -21,7 +15,8 @@ namespace backend.Models
         [StringLength(4)]
         public string FlightDuration { get; set; } = string.Empty;
 
-        [Range(1, int.MaxValue)]
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        
         public int AircraftId { get; set; }
 
         public int DepartureAirportId { get; set; }
@@ -30,7 +25,6 @@ namespace backend.Models
         public int ArrivalAirportId { get; set; }
         public ArrivalAirport ArrivalAirport { get; set; } = new ArrivalAirport();
 
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 
     public class FlightPlanDto

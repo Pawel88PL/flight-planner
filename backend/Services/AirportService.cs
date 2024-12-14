@@ -7,12 +7,10 @@ namespace backend.Services
 {
     public class AirportService : IAirportService
     {
-        private readonly ApplicationDbContext _context;
         private readonly IWeatherApiHelper _weatherApiHelper;
 
-        public AirportService(ApplicationDbContext context, IWeatherApiHelper weatherApiHelper)
+        public AirportService(IWeatherApiHelper weatherApiHelper)
         {
-            _context = context;
             _weatherApiHelper = weatherApiHelper;
         }
 
@@ -39,7 +37,7 @@ namespace backend.Services
             var departureAirport = airportsObject.Data.FirstOrDefault(airport => airport.ICAO == departureICAO);
             var arrivalAirport = airportsObject.Data.FirstOrDefault(airport => airport.ICAO == arrivalICAO);
 
-            return  new List<AirportData>
+            return new List<AirportData>
             {
                 new AirportData
                 {

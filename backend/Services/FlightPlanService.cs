@@ -10,17 +10,20 @@ namespace backend.Services
         private readonly IAirportService _airportService;
         private readonly IAirportRepository _airportRepository;
         private readonly IFlightPlanRepository _flightPlanRepository;
+        private readonly IWeatherRepository _weatherRepository;
         private readonly IWeatherService _weatherService;
 
         public FlightPlanService(
             IAirportService airportService,
             IAirportRepository airportRepository,
             IFlightPlanRepository flightPlanRepository,
+            IWeatherRepository weatherRepository,
             IWeatherService weatherService)
         {
             _airportService = airportService;
             _airportRepository = airportRepository;
             _flightPlanRepository = flightPlanRepository;
+            _weatherRepository = weatherRepository;
             _weatherService = weatherService;
         }
 
@@ -44,9 +47,10 @@ namespace backend.Services
                 throw new Exception("Failed to fetch data from external services.", ex);
             }
 
-            await _airportRepository.AddAirportsToDatabase(airportsTask.Result);
+            var airportsIds = await _airportRepository.AddAirportsToDatabase(airportsTask.Result);
+            var flightPlanId = await _flightPlanRepository.AddFlightPlanAsync(request, airportsIds);
 
-            var flightPlanId = await _flightPlanRepository.AddFlightPlanAsync(request);
+            await _weatherRepository.AddArrivalAndDepartureWeather(weatherTask.Result, airportsIds);
             
             return flightPlanId;
         }

@@ -2,6 +2,7 @@ using backend.Data;
 using backend.Interfaces;
 using backend.Models;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace backend.Services
 {
@@ -14,23 +15,31 @@ namespace backend.Services
             _context = context;
         }
 
-        public async Task<int> AddFlightPlanAsync(FlightPlanRequest flightPlanRequest)
+        public async Task<int> AddFlightPlanAsync(FlightPlanRequest flightPlanRequest, List<int> airports)
         {
-            var newFlightPlan = new FlightPlan
+            try
             {
-                DepartureICAO = flightPlanRequest.DepartureICAO,
-                ArrivalICAO = flightPlanRequest.ArrivalICAO,
-                DepartureTime = flightPlanRequest.DepartureTime,
-                FlightDay = flightPlanRequest.FlightDay,
-                FlightDuration = flightPlanRequest.FlightDuration,
-                AircraftId = flightPlanRequest.AircraftId,
-            };
+                var newFlightPlan = new FlightPlan
+                {
+                    DepartureAirportId = airports[0],
+                    ArrivalAirportId = airports[1],
+                    DepartureTime = flightPlanRequest.DepartureTime,
+                    FlightDay = flightPlanRequest.FlightDay,
+                    FlightDuration = flightPlanRequest.FlightDuration,
+                    AircraftId = flightPlanRequest.AircraftId,
+                };
 
-            _context.FlightPlans.Add(newFlightPlan);
+                _context.FlightPlans.Add(newFlightPlan);
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
-            return newFlightPlan.Id;
+                return newFlightPlan.Id;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Failed to add flight plan to database.");
+                throw new Exception("Failed to add flight plan to database.", ex);
+            }
         }
 
         public async Task<FlightPlan> GetFlightPlan(int id)
@@ -38,6 +47,7 @@ namespace backend.Services
             var flightPlan = await _context.FlightPlans
                 .Where(f => f.Id == id)
                 .Include(dep => dep.DepartureAirport)
+                .Include(arr => arr.ArrivalAirport)
                 .FirstOrDefaultAsync();
 
             if (flightPlan == null)

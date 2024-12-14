@@ -14,7 +14,7 @@ namespace backend.Services
             _context = context;
         }
 
-        public async Task AddAirportsToDatabase(List<AirportData> airports)
+        public async Task<List<int>> AddAirportsToDatabase(List<AirportData> airports)
         {
             var departureAirport = new DepartureAirport
             {
@@ -36,6 +36,8 @@ namespace backend.Services
             _context.ArrivalAirports.Add(arrivalAirport);
 
             await _context.SaveChangesAsync();
+
+            return new List<int> {departureAirport.Id, arrivalAirport.Id};
         }
 
         public async Task<ArrivalAirport?> GetArrivalAirportByICAO(string icao)
