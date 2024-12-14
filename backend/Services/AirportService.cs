@@ -1,3 +1,4 @@
+using backend.Data;
 using backend.Interfaces;
 using backend.Models;
 using Newtonsoft.Json;
@@ -6,14 +7,16 @@ namespace backend.Services
 {
     public class AirportService : IAirportService
     {
+        private readonly ApplicationDbContext _context;
         private readonly IWeatherApiHelper _weatherApiHelper;
 
-        public AirportService(IWeatherApiHelper weatherApiHelper)
+        public AirportService(ApplicationDbContext context, IWeatherApiHelper weatherApiHelper)
         {
+            _context = context;
             _weatherApiHelper = weatherApiHelper;
         }
 
-        public async Task<List<AirportData>> GetDepartureAndArrivalAirports(string departureICAO, string arrivalICAO)
+        public async Task GetDepartureAndArrivalAirports(string departureICAO, string arrivalICAO)
         {
             // Pobranie danych lotnisk z API
             var airportsData = await _weatherApiHelper.GetAsync<object>("station", departureICAO, arrivalICAO);
@@ -36,8 +39,7 @@ namespace backend.Services
             var departureAirport = airportsObject.Data.FirstOrDefault(airport => airport.ICAO == departureICAO);
             var arrivalAirport = airportsObject.Data.FirstOrDefault(airport => airport.ICAO == arrivalICAO);
 
-            // Zwrot wyniku
-            return new List<AirportData>
+            var airportList = new List<AirportData>
             {
                 new AirportData
                 {
@@ -56,6 +58,32 @@ namespace backend.Services
                     Name = arrivalAirport?.Name ?? $"Nie znaleziono danych dla lotniska {arrivalICAO}."
                 }
             };
+
+            await AddAirportsToDatabase(airportList);
+        }
+
+        private async Task AddAirportsToDatabase(List<AirportData> airports)
+        {
+            var departureAirport = new DepartureAirport
+            {
+                ICAO = airports[0].ICAO,
+                Name = airports[0].Name,
+                City = airports[0].City,
+                Country = airports[0].Country.Name,
+            };
+
+            var arrivalAirport = new ArrivalAirport
+            {
+                ICAO = airports[1].ICAO,
+                Name = airports[1].Name,
+                City = airports[1].City,
+                Country = airports[1].Country.Name,
+            };
+
+            _context.DepartureAirports.Add(departureAirport);
+            _context.ArrivalAirports.Add(arrivalAirport);
+
+            await _context.SaveChangesAsync();
         }
     }
 }

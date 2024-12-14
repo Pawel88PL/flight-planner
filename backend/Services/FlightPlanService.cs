@@ -1,6 +1,7 @@
 using backend.Data;
 using backend.Interfaces;
 using backend.Models;
+using Serilog;
 
 namespace backend.Services
 {
@@ -8,49 +9,19 @@ namespace backend.Services
     {
         private readonly IAirportService _airportService;
         private readonly IAIService _aiService;
-        private readonly ApplicationDbContext _context;
+        private readonly IFlightPlanRepository _flightPlanRepository;
         private readonly IWeatherService _weatherService;
 
         public FlightPlanService(
-            ApplicationDbContext context,
             IAirportService airportService,
             IAIService aiService,
+            IFlightPlanRepository flightPlanRepository,
             IWeatherService weatherService)
         {
-            _context = context;
             _aiService = aiService;
             _airportService = airportService;
+            _flightPlanRepository = flightPlanRepository;
             _weatherService = weatherService;
-        }
-
-        private async Task<int> AddFlightPlanToDataBaseAsync(FlightPlanRequest flightPlanRequest, List<AirportData> airportDatas, WeatherResponse weather, string justification)
-        {
-            var newFlightPlan = new FlightPlanResponse
-            {
-                DepartureICAO = flightPlanRequest.DepartureICAO,
-                ArrivalICAO = flightPlanRequest.ArrivalICAO,
-                DepartureTime = flightPlanRequest.DepartureTime,
-                FlightDay = flightPlanRequest.FlightDay,
-                FlightDuration = flightPlanRequest.FlightDuration,
-                AircraftId = flightPlanRequest.AircraftId,
-                DepartureMETAR = weather.DepartureMETAR,
-                ArrivalMETAR = weather.ArrivalMETAR,
-                DepartureTAF = weather.DepartureTAF,
-                ArrivalTAF = weather.ArrivalTAF,
-                DepartureAirportName = airportDatas[0].Name,
-                DepartureCity = airportDatas[0].City,
-                DepartureCountry = airportDatas[0].Country.Name,
-                ArrivalAirportName = airportDatas[1].Name,
-                ArrivalCity = airportDatas[1].City,
-                ArrivalCountry = airportDatas[1].Country.Name,
-                AIJustification = justification
-            };
-
-            _context.FlightPlanResponses.Add(newFlightPlan);
-
-            await _context.SaveChangesAsync();
-
-            return newFlightPlan.Id;
         }
 
         public async Task<int> CreateFlightPlan(FlightPlanRequest request)
@@ -60,60 +31,50 @@ namespace backend.Services
                 throw new Exception("Departure and Arrival ICAO codes are required.");
             }
 
+            var flightPlanTask = _flightPlanRepository.AddFlightPlanAsync(request);
             var weatherTask = _weatherService.GetWeatherDataForDepartureAndArrival(request.DepartureICAO, request.ArrivalICAO);
             var airportsTask = _airportService.GetDepartureAndArrivalAirports(request.DepartureICAO, request.ArrivalICAO);
 
             try
             {
-                await Task.WhenAll(weatherTask, airportsTask);
+                await Task.WhenAll(flightPlanTask,weatherTask, airportsTask);
             }
             catch (Exception ex)
             {
-                // Obsłuż wyjątki (np. logowanie lub ponowne próby)
+                Log.Error(ex, "Failed to fetch data from external services.");
                 throw new Exception("Failed to fetch data from external services.", ex);
             }
 
-            var weatherData = await weatherTask;
-            var airports = await airportsTask;
-
-            var justification = await _aiService.CreateJustification(weatherData);
+            var flightPlanId = await flightPlanTask;
             
-            return await AddFlightPlanToDataBaseAsync(request, airports, weatherData, justification);
+            return flightPlanId;
         }
 
-        public async Task<FlightPlanResponseDto> GetFlightPlan(int id)
+        public async Task<FlightPlanDto> GetFlightPlan(int id)
         {
-            var flightPlanResponse = await _context.FlightPlanResponses.FindAsync(id);
+            var flightPlan = await _flightPlanRepository.GetFlightPlan(id);
+            // var departureAirport = await _airportService.GetAirportByICAO(flightPlan.DepartureICAO);
+            // var arrivalAirport = await _airportService.GetAirportByICAO(flightPlan.ArrivalICAO);
+            // var departureWeather = await _weatherService.GetWeatherDataForICAO(flightPlan.DepartureICAO);
+            // var arrivalWeather = await _weatherService.GetWeatherDataForICAO(flightPlan.ArrivalICAO);
 
-            if (flightPlanResponse == null)
+            return new FlightPlanDto
             {
-                throw new Exception("Flight plan request not found.");
-            }
-
-            return MapFlightPlanResponseToDto(flightPlanResponse);
-        }
-
-        private static FlightPlanResponseDto MapFlightPlanResponseToDto(FlightPlanResponse response)
-        {
-            return new FlightPlanResponseDto
-            {
-                DepartureICAO = response.DepartureICAO,
-                ArrivalICAO = response.ArrivalICAO,
-                DepartureTime = response.DepartureTime,
-                FlightDay = response.FlightDay,
-                FlightDuration = response.FlightDuration,
-                DepartureMETAR = response.DepartureMETAR,
-                ArrivalMETAR = response.ArrivalMETAR,
-                DepartureTAF = response.DepartureTAF,
-                ArrivalTAF = response.ArrivalTAF,
-                AircraftId = response.AircraftId,
-                DepartureAirportName = response.DepartureAirportName,
-                DepartureCity = response.DepartureCity,
-                DepartureCountry = response.DepartureCountry,
-                ArrivalAirportName = response.ArrivalAirportName,
-                ArrivalCity = response.ArrivalCity,
-                ArrivalCountry = response.ArrivalCountry,
-                AIJustification = response.AIJustification
+                Id = flightPlan.Id,
+                DepartureICAO = flightPlan.DepartureICAO,
+                ArrivalICAO = flightPlan.ArrivalICAO,
+                DepartureTime = flightPlan.DepartureTime,
+                FlightDay = flightPlan.FlightDay,
+                FlightDuration = flightPlan.FlightDuration,
+                AircraftId = flightPlan.AircraftId,
+                CreatedAt = flightPlan.CreatedAt,
+                // DepartureAirportName = departureAirport.Name,
+                // DepartureCity = departureAirport.City,
+                // DepartureCountry = departureAirport.Country,
+                // DepartureMETAR = departureWeather.METAR,
+                // DepartureTAF = departureWeather.TAF,
+                // ArrivalMETAR = arrivalWeather.METAR,
+                // ArrivalTAF = arrivalWeather.TAF,
             };
         }
     }

@@ -206,6 +206,7 @@ namespace backend
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IEmailBodyService, EmailBodyService>();
+            services.AddScoped<IFlightPlanRepository, FlightPlanRepository>();
             services.AddScoped<IFlightPlanService, FlightPlanService>();
             services.AddScoped<IOpenAIHelper, OpenAIHelper>();
             services.AddScoped<IWeatherApiHelper, WeatherApiHelper>();
