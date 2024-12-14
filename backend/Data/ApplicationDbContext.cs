@@ -14,10 +14,26 @@ namespace backend.Data
         public DbSet<DepartureAirport> DepartureAirports { get; set; } = default!;
         public DbSet<FlightPlan> FlightPlans { get; set; } = default!;
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<FlightPlan>()
+                .HasOne(fp => fp.DepartureAirport)
+                .WithMany()
+                .HasForeignKey(fp => fp.DepartureAirportId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FlightPlan>()
+                .HasOne(fp => fp.ArrivalAirport)
+                .WithMany()
+                .HasForeignKey(fp => fp.ArrivalAirportId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FlightPlan>()
+                .HasOne(fp => fp.AIResponse)
+                .WithMany()
+                .HasForeignKey(fp => fp.AIResponseId);
         }
     }
 }

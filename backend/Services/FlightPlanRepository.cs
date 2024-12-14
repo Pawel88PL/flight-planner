@@ -46,8 +46,8 @@ namespace backend.Services
         {
             var flightPlan = await _context.FlightPlans
                 .Where(f => f.Id == id)
-                .Include(dep => dep.DepartureAirport)
-                .Include(arr => arr.ArrivalAirport)
+                .Include(f => f.DepartureAirport)
+                .Include(f => f.ArrivalAirport)
                 .FirstOrDefaultAsync();
 
             if (flightPlan == null)

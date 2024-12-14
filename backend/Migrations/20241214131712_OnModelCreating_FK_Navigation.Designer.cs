@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Data;
 
@@ -11,9 +12,11 @@ using backend.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241214131712_OnModelCreating_FK_Navigation")]
+    partial class OnModelCreating_FK_Navigation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -287,7 +290,7 @@ namespace backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AIResponseId")
+                    b.Property<int>("AIResponseId")
                         .HasColumnType("int");
 
                     b.Property<int>("AircraftId")
@@ -461,23 +464,25 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.FlightPlan", b =>
                 {
-                    b.HasOne("backend.Models.AIResponse", "AIResponse")
+                    b.HasOne("backend.Models.AIResponse", "AIJustification")
                         .WithMany()
-                        .HasForeignKey("AIResponseId");
+                        .HasForeignKey("AIResponseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("backend.Models.ArrivalAirport", "ArrivalAirport")
                         .WithMany()
                         .HasForeignKey("ArrivalAirportId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("backend.Models.DepartureAirport", "DepartureAirport")
                         .WithMany()
                         .HasForeignKey("DepartureAirportId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("AIResponse");
+                    b.Navigation("AIJustification");
 
                     b.Navigation("ArrivalAirport");
 
