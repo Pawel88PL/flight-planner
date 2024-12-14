@@ -61,7 +61,7 @@
 
 
                 <mat-card class="my-3">
-                    <mat-card-content> 
+                    <mat-card-content>
                         <div class="row">
                             <div class="col-md-6">
                                 <p class="text-center">
@@ -79,9 +79,21 @@
                     </mat-card-content>
                 </mat-card>
 
-                <mat-card class="my-3">
+                <mat-card *ngIf="isLoadingAI">
                     <mat-card-content>
-                        <markdown class="markdown" [data]="flightPlan.aiJustification.response"></markdown>
+                        <h5 class="text-center">
+                            <img src="./images/airplane.png" alt="icon" class="icon">
+                            Generowanie analizy AI...
+                        </h5>
+                        <div class="my-4">
+                            <mat-progress-bar mode="query"></mat-progress-bar>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card *ngIf="!isLoadingAI" class="my-3">
+                    <mat-card-content>
+                        <markdown class="markdown" [data]="aiResponse?.response"></markdown>
                     </mat-card-content>
                 </mat-card>
 

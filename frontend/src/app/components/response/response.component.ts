@@ -1,13 +1,16 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MarkdownModule } from 'ngx-markdown';
 
-import { FlightPlanResponse } from '../../models/response-model';
-import { ActivatedRoute } from '@angular/router';
+import { AiService } from '../../services/ai.service';
 import { FlightPlanService } from '../../services/flight-plan.service';
+
+import { AIResponseModel } from '../../models/ai-response-model';
+import { FlightPlanResponse } from '../../models/response-model';
 
 @Component({
   selector: 'app-response',
@@ -27,12 +30,19 @@ export class ResponseComponent implements OnInit {
   errorMessage: string | null = null;
   successMessage: string | null = null
 
+  aiResponseId: string | null = null;
+  aiResponse: AIResponseModel | null = null;
+
   flightPlanId: string | null = null;
   flightPlan: FlightPlanResponse | null = null;
 
   isLoading: boolean = true;
+  isLoadingAI: boolean = true;
 
-  constructor(private route: ActivatedRoute, private flightPlanService: FlightPlanService) { }
+  constructor(
+    private aiService: AiService,
+    private route: ActivatedRoute,
+    private flightPlanService: FlightPlanService) { }
 
   ngOnInit() {
     this.setFlightPlanId();
@@ -49,6 +59,7 @@ export class ResponseComponent implements OnInit {
       next: (response) => {
         this.flightPlan = response;
         this.isLoading = false;
+        this.getAIResponse();
       },
       error: (error) => {
         this.errorMessage = error.error.message;
@@ -56,9 +67,25 @@ export class ResponseComponent implements OnInit {
     });
   }
 
-  
-  
+  getAIResponse() {
+    if (!this.flightPlanId) {
+      console.error('Flight Plan ID is not set');
+      return
+    }
+    this.isLoadingAI = true;
+
+    this.aiService.getAIResponseByFlightPlanById(this.flightPlanId).subscribe({
+      next: (response) => {
+        this.aiResponse = response;
+        this.isLoadingAI = false;
+      },
+      error: (error) => {
+        this.errorMessage = error.error.message;
+      }
+    });
+  }
+
   setFlightPlanId() {
-    this.flightPlanId = this.route.snapshot.paramMap.get('id'); 
+    this.flightPlanId = this.route.snapshot.paramMap.get('id');
   }
 }

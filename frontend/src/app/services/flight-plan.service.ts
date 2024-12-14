@@ -9,6 +9,7 @@ import { FlightPlanResponse } from '../models/response-model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class FlightPlanService {
 
   private apiUrl = `${environment.apiUrl}/flight-plan`;

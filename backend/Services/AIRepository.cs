@@ -8,11 +8,9 @@ namespace backend.Services
     public class AIRepository : IAIRepository
     {
         private readonly ApplicationDbContext _context;
-        private readonly IConfiguration _configuration;
 
-        public AIRepository(ApplicationDbContext context, IConfiguration configuration)
+        public AIRepository(ApplicationDbContext context)
         {
-            _configuration = configuration;
             _context = context;
         }
 

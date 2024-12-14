@@ -16,7 +16,7 @@ namespace backend.Controllers
             _aiService = aiService;
         }
 
-        [HttpGet("get")]
+        [HttpGet("get/{flightPlanId}")]
         public async Task<IActionResult> GetAIResponseByFlightPlanId(int flightPlanId)
         {
             if (!ModelState.IsValid)

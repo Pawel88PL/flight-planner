@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Data;
 
@@ -11,9 +12,11 @@ using backend.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241214163740_AIResponse_FlightPlanIdNew")]
+    partial class AIResponse_FlightPlanIdNew
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -462,7 +465,7 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AIResponse", b =>
                 {
                     b.HasOne("backend.Models.FlightPlan", "FlightPlan")
-                        .WithMany("AIResponses")
+                        .WithMany()
                         .HasForeignKey("FlightPlanId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -487,11 +490,6 @@ namespace backend.Migrations
                     b.Navigation("ArrivalAirport");
 
                     b.Navigation("DepartureAirport");
-                });
-
-            modelBuilder.Entity("backend.Models.FlightPlan", b =>
-                {
-                    b.Navigation("AIResponses");
                 });
 #pragma warning restore 612, 618
         }

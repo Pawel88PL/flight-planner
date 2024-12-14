@@ -1150,3 +1150,570 @@ Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
 2024-12-14 15:53:13.139 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
 2024-12-14 15:53:13.139 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/13 - 200 null application/json; charset=utf-8 29.7081ms
 2024-12-14 17:05:44.462 +01:00 [INF] Application is shutting down...
+2024-12-14 17:18:10.164 +01:00 [FTL] Application startup failed: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAIService Lifetime: Scoped ImplementationType: backend.Services.AIService': Unable to resolve service for type 'backend.Services.AIRepository' while attempting to activate 'backend.Services.AIService'.),    at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAIService Lifetime: Scoped ImplementationType: backend.Services.AIService': Unable to resolve service for type 'backend.Services.AIRepository' while attempting to activate 'backend.Services.AIService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAIService Lifetime: Scoped ImplementationType: backend.Services.AIService': Unable to resolve service for type 'backend.Services.AIRepository' while attempting to activate 'backend.Services.AIService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'backend.Services.AIRepository' while attempting to activate 'backend.Services.AIService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:22:57.355 +01:00 [INF] Application is starting
+2024-12-14 17:22:57.416 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-14 17:22:57.482 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-14 17:22:57.483 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-14 17:22:57.483 +01:00 [INF] Hosting environment: Development
+2024-12-14 17:22:57.483 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-14 17:22:58.113 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-14 17:22:58.175 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 64.4457ms
+2024-12-14 17:22:58.811 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-14 17:22:58.855 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.4173ms
+2024-12-14 17:23:24.764 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-14 17:23:24.768 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-14 17:23:24.787 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:23:24.788 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 24.8227ms
+2024-12-14 17:23:24.846 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-14 17:23:24.874 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:23:24.909 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 17:23:24.920 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:23:31.870 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-14 17:23:31.872 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-14 17:23:31.899 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-14 17:23:31.899 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-14 17:23:31.903 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-14 17:23:31.904 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-14 17:23:32.527 +01:00 [INF] Received HTTP response headers after 625.8282ms - 200
+2024-12-14 17:23:32.527 +01:00 [INF] End processing HTTP request after 627.9228ms - 200
+2024-12-14 17:23:32.530 +01:00 [INF] Received HTTP response headers after 626.0962ms - 200
+2024-12-14 17:23:32.530 +01:00 [INF] Received HTTP response headers after 657.8821ms - 200
+2024-12-14 17:23:32.530 +01:00 [INF] End processing HTTP request after 626.9838ms - 200
+2024-12-14 17:23:32.530 +01:00 [INF] End processing HTTP request after 662.4402ms - 200
+2024-12-14 17:23:32.870 +01:00 [WRN] The foreign key property 'AIResponse.FlightPlanId1' was created in shadow state because a conflicting property with the simple name 'FlightPlanId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2024-12-14 17:23:33.644 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-14 17:23:33.650 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 8728.1451ms
+2024-12-14 17:23:33.650 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 17:23:33.655 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 8808.9262ms
+2024-12-14 17:23:33.688 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/14 - null null
+2024-12-14 17:23:33.728 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:23:33.743 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:23:33.751 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:23:33.949 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 17:23:33.955 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 204.0582ms
+2024-12-14 17:23:33.956 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:23:33.956 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/14 - 200 null application/json; charset=utf-8 268.462ms
+2024-12-14 17:23:33.962 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/14 - null null
+2024-12-14 17:23:33.963 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:23:33.964 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:23:33.967 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 17:24:06.063 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'backend.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FlightPlanId'.
+Invalid column name 'FlightPlanId'.
+Invalid column name 'FlightPlanId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ab3384b3-fa7e-48e7-91c5-adead68d62e8
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FlightPlanId'.
+Invalid column name 'FlightPlanId'.
+Invalid column name 'FlightPlanId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:ab3384b3-fa7e-48e7-91c5-adead68d62e8
+Error Number:207,State:1,Class:16
+2024-12-14 17:24:06.151 +01:00 [ERR] Wystąpił błąd podczas pobierania odpowiedzi z AI. Invalid column name 'FlightPlanId'.
+Invalid column name 'FlightPlanId'.
+Invalid column name 'FlightPlanId1'.
+2024-12-14 17:24:06.151 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-14 17:24:06.153 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 32186.5432ms
+2024-12-14 17:24:06.153 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:24:06.154 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/14 - 400 null application/json; charset=utf-8 32191.7205ms
+2024-12-14 17:31:08.786 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:31:18.335 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:37:39.602 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:37:47.332 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:40:19.434 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:40:28.972 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:40:39.252 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:48:10.037 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2024-12-14 17:48:29.148 +01:00 [INF] Application is starting
+2024-12-14 17:48:29.210 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-14 17:48:29.298 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-14 17:48:29.300 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-14 17:48:29.301 +01:00 [INF] Hosting environment: Development
+2024-12-14 17:48:29.301 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-14 17:48:29.860 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-14 17:48:29.904 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 45.4523ms
+2024-12-14 17:48:30.260 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-14 17:48:30.306 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.8554ms
+2024-12-14 17:49:01.277 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-14 17:49:01.282 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-14 17:49:01.351 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:49:01.358 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 81.4222ms
+2024-12-14 17:49:01.393 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-14 17:49:01.395 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:49:01.535 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 17:49:01.547 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:49:01.652 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-14 17:49:01.653 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPPO,EPWA
+2024-12-14 17:49:01.667 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-14 17:49:01.667 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPPO,EPWA
+2024-12-14 17:49:01.669 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-14 17:49:01.669 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPPO,EPWA
+2024-12-14 17:49:02.147 +01:00 [INF] Received HTTP response headers after 491.7562ms - 200
+2024-12-14 17:49:02.147 +01:00 [INF] End processing HTTP request after 495.9995ms - 200
+2024-12-14 17:49:02.151 +01:00 [INF] Received HTTP response headers after 483.591ms - 200
+2024-12-14 17:49:02.151 +01:00 [INF] End processing HTTP request after 483.9541ms - 200
+2024-12-14 17:49:02.165 +01:00 [INF] Received HTTP response headers after 495.5783ms - 200
+2024-12-14 17:49:02.165 +01:00 [INF] End processing HTTP request after 495.924ms - 200
+2024-12-14 17:49:03.052 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-14 17:49:03.063 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 1513.039ms
+2024-12-14 17:49:03.064 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 17:49:03.070 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 1676.2755ms
+2024-12-14 17:49:03.085 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-14 17:49:03.089 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:49:03.092 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:49:03.096 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:49:03.288 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 17:49:03.292 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 196.547ms
+2024-12-14 17:49:03.292 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:49:03.293 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 208.0992ms
+2024-12-14 17:49:03.298 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/15 - null null
+2024-12-14 17:49:03.299 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:49:03.301 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:49:03.305 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 17:50:06.585 +01:00 [INF] Dane lotu do analizy: {"Dzień lotu":"today","Czas trwania lotu":"0300","Godzina wylotu":"2000","Kod lotniska startu":"EPPO","Miasto lotniska startu":"Poznań","Kraj lotniska startu":"Poland","METAR lotniska startu":"EPPO 141630Z 26010KT 9999 OVC012 00/M02 Q1012","TAF lotniska startu":"TAF EPPO 141130Z 1412/1512 25012KT 9999 OVC013 PROB40 TEMPO 1413/1418 25015G25KT 4000 -SN BR BKN007 TEMPO 1418/1506 25017G27KT 1400 RASN BKN003 BECMG 1506/1509 BKN030 TEMPO 1509/1512 25017G27KT","Nazwa lotniska startu":"Poznań-Ławica Airport","Kod lotniska lądowania":"EPWA","Miasto lotniska lądowania":"Warsaw","Kraj lotniska lądowania":"Poland","METAR lotniska lądowania":"EPWA 141630Z 25012KT 9999 OVC015 01/M02 Q1011 TEMPO 4000 -FZDZ BR BKN010","TAF lotniska lądowania":"TAF AMD EPWA 141623Z 1416/1515 21008KT 8000 OVC015 BECMG 1416/1419 BKN010 PROB40 TEMPO 1416/1420 4000 -FZDZ BR BKN006 TEMPO 1420/1508 4000 -SN BR BKN006 PROB40 TEMPO 1422/1507 27015G28KT 2000 SN BKN003 TEMPO 1508/1515 28015G28KT BKN006","Nazwa lotniska lądowania":"Warsaw Chopin Airport"}
+2024-12-14 17:50:06.613 +01:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-14 17:50:06.615 +01:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-14 17:50:32.729 +01:00 [INF] Received HTTP response headers after 26114.6648ms - 200
+2024-12-14 17:50:32.731 +01:00 [INF] End processing HTTP request after 26119.2582ms - 200
+2024-12-14 17:50:32.736 +01:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-AePd9MBVZfPmWLD4SWpBIpcratnaS",
+  "object": "chat.completion",
+  "created": 1734195007,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Aby ocenić, czy lot VFR jest możliwy, musimy przeanalizować METAR i TAF dla obu lotnisk (startowego i docelowego) oraz uwzględnić kluczowe czynniki jak widzialność, podstawa chmur, warunki meteorologiczne oraz wiatr.\n\n**Analiza warunków na lotnisku startu (EPPO - Poznań-Ławica):**\n\n- **METAR EPPO 141630Z:** Wiatr z kierunku 260 stopni, prędkość 10 węzłów, widzialność ponad 10 km, zachmurzenie całkowite (OVC) na poziomie 1200 stóp, temperatura 0°C, ciśnienie Q1012.\n\n- **TAF EPPO:** Przewidywany wiatr z kierunku 250 stopni o prędkości 12 węzłów, utrzymanie dobrej widoczności (9999 m), całkowite zachmurzenie na wysokości 1300 stóp. Prognoza czasowa 40% prawdopodobieństwa: między 13:00 a 18:00 możliwe opady śniegu oraz słaba widoczność (4000 m) i niższe zachmurzenie (700 stóp). Między 18:00 a 06:00 możliwy deszcz ze śniegiem i snówka przy 1400 m widoczności i niskim zachmurzeniu (300 stóp).\n\n**Analiza warunków na lotnisku lądowania (EPWA - Warsaw Chopin):**\n\n- **METAR EPWA 141630Z:** Wiatr z kierunku 250 stopni o prędkości 12 węzłów, widzialność ponad 10 km, całkowite zachmurzenie na poziomie 1500 stóp, temperatura 1°C, tymczasowa pogorszenie widzialności do 4000 m z mżawką marznącą i mgłą oraz niższe zachmurzenie na 1000 stóp.\n\n- **TAF EPWA:** Wiatr z kierunku 210 stopni o 8 węzłów, widzialność 8000 m, całkowite zachmurzenie na wysokości 1500 stóp. Przejściowe okresy z widocznością 4000 m i mżawką marznącą oraz mgłą, zachmurzenie na poziomie 600 stóp. Między 22:00 a 07:00 możliwe opady śniegu, widoczność 2000 m i zachmurzenie 300 stóp.\n\n**Ocena pod kątem lotu VFR:**\n\n1. **Podstawa chmur:** VFR wymaga, aby podstawa chmur była nie mniejsza niż 1000 stóp nad terenem (AGL) dla przestrzeni powietrznej klasy G i E oraz nie mniej niż 1500 stóp nad terenem dla klasy C i D w strefach kontrolowanych. Zarówno na lotnisku w Poznaniu, jak i w Warszawie, prognozowane są okresy, w których chmury są na wysokości zaledwie 300-700 stóp, co jest nieodpowiednie dla lotu VFR.\n\n2. **Widoczność:** Wymagana minimalna widoczność dla lotu VFR to 5 km lub więcej. TAF dla obu lotnisk przewiduje okresy z widocznością zaledwie 1400-4000 m, co poniżej wymagań dla VFR.\n\n3. **Inne zjawiska pogodowe:** Występuje ryzyko opadów śniegu, deszczu ze śniegiem oraz mgły, które dodatkowo obniżają widoczność i stanowią zagrożenie dla lotu VFR.\n\nBiorąc pod uwagę powyższe analizy, lot VFR z Poznania do Warszawy o przewidzianej porze nie jest możliwy do wykonania w bezpieczny sposób, zgodnie z przepisami VFR, ze względu na niską podstawę chmur i słabą widoczność.",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 655,
+    "completion_tokens": 905,
+    "total_tokens": 1560,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_9faba9f038"
+}
+
+2024-12-14 17:50:32.790 +01:00 [INF] Uzasadnienie wygenerowane przez AI (PL): Aby ocenić, czy lot VFR jest możliwy, musimy przeanalizować METAR i TAF dla obu lotnisk (startowego i docelowego) oraz uwzględnić kluczowe czynniki jak widzialność, podstawa chmur, warunki meteorologiczne oraz wiatr.
+
+**Analiza warunków na lotnisku startu (EPPO - Poznań-Ławica):**
+
+- **METAR EPPO 141630Z:** Wiatr z kierunku 260 stopni, prędkość 10 węzłów, widzialność ponad 10 km, zachmurzenie całkowite (OVC) na poziomie 1200 stóp, temperatura 0°C, ciśnienie Q1012.
+
+- **TAF EPPO:** Przewidywany wiatr z kierunku 250 stopni o prędkości 12 węzłów, utrzymanie dobrej widoczności (9999 m), całkowite zachmurzenie na wysokości 1300 stóp. Prognoza czasowa 40% prawdopodobieństwa: między 13:00 a 18:00 możliwe opady śniegu oraz słaba widoczność (4000 m) i niższe zachmurzenie (700 stóp). Między 18:00 a 06:00 możliwy deszcz ze śniegiem i snówka przy 1400 m widoczności i niskim zachmurzeniu (300 stóp).
+
+**Analiza warunków na lotnisku lądowania (EPWA - Warsaw Chopin):**
+
+- **METAR EPWA 141630Z:** Wiatr z kierunku 250 stopni o prędkości 12 węzłów, widzialność ponad 10 km, całkowite zachmurzenie na poziomie 1500 stóp, temperatura 1°C, tymczasowa pogorszenie widzialności do 4000 m z mżawką marznącą i mgłą oraz niższe zachmurzenie na 1000 stóp.
+
+- **TAF EPWA:** Wiatr z kierunku 210 stopni o 8 węzłów, widzialność 8000 m, całkowite zachmurzenie na wysokości 1500 stóp. Przejściowe okresy z widocznością 4000 m i mżawką marznącą oraz mgłą, zachmurzenie na poziomie 600 stóp. Między 22:00 a 07:00 możliwe opady śniegu, widoczność 2000 m i zachmurzenie 300 stóp.
+
+**Ocena pod kątem lotu VFR:**
+
+1. **Podstawa chmur:** VFR wymaga, aby podstawa chmur była nie mniejsza niż 1000 stóp nad terenem (AGL) dla przestrzeni powietrznej klasy G i E oraz nie mniej niż 1500 stóp nad terenem dla klasy C i D w strefach kontrolowanych. Zarówno na lotnisku w Poznaniu, jak i w Warszawie, prognozowane są okresy, w których chmury są na wysokości zaledwie 300-700 stóp, co jest nieodpowiednie dla lotu VFR.
+
+2. **Widoczność:** Wymagana minimalna widoczność dla lotu VFR to 5 km lub więcej. TAF dla obu lotnisk przewiduje okresy z widocznością zaledwie 1400-4000 m, co poniżej wymagań dla VFR.
+
+3. **Inne zjawiska pogodowe:** Występuje ryzyko opadów śniegu, deszczu ze śniegiem oraz mgły, które dodatkowo obniżają widoczność i stanowią zagrożenie dla lotu VFR.
+
+Biorąc pod uwagę powyższe analizy, lot VFR z Poznania do Warszawy o przewidzianej porze nie jest możliwy do wykonania w bezpieczny sposób, zgodnie z przepisami VFR, ze względu na niską podstawę chmur i słabą widoczność.
+2024-12-14 17:51:44.357 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 17:51:44.363 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 161059.0796ms
+2024-12-14 17:51:44.365 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:51:44.367 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/15 - 200 null application/json; charset=utf-8 161069.1602ms
+2024-12-14 17:53:38.996 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-14 17:53:39.028 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:53:39.037 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:53:39.061 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:53:39.529 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 17:53:39.532 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 461.7908ms
+2024-12-14 17:53:39.533 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:53:39.533 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 538.5018ms
+2024-12-14 17:53:39.542 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/15 - null null
+2024-12-14 17:53:39.542 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:53:39.543 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:53:39.543 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 17:53:51.441 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 17:53:51.444 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 11900.7675ms
+2024-12-14 17:53:51.444 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:53:51.444 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/15 - 200 null application/json; charset=utf-8 11902.936ms
+2024-12-14 17:57:44.473 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - null null
+2024-12-14 17:57:44.624 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:57:44.630 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:57:44.634 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:57:44.769 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 17:57:44.776 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 140.6967ms
+2024-12-14 17:57:44.776 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:57:44.778 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/15 - 200 null application/json; charset=utf-8 306.9723ms
+2024-12-14 17:57:44.826 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/15 - null null
+2024-12-14 17:57:44.827 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:57:44.827 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:57:44.828 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 17:57:44.858 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 17:57:44.859 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 30.9577ms
+2024-12-14 17:57:44.859 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:57:44.859 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/15 - 200 null application/json; charset=utf-8 33.2173ms
+2024-12-14 17:59:33.336 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-14 17:59:33.339 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:59:33.343 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 7.3443ms
+2024-12-14 17:59:33.450 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-14 17:59:33.453 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:59:33.455 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 17:59:33.458 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:59:33.483 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPWR,EPPO
+2024-12-14 17:59:33.483 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPWR,EPPO
+2024-12-14 17:59:33.628 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPWR,EPPO
+2024-12-14 17:59:33.629 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPWR,EPPO
+2024-12-14 17:59:33.655 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPWR,EPPO
+2024-12-14 17:59:33.656 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPWR,EPPO
+2024-12-14 17:59:34.054 +01:00 [INF] Received HTTP response headers after 570.9327ms - 200
+2024-12-14 17:59:34.054 +01:00 [INF] End processing HTTP request after 571.4367ms - 200
+2024-12-14 17:59:34.068 +01:00 [INF] Received HTTP response headers after 439.4137ms - 200
+2024-12-14 17:59:34.068 +01:00 [INF] End processing HTTP request after 439.898ms - 200
+2024-12-14 17:59:34.132 +01:00 [INF] Received HTTP response headers after 476.2838ms - 200
+2024-12-14 17:59:34.132 +01:00 [INF] End processing HTTP request after 477.2142ms - 200
+2024-12-14 17:59:34.263 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-14 17:59:34.263 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 805.453ms
+2024-12-14 17:59:34.263 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 17:59:34.264 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 813.4005ms
+2024-12-14 17:59:34.286 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - null null
+2024-12-14 17:59:34.286 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:59:34.286 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:59:34.287 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 17:59:34.317 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 17:59:34.317 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 29.9334ms
+2024-12-14 17:59:34.317 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 17:59:34.317 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - 200 null application/json; charset=utf-8 31.4588ms
+2024-12-14 17:59:34.322 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - null null
+2024-12-14 17:59:34.322 +01:00 [INF] CORS policy execution successful.
+2024-12-14 17:59:34.322 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:59:34.323 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 17:59:34.365 +01:00 [INF] Dane lotu do analizy: {"Dzień lotu":"today","Czas trwania lotu":"0200","Godzina wylotu":"2100","Kod lotniska startu":"EPWR","Miasto lotniska startu":"Wrocław","Kraj lotniska startu":"Poland","METAR lotniska startu":"EPWR 141630Z 26008KT 220V290 9999 OVC021 01/M02 Q1015","TAF lotniska startu":"TAF EPWR 141430Z 1415/1515 28007KT 9999 OVC020 BECMG 1421/1424 OVC007 TEMPO 1421/1507 27018G28KT 2500 RASN BR BKN003 BECMG 1507/1510 BKN013 TEMPO 1507/1515 27018G28KT 3500 -RADZ BR BKN007","Nazwa lotniska startu":"Copernicus Wrocław Airport","Kod lotniska lądowania":"EPPO","Miasto lotniska lądowania":"Poznań","Kraj lotniska lądowania":"Poland","METAR lotniska lądowania":"EPPO 141630Z 26010KT 9999 OVC012 00/M02 Q1012","TAF lotniska lądowania":"TAF EPPO 141130Z 1412/1512 25012KT 9999 OVC013 PROB40 TEMPO 1413/1418 25015G25KT 4000 -SN BR BKN007 TEMPO 1418/1506 25017G27KT 1400 RASN BKN003 BECMG 1506/1509 BKN030 TEMPO 1509/1512 25017G27KT","Nazwa lotniska lądowania":"Poznań-Ławica Airport"}
+2024-12-14 17:59:34.366 +01:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-14 17:59:34.366 +01:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-14 17:59:48.275 +01:00 [INF] Received HTTP response headers after 13908.2985ms - 200
+2024-12-14 17:59:48.275 +01:00 [INF] End processing HTTP request after 13909.5652ms - 200
+2024-12-14 17:59:48.277 +01:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-AePmI5LmXkwBwEUunXcKGhiDoIhrZ",
+  "object": "chat.completion",
+  "created": 1734195574,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Aby ocenić, czy lot VFR (Visual Flight Rules) z Wrocławia (EPWR) do Poznania (EPPO) jest możliwy, musimy dokładnie przeanalizować warunki pogodowe na podstawie dostępnych danych METAR i TAF dla obu lotnisk.\n\n### Analiza METAR i TAF dla lotniska startu (EPWR):\n- **METAR EPWR 141630Z 26008KT 220V290 9999 OVC021 01/M02 Q1015**\n  - Wiatr: 260 stopni z prędkością 8 KT, zmienny pomiędzy 220 a 290 stopni\n  - Widoczność: 10 km lub więcej\n  - Zachmurzenie: całkowite (OVC) na poziomie 2100 stóp\n  - Temperatura: 1°C, Punkt rosy: -2°C\n- **TAF EPWR 141430Z 1415/1515 28007KT 9999 OVC020 BECMG 1421/1424 OVC007 TEMPO 1421/1507 27018G28KT 2500 RASN BR BKN003**\n  - Oczekiwane pogorszenie pogody od 21:00 UTC z chmurami na 700 stóp\n  - Tymczasowe pogorszenie od 21:00 UTC do 07:00 UTC 15:00 do 2500 m widoczności z deszczem ze śniegiem (RASN) i mgłą (BR), zachmurzenie na 300 stóp\n\n### Analiza METAR i TAF dla lotniska lądowania (EPPO):\n- **METAR EPPO 141630Z 26010KT 9999 OVC012 00/M02 Q1012**\n  - Wiatr: 260 stopni z prędkością 10 KT\n  - Widoczność: 10 km lub więcej\n  - Zachmurzenie: całkowite (OVC) na poziomie 1200 stóp\n  - Temperatura: 0°C, Punkt rosy: -2°C\n- **TAF EPPO 141130Z 1412/1512 25012KT 9999 OVC013 PROB40 TEMPO 1413/1418 25015G25KT 4000 -SN BR BKN007 TEMPO 1418/1506 25017G27KT 1400 RASN BKN003**\n  - Tymczasowe pogorszenie pogody od 18:00 UTC do 06:00 UTC 15:00 do widoczności 1400 m z deszczem ze śniegiem i zachmurzeniem na 300 stóp\n\n### Ocena możliwości lotu VFR:\n1. **Widoczność i Podstawa Chmur:**\n   - Wrocław: Po 21:00 UTC nastąpi znaczne pogorszenie warunków – widoczność do 2500 m, podstawa chmur obniży się do 700 stóp, a chwilowo nawet 300 stóp.\n   - Poznań: Od około 18:00 UTC warunki zaczynają się pogarszać z przewidywaną widocznością 1400 m i podstawą chmur 300 stóp.\n\n2. **Warunki VFR:**\n   - Zasady VFR wymagają minimum widoczności 5 km i podstawy chmur na 1500 stóp w przestrzeni klasy G (a wyższe minima w przestrzeniach kontrolowanych), co nie będzie spełnione w żadnym z tych przypadków.\n   - Prognozowane warunki zarówno na początku, jak i w trakcie planowanego lotu, nie spełniają zasad VFR ze względu na niską podstawę chmur oraz ograniczoną widoczność.\n\n### Podsumowanie:\nPlanując lot VFR z Wrocławia (EPWR) do Poznania (EPPO) na dzisiejszy wieczór, biorąc pod uwagę prognozowane warunki, należy stwierdzić, że lot VFR **nie jest możliwy** ze względu na niespełnienie niezbędnych wymagań dotyczących minimalnej widoczności i podstawy chmur. W takiej sytuacji należałoby rozważyć opcje alternatywne, takie jak lot zgodnie z IFR (Instrument Flight Rules) lub odroczenie lotu do poprawy warunków pogodowych.",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 627,
+    "completion_tokens": 972,
+    "total_tokens": 1599,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_9faba9f038"
+}
+
+2024-12-14 17:59:48.279 +01:00 [INF] Uzasadnienie wygenerowane przez AI (PL): Aby ocenić, czy lot VFR (Visual Flight Rules) z Wrocławia (EPWR) do Poznania (EPPO) jest możliwy, musimy dokładnie przeanalizować warunki pogodowe na podstawie dostępnych danych METAR i TAF dla obu lotnisk.
+
+### Analiza METAR i TAF dla lotniska startu (EPWR):
+- **METAR EPWR 141630Z 26008KT 220V290 9999 OVC021 01/M02 Q1015**
+  - Wiatr: 260 stopni z prędkością 8 KT, zmienny pomiędzy 220 a 290 stopni
+  - Widoczność: 10 km lub więcej
+  - Zachmurzenie: całkowite (OVC) na poziomie 2100 stóp
+  - Temperatura: 1°C, Punkt rosy: -2°C
+- **TAF EPWR 141430Z 1415/1515 28007KT 9999 OVC020 BECMG 1421/1424 OVC007 TEMPO 1421/1507 27018G28KT 2500 RASN BR BKN003**
+  - Oczekiwane pogorszenie pogody od 21:00 UTC z chmurami na 700 stóp
+  - Tymczasowe pogorszenie od 21:00 UTC do 07:00 UTC 15:00 do 2500 m widoczności z deszczem ze śniegiem (RASN) i mgłą (BR), zachmurzenie na 300 stóp
+
+### Analiza METAR i TAF dla lotniska lądowania (EPPO):
+- **METAR EPPO 141630Z 26010KT 9999 OVC012 00/M02 Q1012**
+  - Wiatr: 260 stopni z prędkością 10 KT
+  - Widoczność: 10 km lub więcej
+  - Zachmurzenie: całkowite (OVC) na poziomie 1200 stóp
+  - Temperatura: 0°C, Punkt rosy: -2°C
+- **TAF EPPO 141130Z 1412/1512 25012KT 9999 OVC013 PROB40 TEMPO 1413/1418 25015G25KT 4000 -SN BR BKN007 TEMPO 1418/1506 25017G27KT 1400 RASN BKN003**
+  - Tymczasowe pogorszenie pogody od 18:00 UTC do 06:00 UTC 15:00 do widoczności 1400 m z deszczem ze śniegiem i zachmurzeniem na 300 stóp
+
+### Ocena możliwości lotu VFR:
+1. **Widoczność i Podstawa Chmur:**
+   - Wrocław: Po 21:00 UTC nastąpi znaczne pogorszenie warunków – widoczność do 2500 m, podstawa chmur obniży się do 700 stóp, a chwilowo nawet 300 stóp.
+   - Poznań: Od około 18:00 UTC warunki zaczynają się pogarszać z przewidywaną widocznością 1400 m i podstawą chmur 300 stóp.
+
+2. **Warunki VFR:**
+   - Zasady VFR wymagają minimum widoczności 5 km i podstawy chmur na 1500 stóp w przestrzeni klasy G (a wyższe minima w przestrzeniach kontrolowanych), co nie będzie spełnione w żadnym z tych przypadków.
+   - Prognozowane warunki zarówno na początku, jak i w trakcie planowanego lotu, nie spełniają zasad VFR ze względu na niską podstawę chmur oraz ograniczoną widoczność.
+
+### Podsumowanie:
+Planując lot VFR z Wrocławia (EPWR) do Poznania (EPPO) na dzisiejszy wieczór, biorąc pod uwagę prognozowane warunki, należy stwierdzić, że lot VFR **nie jest możliwy** ze względu na niespełnienie niezbędnych wymagań dotyczących minimalnej widoczności i podstawy chmur. W takiej sytuacji należałoby rozważyć opcje alternatywne, takie jak lot zgodnie z IFR (Instrument Flight Rules) lub odroczenie lotu do poprawy warunków pogodowych.
+2024-12-14 17:59:48.332 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 17:59:48.335 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 14012.2047ms
+2024-12-14 17:59:48.336 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 17:59:48.341 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - 200 null application/json; charset=utf-8 14017.5881ms
+2024-12-14 18:00:38.195 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - null null
+2024-12-14 18:00:38.205 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:00:38.221 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:00:38.233 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:00:38.335 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 18:00:38.336 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 102.888ms
+2024-12-14 18:00:38.336 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:00:38.336 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - 200 null application/json; charset=utf-8 163.2439ms
+2024-12-14 18:00:38.346 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - null null
+2024-12-14 18:00:38.346 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:00:38.346 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:00:38.346 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 18:01:06.549 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - null null
+2024-12-14 18:01:06.552 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:01:06.576 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:01:06.650 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:01:06.752 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 18:01:06.976 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 18:01:06.979 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 278.2605ms
+2024-12-14 18:01:06.984 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:01:06.985 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - 200 null application/json; charset=utf-8 435.7439ms
+2024-12-14 18:01:06.996 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 28649.8782ms
+2024-12-14 18:01:06.996 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:01:06.996 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - 499 null application/json; charset=utf-8 28650.9148ms
+2024-12-14 18:01:07.001 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - null null
+2024-12-14 18:01:07.001 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:01:07.001 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:01:07.002 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 18:01:12.161 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 18:01:12.162 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 5160.1317ms
+2024-12-14 18:01:12.162 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:01:12.163 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - 200 null application/json; charset=utf-8 5161.7491ms
+2024-12-14 18:01:14.704 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - null null
+2024-12-14 18:01:14.708 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:01:14.710 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:01:14.711 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:01:14.754 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 18:01:14.755 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 44.1159ms
+2024-12-14 18:01:14.755 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:01:14.756 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - 200 null application/json; charset=utf-8 52.2851ms
+2024-12-14 18:01:14.765 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - null null
+2024-12-14 18:01:14.765 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:01:14.765 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:01:14.765 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 18:01:17.765 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 18:01:17.766 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 3000.8065ms
+2024-12-14 18:01:17.767 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:01:17.767 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - 200 null application/json; charset=utf-8 3002.0801ms
+2024-12-14 18:01:52.176 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - null null
+2024-12-14 18:01:52.178 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:01:52.180 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:01:52.182 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:01:52.207 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 18:01:52.208 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 26.7409ms
+2024-12-14 18:01:52.209 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:01:52.209 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - 200 null application/json; charset=utf-8 33.1013ms
+2024-12-14 18:01:52.216 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - null null
+2024-12-14 18:01:52.217 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:01:52.217 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:01:52.217 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 18:02:00.375 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 18:02:00.378 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 8160.4711ms
+2024-12-14 18:02:00.378 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:02:00.380 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - 200 null application/json; charset=utf-8 8162.3658ms
+2024-12-14 18:09:23.682 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - null null
+2024-12-14 18:09:23.688 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:09:23.692 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:09:23.696 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:09:24.103 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 18:09:24.104 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 387.5094ms
+2024-12-14 18:09:24.104 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:09:24.104 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/16 - 200 null application/json; charset=utf-8 423.0992ms
+2024-12-14 18:09:24.113 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - null null
+2024-12-14 18:09:24.113 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:09:24.113 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:09:24.114 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 18:09:24.140 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 18:09:24.142 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 28.1375ms
+2024-12-14 18:09:24.142 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:09:24.142 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - 200 null application/json; charset=utf-8 29.4527ms

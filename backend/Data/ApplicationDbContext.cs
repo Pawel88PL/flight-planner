@@ -30,10 +30,11 @@ namespace backend.Data
                 .HasForeignKey(fp => fp.ArrivalAirportId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<FlightPlan>()
-                .HasOne(fp => fp.AIResponse)
-                .WithMany()
-                .HasForeignKey(fp => fp.AIResponseId);
+            modelBuilder.Entity<AIResponse>()
+                .HasOne(ai => ai.FlightPlan)
+                .WithMany(fp => fp.AIResponses)
+                .HasForeignKey(ai => ai.FlightPlanId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

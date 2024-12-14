@@ -10,13 +10,13 @@ namespace backend.Services
 {
     public class AIService : IAIService
     {
-        private readonly AIRepository _aiRepository;
+        private readonly IAIRepository _aiRepository;
         private readonly IConfiguration _configuration;
         private readonly IFlightPlanService _flightPlanService;
         private readonly IOpenAIHelper _openAIHelper;
 
         public AIService(
-            AIRepository aiRepository,
+            IAIRepository aiRepository,
             IConfiguration configuration,
             IFlightPlanService flightPlanService,
             IOpenAIHelper openAIHelper)

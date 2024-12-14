@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using backend.Data;
 
@@ -11,9 +12,11 @@ using backend.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241214163109_AIResponse_FlightPlanId")]
+    partial class AIResponse_FlightPlanId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -166,12 +169,15 @@ namespace backend.Migrations
                     b.Property<int>("FlightPlanId")
                         .HasColumnType("int");
 
+                    b.Property<int>("FlightPlanId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("Response")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FlightPlanId");
+                    b.HasIndex("FlightPlanId1");
 
                     b.ToTable("AIResponses");
                 });
@@ -292,6 +298,9 @@ namespace backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("AIResponseId")
+                        .HasColumnType("int");
+
                     b.Property<int>("AircraftId")
                         .HasColumnType("int");
 
@@ -320,6 +329,8 @@ namespace backend.Migrations
                         .HasColumnType("nvarchar(4)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AIResponseId");
 
                     b.HasIndex("ArrivalAirportId");
 
@@ -462,8 +473,8 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Models.AIResponse", b =>
                 {
                     b.HasOne("backend.Models.FlightPlan", "FlightPlan")
-                        .WithMany("AIResponses")
-                        .HasForeignKey("FlightPlanId")
+                        .WithMany()
+                        .HasForeignKey("FlightPlanId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -472,6 +483,10 @@ namespace backend.Migrations
 
             modelBuilder.Entity("backend.Models.FlightPlan", b =>
                 {
+                    b.HasOne("backend.Models.AIResponse", "AIResponse")
+                        .WithMany()
+                        .HasForeignKey("AIResponseId");
+
                     b.HasOne("backend.Models.ArrivalAirport", "ArrivalAirport")
                         .WithMany()
                         .HasForeignKey("ArrivalAirportId")
@@ -484,14 +499,11 @@ namespace backend.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.Navigation("AIResponse");
+
                     b.Navigation("ArrivalAirport");
 
                     b.Navigation("DepartureAirport");
-                });
-
-            modelBuilder.Entity("backend.Models.FlightPlan", b =>
-                {
-                    b.Navigation("AIResponses");
                 });
 #pragma warning restore 612, 618
         }

@@ -25,8 +25,7 @@ namespace backend.Models
         public int ArrivalAirportId { get; set; }
         public ArrivalAirport ArrivalAirport { get; set; } = default!;
 
-        public int? AIResponseId { get; set; }
-        public AIResponse? AIResponse { get; set; } = default!;
+        public List<AIResponse> AIResponses { get; set; } = new List<AIResponse>();
     }
 
     public class FlightPlanDto
@@ -39,6 +38,5 @@ namespace backend.Models
         public DateTime CreatedAt { get; set; }
         public DepartureAirport DepartureAirport { get; set; } = new DepartureAirport();
         public ArrivalAirport ArrivalAirport { get; set; } = new ArrivalAirport();
-        public AIResponse AIJustification { get; set; } = new AIResponse();
     }
 }

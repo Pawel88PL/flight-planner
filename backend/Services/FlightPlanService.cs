@@ -74,7 +74,6 @@ namespace backend.Services
                 AircraftId = flightPlan.AircraftId,
                 DepartureAirport = flightPlan.DepartureAirport,
                 ArrivalAirport = flightPlan.ArrivalAirport,
-                AIJustification = flightPlan.AIResponse ?? new AIResponse(),
             };
 
             return flightPlanDto;
