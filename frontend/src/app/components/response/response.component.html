@@ -26,14 +26,15 @@
                     <div class="col-lg-6">
                         <mat-card class="airport-card my-2">
                             <mat-card-content>
-                                <h3 class="text-center">{{ flightPlan.departureAirportName }}</h3>
-                                <h5 class="text-center">{{ flightPlan.departureCity }} {{ flightPlan.departureCountry}},
-                                    Kod ICAO: {{ flightPlan.departureICAO }}
+                                <h3 class="text-center">{{ flightPlan.departureAirport.name }}</h3>
+                                <h5 class="text-center">{{ flightPlan.departureAirport.city }} {{
+                                    flightPlan.departureAirport.country }},
+                                    Kod ICAO: {{ flightPlan.departureAirport.icao }}
                                 </h5>
 
                                 <div class="alert alert-info">
-                                    <p><strong>METAR:</strong> {{ flightPlan.departureMETAR }}</p>
-                                    <p><strong>TAF:</strong> {{ flightPlan.departureTAF }}</p>
+                                    <p><strong>METAR:</strong> {{ flightPlan.departureAirport.metar }}</p>
+                                    <p><strong>TAF:</strong> {{ flightPlan.departureAirport.taf }}</p>
 
                                 </div>
                             </mat-card-content>
@@ -43,42 +44,46 @@
                     <div class="col-lg-6">
                         <mat-card class="airport-card my-2">
                             <mat-card-content>
-                                <h3 class="text-center">{{ flightPlan.arrivalAirportName }}</h3>
-                                <h5 class="text-center">{{ flightPlan.arrivalCity }} {{ flightPlan.arrivalCountry}},
-                                    Kod ICAO: {{ flightPlan.arrivalICAO }}
+                                <h3 class="text-center">{{ flightPlan.arrivalAirport.name }}</h3>
+                                <h5 class="text-center">{{ flightPlan.arrivalAirport.city }} {{
+                                    flightPlan.arrivalAirport.country }},
+                                    Kod ICAO: {{ flightPlan.arrivalAirport.icao }}
                                 </h5>
 
                                 <div class="alert alert-info">
-                                    <p><strong>METAR:</strong> {{ flightPlan.arrivalMETAR }}</p>
-                                    <p><strong>TAF:</strong> {{ flightPlan.arrivalTAF }}</p>
+                                    <p><strong>METAR:</strong> {{ flightPlan.arrivalAirport.metar }}</p>
+                                    <p><strong>TAF:</strong> {{ flightPlan.arrivalAirport.taf }}</p>
                                 </div>
                             </mat-card-content>
                         </mat-card>
                     </div>
                 </div>
 
+
                 <mat-card class="my-3">
-                    <mat-card-content>
-                        <markdown class="markdown" [data]="flightPlan.aiJustification"></markdown>
+                    <mat-card-content> 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="text-center">
+                                    <strong>Planowana data startu:</strong>
+                                    {{ flightPlan.flightDay }} - {{ flightPlan.departureTime }}
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-center">
+                                    <strong>Zadeklarowana długość lotu:</strong>
+                                    {{ flightPlan.flightDuration }}
+                                </p>
+                            </div>
+                        </div>
                     </mat-card-content>
                 </mat-card>
 
-                <div class="alert alert-light">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="text-center">
-                                <strong>Planowana data startu:</strong>
-                                {{ flightPlan.flightDay }} - {{ flightPlan.departureTime }}
-                            </p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="text-center">
-                                <strong>Zadeklarowana długość lotu:</strong>
-                                {{ flightPlan.flightDuration }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <mat-card class="my-3">
+                    <mat-card-content>
+                        <markdown class="markdown" [data]="flightPlan.aiJustification.response"></markdown>
+                    </mat-card-content>
+                </mat-card>
 
             </div>
         </mat-card-content>

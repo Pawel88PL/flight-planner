@@ -1,20 +1,14 @@
+import { AIResponseModel } from "./ai-response-model";
+import { AirportModel } from "./airport-model";
+
 export interface FlightPlanResponse {
-    responseId: number;
-    departureICAO: string;
-    arrivalICAO: string;
-    departureTime: string;
+    id: number;
     flightDay: string;
     flightDuration: string;
+    departureTime: string;
     aircraftId: number;
-    departureMETAR: string;
-    arrivalMETAR: string;
-    departureTAF: string;
-    arrivalTAF: string;
-    departureAirportName: string;
-    departureCity: string;
-    departureCountry: string;
-    arrivalAirportName: string;
-    arrivalCity: string;
-    arrivalCountry: string;
-    aiJustification: string;
+    createdAt: string;
+    departureAirport: AirportModel;
+    arrivalAirport: AirportModel;
+    aiJustification: AIResponseModel;
 }
