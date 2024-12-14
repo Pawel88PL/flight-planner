@@ -4,6 +4,6 @@ namespace backend.Interfaces
 {
     public interface IAirportService
     {
-        Task GetDepartureAndArrivalAirports(string departureICAO, string arrivalICAO);
+        Task<List<AirportData>> GetDepartureAndArrivalAirports(string departureICAO, string arrivalICAO);
     }
 }

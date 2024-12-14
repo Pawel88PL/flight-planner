@@ -201,6 +201,7 @@ namespace backend
         // Dodanie serwisów
         private static void RegisterServices(IServiceCollection services)
         {
+            services.AddScoped<IAirportRepository, AirportRepository>();
             services.AddScoped<IAirportService, AirportService>();
             services.AddScoped<IAIService, AIService>();
             services.AddScoped<IAuthService, AuthService>();
