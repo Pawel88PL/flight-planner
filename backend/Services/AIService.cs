@@ -38,28 +38,50 @@ namespace backend.Services
         {
             var flightPlan = JsonConvert.SerializeObject(flightPlanData);
 
-            Log.Information("Dane lotu do analizy: {FlightPlan}", flightPlan);
+            var systemContent =
+            @"Jesteś doświadczonym doradcą lotniczym i ekspertem w analizie warunków pogodowych dla lotów VFR (Visual Flight Rules). Twoim zadaniem jest ocena możliwości wykonania planowanego lotu w oparciu o:
+
+            1. Aktualne i prognozowane warunki meteorologiczne (METAR/TAF) dla lotnisk startu, docelowego i, w miarę możliwości, lotnisk alternatywnych.
+            2. Minimalne wymogi VFR w zakresie widoczności, podstawy chmur oraz warunków atmosferycznych.
+            3. Ograniczenia statku powietrznego, w tym maksymalną dopuszczalną boczną składową wiatru (crosswind component) określoną przez producenta lub procedury operatora.
+            4. Planowane parametry lotu (czas, data, trasa).
+
+            Wynik swojej analizy przedstaw w języku polskim w następującej formie:
+            - Najpierw podaj jednoznaczną decyzję, czy lot VFR jest możliwy, uwzględniając wszystkie podane dane.
+            - Następnie uzasadnij tę decyzję, odnosząc się do konkretnych parametrów pogodowych (widzialność, chmury, wiatr), obowiązujących przepisów VFR oraz ograniczeń samolotu, w tym dopuszczalnego crosswind component.
+            - Na koniec wymień potencjalne zagrożenia i zalecenia dla pilota.
+
+            Twoja odpowiedź powinna być merytoryczna, spójna i uwzględniać kluczowe aspekty bezpieczeństwa.
+            
+            Wyróżnij ją od reszty tekstu, np. poprzez zastosowanie dobrze widocznego nagłówka lub formatowania.";
+
+            Log.Information("Zapytanie do AI (PL): {Request}", systemContent);
+
+            var userContent =
+            @$"Oto dane planowanego lotu do analizy, łącznie z danymi wybranego samolotu (format JSON):
+            {flightPlan}
+
+            Czy lot VFR jest możliwy? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.";
+
+            Log.Information("Zapytanie do AI (PL): {Request}", userContent);
 
             var justificationRequest = new AIRequest
             {
                 model = _configuration["OpenAI:Model"],
+                temperature = 0.3m,
+                max_tokens = 3000,
                 messages = new List<AIMessages>
                 {
                     new AIMessages
                     {
                         role = "system",
-                        content = "Jesteś ekspertem w dziedzinie lotnictwa i specjalizujesz się w analizie danych pogodowych. "
-                                + "Twoim zadaniem jest ocenić bezpieczeństwo lotu VFR (Visual Flight Rules) na podstawie daty i godziny lotu, danych METAR i TAF. "
-                                + "Przeanalizuj warunki pogodowe, takie jak widoczność, podstawa chmur, wiatr oraz inne kluczowe parametry. "
-                                + "Na podstawie podanych danych oceń, czy lot VFR może zostać wykonany w bezpieczny sposób, stosując się do przepisów VFR. "
-                                + "Podaj jednoznaczną decyzję (czy lot jest możliwy) oraz uzasadnij swoją decyzję. Odpowiedź ma być w języku polskim."
+                        content = systemContent
+
                     },
                     new AIMessages
                     {
                         role = "user",
-                        content = $"Oto dane planowanego lotu do analizy:\n"
-                                + $"{flightPlan}"
-                                + "Czy lot VFR jest możliwy? Proszę podać szczegółowe uzasadnienie w języku polskim."
+                        content = userContent
                     }
                 }
             };
@@ -98,6 +120,21 @@ namespace backend.Services
         private async Task<Dictionary<string, object>> PrepareAIRequest(int flightPlanId)
         {
             var flightPlan = await _flightPlanService.GetFlightPlan(flightPlanId);
+            var aircraftModel = "Technam P2008";
+
+            var aircraftData = new Dictionary<string, object>
+            {
+                { "Model samolotu", aircraftModel },
+                { "Maksymalny boczny komponent wiatru w knots", 15 },
+                { "Minimalna prędkość przeciągnięcia w konts", 39 },
+                { "Prędkość wznoszenia w ft/min", 900 },
+                { "Maksymalna masa startowa w kg", 600 },
+                { "Zasięg w NM", 730 },
+                { "Prędkość przelotowa w knots", 115 },
+                { "Zużycie paliwa w litrach na godzinę", 17 },
+                { "Minimalna widoczność VFR w km", 5 },
+                { "Minimalna podstawa chmur VFR w ft AGL", 1500 }
+            };
 
             return new Dictionary<string, object>
             {
@@ -117,7 +154,9 @@ namespace backend.Services
                 { "Kraj lotniska lądowania", GetValueOrDefault(flightPlan.ArrivalAirport.Country) },
                 { "METAR lotniska lądowania", GetValueOrDefault(flightPlan.ArrivalAirport.METAR) },
                 { "TAF lotniska lądowania", GetValueOrDefault(flightPlan.ArrivalAirport.TAF) },
-                { "Nazwa lotniska lądowania", GetValueOrDefault(flightPlan.ArrivalAirport.Name) }
+                { "Nazwa lotniska lądowania", GetValueOrDefault(flightPlan.ArrivalAirport.Name) },
+
+                { "Dane samolotu", aircraftData }
             };
         }
 

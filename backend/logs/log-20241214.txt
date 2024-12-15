@@ -1717,3 +1717,166 @@ Planując lot VFR z Wrocławia (EPWR) do Poznania (EPPO) na dzisiejszy wieczór,
 2024-12-14 18:09:24.142 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 28.1375ms
 2024-12-14 18:09:24.142 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
 2024-12-14 18:09:24.142 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/16 - 200 null application/json; charset=utf-8 29.4527ms
+2024-12-14 18:10:32.958 +01:00 [INF] Application is starting
+2024-12-14 18:10:32.995 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-14 18:10:33.043 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-14 18:10:33.044 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-14 18:10:33.044 +01:00 [INF] Hosting environment: Development
+2024-12-14 18:10:33.044 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-14 18:11:09.475 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-14 18:11:09.503 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-14 18:11:09.525 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:11:09.530 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 57.0296ms
+2024-12-14 18:11:09.534 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-14 18:11:09.538 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:11:09.569 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 18:11:09.586 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:11:09.693 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/station/EPGD,EPWR
+2024-12-14 18:11:09.693 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/station/EPGD,EPWR
+2024-12-14 18:11:09.705 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/metar/EPGD,EPWR
+2024-12-14 18:11:09.705 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/metar/EPGD,EPWR
+2024-12-14 18:11:09.706 +01:00 [INF] Start processing HTTP request GET https://api.checkwx.com/taf/EPGD,EPWR
+2024-12-14 18:11:09.706 +01:00 [INF] Sending HTTP request GET https://api.checkwx.com/taf/EPGD,EPWR
+2024-12-14 18:11:10.207 +01:00 [INF] Received HTTP response headers after 509.6827ms - 200
+2024-12-14 18:11:10.207 +01:00 [INF] Received HTTP response headers after 496.9525ms - 200
+2024-12-14 18:11:10.207 +01:00 [INF] Received HTTP response headers after 497.9159ms - 200
+2024-12-14 18:11:10.209 +01:00 [INF] End processing HTTP request after 503.9525ms - 200
+2024-12-14 18:11:10.208 +01:00 [INF] End processing HTTP request after 516.7653ms - 200
+2024-12-14 18:11:10.209 +01:00 [INF] End processing HTTP request after 502.7767ms - 200
+2024-12-14 18:11:11.040 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-14 18:11:11.045 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 1457.487ms
+2024-12-14 18:11:11.046 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-14 18:11:11.050 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 1516.218ms
+2024-12-14 18:11:11.074 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/17 - null null
+2024-12-14 18:11:11.119 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:11:11.124 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:11:11.131 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:11:11.296 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 18:11:11.301 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 169.5064ms
+2024-12-14 18:11:11.301 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:11:11.302 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/17 - 200 null application/json; charset=utf-8 228.2237ms
+2024-12-14 18:11:11.306 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/17 - null null
+2024-12-14 18:11:11.308 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:11:11.311 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:11:11.314 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 18:11:11.400 +01:00 [INF] Dane lotu do analizy: {"Dzień lotu":"today","Czas trwania lotu":"0300","Godzina wylotu":"2000","Kod lotniska startu":"EPGD","Miasto lotniska startu":"Gdansk","Kraj lotniska startu":"Poland","METAR lotniska startu":"EPGD 141700Z 25016KT 9000 OVC009 M02/M04 Q1006","TAF lotniska startu":"TAF EPGD 141130Z 1412/1512 25013KT 9999 OVC010 PROB40 TEMPO 1412/1415 OVC008 BECMG 1415/1418 4000 -SN OVC005 TEMPO 1415/1422 27018G28KT 2000 SN BKN002 BECMG 1422/1501 SCT012 BKN020 TEMPO 1422/1512 29018G30KT","Nazwa lotniska startu":"Gdańsk Lech Wałęsa Airport","Kod lotniska lądowania":"EPWR","Miasto lotniska lądowania":"Wrocław","Kraj lotniska lądowania":"Poland","METAR lotniska lądowania":"EPWR 141700Z 26010KT 9999 OVC020 01/M02 Q1015","TAF lotniska lądowania":"TAF EPWR 141430Z 1415/1515 28007KT 9999 OVC020 BECMG 1421/1424 OVC007 TEMPO 1421/1507 27018G28KT 2500 RASN BR BKN003 BECMG 1507/1510 BKN013 TEMPO 1507/1515 27018G28KT 3500 -RADZ BR BKN007","Nazwa lotniska lądowania":"Copernicus Wrocław Airport"}
+2024-12-14 18:11:11.419 +01:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-14 18:11:11.419 +01:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-14 18:11:25.451 +01:00 [INF] Received HTTP response headers after 14030.9948ms - 200
+2024-12-14 18:11:25.452 +01:00 [INF] End processing HTTP request after 14032.3924ms - 200
+2024-12-14 18:11:25.456 +01:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-AePxXs9FyrpC3sdAHiKZo08RcdfMW",
+  "object": "chat.completion",
+  "created": 1734196271,
+  "model": "gpt-4o-2024-08-06",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Na podstawie podanych danych analizujemy możliwość wykonania lotu VFR z lotniska Gdańsk Lech Wałęsa (EPGD) do lotniska Copernicus Wrocław (EPWR).\n\n### Warunki METAR i TAF dla EPGD (Gdańsk)\n\n**METAR:**  \n- Wiatr: 250° z prędkością 16 węzłów\n- Widoczność: 9000 metrów\n- Zachmurzenie: OVC009 (pełne pokrycie chmur na poziomie 900 stóp)\n- Temperatura: -2°C, punkt rosy: -4°C\n- Ciśnienie: 1006 hPa\n\n**TAF:**  \n- Zmiany: 250° z 13 węzłami, pełne pokrycie chmur na poziomie 1000 stóp\n- Czasowe pogorszenie: chmury OVC008, później OVC005 z opadami śniegu i widocznością 2000 metrów\n- Po 22:00: SCT012 BKN020 (rozproszone chmury na 1200 stóp i rozproszone na 2000 stóp)\n\n### Warunki METAR i TAF dla EPWR (Wrocław)\n\n**METAR:**  \n- Wiatr: 260° z prędkością 10 węzłów\n- Widoczność: 9999 metrów\n- Zachmurzenie: OVC020 (pełne pokrycie chmur na poziomie 2000 stóp)\n- Temperatura: 1°C, punkt rosy: -2°C\n- Ciśnienie: 1015 hPa\n\n**TAF:**  \n- Przewidywana zmiana: OVC007, chwilowe pogorszenie do 2500 metrów z opadami deszczu i śniegu oraz chmury BKN003\n- Po 07:00 kolejnego dnia: poprawa do BKN013\n\n### Ocena warunków dla lotu VFR\n\n1. **Podstawa chmur:**  \n   - Na lotnisku EPGD obserwowane zachmurzenie na poziomie 900 stóp nie spełnia minimalnych wymogów dla lotów VFR (zazwyczaj 1000 stóp nad poziomem lotniska).\n   - Na lotnisku EPWR przewidywane obniżenie do OVC007 (700 stóp) także nie spełnia tych wymagań.\n\n2. **Widoczność:**  \n   - Na EPGD chwilowe pogorszenie do 2000 metrów wyklucza standardy VFR, które wymagają przynajmniej 5000 metrów.\n   - Na EPWR również przewidywane pogorszenie do 2500 metrów nie jest akceptowalne dla VFR.\n\n3. **Inne czynniki:**  \n   - Prognozowane opady śniegu i możliwość formowania się mgły dodatkowo zwiększają ryzyko.\n\n### Decyzja\n\nPodane warunki nie pozwalają na bezpieczne wykonanie lotu VFR z Gdańska do Wrocławia. Niskie podstawy chmur, ograniczona widoczność oraz prognozowane opady śniegu i mgły znacząco zwiększają ryzyko i są niezgodne z przepisami VFR. Z tego względu lot powinien zostać odwołany lub przełożony do czasu poprawy warunków atmosferycznych.",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 632,
+    "completion_tokens": 758,
+    "total_tokens": 1390,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_9faba9f038"
+}
+
+2024-12-14 18:11:25.512 +01:00 [INF] Uzasadnienie wygenerowane przez AI (PL): Na podstawie podanych danych analizujemy możliwość wykonania lotu VFR z lotniska Gdańsk Lech Wałęsa (EPGD) do lotniska Copernicus Wrocław (EPWR).
+
+### Warunki METAR i TAF dla EPGD (Gdańsk)
+
+**METAR:**  
+- Wiatr: 250° z prędkością 16 węzłów
+- Widoczność: 9000 metrów
+- Zachmurzenie: OVC009 (pełne pokrycie chmur na poziomie 900 stóp)
+- Temperatura: -2°C, punkt rosy: -4°C
+- Ciśnienie: 1006 hPa
+
+**TAF:**  
+- Zmiany: 250° z 13 węzłami, pełne pokrycie chmur na poziomie 1000 stóp
+- Czasowe pogorszenie: chmury OVC008, później OVC005 z opadami śniegu i widocznością 2000 metrów
+- Po 22:00: SCT012 BKN020 (rozproszone chmury na 1200 stóp i rozproszone na 2000 stóp)
+
+### Warunki METAR i TAF dla EPWR (Wrocław)
+
+**METAR:**  
+- Wiatr: 260° z prędkością 10 węzłów
+- Widoczność: 9999 metrów
+- Zachmurzenie: OVC020 (pełne pokrycie chmur na poziomie 2000 stóp)
+- Temperatura: 1°C, punkt rosy: -2°C
+- Ciśnienie: 1015 hPa
+
+**TAF:**  
+- Przewidywana zmiana: OVC007, chwilowe pogorszenie do 2500 metrów z opadami deszczu i śniegu oraz chmury BKN003
+- Po 07:00 kolejnego dnia: poprawa do BKN013
+
+### Ocena warunków dla lotu VFR
+
+1. **Podstawa chmur:**  
+   - Na lotnisku EPGD obserwowane zachmurzenie na poziomie 900 stóp nie spełnia minimalnych wymogów dla lotów VFR (zazwyczaj 1000 stóp nad poziomem lotniska).
+   - Na lotnisku EPWR przewidywane obniżenie do OVC007 (700 stóp) także nie spełnia tych wymagań.
+
+2. **Widoczność:**  
+   - Na EPGD chwilowe pogorszenie do 2000 metrów wyklucza standardy VFR, które wymagają przynajmniej 5000 metrów.
+   - Na EPWR również przewidywane pogorszenie do 2500 metrów nie jest akceptowalne dla VFR.
+
+3. **Inne czynniki:**  
+   - Prognozowane opady śniegu i możliwość formowania się mgły dodatkowo zwiększają ryzyko.
+
+### Decyzja
+
+Podane warunki nie pozwalają na bezpieczne wykonanie lotu VFR z Gdańska do Wrocławia. Niskie podstawy chmur, ograniczona widoczność oraz prognozowane opady śniegu i mgły znacząco zwiększają ryzyko i są niezgodne z przepisami VFR. Z tego względu lot powinien zostać odwołany lub przełożony do czasu poprawy warunków atmosferycznych.
+2024-12-14 18:11:25.562 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 18:11:25.563 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 14248.8629ms
+2024-12-14 18:11:25.563 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:11:25.564 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/17 - 200 null application/json; charset=utf-8 14257.4747ms
+2024-12-14 18:12:25.993 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/17 - null null
+2024-12-14 18:12:25.995 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:12:25.995 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:12:25.996 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 18:12:26.067 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 18:12:26.068 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 72.2562ms
+2024-12-14 18:12:26.069 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 18:12:26.070 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/17 - 200 null application/json; charset=utf-8 76.6237ms
+2024-12-14 18:12:26.072 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/17 - null null
+2024-12-14 18:12:26.073 +01:00 [INF] CORS policy execution successful.
+2024-12-14 18:12:26.073 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:12:26.075 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 18:12:26.192 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 18:12:26.193 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 115.5308ms
+2024-12-14 18:12:26.193 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 18:12:26.193 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/17 - 200 null application/json; charset=utf-8 120.7835ms
+2024-12-14 19:29:24.036 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/17 - null null
+2024-12-14 19:29:24.054 +01:00 [INF] CORS policy execution successful.
+2024-12-14 19:29:24.059 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 19:29:24.063 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-14 19:29:24.262 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-14 19:29:24.265 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 200.6359ms
+2024-12-14 19:29:24.265 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-14 19:29:24.266 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/17 - 200 null application/json; charset=utf-8 232.7611ms
+2024-12-14 19:29:24.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/17 - null null
+2024-12-14 19:29:24.273 +01:00 [INF] CORS policy execution successful.
+2024-12-14 19:29:24.273 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 19:29:24.273 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-14 19:29:24.300 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-14 19:29:24.301 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 27.6218ms
+2024-12-14 19:29:24.301 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-14 19:29:24.301 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/17 - 200 null application/json; charset=utf-8 28.8128ms
