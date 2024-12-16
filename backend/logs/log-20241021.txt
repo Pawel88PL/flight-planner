@@ -1,9 +1,0 @@
-2024-10-21 17:26:42.773 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
-2024-10-21 17:26:42.802 +02:00 [INF] Application is starting
-2024-10-21 17:26:42.812 +02:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-2024-10-21 17:26:42.841 +02:00 [WRN] The WebRootPath was not found: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/wwwroot. Static files may be unavailable.
-2024-10-21 17:26:42.850 +02:00 [INF] Now listening on: http://localhost:5139
-2024-10-21 17:26:42.851 +02:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-10-21 17:26:42.851 +02:00 [INF] Hosting environment: Development
-2024-10-21 17:26:42.851 +02:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
-2024-10-21 17:47:53.146 +02:00 [INF] Application is shutting down...

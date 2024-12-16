@@ -34,13 +34,13 @@ namespace backend.Services
                 throw new Exception("Departure and Arrival ICAO codes are required.");
             }
 
-            var airportsTask = _airportService.GetDepartureAndArrivalAirports(request.DepartureICAO, request.ArrivalICAO);
             var weatherTask = _weatherService.GetWeatherDataForDepartureAndArrival(request.DepartureICAO, request.ArrivalICAO);
+            var airportsTask =  _airportService.GetDepartureAndArrivalAirports(request.DepartureICAO, request.ArrivalICAO);
 
-            await Task.WhenAll(airportsTask, weatherTask);
+            await Task.WhenAll(weatherTask, airportsTask);
 
-            var airports = await airportsTask;
             var weather = await weatherTask;
+            var airports = await airportsTask;
 
             using var transaction = await _context.Database.BeginTransactionAsync();
 

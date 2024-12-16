@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace backend.Models
 {
     public class WeatherResponse
@@ -8,15 +10,18 @@ namespace backend.Models
         public string ArrivalTAF { get; set; } = string.Empty;
     }
 
-    public class MetarResponse
+    public class WeatherData
     {
-        public int Results { get; set; }
-        public List<string> Data { get; set; } = new List<string>();
-    }
+        [JsonProperty("metar_id")]
+        public int MetarId { get; set; }
 
-    public class TafResponse
-    {
-        public int Results { get; set; }
-        public List<string> Data { get; set; } = new List<string>();
+        [JsonProperty("icaoId")]
+        public string? ICAO { get; set; }
+
+        [JsonProperty("rawOb")]
+        public string? RawMetar { get; set; } // Dane dla METAR
+
+        [JsonProperty("rawTaf")]
+        public string? RawTaf { get; set; } // Dane dla TAF
     }
 }

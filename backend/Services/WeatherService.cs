@@ -1,6 +1,7 @@
 using backend.Interfaces;
 using backend.Models;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace backend.Services
 {
@@ -13,7 +14,7 @@ namespace backend.Services
             _weatherApiHelper = weatherApiHelper;
         }
 
-        private async Task<WeatherResponse> GetMetarForDepartureAndArrival(string departureICAO, string arrivalICAO)
+        private async Task<WeatherResponse> GetWeatherForDepartureAndArrival(string departureICAO, string arrivalICAO)
         {
             // Pobranie danych METAR z API
             var weatherData = await _weatherApiHelper.GetAsync<object>("metar", departureICAO, arrivalICAO);
@@ -26,70 +27,49 @@ namespace backend.Services
             }
 
             // Parsowanie i wyodrębnianie METAR dla poszczególnych lotnisk
-            var weatherObject = JsonConvert.DeserializeObject<MetarResponse>(metarData);
-            if (weatherObject == null || weatherObject.Data == null)
+            var weatherObject = JsonConvert.DeserializeObject<List<WeatherData>>(metarData);
+            if (weatherObject == null || weatherObject.Count == 0)
             {
                 throw new InvalidOperationException("Nie udało się sparsować odpowiedzi METAR.");
             }
 
-            // Znalezienie danych METAR dla lotniska odlotu
-            var departureMETAR = weatherObject.Data.FirstOrDefault(metar => metar.Contains(departureICAO));
-            var arrivalMETAR = weatherObject.Data.FirstOrDefault(metar => metar.Contains(arrivalICAO));
+            // Znalezienie danych pogodowych dla lotniska odlotu i przylotu
+            var departure = weatherObject.FirstOrDefault(metar => metar.ICAO == departureICAO);
+            var arrival = weatherObject.FirstOrDefault(metar => metar.ICAO == arrivalICAO);
+
+            
+            if (departure == null || arrival == null)
+            {
+                throw new Exception("Nie znaleziono danych METAR dla podanych lotnisk.");
+            }
+
+            // Przykład użycia
+            Log.Information($"Departure METAR: {departure.RawMetar}");
+            Log.Information($"Arrival METAR: {arrival.RawMetar}");
+            Log.Information($"Departure TAF: {departure.RawTaf}");
+            Log.Information($"Arrival TAF: {arrival.RawTaf}");
+
 
             // Zwrot wyniku
             return new WeatherResponse
             {
-                DepartureMETAR = departureMETAR ?? $"Nie znaleziono danych dla lotniska {departureICAO}.",
-                ArrivalMETAR = arrivalMETAR ?? $"Nie znaleziono danych dla lotniska {arrivalICAO}."
+                DepartureMETAR = departure.RawMetar!,
+                DepartureTAF = departure.RawTaf!,
+                ArrivalMETAR =  arrival.RawMetar!,
+                ArrivalTAF = arrival.RawTaf!
             };
         }
-
-        private async Task<WeatherResponse> GetTafForDepartureAndArrival(string departureICAO, string arrivalICAO)
-        {
-            // Pobranie danych TAF z API
-            var weatherData = await _weatherApiHelper.GetAsync<object>("taf", departureICAO, arrivalICAO);
-
-            var tafData = weatherData.ToString();
-
-            if (string.IsNullOrEmpty(tafData))
-            {
-                throw new InvalidOperationException("Nie udało się pobrać danych TAF.");
-            }
-
-            var tafObject = JsonConvert.DeserializeObject<TafResponse>(tafData);
-            if (tafObject == null || tafObject.Data == null)
-            {
-                throw new InvalidOperationException("Nie udało się sparsować odpowiedzi TAF.");
-            }
-
-            // Znalezienie danych TAF dla lotniska odlotu
-            var departureTAF = tafObject.Data.FirstOrDefault(taf => taf.Contains(departureICAO));
-            var arrivalTAF = tafObject.Data.FirstOrDefault(taf => taf.Contains(arrivalICAO));
-
-            // Zwrot wyniku
-            return new WeatherResponse
-            {
-                DepartureTAF = departureTAF ?? $"Nie znaleziono danych dla lotniska {departureICAO}.",
-                ArrivalTAF = arrivalTAF ?? $"Nie znaleziono danych dla lotniska {arrivalICAO}."
-            };
-        }
-
+        
         public async Task<WeatherResponse> GetWeatherDataForDepartureAndArrival(string departureICAO, string arrivalICAO)
         {
-            var metarTask = GetMetarForDepartureAndArrival(departureICAO, arrivalICAO);
-            var tafTask = GetTafForDepartureAndArrival(departureICAO, arrivalICAO);
-
-            await Task.WhenAll(metarTask, tafTask);
-
-            var metar = await metarTask;
-            var taf = await tafTask;
+            var metar = await GetWeatherForDepartureAndArrival(departureICAO, arrivalICAO);
 
             return new WeatherResponse
             {
                 DepartureMETAR = metar.DepartureMETAR,
                 ArrivalMETAR = metar.ArrivalMETAR,
-                DepartureTAF = taf.DepartureTAF,
-                ArrivalTAF = taf.ArrivalTAF
+                DepartureTAF = metar.DepartureTAF,
+                ArrivalTAF = metar.ArrivalTAF
             };
         }
     }

@@ -8,23 +8,21 @@ namespace backend.Helpers
 {
     public class WeatherApiHelper : IWeatherApiHelper
     {
+        private readonly IConfiguration _configuration;
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey;
 
-        public WeatherApiHelper(HttpClient httpClient, IConfiguration configuration)
+        public WeatherApiHelper(IConfiguration configuration, HttpClient httpClient)
         {
-            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
-            _apiKey = configuration["WeatherApi:ApiKey"] ?? throw new InvalidOperationException("API key is missing.");
-
-            // Konfiguracja HttpClient
-            _httpClient.DefaultRequestHeaders.Accept.Clear();
-            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            _httpClient.DefaultRequestHeaders.Add("X-API-Key", _apiKey);
+            _configuration = configuration;
+            _httpClient = httpClient;
         }
 
         public async Task<T> GetAsync<T>(string request, string departureICAO, string arrivalICAO)
         {
-            var url = $"https://api.checkwx.com/{request}/{departureICAO},{arrivalICAO}";
+            var baseUrl = _configuration["AviationWeather:ApiUrl"]
+                ?? throw new InvalidOperationException("API base URL is not configured.");
+
+            var url = $"{baseUrl}/{request}?ids={departureICAO}%2C{arrivalICAO}&format=json&taf=true";
 
             try
             {

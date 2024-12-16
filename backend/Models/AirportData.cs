@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace backend.Models
 {
     public class AirportData
@@ -17,7 +19,16 @@ namespace backend.Models
 
     public class AirportsResponse
     {
-        public int Results { get; set; }
-        public List<AirportData> Data { get; set; } = new List<AirportData>();
+        [JsonProperty("data")]
+        public int Id { get; set; }
+
+        [JsonProperty("icaoId")]
+        public string? ICAO { get; set; }
+
+        [JsonProperty("name")]
+        public string? Name { get; set; }
+
+        [JsonProperty("country")]
+        public string? Country { get; set; }
     }
 }
