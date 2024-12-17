@@ -184,7 +184,16 @@ export class InsertFlyDataComponent implements OnInit {
       return { invalidTime: true };
     }
 
-    return null;
-  }
+    // Sprawdzenie, czy czas nie minął dla dzisiejszej daty
+    const now = new Date();
+    const currentTime = now.getHours() * 100 + now.getMinutes(); // Aktualna godzina jako liczba np. 1423
 
+    const enteredTime = hours * 100 + minutes; // Wprowadzona godzina jako liczba
+
+    if (enteredTime < currentTime) {
+      return { timePassed: true }; // Błąd: Wprowadzona godzina już minęła
+    }
+
+    return null; // Wszystko OK
+  }
 }

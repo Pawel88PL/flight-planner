@@ -70,8 +70,15 @@
                             <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('pattern')">
                                 Wprowadź godzinę w formacie HHMM, np. 1345
                             </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('timePassed')">
+                                Wprowadzona godzina już minęła. Proszę podać przyszły czas.
+                            </mat-error>
+                            <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('invalidFormat')">
+                                Format godziny jest nieprawidłowy. Wprowadź godzinę w formacie HHMM.
+                            </mat-error>
                             <mat-error *ngIf="flyDataForm.controls['departureTime'].hasError('invalidTime')">
-                                Godzina musi być w zakresie 0000 - 2359
+                                Wprowadzona godzina jest nieprawidłowa. Upewnij się, że godziny to 00-23, a minuty
+                                00-59.
                             </mat-error>
                         </mat-form-field>
                     </div>
