@@ -30,7 +30,7 @@ namespace backend.Services
             var weatherObject = JsonConvert.DeserializeObject<List<WeatherData>>(metarData);
             if (weatherObject == null || weatherObject.Count == 0)
             {
-                throw new InvalidOperationException("Nie udało się sparsować odpowiedzi METAR.");
+                throw new Exception($"Nie znaleziono danych pogodowych dla lotnisk: {departureICAO} i {arrivalICAO}");
             }
 
             // Znalezienie danych pogodowych dla lotniska odlotu i przylotu
@@ -38,19 +38,16 @@ namespace backend.Services
             var arrival = weatherObject.FirstOrDefault(metar => metar.ICAO == arrivalICAO);
 
             
-            if (departure == null || arrival == null)
+            if (departure == null)
             {
-                throw new Exception("Nie znaleziono danych METAR dla podanych lotnisk.");
+                throw new Exception($"Nie znaleziono danych pogodowych dla lotniska odlotu: {departureICAO}");
             }
 
-            // Przykład użycia
-            Log.Information($"Departure METAR: {departure.RawMetar}");
-            Log.Information($"Arrival METAR: {arrival.RawMetar}");
-            Log.Information($"Departure TAF: {departure.RawTaf}");
-            Log.Information($"Arrival TAF: {arrival.RawTaf}");
+            if (arrival == null)
+            {
+                throw new Exception($"Nie znaleziono danych pogodowych dla lotniska przylotu: {arrivalICAO}");
+            }
 
-
-            // Zwrot wyniku
             return new WeatherResponse
             {
                 DepartureMETAR = departure.RawMetar!,

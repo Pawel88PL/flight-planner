@@ -31,7 +31,7 @@ namespace backend.Controllers
             }
             catch (Exception ex)
             {
-                var message = "Wystąpił błąd podczas dodawania nowego zapytania o plan lotu. " + ex.Message;
+                var message = ex.Message;
                 Log.Error(message);
                 return BadRequest(new { message });
             }

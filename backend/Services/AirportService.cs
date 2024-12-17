@@ -30,12 +30,22 @@ namespace backend.Services
             var airportsObject = JsonConvert.DeserializeObject<List<AirportsResponse>>(airports);
             if (airportsObject == null || airportsObject.Count == 0)
             {
-                throw new InvalidOperationException("Nie udało się sparsować odpowiedzi lotnisk.");
+                throw new InvalidOperationException($"Nie znaleziono informacji dla lotnisk: {departureICAO} i {arrivalICAO}");
             }
 
             // Znalezienie danych lotnisk dla lotniska odlotu i przylotu
             var departureAirport = airportsObject.FirstOrDefault(airport => airport.ICAO == departureICAO);
             var arrivalAirport = airportsObject.FirstOrDefault(airport => airport.ICAO == arrivalICAO);
+
+            if (departureAirport == null)
+            {
+                throw new Exception($"Nie znaleziono danych dla lotniska odlotu: {departureICAO}");
+            }
+
+            if (arrivalAirport == null)
+            {
+                throw new Exception($"Nie znaleziono danych dla lotniska przylotu: {arrivalICAO}");
+            }
 
             return new List<AirportData>
             {
