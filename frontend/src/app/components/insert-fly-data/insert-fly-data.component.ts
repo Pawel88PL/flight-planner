@@ -126,7 +126,7 @@ export class InsertFlyDataComponent implements OnInit {
     if (this.flyDataForm.invalid) {
       return;
     }
-    
+
     this.isLoading = true;
     this.flightPlanService.createFlightPlan(this.flyDataForm.value).subscribe({
       next: (response) => {
@@ -184,14 +184,16 @@ export class InsertFlyDataComponent implements OnInit {
       return { invalidTime: true };
     }
 
-    // Sprawdzenie, czy czas nie minął dla dzisiejszej daty
+    // Pobranie bieżącego czasu UTC
     const now = new Date();
-    const currentTime = now.getHours() * 100 + now.getMinutes(); // Aktualna godzina jako liczba np. 1423
+    const currentUTCHours = now.getUTCHours();
+    const currentUTCMinutes = now.getUTCMinutes();
+    const currentUTCTime = currentUTCHours * 100 + currentUTCMinutes;
 
     const enteredTime = hours * 100 + minutes; // Wprowadzona godzina jako liczba
 
-    if (enteredTime < currentTime) {
-      return { timePassed: true }; // Błąd: Wprowadzona godzina już minęła
+    if (enteredTime < currentUTCTime) {
+      return { timePassed: true }; // Błąd: Wprowadzona godzina UTC już minęła
     }
 
     return null; // Wszystko OK
