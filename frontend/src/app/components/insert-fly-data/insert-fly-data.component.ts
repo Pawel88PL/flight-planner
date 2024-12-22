@@ -48,10 +48,10 @@ export class InsertFlyDataComponent implements OnInit {
   successMessage: string | null = null;
 
   aircrafts = [
-    { id: 1, name: 'Cessna 172' },
+    { id: 1, name: 'Tecnam P208' },
     { id: 2, name: 'Piper PA-28' },
     { id: 3, name: 'Diamond DA40' },
-    { id: 4, name: 'Beechcraft Bonanza' }
+    { id: 4, name: 'Cesna 172' }
   ];
 
   constructor(
