@@ -1,0 +1,632 @@
+2024-12-29 13:12:28.171 +01:00 [INF] Application is starting
+2024-12-29 13:12:28.238 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 13:12:28.278 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 13:12:28.279 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 13:12:28.279 +01:00 [INF] Hosting environment: Development
+2024-12-29 13:12:28.279 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 13:39:05.703 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2024-12-29 13:39:05.731 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-29 13:39:05.742 +01:00 [INF] CORS policy execution successful.
+2024-12-29 13:39:05.746 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 45.1764ms
+2024-12-29 13:39:05.749 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 127
+2024-12-29 13:39:05.751 +01:00 [INF] CORS policy execution successful.
+2024-12-29 13:39:05.777 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-29 13:39:05.793 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-29 13:39:05.894 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWA&format=json&taf=true
+2024-12-29 13:39:05.894 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWA&format=json&taf=true
+2024-12-29 13:39:05.904 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWA&format=json&taf=true
+2024-12-29 13:39:05.904 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWA&format=json&taf=true
+2024-12-29 13:39:06.461 +01:00 [INF] Received HTTP response headers after 553.6172ms - 200
+2024-12-29 13:39:06.462 +01:00 [INF] End processing HTTP request after 558.1155ms - 200
+2024-12-29 13:39:06.479 +01:00 [INF] Received HTTP response headers after 584.943ms - 200
+2024-12-29 13:39:06.479 +01:00 [INF] End processing HTTP request after 586.9978ms - 200
+2024-12-29 13:39:09.519 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-12-29 13:39:09.529 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 3733.7647ms
+2024-12-29 13:39:09.530 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2024-12-29 13:39:09.536 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 3787.914ms
+2024-12-29 13:39:09.545 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/34 - null null
+2024-12-29 13:39:09.551 +01:00 [INF] CORS policy execution successful.
+2024-12-29 13:39:09.552 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-29 13:39:09.556 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2024-12-29 13:39:09.781 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2024-12-29 13:39:09.787 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 231.361ms
+2024-12-29 13:39:09.787 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2024-12-29 13:39:09.788 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/34 - 200 null application/json; charset=utf-8 243.5301ms
+2024-12-29 13:39:09.792 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/34 - null null
+2024-12-29 13:39:09.793 +01:00 [INF] CORS policy execution successful.
+2024-12-29 13:39:09.794 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-29 13:39:09.796 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2024-12-29 13:39:09.973 +01:00 [INF] Zapytanie do AI (PL): Jesteś doświadczonym doradcą lotniczym i ekspertem w analizie warunków pogodowych dla lotów VFR (Visual Flight Rules). Twoim zadaniem jest ocena możliwości wykonania planowanego lotu w oparciu o:
+
+            1. Aktualne i prognozowane warunki meteorologiczne (METAR/TAF) dla lotnisk startu, docelowego i, w miarę możliwości, lotnisk alternatywnych.
+            2. Minimalne wymogi VFR w zakresie widoczności, podstawy chmur oraz warunków atmosferycznych.
+            3. Ograniczenia statku powietrznego, w tym maksymalną dopuszczalną boczną składową wiatru (crosswind component) określoną przez producenta lub procedury operatora.
+            4. Planowane parametry lotu (czas, data, trasa).
+
+            Wynik swojej analizy przedstaw w języku polskim w następującej formie:
+            - Najpierw podaj jednoznaczną decyzję, czy lot VFR jest możliwy, uwzględniając wszystkie podane dane.
+            - Następnie uzasadnij tę decyzję, odnosząc się do konkretnych parametrów pogodowych (widzialność, chmury, wiatr), obowiązujących przepisów VFR oraz ograniczeń samolotu, w tym dopuszczalnego crosswind component.
+            - Na koniec wymień potencjalne zagrożenia i zalecenia dla pilota.
+
+            Twoja odpowiedź powinna być merytoryczna, spójna i uwzględniać kluczowe aspekty bezpieczeństwa.
+            
+            Wyróżnij ją od reszty tekstu, np. poprzez zastosowanie dobrze widocznego nagłówka lub formatowania.
+2024-12-29 13:39:09.973 +01:00 [INF] Zapytanie do AI (PL): Oto dane planowanego lotu do analizy, łącznie z danymi wybranego samolotu (format JSON):
+            {"Dzień lotu":"today","Czas trwania lotu":"0200","Godzina wylotu":"1400","Kod lotniska startu":"EPPO","Miasto lotniska startu":"","Kraj lotniska startu":"","METAR lotniska startu":"EPPO 291230Z 24005KT CAVOK 02/00 Q1024","TAF lotniska startu":"TAF EPPO 291130Z 2912/3012 23010KT CAVOK BECMG 2914/2917 OVC003 PROB30 TEMPO 2920/2922 -FZDZ TEMPO 2920/3006 2000 DZ BR","Nazwa lotniska startu":"POZNAN/LAWICA AIRPORT","Kod lotniska lądowania":"EPWA","Miasto lotniska lądowania":"","Kraj lotniska lądowania":"","METAR lotniska lądowania":"EPWA 291230Z 21006KT 5000 BR OVC004 04/03 Q1023 TEMPO BKN005","TAF lotniska lądowania":"TAF EPWA 291130Z 2912/3012 22008KT 3000 BR BKN006 TEMPO 2912/2914 2000 BR BKN002 PROB30 TEMPO 2914/2920 5000 BR SCT006 BKN012 TEMPO 2921/3012 2000 DZ BR BKN003 PROB40 TEMPO 2921/3006 FZDZ","Nazwa lotniska lądowania":"WARSAW/CHOPINA AIRPORT","Dane samolotu":{"Model samolotu":"Technam P2008","Maksymalny boczny komponent wiatru w knots":15,"Minimalna prędkość przeciągnięcia w konts":39,"Prędkość wznoszenia w ft/min":900,"Maksymalna masa startowa w kg":600,"Zasięg w NM":730,"Prędkość przelotowa w knots":115,"Zużycie paliwa w litrach na godzinę":17,"Minimalna widoczność VFR w km":5,"Minimalna podstawa chmur VFR w ft AGL":1500}}
+
+            Czy lot VFR jest możliwy? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.
+2024-12-29 13:39:09.995 +01:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-29 13:39:09.995 +01:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2024-12-29 13:39:23.864 +01:00 [INF] Received HTTP response headers after 13868.8438ms - 200
+2024-12-29 13:39:23.864 +01:00 [INF] End processing HTTP request after 13869.8148ms - 200
+2024-12-29 13:39:23.875 +01:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-AjmrXeLDiAampT45d1FHf8Xejz6hx",
+  "object": "chat.completion",
+  "created": 1735475951,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "### Analiza możliwości lotu VFR\n\n**Decyzja:** Lot VFR nie jest możliwy.\n\n**Uzasadnienie:**\n1. **Warunki pogodowe na lotnisku startu (EPPO)**:\n   - **METAR:** EPPO 291230Z 24005KT CAVOK 02/00 Q1024\n   - **TAF:** TAF EPPO 291130Z 2912/3012 23010KT CAVOK BECMG 2914/2917 OVC003 PROB30 TEMPO 2920/2922 -FZDZ TEMPO 2920/3006 2000 DZ BR\n   - **Widoczność:** CAVOK oznacza, że widoczność jest dobra, a chmury są powyżej 5000 ft. Jednak prognoza TAF wskazuje na możliwe obniżenie widoczności do 2000 m z powodu deszczu i mgły (BR).\n\n2. **Warunki pogodowe na lotnisku lądowania (EPWA)**:\n   - **METAR:** EPWA 291230Z 21006KT 5000 BR OVC004 04/03 Q1023\n   - **TAF:** TAF EPWA 291130Z 2912/3012 22008KT 3000 BR BKN006 TEMPO 2912/2914 2000 BR BKN002 PROB30 TEMPO 2914/2920 5000 BR SCT006 BKN012 TEMPO 2921/3012 2000 DZ BR BKN003 PROB40 TEMPO 2921/3006 FZDZ\n   - **Widoczność:** Aktualna widoczność wynosi 5000 m, co spełnia minimalne wymagania VFR, jednak prognoza wskazuje na obniżenie widoczności do 2000 m, co również nie spełnia wymogów.\n\n3. **Minimalne wymagania VFR**:\n   - **Widoczność:** Minimalna wymagana widoczność dla lotów VFR wynosi 5 km. W obu przypadkach (EPPO i EPWA) prognozowane warunki mogą obniżyć widoczność poniżej tego progu.\n   - **Podstawa chmur:** Minimalna podstawa chmur dla lotów VFR wynosi 1500 ft AGL. Na EPWA prognozowane są chmury na poziomie 400 ft, co również nie spełnia wymogów.\n\n4. **Ograniczenia statku powietrznego**:\n   - Model samolotu: Technam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 kt. W prognozowanych warunkach wiatr na EPPO wynosi 10 kt, a na EPWA 8 kt, co jest w granicach akceptowalnych, ale nie ma to znaczenia w kontekście innych warunków pogodowych.\n\n**Potencjalne zagrożenia i zalecenia dla pilota**:\n- **Zagrożenia:** Obniżona widoczność i niska podstawa chmur mogą prowadzić do sytuacji, w której pilot straci orientację w przestrzeni powietrznej, co zwiększa ryzyko wypadku.\n- **Zalecenia:** Należy rozważyć opóźnienie lotu do momentu poprawy warunków pogodowych lub zmianę trasy na lotnisko, gdzie warunki VFR są spełnione. Piloci powinni zawsze monitorować aktualne i prognozowane warunki pogodowe oraz być gotowi do podjęcia decyzji o powrocie lub lądowaniu awaryjnym w przypadku pogorszenia się warunków.",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 986,
+    "completion_tokens": 816,
+    "total_tokens": 1802,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "fp_d02d531b47"
+}
+
+2024-12-29 13:39:23.925 +01:00 [INF] Uzasadnienie wygenerowane przez AI (PL): ### Analiza możliwości lotu VFR
+
+**Decyzja:** Lot VFR nie jest możliwy.
+
+**Uzasadnienie:**
+1. **Warunki pogodowe na lotnisku startu (EPPO)**:
+   - **METAR:** EPPO 291230Z 24005KT CAVOK 02/00 Q1024
+   - **TAF:** TAF EPPO 291130Z 2912/3012 23010KT CAVOK BECMG 2914/2917 OVC003 PROB30 TEMPO 2920/2922 -FZDZ TEMPO 2920/3006 2000 DZ BR
+   - **Widoczność:** CAVOK oznacza, że widoczność jest dobra, a chmury są powyżej 5000 ft. Jednak prognoza TAF wskazuje na możliwe obniżenie widoczności do 2000 m z powodu deszczu i mgły (BR).
+
+2. **Warunki pogodowe na lotnisku lądowania (EPWA)**:
+   - **METAR:** EPWA 291230Z 21006KT 5000 BR OVC004 04/03 Q1023
+   - **TAF:** TAF EPWA 291130Z 2912/3012 22008KT 3000 BR BKN006 TEMPO 2912/2914 2000 BR BKN002 PROB30 TEMPO 2914/2920 5000 BR SCT006 BKN012 TEMPO 2921/3012 2000 DZ BR BKN003 PROB40 TEMPO 2921/3006 FZDZ
+   - **Widoczność:** Aktualna widoczność wynosi 5000 m, co spełnia minimalne wymagania VFR, jednak prognoza wskazuje na obniżenie widoczności do 2000 m, co również nie spełnia wymogów.
+
+3. **Minimalne wymagania VFR**:
+   - **Widoczność:** Minimalna wymagana widoczność dla lotów VFR wynosi 5 km. W obu przypadkach (EPPO i EPWA) prognozowane warunki mogą obniżyć widoczność poniżej tego progu.
+   - **Podstawa chmur:** Minimalna podstawa chmur dla lotów VFR wynosi 1500 ft AGL. Na EPWA prognozowane są chmury na poziomie 400 ft, co również nie spełnia wymogów.
+
+4. **Ograniczenia statku powietrznego**:
+   - Model samolotu: Technam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 kt. W prognozowanych warunkach wiatr na EPPO wynosi 10 kt, a na EPWA 8 kt, co jest w granicach akceptowalnych, ale nie ma to znaczenia w kontekście innych warunków pogodowych.
+
+**Potencjalne zagrożenia i zalecenia dla pilota**:
+- **Zagrożenia:** Obniżona widoczność i niska podstawa chmur mogą prowadzić do sytuacji, w której pilot straci orientację w przestrzeni powietrznej, co zwiększa ryzyko wypadku.
+- **Zalecenia:** Należy rozważyć opóźnienie lotu do momentu poprawy warunków pogodowych lub zmianę trasy na lotnisko, gdzie warunki VFR są spełnione. Piloci powinni zawsze monitorować aktualne i prognozowane warunki pogodowe oraz być gotowi do podjęcia decyzji o powrocie lub lądowaniu awaryjnym w przypadku pogorszenia się warunków.
+2024-12-29 13:39:24.041 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2024-12-29 13:39:24.042 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 14245.6213ms
+2024-12-29 13:39:24.042 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2024-12-29 13:39:24.042 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/34 - 200 null application/json; charset=utf-8 14250.2373ms
+2024-12-29 13:43:50.300 +01:00 [INF] Application is shutting down...
+2024-12-29 13:44:01.088 +01:00 [INF] Application is starting
+2024-12-29 13:44:01.143 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 13:44:01.203 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 13:44:01.205 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 13:44:01.205 +01:00 [INF] Hosting environment: Development
+2024-12-29 13:44:01.205 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 13:44:01.325 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-29 13:44:01.367 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 43.3449ms
+2024-12-29 13:44:01.438 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - null null
+2024-12-29 13:44:01.438 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui.css - null null
+2024-12-29 13:44:01.440 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-29 13:44:01.759 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-29 13:44:01.759 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-29 13:44:01.808 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 368.3709ms
+2024-12-29 13:44:01.808 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui.css - 200 143943 text/css 395.4239ms
+2024-12-29 13:44:01.809 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-29 13:44:01.810 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 398.0047ms
+2024-12-29 13:44:01.915 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-29 13:44:01.961 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.3605ms
+2024-12-29 14:11:47.132 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:11:47.152 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-29 14:11:47.172 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:11:47.174 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 43.3125ms
+2024-12-29 14:11:47.227 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 159
+2024-12-29 14:11:47.229 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:11:47.317 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:11:47.335 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:11:47.340 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:11:47.360 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:12:02.590 +01:00 [ERR] An error occurred using the connection to database 'flight_planner' on server '87.106.167.108,1433'.
+2024-12-29 14:12:02.609 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'backend.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2024-12-29 14:12:02.695 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 15333.8458ms
+2024-12-29 14:12:02.696 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:12:02.697 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 40 - Could not open a connection to SQL Server)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at backend.Services.AuthService.RegisterNewUserAsync(Register userRegisterData) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Services/AuthService.cs:line 183
+   at backend.Controllers.AuthController.Register(Register userRegisterData) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Controllers/AuthController.cs:line 95
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2024-12-29 14:12:02.720 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 500 null text/plain; charset=utf-8 15493.733ms
+2024-12-29 14:13:07.279 +01:00 [INF] Application is starting
+2024-12-29 14:13:07.335 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 14:13:07.396 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 14:13:07.397 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 14:13:07.397 +01:00 [INF] Hosting environment: Development
+2024-12-29 14:13:07.397 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 14:13:07.748 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-29 14:13:07.800 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 47.402ms
+2024-12-29 14:13:08.198 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-29 14:13:08.241 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.6296ms
+2024-12-29 14:13:11.629 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:13:11.636 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-29 14:13:11.657 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:13:11.659 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 30.2087ms
+2024-12-29 14:13:11.661 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 159
+2024-12-29 14:13:11.663 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:13:11.733 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:13:11.750 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:13:11.752 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:13:11.766 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:14:09.449 +01:00 [ERR] An error occurred using the connection to database 'flight_planner' on server '87.106.167.108,1433'.
+2024-12-29 14:14:09.460 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'backend.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, Int32 optionValue)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, Int32 optionValue)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2024-12-29 14:14:09.531 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 57765.9113ms
+2024-12-29 14:14:09.532 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:14:09.534 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, Int32 optionValue)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at backend.Services.AuthService.RegisterNewUserAsync(Register userRegisterData) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Services/AuthService.cs:line 183
+   at backend.Controllers.AuthController.Register(Register userRegisterData) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Controllers/AuthController.cs:line 94
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2024-12-29 14:14:09.554 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 500 null text/plain; charset=utf-8 57895.1441ms
+2024-12-29 14:15:13.505 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:15:13.512 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:15:13.512 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 7.2567ms
+2024-12-29 14:15:13.514 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 134
+2024-12-29 14:15:13.515 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:15:13.524 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:15:13.526 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:15:13.527 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:15:13.529 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:19:35.674 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:19:35.678 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:19:35.678 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 3.7163ms
+2024-12-29 14:19:35.752 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 130
+2024-12-29 14:19:35.753 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:19:35.762 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:19:35.764 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:19:35.764 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:19:35.766 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:21:03.268 +01:00 [INF] Application is starting
+2024-12-29 14:21:03.325 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 14:21:03.381 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 14:21:03.382 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 14:21:03.383 +01:00 [INF] Hosting environment: Development
+2024-12-29 14:21:03.383 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 14:21:03.547 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-29 14:21:03.592 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 45.2869ms
+2024-12-29 14:21:03.864 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-29 14:21:03.935 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 71.1817ms
+2024-12-29 14:21:22.720 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:21:22.746 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-29 14:21:22.773 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:21:22.775 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 57.5944ms
+2024-12-29 14:21:22.824 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 130
+2024-12-29 14:21:22.825 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:21:22.876 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:21:22.893 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:21:22.894 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:21:22.952 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:22:33.742 +01:00 [INF] Application is starting
+2024-12-29 14:22:33.802 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 14:22:33.862 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 14:22:33.863 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 14:22:33.864 +01:00 [INF] Hosting environment: Development
+2024-12-29 14:22:33.864 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 14:22:34.048 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-29 14:22:34.096 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 48.8321ms
+2024-12-29 14:22:34.165 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-29 14:22:34.225 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.2977ms
+2024-12-29 14:22:52.579 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:22:52.587 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-29 14:22:52.639 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:22:52.641 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 62.5703ms
+2024-12-29 14:22:52.645 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 130
+2024-12-29 14:22:52.646 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:22:52.722 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:22:52.743 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:22:52.746 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:22:52.776 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:22:52.887 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-29 14:22:52.896 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 117.6957ms
+2024-12-29 14:22:52.896 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:22:52.898 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 400 null application/problem+json; charset=utf-8 252.613ms
+2024-12-29 14:23:21.106 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:23:21.114 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:23:21.115 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 9.1224ms
+2024-12-29 14:23:21.116 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 130
+2024-12-29 14:23:21.117 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:23:21.125 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:23:21.127 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:23:21.127 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:23:21.128 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:23:21.142 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-29 14:23:21.143 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 14.3143ms
+2024-12-29 14:23:21.143 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:23:21.143 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 400 null application/problem+json; charset=utf-8 27.0237ms
+2024-12-29 14:26:40.957 +01:00 [INF] Application is starting
+2024-12-29 14:26:41.014 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 14:26:41.067 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 14:26:41.068 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 14:26:41.068 +01:00 [INF] Hosting environment: Development
+2024-12-29 14:26:41.068 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 14:26:41.215 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-29 14:26:41.256 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 41.8535ms
+2024-12-29 14:26:41.695 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-29 14:26:41.741 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.8001ms
+2024-12-29 14:27:18.486 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:27:18.493 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-29 14:27:18.534 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:27:18.537 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 51.3185ms
+2024-12-29 14:27:18.579 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 130
+2024-12-29 14:27:18.583 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:27:18.679 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:27:18.696 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:27:18.697 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:27:18.710 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2024-12-29 14:27:18.793 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-29 14:27:18.801 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 89.7905ms
+2024-12-29 14:27:18.801 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:27:18.802 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 400 null application/problem+json; charset=utf-8 223.275ms
+2024-12-29 14:27:44.122 +01:00 [INF] Application is starting
+2024-12-29 14:27:44.179 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 14:27:44.234 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 14:27:44.236 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 14:27:44.236 +01:00 [INF] Hosting environment: Development
+2024-12-29 14:27:44.236 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 14:27:44.389 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-29 14:27:44.438 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 50.2927ms
+2024-12-29 14:27:44.507 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-29 14:27:44.554 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.8882ms
+2024-12-29 14:30:27.647 +01:00 [INF] Application is starting
+2024-12-29 14:30:27.712 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-12-29 14:30:27.773 +01:00 [INF] Now listening on: http://localhost:5139
+2024-12-29 14:30:27.776 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-29 14:30:27.776 +01:00 [INF] Hosting environment: Development
+2024-12-29 14:30:27.776 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2024-12-29 14:30:27.939 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2024-12-29 14:30:27.982 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 42.7167ms
+2024-12-29 14:30:28.035 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2024-12-29 14:30:28.078 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.0088ms
+2024-12-29 14:30:54.226 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2024-12-29 14:30:54.234 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-12-29 14:30:54.251 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:30:54.252 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 25.96ms
+2024-12-29 14:30:54.257 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 159
+2024-12-29 14:30:54.259 +01:00 [INF] CORS policy execution successful.
+2024-12-29 14:30:54.320 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-12-29 14:30:54.333 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2024-12-29 14:30:54.334 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2024-12-29 14:30:54.344 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).

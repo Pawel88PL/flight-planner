@@ -1,0 +1,148 @@
+2025-01-01 20:02:59.006 +01:00 [INF] Application is starting
+2025-01-01 20:02:59.046 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-01 20:02:59.086 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-01 20:02:59.088 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-01 20:02:59.088 +01:00 [INF] Hosting environment: Development
+2025-01-01 20:02:59.088 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-01 20:04:00.018 +01:00 [INF] Application is shutting down...
+2025-01-01 20:04:07.481 +01:00 [INF] Application is starting
+2025-01-01 20:04:07.535 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-01 20:04:07.590 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-01 20:04:07.591 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-01 20:04:07.592 +01:00 [INF] Hosting environment: Development
+2025-01-01 20:04:07.592 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-01 20:04:08.012 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-01-01 20:04:08.065 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 53.0465ms
+2025-01-01 20:04:08.097 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - null null
+2025-01-01 20:04:08.097 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-01 20:04:08.520 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-01 20:04:08.567 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-01 20:04:08.568 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 470.9468ms
+2025-01-01 20:04:08.568 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 470.9385ms
+2025-01-01 20:04:08.675 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-01-01 20:04:08.739 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 63.6096ms
+2025-01-01 20:04:11.975 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2025-01-01 20:04:11.985 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-01 20:04:12.011 +01:00 [INF] CORS policy execution successful.
+2025-01-01 20:04:12.014 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 38.9697ms
+2025-01-01 20:04:12.017 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 159
+2025-01-01 20:04:12.019 +01:00 [INF] CORS policy execution successful.
+2025-01-01 20:04:12.109 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-01-01 20:04:12.124 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-01-01 20:04:12.126 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-01-01 20:04:12.137 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2025-01-01 20:05:43.338 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 91202.3665ms
+2025-01-01 20:05:43.340 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-01-01 20:05:43.342 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Role PILOT does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRoleAsync(TUser user, String role)
+   at backend.Services.AuthService.AddToRoleAsync(User user, String role) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Services/AuthService.cs:line 39
+   at backend.Services.AuthService.RegisterNewUserAsync(Register userRegisterData) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Services/AuthService.cs:line 193
+   at backend.Controllers.AuthController.Register(Register userRegisterData) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Controllers/AuthController.cs:line 94
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-01 20:05:43.367 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 500 null text/plain; charset=utf-8 91352.1862ms
+2025-01-01 20:06:25.812 +01:00 [INF] Application is starting
+2025-01-01 20:06:25.838 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-01 20:06:25.881 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-01 20:06:25.882 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-01 20:06:25.882 +01:00 [INF] Hosting environment: Development
+2025-01-01 20:06:25.883 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-01 20:06:26.153 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-01-01 20:06:26.197 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 43.5861ms
+2025-01-01 20:06:26.340 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-01-01 20:06:26.397 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.9401ms
+2025-01-01 20:06:35.385 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2025-01-01 20:06:35.394 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-01 20:06:35.430 +01:00 [INF] CORS policy execution successful.
+2025-01-01 20:06:35.433 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 48.6457ms
+2025-01-01 20:06:35.435 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 159
+2025-01-01 20:06:35.436 +01:00 [INF] CORS policy execution successful.
+2025-01-01 20:06:35.526 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-01-01 20:06:35.538 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-01-01 20:06:35.539 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-01-01 20:06:35.548 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2025-01-01 20:07:02.306 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microsoft.AspNetCore.Identity.IdentityError, Microsoft.Extensions.Identity.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]'.
+2025-01-01 20:07:02.318 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 26767.6983ms
+2025-01-01 20:07:02.319 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-01-01 20:07:02.326 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 400 null application/json; charset=utf-8 26892.2225ms
+2025-01-01 20:19:52.961 +01:00 [INF] Application is starting
+2025-01-01 20:19:52.987 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-01 20:19:53.027 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-01 20:19:53.029 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-01 20:19:53.029 +01:00 [INF] Hosting environment: Development
+2025-01-01 20:19:53.029 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-01 20:19:53.216 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-01-01 20:19:53.275 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 58.8912ms
+2025-01-01 20:19:53.726 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-01-01 20:19:53.772 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.4626ms
+2025-01-01 20:19:55.773 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2025-01-01 20:19:55.806 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-01 20:19:55.820 +01:00 [INF] CORS policy execution successful.
+2025-01-01 20:19:55.821 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 49.9517ms
+2025-01-01 20:19:55.823 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 159
+2025-01-01 20:19:55.825 +01:00 [INF] CORS policy execution successful.
+2025-01-01 20:19:55.909 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-01-01 20:19:55.919 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'wp8TYuqHEA5J_zbL6dbE0fYa42gfy19a7rPk5gtGR0E'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-01-01 20:19:55.921 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-01-01 20:19:55.929 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2025-01-01 20:20:09.554 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-01 20:20:09.559 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 13626.5543ms
+2025-01-01 20:20:09.560 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-01-01 20:20:09.568 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 200 0 null 13745.2856ms

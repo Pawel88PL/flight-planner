@@ -34,39 +34,6 @@ namespace backend.Services
             _userManager = userManager;
         }
 
-        public async Task AddToRoleAsync(User user, string role)
-        {
-            await _userManager.AddToRoleAsync(user, role);
-        }
-
-        public async Task<bool> CheckUserRoleAsync(User user)
-        {
-            var roles = await _userManager.GetRolesAsync(user);
-
-            if (roles.Contains("Administrator") || roles.Contains("Operator"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public async Task<IdentityResult> ConfirmEmailAsync(User user, string token)
-        {
-            var userToConfirm = await _userManager.FindByIdAsync(user.Id);
-            if (userToConfirm == null)
-            {
-                throw new ArgumentException("Użytkownik nie istnieje.");
-            }
-
-            userToConfirm.IsActive = true;
-            await _userManager.UpdateAsync(userToConfirm);
-
-            return await _userManager.ConfirmEmailAsync(user, token);
-        }
-
         public async Task<User?> FindByIdAsync(string userId)
         {
             return await _userManager.FindByIdAsync(userId);
@@ -82,17 +49,6 @@ namespace backend.Services
             }
 
             return user;
-        }
-
-        private static string GenerateRandomPasword()
-        {
-
-            return Guid.NewGuid().ToString().Replace("-", "").Substring(0, 12);
-        }
-
-        private static string GenerateRandomUserId()
-        {
-            return Guid.NewGuid().ToString().Replace("-", "").Substring(0, 16);
         }
 
         public async Task<string> GenerateJwtTokenForUser(User user)
@@ -127,14 +83,6 @@ namespace backend.Services
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-
-        // Metoda generująca i wysyłająca kod 2FA
-        public async Task<string> GenerateTwoFactorTokenAsync(User user)
-        {
-            var token = await _userManager.GenerateTwoFactorTokenAsync(user, TokenOptions.DefaultEmailProvider);
-            await _emailService.SendTwoFactorCodeEmail(user.Id, token);
-            return token;
         }
 
         public async Task<IEnumerable<UserDTO>> GetUsersAsync()
@@ -195,14 +143,11 @@ namespace backend.Services
                 Email = userRegisterData.Email!,
                 DateAdded = DateTime.Now,
                 IsActive = true,
-                TwoFactorEnabled = userRegisterData.Role == "Admin"
             };
 
             var result = await _userManager.CreateAsync(newUser, userRegisterData.Password!);
-            var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
-            await _emailService.SendActivationEmail(newUser.Id, token);
 
-            await AddToRoleAsync(newUser, userRegisterData.Role!);
+            await _userManager.AddToRoleAsync(newUser, "Pilot");
 
             return result;
         }
@@ -290,12 +235,6 @@ namespace backend.Services
                 Log.Error(ex, $"Error updating user with ID {updateUser.Id}");
                 return false;
             }
-        }
-
-        // Metoda do weryfikacji kodu 2FA
-        public async Task<bool> VerifyTwoFactorTokenAsync(User user, string token)
-        {
-            return await _userManager.VerifyTwoFactorTokenAsync(user, TokenOptions.DefaultEmailProvider, token);
         }
     }
 }

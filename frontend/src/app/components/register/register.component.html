@@ -1,10 +1,17 @@
 <div class="container">
 
-    <div *ngIf="isLoading">
-        <h2 class="text-center mb-5">Dodawanie nowego użytkownika do bazy danych...</h2>
-        <div *ngIf="isLoading" class="mb-5">
-            <mat-progress-bar mode="query"></mat-progress-bar>
-        </div>
+    <div *ngIf="isLoading" class="loading-card">
+        <mat-card>
+            <mat-card-content>
+                <h4 class="text-center mb-4">
+                    <img src="./images/auth-login.png" alt="person" class="icon">
+                    Poczekaj chwilę, przetwarzam rejestrację ...
+                </h4>
+                <div class="mb-4">
+                    <mat-progress-bar mode="query"></mat-progress-bar>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
 
     <div *ngIf="!isLoading">
@@ -13,7 +20,7 @@
             <mat-card-content>
                 <h3 class="text-center">
                     <img src="./images/register.png" alt="login" class="icon">
-                    Załóż konto
+                    Zarejestruj się
                 </h3>
 
                 <hr class="mb-5">

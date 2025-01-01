@@ -11,7 +11,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 
 import { Router, RouterModule } from '@angular/router';
-import { Role } from '../../models/user-model';
 import { DataService } from '../../services/data.service';
 
 import gsap from 'gsap';
@@ -43,11 +42,6 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   errorMessage: string | null = null;
   isLoading: boolean = false;
   successMessage: string | null = null;
-
-  roles: Role[] = [
-    { id: 1, name: 'Admin' },
-    { id: 2, name: 'Pilot' }
-  ];
 
   constructor(
     private fb: FormBuilder,
@@ -89,7 +83,6 @@ export class RegisterComponent implements OnInit, AfterViewInit {
       confirmEmail: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
-      role: ['', Validators.required]
     }, { validator: [this.passwordMatchValidator, this.emailMatchValidator] });
   }
 

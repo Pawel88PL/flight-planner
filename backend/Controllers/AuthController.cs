@@ -21,14 +21,6 @@ namespace backend.Controllers
             _roleManager = roleManager;
         }
 
-        [Authorize]
-        [HttpGet("roles")]
-        public async Task<IActionResult> GetRoles()
-        {
-            var roles = await _roleManager.Roles.ToListAsync();
-            return Ok(roles);
-        }
-
         [Authorize(Roles = "Administrator")]
         [HttpGet("getUsers")]
         public async Task<IActionResult> GetUsers()
@@ -78,7 +70,6 @@ namespace backend.Controllers
             return Ok();
         }
 
-        //[Authorize(Roles = "Administrator")]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Register userRegisterData)
         {
