@@ -36,21 +36,14 @@
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button mat-raised-button class="m-2" (click)="authService.logout()"
-                        *ngIf="authService.isOperator() || authService.isAdmin()" matTooltip="Kliknij, aby wylogować">
-                        <img src="./images/admin.png" alt="person" class="icon">
-                        WYLOGUJ
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button mat-raised-button class="m-2" (click)="authService.logout()" disabled="true"
-                        *ngIf="authService.isOperator() || authService.isAdmin()" matTooltip="Kliknij, aby wylogować">
+                    <button mat-raised-button class="m-2" disabled="true"
+                        *ngIf="authService.isLoggedIn()" matTooltip="Kliknij, aby wylogować">
                         Zalogowano: {{ userName }}
                     </button>
                 </li>
                 <li class="nav-item">
                     <button mat-raised-button class="m-2" (click)="authService.logout()"
-                        *ngIf="authService.isLoggedIn() && !authService.isAdmin() && !authService.isOperator()"
+                        *ngIf="authService.isLoggedIn()"
                         matTooltip="Kliknij, aby wylogować">
                         <img src="./images/man.png" alt="person" class="icon">
                         WYLOGUJ

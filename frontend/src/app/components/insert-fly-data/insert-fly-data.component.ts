@@ -14,9 +14,10 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { Router, RouterModule } from '@angular/router';
 
-import { AuthService } from '../../services/auth.service';
-import { DataService } from '../../services/data.service';
 import { FlightPlanService } from '../../services/flight-plan.service';
+
+import Swal from 'sweetalert2';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-insert-fly-data',
@@ -55,15 +56,33 @@ export class InsertFlyDataComponent implements OnInit {
   ];
 
   constructor(
-    private fb: FormBuilder,
     private authService: AuthService,
-    private dataService: DataService,
+    private fb: FormBuilder,
     private flightPlanService: FlightPlanService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
     this.initializeRegisterForm();
+  }
+
+  notLoggedInAlert(): void {
+    Swal.fire({
+      icon: 'info',
+      title: 'Zaloguj się, aby kontynuować!',
+      text: 'Aby wykonać analizę warunków pogodowych, zaloguj się na swoje konto lub zarejestruj, jeśli jeszcze go nie masz.',
+      showCancelButton: true,
+      confirmButtonText: 'Zaloguj się',
+      cancelButtonText: 'Zarejestruj się'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Przekierowanie do strony logowania
+        this.router.navigate(['/login']);
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        // Przekierowanie do strony rejestracji
+        this.router.navigate(['/register']);
+      }
+    });
   }
 
   clearSuccessMessage() {
@@ -124,6 +143,11 @@ export class InsertFlyDataComponent implements OnInit {
 
   onSubmit(): void {
     if (this.flyDataForm.invalid) {
+      return;
+    }
+
+    if (!this.authService.isLoggedIn()) {
+      this.notLoggedInAlert();
       return;
     }
 

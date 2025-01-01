@@ -109,7 +109,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
           this.isLoading = false;
           this.errorMessage = null;
           // Ustaw widok na listę użytkowników i wiadomość o sukcesie
-          this.dataService.setSuccessMessage('Dodano nowego użytkownika');
+          this.dataService.setSuccessMessage('Proces rejestracji zakończony sukcesem. Możesz się teraz zalogować.');
           this.router.navigate(['/home']);
         },
         error: error => {
