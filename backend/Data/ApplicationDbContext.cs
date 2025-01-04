@@ -35,6 +35,12 @@ namespace backend.Data
                 .WithMany(fp => fp.AIResponses)
                 .HasForeignKey(ai => ai.FlightPlanId)
                 .OnDelete(DeleteBehavior.Cascade);
+            
+            modelBuilder.Entity<FlightPlan>()
+                .HasOne(fp => fp.User)
+                .WithMany()
+                .HasForeignKey(fp => fp.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

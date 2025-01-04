@@ -25,6 +25,9 @@ namespace backend.Models
         public int ArrivalAirportId { get; set; }
         public ArrivalAirport ArrivalAirport { get; set; } = default!;
 
+        public string UserId { get; set; } = string.Empty;
+        public User User { get; set; } = default!;
+
         public List<AIResponse> AIResponses { get; set; } = new List<AIResponse>();
     }
 

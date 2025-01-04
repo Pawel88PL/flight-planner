@@ -17,10 +17,14 @@ export class FlightPlanService {
   constructor(private authService: AuthService, private http: HttpClient) { }
 
   createFlightPlan(request: FlightPlanRequest): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/create`, request);
+    const token = this.authService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.post<any>(`${this.apiUrl}/create`, request, { headers });
   }
 
   getFlightPlanById(id: string): Observable<FlightPlanResponse> {
-    return this.http.get<FlightPlanResponse>(`${this.apiUrl}/get/${id}`);
+    const token = this.authService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get<FlightPlanResponse>(`${this.apiUrl}/get/${id}`, { headers });
   }
 }

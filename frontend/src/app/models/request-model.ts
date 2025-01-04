@@ -6,5 +6,5 @@ export interface FlightPlanRequest {
     flightDay: string;
     flightDuration: string;
     aircraftId: number;
-
+    userId: string;
 }

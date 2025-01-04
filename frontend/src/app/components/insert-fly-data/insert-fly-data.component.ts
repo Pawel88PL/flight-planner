@@ -18,6 +18,7 @@ import { FlightPlanService } from '../../services/flight-plan.service';
 
 import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth.service';
+import { FlightPlanRequest } from '../../models/request-model';
 
 @Component({
   selector: 'app-insert-fly-data',
@@ -44,8 +45,10 @@ import { AuthService } from '../../services/auth.service';
 export class InsertFlyDataComponent implements OnInit {
 
   flyDataForm!: FormGroup;
-  errorMessage: string | null = null;
   isLoading: boolean = false;
+  userId: string | null = null;
+  
+  errorMessage: string | null = null;
   successMessage: string | null = null;
 
   aircrafts = [
@@ -64,6 +67,7 @@ export class InsertFlyDataComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeRegisterForm();
+    this.getUserId();
   }
 
   notLoggedInAlert(): void {
@@ -88,6 +92,10 @@ export class InsertFlyDataComponent implements OnInit {
   clearSuccessMessage() {
     if (this.successMessage)
       this.successMessage = null;
+  }
+
+  getUserId(): void {
+    this.userId = this.authService.getUserId();
   }
 
   initializeRegisterForm(): void {
@@ -146,13 +154,15 @@ export class InsertFlyDataComponent implements OnInit {
       return;
     }
 
-    if (!this.authService.isLoggedIn()) {
+    if (!this.userId) {
       this.notLoggedInAlert();
       return;
     }
 
     this.isLoading = true;
-    this.flightPlanService.createFlightPlan(this.flyDataForm.value).subscribe({
+    const request = this.prepareFlightPlanRequest();
+
+    this.flightPlanService.createFlightPlan(request).subscribe({
       next: (response) => {
         this.isLoading = false;
         const responseId = response.responseId;
@@ -163,6 +173,23 @@ export class InsertFlyDataComponent implements OnInit {
         this.isLoading = false;
       }
     });
+  }
+
+  prepareFlightPlanRequest(): FlightPlanRequest {
+    if (!this.userId) {
+      throw new Error('User ID is not set');
+    }
+
+    return {
+      id: 0,
+      departureICAO: this.flyDataForm.value.departureICAO,
+      arrivalICAO: this.flyDataForm.value.arrivalICAO,
+      departureTime: this.flyDataForm.value.departureTime,
+      flightDay: this.flyDataForm.value.flightDay,
+      flightDuration: this.flyDataForm.value.flightDuration,
+      aircraftId: this.flyDataForm.value.aircraftId,
+      userId: this.userId
+    };
   }
 
   validateFlightDuration(control: any): { [key: string]: boolean } | null {

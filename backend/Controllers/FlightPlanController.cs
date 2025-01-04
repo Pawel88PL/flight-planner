@@ -1,5 +1,6 @@
 using backend.Interfaces;
 using backend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
@@ -16,6 +17,7 @@ namespace backend.Controllers
             _flightPlanService = flightPlanService;
         }
 
+        [Authorize (Roles = "Pilot")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateFlightPlanAsync(FlightPlanRequest request)
         {
@@ -37,6 +39,7 @@ namespace backend.Controllers
             }
         }
 
+        [Authorize (Roles = "Pilot, Admin")]
         [HttpGet("get/{id}")]
         public async Task<IActionResult> GetFlightPlanResponseAsync(int id)
         {

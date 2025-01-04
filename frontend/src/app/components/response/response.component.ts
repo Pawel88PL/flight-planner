@@ -62,6 +62,7 @@ export class ResponseComponent implements OnInit {
         this.getAIResponse();
       },
       error: (error) => {
+        this.isLoading = false;
         this.errorMessage = error.error.message;
       }
     });

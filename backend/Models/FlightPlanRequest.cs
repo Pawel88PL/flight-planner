@@ -2,11 +2,12 @@ namespace backend.Models
 {
     public class FlightPlanRequest
     {   
-        public string DepartureICAO { get; set; } = string.Empty;
-        public string ArrivalICAO { get; set; } = string.Empty;
-        public string DepartureTime { get; set; } = string.Empty;
-        public string FlightDay { get; set; } = string.Empty;
-        public string FlightDuration { get; set; } = string.Empty;
+        public required string DepartureICAO { get; set; }
+        public required string ArrivalICAO { get; set; }
+        public required string DepartureTime { get; set; }
+        public required string FlightDay { get; set; }
+        public required string FlightDuration { get; set; }
+        public required string UserId { get; set; }
         public int AircraftId { get; set; }
     }
 }
