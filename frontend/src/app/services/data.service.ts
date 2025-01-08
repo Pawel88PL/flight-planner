@@ -17,8 +17,16 @@ export class DataService {
     this.successMessage.next(null);
   }
 
+  getFlyDataForm(): any {
+    return this.responseData;
+  }
+
   getResponseData(): any {
     return this.responseData;
+  }
+
+  setFlyDataForm(data: any): void {
+    this.responseData = data;
   }
 
   setResponseData(data: any): void {

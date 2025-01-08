@@ -27,6 +27,7 @@ namespace backend.Services
                     FlightDay = flightPlanRequest.FlightDay,
                     FlightDuration = flightPlanRequest.FlightDuration,
                     AircraftId = flightPlanRequest.AircraftId,
+                    UserId = flightPlanRequest.UserId
                 };
 
                 _context.FlightPlans.Add(newFlightPlan);

@@ -14,11 +14,13 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { Router, RouterModule } from '@angular/router';
 
+import { AuthService } from '../../services/auth.service';
+import { DataService } from '../../services/data.service';
 import { FlightPlanService } from '../../services/flight-plan.service';
 
-import Swal from 'sweetalert2';
-import { AuthService } from '../../services/auth.service';
 import { FlightPlanRequest } from '../../models/request-model';
+
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-insert-fly-data',
@@ -35,6 +37,7 @@ import { FlightPlanRequest } from '../../models/request-model';
     MatProgressBarModule,
     MatRadioModule,
     MatSelectModule,
+
     RouterModule,
     ReactiveFormsModule
   ],
@@ -46,6 +49,7 @@ export class InsertFlyDataComponent implements OnInit {
 
   flyDataForm!: FormGroup;
   isLoading: boolean = false;
+  request: FlightPlanRequest | null = null;
   userId: string | null = null;
   
   errorMessage: string | null = null;
@@ -60,6 +64,7 @@ export class InsertFlyDataComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
+    private dataService: DataService,
     private fb: FormBuilder,
     private flightPlanService: FlightPlanService,
     private router: Router
@@ -68,6 +73,20 @@ export class InsertFlyDataComponent implements OnInit {
   ngOnInit(): void {
     this.initializeRegisterForm();
     this.getUserId();
+    this.request = this.dataService.getFlyDataForm();
+
+    if (this.request) {
+      this.flyDataForm.setValue({
+        departureICAO: this.request.departureICAO,
+        arrivalICAO: this.request.arrivalICAO,
+        departureTime: this.request.departureTime,
+        flightDay: this.request.flightDay,
+        flightDuration: this.request.flightDuration,
+        aircraftId: this.request.aircraftId
+      });
+
+      this.onSubmit();
+    }
   }
 
   notLoggedInAlert(): void {
@@ -80,6 +99,7 @@ export class InsertFlyDataComponent implements OnInit {
       cancelButtonText: 'Zarejestruj się'
     }).then((result) => {
       if (result.isConfirmed) {
+        this.dataService.setFlyDataForm(this.flyDataForm.value);
         // Przekierowanie do strony logowania
         this.router.navigate(['/login']);
       } else if (result.dismiss === Swal.DismissReason.cancel) {
@@ -154,15 +174,17 @@ export class InsertFlyDataComponent implements OnInit {
       return;
     }
 
+    console.log(this.flyDataForm.value);
+    
     if (!this.userId) {
       this.notLoggedInAlert();
       return;
     }
-
+    
     this.isLoading = true;
-    const request = this.prepareFlightPlanRequest();
+    this.request = this.prepareFlightPlanRequest();
 
-    this.flightPlanService.createFlightPlan(request).subscribe({
+    this.flightPlanService.createFlightPlan(this.request).subscribe({
       next: (response) => {
         this.isLoading = false;
         const responseId = response.responseId;

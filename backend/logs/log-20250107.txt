@@ -1,0 +1,16 @@
+2025-01-07 07:55:58.126 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/37 - null null
+2025-01-07 07:55:58.140 +01:00 [INF] CORS policy execution successful.
+2025-01-07 07:55:58.140 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/37 - 204 null null 15.2416ms
+2025-01-07 07:55:58.142 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/37 - null null
+2025-01-07 07:55:58.143 +01:00 [INF] CORS policy execution successful.
+2025-01-07 07:55:58.155 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4.01.2025 09:57:03', Current time (UTC): '7.01.2025 06:55:58'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-01-07 07:55:58.159 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4.01.2025 09:57:03', Current time (UTC): '7.01.2025 06:55:58'.
+2025-01-07 07:55:58.159 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pilot|Admin)
+2025-01-07 07:55:58.160 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-07 07:55:58.160 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/37 - 401 0 null 17.9555ms

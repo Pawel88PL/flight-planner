@@ -1,0 +1,32 @@
+2025-01-06 16:12:23.788 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/37 - null null
+2025-01-06 16:12:23.828 +01:00 [INF] CORS policy execution successful.
+2025-01-06 16:12:23.833 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/37 - 204 null null 46.6181ms
+2025-01-06 16:12:23.834 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/37 - null null
+2025-01-06 16:12:23.836 +01:00 [INF] CORS policy execution successful.
+2025-01-06 16:12:23.854 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4.01.2025 09:57:03', Current time (UTC): '6.01.2025 15:12:23'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-01-06 16:12:23.860 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4.01.2025 09:57:03', Current time (UTC): '6.01.2025 15:12:23'.
+2025-01-06 16:12:23.861 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pilot|Admin)
+2025-01-06 16:12:23.861 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-06 16:12:23.861 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/37 - 401 0 null 27.1307ms
+2025-01-06 21:23:40.690 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/37 - null null
+2025-01-06 21:23:40.702 +01:00 [INF] CORS policy execution successful.
+2025-01-06 21:23:40.707 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/37 - 204 null null 19.8288ms
+2025-01-06 21:23:40.709 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/37 - null null
+2025-01-06 21:23:40.711 +01:00 [INF] CORS policy execution successful.
+2025-01-06 21:23:40.727 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4.01.2025 09:57:03', Current time (UTC): '6.01.2025 20:23:40'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-01-06 21:23:40.733 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '4.01.2025 09:57:03', Current time (UTC): '6.01.2025 20:23:40'.
+2025-01-06 21:23:40.735 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pilot|Admin)
+2025-01-06 21:23:40.735 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-06 21:23:40.736 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/37 - 401 0 null 26.7368ms
