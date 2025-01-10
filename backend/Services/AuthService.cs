@@ -64,10 +64,11 @@ namespace backend.Services
 
             var claims = new List<Claim>
             {
-                new (JwtRegisteredClaimNames.Sub, user.UserName ?? string.Empty),
-                new (ClaimTypes.NameIdentifier, user.Id),
-                new (ClaimTypes.Name, user.FirstName ?? string.Empty),
-                new (ClaimTypes.Surname, user.LastName ?? string.Empty)
+                new(JwtRegisteredClaimNames.Sub, user.Id),
+                new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new(ClaimTypes.NameIdentifier, user.UserName ?? string.Empty),
+                new(ClaimTypes.Name, user.FirstName ?? string.Empty),
+                new(ClaimTypes.Surname, user.LastName ?? string.Empty)
             };
 
             var roles = await _userManager.GetRolesAsync(user);

@@ -27,6 +27,7 @@ export class DataService {
 
   setFlyDataForm(data: any): void {
     this.responseData = data;
+    localStorage.setItem('flyDataForm', 'true');
   }
 
   setResponseData(data: any): void {

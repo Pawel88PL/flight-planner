@@ -58,5 +58,16 @@ namespace backend.Services
 
             return flightPlan;
         }
+
+        public async Task<List<FlightPlan>> GetFlightPlansForUser(string userId)
+        {
+            var flightPlans = await _context.FlightPlans
+                .Where(f => f.UserId == userId)
+                .Include(f => f.DepartureAirport)
+                .Include(f => f.ArrivalAirport)
+                .ToListAsync();
+
+            return flightPlans;
+        }
     }
 }

@@ -75,7 +75,7 @@ export class InsertFlyDataComponent implements OnInit {
     this.getUserId();
     this.request = this.dataService.getFlyDataForm();
 
-    if (this.request) {
+    if (this.request && localStorage.getItem('flyDataForm')) {
       this.flyDataForm.setValue({
         departureICAO: this.request.departureICAO,
         arrivalICAO: this.request.arrivalICAO,
@@ -116,6 +116,7 @@ export class InsertFlyDataComponent implements OnInit {
 
   getUserId(): void {
     this.userId = this.authService.getUserId();
+    console.log('User ID:', this.userId);
   }
 
   initializeRegisterForm(): void {
@@ -180,9 +181,12 @@ export class InsertFlyDataComponent implements OnInit {
       this.notLoggedInAlert();
       return;
     }
+
+    console.log('User ID:', this.userId);
     
     this.isLoading = true;
     this.request = this.prepareFlightPlanRequest();
+    localStorage.removeItem('flyDataForm');
 
     this.flightPlanService.createFlightPlan(this.request).subscribe({
       next: (response) => {

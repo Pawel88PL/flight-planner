@@ -445,3 +445,129 @@ Podsumowując, ze względu na prognozowane warunki meteorologiczne, lot VFR w pl
 2025-01-08 20:40:07.554 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 29.4579ms
 2025-01-08 20:40:07.554 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
 2025-01-08 20:40:07.555 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 33.5372ms
+2025-01-08 20:51:20.932 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-08 20:51:20.935 +01:00 [INF] CORS policy execution successful.
+2025-01-08 20:51:20.937 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 5.123ms
+2025-01-08 20:51:20.938 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-01-08 20:51:20.939 +01:00 [INF] CORS policy execution successful.
+2025-01-08 20:51:20.941 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-08 20:51:20.944 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-08 20:51:21.425 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-08 20:51:21.458 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-08 20:51:21.495 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 549.6415ms
+2025-01-08 20:51:21.495 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-08 20:51:21.495 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 556.6612ms
+2025-01-08 20:58:20.568 +01:00 [INF] Application is shutting down...
+2025-01-08 20:58:26.696 +01:00 [INF] Application is starting
+2025-01-08 20:58:26.717 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-08 20:58:26.742 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-08 20:58:26.742 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-08 20:58:26.743 +01:00 [INF] Hosting environment: Development
+2025-01-08 20:58:26.743 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-08 21:03:37.737 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:03:37.848 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-08 21:03:37.908 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:03:37.913 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 180.0717ms
+2025-01-08 21:03:37.915 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:03:37.920 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:03:37.970 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 404 0 null 54.8593ms
+2025-01-08 21:03:37.972 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId, Response status code: 404
+2025-01-08 21:03:42.652 +01:00 [INF] Application is shutting down...
+2025-01-08 21:03:48.502 +01:00 [INF] Application is starting
+2025-01-08 21:03:48.523 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-08 21:03:48.545 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-08 21:03:48.546 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-08 21:03:48.546 +01:00 [INF] Hosting environment: Development
+2025-01-08 21:03:48.546 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-08 21:03:51.247 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:03:51.267 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-08 21:03:51.283 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:03:51.289 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 43.1243ms
+2025-01-08 21:03:51.292 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:03:51.297 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:03:51.380 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-08 21:03:51.388 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-08 21:03:51.474 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-08 21:03:51.485 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 95.525ms
+2025-01-08 21:03:51.486 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-08 21:03:51.488 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 196.7268ms
+2025-01-08 21:04:11.166 +01:00 [INF] Application is shutting down...
+2025-01-08 21:04:18.140 +01:00 [INF] Application is starting
+2025-01-08 21:04:18.170 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-08 21:04:18.217 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-08 21:04:18.219 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-08 21:04:18.220 +01:00 [INF] Hosting environment: Development
+2025-01-08 21:04:18.220 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-08 21:04:18.429 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-01-08 21:04:18.486 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 57.24ms
+2025-01-08 21:04:18.731 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-08 21:04:18.731 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - null null
+2025-01-08 21:04:19.113 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-08 21:04:19.113 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-08 21:04:19.115 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 383.5966ms
+2025-01-08 21:04:19.115 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 383.5963ms
+2025-01-08 21:04:19.194 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-01-08 21:04:19.254 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.8957ms
+2025-01-08 21:04:27.556 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:04:27.566 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-08 21:04:27.608 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:04:27.611 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 54.8533ms
+2025-01-08 21:04:27.612 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:04:27.614 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:04:27.738 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-08 21:04:27.748 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-08 21:08:58.306 +01:00 [INF] Application is starting
+2025-01-08 21:08:58.332 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-01-08 21:08:58.367 +01:00 [INF] Now listening on: http://localhost:5139
+2025-01-08 21:08:58.369 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-08 21:08:58.370 +01:00 [INF] Hosting environment: Development
+2025-01-08 21:08:58.370 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-01-08 21:08:58.823 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-01-08 21:08:58.878 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 55.7924ms
+2025-01-08 21:08:59.556 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-01-08 21:08:59.597 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.1821ms
+2025-01-08 21:09:01.633 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-01-08 21:09:01.639 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-08 21:09:01.655 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:09:01.657 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 23.9656ms
+2025-01-08 21:09:01.661 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-01-08 21:09:01.662 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:09:01.743 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-08 21:09:01.750 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-01-08 21:09:01.760 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-01-08 21:09:01.761 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-01-08 21:09:01.761 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-01-08 21:09:01.763 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-08 21:09:01.764 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 12.9484ms
+2025-01-08 21:09:01.765 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-08 21:09:01.766 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 105.6572ms
+2025-01-08 21:09:10.372 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-08 21:09:10.384 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:09:10.387 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 15.6124ms
+2025-01-08 21:09:10.390 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-01-08 21:09:10.391 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:09:10.395 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-08 21:09:10.408 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-08 21:09:10.692 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-08 21:09:10.721 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-08 21:09:10.754 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 345.7945ms
+2025-01-08 21:09:10.754 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-08 21:09:10.756 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 366.355ms
+2025-01-08 21:09:22.264 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:09:22.273 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:09:22.274 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 10.9412ms
+2025-01-08 21:09:22.276 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:09:22.278 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:09:22.317 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-08 21:09:22.320 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-08 21:09:54.559 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-08 21:09:54.573 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 32253.4232ms
+2025-01-08 21:09:54.574 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-08 21:09:54.575 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 32299.5306ms
+2025-01-08 21:10:16.127 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:10:16.135 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:10:16.269 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 21.6935ms
+2025-01-08 21:10:16.315 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-08 21:10:16.325 +01:00 [INF] CORS policy execution successful.
+2025-01-08 21:10:16.388 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-08 21:10:16.391 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).

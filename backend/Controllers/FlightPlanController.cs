@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using backend.Interfaces;
 using backend.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -51,6 +52,30 @@ namespace backend.Controllers
             catch (Exception ex)
             {
                 var message = "Wystąpił błąd podczas pobierania zapytania o plan lotu. " + ex.Message;
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
+
+        [Authorize (Roles = "Pilot, Admin")]
+        [HttpGet("get-flight-plans-by-userId")]
+        public async Task<IActionResult> GetFlightPlansForUserAsync()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return BadRequest(new { message = "Nie znaleziono identyfikatora użytkownika." });
+            }
+
+            try
+            {
+                var flightPlans = await _flightPlanService.GetFlightPlansForUser(userId);
+                return Ok(flightPlans);
+            }
+            catch (Exception ex)
+            {
+                var message = "Wystąpił błąd podczas pobierania planów lotu dla użytkownika. " + ex.Message;
                 Log.Error(message);
                 return BadRequest(new { message });
             }

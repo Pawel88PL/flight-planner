@@ -6,5 +6,6 @@ namespace backend.Interfaces
     {
         Task<int> AddFlightPlanAsync(FlightPlanRequest flightPlanRequest, List<int> airports);
         Task<FlightPlan> GetFlightPlan(int id);
+        Task<List<FlightPlan>> GetFlightPlansForUser(string userId);
     }
 }

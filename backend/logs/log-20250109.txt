@@ -1,0 +1,17 @@
+2025-01-09 08:17:53.041 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-09 08:17:53.421 +01:00 [INF] CORS policy execution successful.
+2025-01-09 08:17:53.445 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8.01.2025 22:09:10', Current time (UTC): '9.01.2025 07:17:53'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-01-09 08:17:53.474 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8.01.2025 22:09:10', Current time (UTC): '9.01.2025 07:17:53'.
+2025-01-09 08:17:53.481 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pilot|Admin)
+2025-01-09 08:17:53.487 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-09 08:17:53.488 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 401 0 null 449.6049ms
+2025-01-09 08:17:53.651 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-09 08:17:53.658 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 387798.5755ms
+2025-01-09 08:17:53.658 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-09 08:17:53.659 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 499 null application/json; charset=utf-8 387875.7043ms

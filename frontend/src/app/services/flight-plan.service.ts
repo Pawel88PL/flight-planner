@@ -27,4 +27,10 @@ export class FlightPlanService {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this.http.get<FlightPlanResponse>(`${this.apiUrl}/get/${id}`, { headers });
   }
+
+  getFlightPlans(): Observable<FlightPlanResponse[]> {
+    const token = this.authService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get<FlightPlanResponse[]>(`${this.apiUrl}/get-flight-plans-by-userId`, { headers });
+  }
 }

@@ -71,7 +71,7 @@ export class AuthService {
     const token = this.getToken();
     if (!token) return null;
     const decodedToken = this.jwtService.decodeToken(token);
-    return decodedToken.nameid;
+    return decodedToken.sub;
   }
 
   handleTokenExpiration(token: string | null): void {

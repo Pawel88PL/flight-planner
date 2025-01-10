@@ -35,7 +35,7 @@ namespace backend.Services
             }
 
             var weatherTask = _weatherService.GetWeatherDataForDepartureAndArrival(request.DepartureICAO, request.ArrivalICAO);
-            var airportsTask =  _airportService.GetDepartureAndArrivalAirports(request.DepartureICAO, request.ArrivalICAO);
+            var airportsTask = _airportService.GetDepartureAndArrivalAirports(request.DepartureICAO, request.ArrivalICAO);
 
             await Task.WhenAll(weatherTask, airportsTask);
 
@@ -77,6 +77,24 @@ namespace backend.Services
             };
 
             return flightPlanDto;
+        }
+
+        public async Task<List<FlightPlanDto>> GetFlightPlansForUser(string userId)
+        {
+            var flightPlans = await _flightPlanRepository.GetFlightPlansForUser(userId);
+
+            var flightPlansDto = flightPlans.Select(f => new FlightPlanDto
+            {
+                Id = f.Id,
+                DepartureTime = f.DepartureTime,
+                FlightDay = f.FlightDay,
+                FlightDuration = f.FlightDuration,
+                AircraftId = f.AircraftId,
+                DepartureAirport = f.DepartureAirport,
+                ArrivalAirport = f.ArrivalAirport,
+            }).ToList();
+
+            return flightPlansDto;
         }
     }
 }
