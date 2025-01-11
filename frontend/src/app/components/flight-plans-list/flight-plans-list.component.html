@@ -6,19 +6,28 @@
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Data startu</th>
+                        <th scope="col">Numer</th>
+                        <th scope="col">Data utworzenia</th>
                         <th scope="col">Lotnisko startu</th>
                         <th scope="col">Lotnisko docelowe</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let flightPlan of flightPlans">
-                        <td>{{ flightPlan.departureTime }}</td>
-                        <td>{{ flightPlan.departureAirport }}</td>
-                        <td>{{ flightPlan.arrivalAirport }}</td>
+                    <tr *ngFor="let flightPlan of flightPlans" (click)="showFlightPlanDetails(flightPlan.id)"
+                        style="cursor: pointer;">
+                        <td>{{ flightPlan.id }}</td>
+                        <td>{{ flightPlan.createdAt | date: 'd MMMM yyyy HH:mm' }}</td>
+                        <td>
+                            {{ flightPlan.departureAirport.icao }} -
+                            {{ flightPlan.departureAirport.name }}
+                        </td>
+                        <td>
+                            {{ flightPlan.arrivalAirport.icao }} -
+                            {{ flightPlan.arrivalAirport.name }}
+                        </td>
                     </tr>
                 </tbody>
             </table>

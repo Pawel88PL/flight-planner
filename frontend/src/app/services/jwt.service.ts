@@ -15,6 +15,11 @@ interface JwtPayload {
 })
 
 export class JwtService {
+
+  clearToken(): void {
+    localStorage.removeItem('token');
+  }
+
   decodeToken(token: string): JwtPayload {
     const decoded: any = jwtDecode(token);
     return {
@@ -26,6 +31,14 @@ export class JwtService {
       exp: decoded.exp,
     };
   }
+
+  getToken(): string | null {
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('token');
+    }
+    return null;
+  }
+
 
   getTokenExpirationDate(token: string): Date | null {
     const decoded = this.decodeToken(token);
@@ -40,5 +53,9 @@ export class JwtService {
     const date = this.getTokenExpirationDate(token);
     if (date === null) return false;
     return !(date.valueOf() > new Date().valueOf());
+  }
+
+  setToken(token: string): void {
+    localStorage.setItem('token', token);
   }
 }

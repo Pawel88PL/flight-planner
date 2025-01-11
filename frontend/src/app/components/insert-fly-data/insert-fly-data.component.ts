@@ -174,8 +174,6 @@ export class InsertFlyDataComponent implements OnInit {
     if (this.flyDataForm.invalid) {
       return;
     }
-
-    console.log(this.flyDataForm.value);
     
     if (!this.userId) {
       this.notLoggedInAlert();

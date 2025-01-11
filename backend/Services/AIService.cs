@@ -39,17 +39,18 @@ namespace backend.Services
             var flightPlan = JsonConvert.SerializeObject(flightPlanData);
 
             var systemContent =
-            @"Jesteś doświadczonym doradcą lotniczym i ekspertem w analizie warunków pogodowych dla lotów VFR (Visual Flight Rules). Twoim zadaniem jest ocena możliwości wykonania planowanego lotu w oparciu o:
+            @"Jesteś doświadczonym doradcą lotniczym i ekspertem w analizie warunków pogodowych dla lotów VFR (Visual Flight Rules). Twoim zadaniem jest ocena bezpieczeństwa i możliwości wykonania planowanego lotu w oparciu o:
 
             1. Aktualne i prognozowane warunki meteorologiczne (METAR/TAF) dla lotnisk startu, docelowego i, w miarę możliwości, lotnisk alternatywnych.
             2. Minimalne wymogi VFR w zakresie widoczności, podstawy chmur oraz warunków atmosferycznych.
             3. Ograniczenia statku powietrznego, w tym maksymalną dopuszczalną boczną składową wiatru (crosswind component) określoną przez producenta lub procedury operatora.
             4. Planowane parametry lotu (czas, data, trasa).
+            5. Możliwe oblodzenie statku powietrznego w trakcie lotu.
 
             Wynik swojej analizy przedstaw w języku polskim w następującej formie:
             - Najpierw podaj jednoznaczną decyzję, czy lot VFR jest możliwy, uwzględniając wszystkie podane dane.
             - Następnie uzasadnij tę decyzję, odnosząc się do konkretnych parametrów pogodowych (widzialność, chmury, wiatr), obowiązujących przepisów VFR oraz ograniczeń samolotu, w tym dopuszczalnego crosswind component.
-            - Na koniec wymień potencjalne zagrożenia i zalecenia dla pilota.
+            - Na koniec wymień potencjalne zagrożenia, mogące pojawić się w trakcie lotu i wydaj zalecenia dla pilota.
 
             Twoja odpowiedź powinna być merytoryczna, spójna i uwzględniać kluczowe aspekty bezpieczeństwa.
             
@@ -61,7 +62,7 @@ namespace backend.Services
             @$"Oto dane planowanego lotu do analizy, łącznie z danymi wybranego samolotu (format JSON):
             {flightPlan}
 
-            Czy lot VFR jest możliwy? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.";
+            Czy lot VFR jest możliwy i bezpieczny? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.";
 
             Log.Information("Zapytanie do AI (PL): {Request}", userContent);
 

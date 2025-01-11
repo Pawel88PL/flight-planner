@@ -86,6 +86,7 @@ namespace backend.Services
             var flightPlansDto = flightPlans.Select(f => new FlightPlanDto
             {
                 Id = f.Id,
+                CreatedAt = f.CreatedAt,
                 DepartureTime = f.DepartureTime,
                 FlightDay = f.FlightDay,
                 FlightDuration = f.FlightDuration,
