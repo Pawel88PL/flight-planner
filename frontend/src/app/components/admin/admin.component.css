@@ -1,0 +1,40 @@
+.airplanes {
+    padding: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #56d1f0, #dfe4e6);
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.config {
+    padding: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #56d1f0, #dfe4e6);
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-container {
+    margin: 100px auto 0 auto;
+    max-width: 1200px;
+}
+
+.flights {
+    padding: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #56d1f0, #dfe4e6);
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.users {
+    padding: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #56d1f0, #dfe4e6);
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.airplanes:hover,
+.config:hover,
+.flights:hover,
+.users:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

@@ -14,9 +14,16 @@
             <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
                     <button mat-raised-button class="m-2" routerLink="/flight-plans"
-                        *ngIf="authService.isLoggedIn()">
+                        *ngIf="authService.isLoggedIn() && authService.isPilot()">
                         <img src="./images/panel.png" alt="person" class="icon">
                         HISTORIA ZAPYTAŃ
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button mat-raised-button class="m-2" routerLink="/admin"
+                        *ngIf="authService.isLoggedIn() && authService.isAdmin()">
+                        <img src="./images/panel.png" alt="person" class="icon">
+                        PANEL ADMINISTRATORA
                     </button>
                 </li>
             </ul>

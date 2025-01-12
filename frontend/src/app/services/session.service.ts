@@ -66,6 +66,9 @@ export class SessionService {
   }
 
   showNewTokenAlert(): void {
+
+    console.log('Show new token alert');
+
     let remainingTime = 60;
 
     const toast = this.toastr.info(
