@@ -793,3 +793,47 @@ RolesAuthorizationRequirement:User.IsInRole must be true for one of the followin
 2025-01-11 14:08:25.356 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 36.3931ms
 2025-01-11 14:08:25.356 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
 2025-01-11 14:08:25.356 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/51 - 200 null application/json; charset=utf-8 38.6951ms
+2025-01-11 14:26:55.019 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-11 14:26:55.022 +01:00 [INF] CORS policy execution successful.
+2025-01-11 14:26:55.024 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 6.0829ms
+2025-01-11 14:26:55.033 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-11 14:26:55.035 +01:00 [INF] CORS policy execution successful.
+2025-01-11 14:26:55.049 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-11 14:26:55.051 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-11 14:26:55.228 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-11 14:26:55.228 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 177.3328ms
+2025-01-11 14:26:55.228 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-11 14:26:55.228 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 195.8552ms
+2025-01-11 14:26:58.673 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/50 - null null
+2025-01-11 14:26:58.679 +01:00 [INF] CORS policy execution successful.
+2025-01-11 14:26:58.683 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/50 - 204 null null 9.7804ms
+2025-01-11 14:26:58.686 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/50 - null null
+2025-01-11 14:26:58.687 +01:00 [INF] CORS policy execution successful.
+2025-01-11 14:26:58.688 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-01-11 14:26:58.688 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2025-01-11 14:26:58.714 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2025-01-11 14:26:58.714 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 25.8047ms
+2025-01-11 14:26:58.714 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-01-11 14:26:58.714 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/50 - 200 null application/json; charset=utf-8 28.0204ms
+2025-01-11 14:26:58.719 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/50 - null null
+2025-01-11 14:26:58.720 +01:00 [INF] CORS policy execution successful.
+2025-01-11 14:26:58.720 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-01-11 14:26:58.720 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2025-01-11 14:26:58.745 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2025-01-11 14:26:58.745 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 25.084ms
+2025-01-11 14:26:58.745 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-01-11 14:26:58.745 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/50 - 200 null application/json; charset=utf-8 26.4604ms
+2025-01-11 14:27:05.660 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-01-11 14:27:05.661 +01:00 [INF] CORS policy execution successful.
+2025-01-11 14:27:05.661 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 0.8973ms
+2025-01-11 14:27:05.663 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-01-11 14:27:05.663 +01:00 [INF] CORS policy execution successful.
+2025-01-11 14:27:05.664 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-11 14:27:05.664 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-01-11 14:27:05.670 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-01-11 14:27:05.670 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-01-11 14:27:05.671 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-01-11 14:27:05.671 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-11 14:27:05.671 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 6.7497ms
+2025-01-11 14:27:05.671 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-11 14:27:05.672 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 9.174ms

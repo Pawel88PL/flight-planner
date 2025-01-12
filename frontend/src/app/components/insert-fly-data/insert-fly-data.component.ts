@@ -51,7 +51,7 @@ export class InsertFlyDataComponent implements OnInit {
   isLoading: boolean = false;
   request: FlightPlanRequest | null = null;
   userId: string | null = null;
-  
+
   errorMessage: string | null = null;
   successMessage: string | null = null;
 
@@ -116,7 +116,6 @@ export class InsertFlyDataComponent implements OnInit {
 
   getUserId(): void {
     this.userId = this.authService.getUserId();
-    console.log('User ID:', this.userId);
   }
 
   initializeRegisterForm(): void {
@@ -174,14 +173,12 @@ export class InsertFlyDataComponent implements OnInit {
     if (this.flyDataForm.invalid) {
       return;
     }
-    
-    if (!this.userId) {
+
+    if (!this.userId && !this.authService.isLoggedIn()) {
       this.notLoggedInAlert();
       return;
     }
 
-    console.log('User ID:', this.userId);
-    
     this.isLoading = true;
     this.request = this.prepareFlightPlanRequest();
     localStorage.removeItem('flyDataForm');
@@ -200,10 +197,6 @@ export class InsertFlyDataComponent implements OnInit {
   }
 
   prepareFlightPlanRequest(): FlightPlanRequest {
-    if (!this.userId) {
-      throw new Error('User ID is not set');
-    }
-
     return {
       id: 0,
       departureICAO: this.flyDataForm.value.departureICAO,
@@ -212,7 +205,7 @@ export class InsertFlyDataComponent implements OnInit {
       flightDay: this.flyDataForm.value.flightDay,
       flightDuration: this.flyDataForm.value.flightDuration,
       aircraftId: this.flyDataForm.value.aircraftId,
-      userId: this.userId
+      userId: this.userId!
     };
   }
 

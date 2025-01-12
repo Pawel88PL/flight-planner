@@ -1,0 +1,233 @@
+2025-01-12 11:46:56.848 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-12 11:46:56.921 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:46:56.922 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 75.1159ms
+2025-01-12 11:46:56.924 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 56
+2025-01-12 11:46:56.926 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:46:56.929 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 11:46:56.934 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-12 11:46:57.557 +01:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-12 11:46:57.572 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 637.169ms
+2025-01-12 11:46:57.572 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 11:46:57.572 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 404 null application/json; charset=utf-8 647.6732ms
+2025-01-12 11:47:04.196 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-12 11:47:04.198 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:47:04.198 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 1.7282ms
+2025-01-12 11:47:04.200 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-01-12 11:47:04.201 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:47:04.202 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 11:47:04.207 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-12 11:47:04.805 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-12 11:47:04.925 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-12 11:47:04.992 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 783.8315ms
+2025-01-12 11:47:04.992 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 11:47:04.994 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 793.5741ms
+2025-01-12 11:47:05.016 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2025-01-12 11:47:05.016 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:47:05.016 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 0.7219ms
+2025-01-12 11:47:05.019 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 182
+2025-01-12 11:47:05.020 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:47:05.040 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-01-12 11:47:05.041 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2025-01-12 11:47:05.052 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWA&format=json&taf=true
+2025-01-12 11:47:05.052 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWA&format=json&taf=true
+2025-01-12 11:47:05.085 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWA&format=json&taf=true
+2025-01-12 11:47:05.085 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWA&format=json&taf=true
+2025-01-12 11:47:05.553 +01:00 [INF] Received HTTP response headers after 467.5319ms - 200
+2025-01-12 11:47:05.553 +01:00 [INF] End processing HTTP request after 468.3658ms - 200
+2025-01-12 11:47:05.569 +01:00 [INF] Received HTTP response headers after 516.7721ms - 200
+2025-01-12 11:47:05.569 +01:00 [INF] End processing HTTP request after 518.1415ms - 200
+2025-01-12 11:47:06.060 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-12 11:47:06.060 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 1018.9912ms
+2025-01-12 11:47:06.061 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-01-12 11:47:06.061 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 1042.3313ms
+2025-01-12 11:47:06.080 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/52 - null null
+2025-01-12 11:47:06.080 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:47:06.080 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/52 - 204 null null 0.9473ms
+2025-01-12 11:47:06.082 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/52 - null null
+2025-01-12 11:47:06.083 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:47:06.083 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-01-12 11:47:06.084 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2025-01-12 11:47:06.166 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2025-01-12 11:47:06.167 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 81.415ms
+2025-01-12 11:47:06.167 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-01-12 11:47:06.167 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/52 - 200 null application/json; charset=utf-8 84.9516ms
+2025-01-12 11:47:06.170 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/52 - null null
+2025-01-12 11:47:06.171 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:47:06.171 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-01-12 11:47:06.171 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2025-01-12 11:47:06.361 +01:00 [INF] Zapytanie do AI (PL): Jesteś doświadczonym doradcą lotniczym i ekspertem w analizie warunków pogodowych dla lotów VFR (Visual Flight Rules). Twoim zadaniem jest ocena bezpieczeństwa i możliwości wykonania planowanego lotu w oparciu o:
+
+            1. Aktualne i prognozowane warunki meteorologiczne (METAR/TAF) dla lotnisk startu, docelowego i, w miarę możliwości, lotnisk alternatywnych.
+            2. Minimalne wymogi VFR w zakresie widoczności, podstawy chmur oraz warunków atmosferycznych.
+            3. Ograniczenia statku powietrznego, w tym maksymalną dopuszczalną boczną składową wiatru (crosswind component) określoną przez producenta lub procedury operatora.
+            4. Planowane parametry lotu (czas, data, trasa).
+            5. Możliwe oblodzenie statku powietrznego w trakcie lotu.
+
+            Wynik swojej analizy przedstaw w języku polskim w następującej formie:
+            - Najpierw podaj jednoznaczną decyzję, czy lot VFR jest możliwy, uwzględniając wszystkie podane dane.
+            - Następnie uzasadnij tę decyzję, odnosząc się do konkretnych parametrów pogodowych (widzialność, chmury, wiatr), obowiązujących przepisów VFR oraz ograniczeń samolotu, w tym dopuszczalnego crosswind component.
+            - Na koniec wymień potencjalne zagrożenia, mogące pojawić się w trakcie lotu i wydaj zalecenia dla pilota.
+
+            Twoja odpowiedź powinna być merytoryczna, spójna i uwzględniać kluczowe aspekty bezpieczeństwa.
+            
+            Wyróżnij ją od reszty tekstu, np. poprzez zastosowanie dobrze widocznego nagłówka lub formatowania.
+2025-01-12 11:47:06.362 +01:00 [INF] Zapytanie do AI (PL): Oto dane planowanego lotu do analizy, łącznie z danymi wybranego samolotu (format JSON):
+            {"Dzień lotu":"today","Czas trwania lotu":"0200","Godzina wylotu":"1100","Kod lotniska startu":"EPPO","Miasto lotniska startu":"","Kraj lotniska startu":"","METAR lotniska startu":"EPPO 121030Z 32009KT 9999 OVC017 01/M02 Q1026","TAF lotniska startu":"TAF AMD EPPO 120901Z 1209/1306 31015KT 9999 OVC020 TEMPO 1209/1212 32018G28KT 4500 -SN DRSN BKN014 OVC019 BECMG 1302/1305 34005KT 2000 BR OVC003","Nazwa lotniska startu":"POZNAN/LAWICA AIRPORT","Kod lotniska lądowania":"EPWA","Miasto lotniska lądowania":"","Kraj lotniska lądowania":"","METAR lotniska lądowania":"EPWA 121030Z 31013KT 9999 -SN BKN006 BKN013 01/00 Q1016 RESN TEMPO 2000 SN","TAF lotniska lądowania":"TAF EPWA 120830Z 1209/1309 26006KT 5000 -SN BKN005 BKN010 TEMPO 1209/1214 1500 SN BR BKN004 BECMG 1210/1212 34010KT BECMG 1214/1216 BKN016 TEMPO 1214/1224 4500 -SN BKN009 BKN012 PROB30 TEMPO 1214/1220 2500 SHSN BKN006 BKN010TCU TEMPO 1300/1308 BKN007 BKN014","Nazwa lotniska lądowania":"WARSAW/CHOPINA AIRPORT","Dane samolotu":{"Model samolotu":"Technam P2008","Maksymalny boczny komponent wiatru w knots":15,"Minimalna prędkość przeciągnięcia w konts":39,"Prędkość wznoszenia w ft/min":900,"Maksymalna masa startowa w kg":600,"Zasięg w NM":730,"Prędkość przelotowa w knots":115,"Zużycie paliwa w litrach na godzinę":17,"Minimalna widoczność VFR w km":5,"Minimalna podstawa chmur VFR w ft AGL":1500}}
+
+            Czy lot VFR jest możliwy i bezpieczny? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.
+2025-01-12 11:47:06.365 +01:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2025-01-12 11:47:06.365 +01:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2025-01-12 11:47:19.228 +01:00 [INF] Received HTTP response headers after 12862.9374ms - 200
+2025-01-12 11:47:19.229 +01:00 [INF] End processing HTTP request after 12865.0434ms - 200
+2025-01-12 11:47:19.232 +01:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-AopmkSrdLQqEvhztYUyUbNYves75P",
+  "object": "chat.completion",
+  "created": 1736678826,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "### Ocena możliwości lotu VFR\n\n**Decyzja:** Lot VFR nie jest możliwy i bezpieczny.\n\n**Uzasadnienie:**\n\n1. **Warunki meteorologiczne na lotnisku startu (EPPO):**\n   - **METAR:** OVC017 (chmury całkowite na wysokości 1700 ft AGL), widoczność 9999 m.\n   - **TAF:** Prognoza przewiduje chmury OVC020 (na wysokości 2000 ft AGL) oraz warunki TEMP, które mogą obniżyć widoczność do 4500 m oraz wprowadzić opady śniegu (SN) i mgłę (BR) w godzinach 1209-1212.\n\n2. **Warunki meteorologiczne na lotnisku lądowania (EPWA):**\n   - **METAR:** BKN006 (chmury na wysokości 600 ft AGL) oraz BKN013 (chmury na wysokości 1300 ft AGL), widoczność 9999 m, ale występują opady śniegu (SN).\n   - **TAF:** Prognoza przewiduje obniżenie widoczności do 5000 m oraz warunki TEMP, które mogą obniżyć widoczność do 1500 m z opadami śniegu i mgłą.\n\n3. **Minimalne wymogi VFR:**\n   - Minimalna widoczność VFR wynosi 5 km, co w przypadku EPPO jest spełnione, ale prognozy na EPWA przewidują obniżenie widoczności do 1500 m, co nie spełnia wymogów VFR.\n   - Minimalna podstawa chmur VFR wynosi 1500 ft AGL, co w przypadku EPPO jest spełnione, ale na EPWA chmury są na wysokości 600 ft AGL, co również nie spełnia wymogów.\n\n4. **Ograniczenia statku powietrznego:**\n   - Samolot Technam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 kt. W prognozach dla EPPO przewiduje się wiatr 310° 15 kt, co jest na granicy dopuszczalnych wartości. Dodatkowo, w czasie TEMP przewiduje się podmuchy do 28 kt, co może przekroczyć dopuszczalny limit.\n\n5. **Możliwe oblodzenie:**\n   - W warunkach opadów śniegu i niskich temperatur (1°C na EPPO i 1°C na EPWA) istnieje ryzyko oblodzenia, co może wpłynąć na bezpieczeństwo lotu.\n\n**Zagrożenia:**\n- Niska podstawa chmur na EPWA (600 ft AGL) oraz możliwe obniżenie widoczności do 1500 m stwarza ryzyko utraty orientacji w przestrzeni.\n- Potencjalne przekroczenie dopuszczalnego bocznego komponentu wiatru w przypadku wystąpienia podmuchów.\n- Ryzyko oblodzenia statku powietrznego w warunkach opadów śniegu.\n\n**Zalecenia dla pilota:**\n- Rozważyć opóźnienie lotu do momentu poprawy warunków meteorologicznych.\n- Monitorować prognozy pogody i zmiany w warunkach na trasie oraz na lotniskach.\n- Przygotować plan awaryjny w przypadku nagłego pogorszenia warunków, w tym alternatywne lotnisko. \n\nPodsumowując, ze względu na niekorzystne warunki meteorologiczne, niską podstawę chmur, obniżoną widoczność oraz ryzyko oblodzenia, lot VFR nie jest zalecany.",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1086,
+    "completion_tokens": 845,
+    "total_tokens": 1931,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_72ed7ab54c"
+}
+
+2025-01-12 11:47:19.242 +01:00 [INF] Uzasadnienie wygenerowane przez AI (PL): ### Ocena możliwości lotu VFR
+
+**Decyzja:** Lot VFR nie jest możliwy i bezpieczny.
+
+**Uzasadnienie:**
+
+1. **Warunki meteorologiczne na lotnisku startu (EPPO):**
+   - **METAR:** OVC017 (chmury całkowite na wysokości 1700 ft AGL), widoczność 9999 m.
+   - **TAF:** Prognoza przewiduje chmury OVC020 (na wysokości 2000 ft AGL) oraz warunki TEMP, które mogą obniżyć widoczność do 4500 m oraz wprowadzić opady śniegu (SN) i mgłę (BR) w godzinach 1209-1212.
+
+2. **Warunki meteorologiczne na lotnisku lądowania (EPWA):**
+   - **METAR:** BKN006 (chmury na wysokości 600 ft AGL) oraz BKN013 (chmury na wysokości 1300 ft AGL), widoczność 9999 m, ale występują opady śniegu (SN).
+   - **TAF:** Prognoza przewiduje obniżenie widoczności do 5000 m oraz warunki TEMP, które mogą obniżyć widoczność do 1500 m z opadami śniegu i mgłą.
+
+3. **Minimalne wymogi VFR:**
+   - Minimalna widoczność VFR wynosi 5 km, co w przypadku EPPO jest spełnione, ale prognozy na EPWA przewidują obniżenie widoczności do 1500 m, co nie spełnia wymogów VFR.
+   - Minimalna podstawa chmur VFR wynosi 1500 ft AGL, co w przypadku EPPO jest spełnione, ale na EPWA chmury są na wysokości 600 ft AGL, co również nie spełnia wymogów.
+
+4. **Ograniczenia statku powietrznego:**
+   - Samolot Technam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 kt. W prognozach dla EPPO przewiduje się wiatr 310° 15 kt, co jest na granicy dopuszczalnych wartości. Dodatkowo, w czasie TEMP przewiduje się podmuchy do 28 kt, co może przekroczyć dopuszczalny limit.
+
+5. **Możliwe oblodzenie:**
+   - W warunkach opadów śniegu i niskich temperatur (1°C na EPPO i 1°C na EPWA) istnieje ryzyko oblodzenia, co może wpłynąć na bezpieczeństwo lotu.
+
+**Zagrożenia:**
+- Niska podstawa chmur na EPWA (600 ft AGL) oraz możliwe obniżenie widoczności do 1500 m stwarza ryzyko utraty orientacji w przestrzeni.
+- Potencjalne przekroczenie dopuszczalnego bocznego komponentu wiatru w przypadku wystąpienia podmuchów.
+- Ryzyko oblodzenia statku powietrznego w warunkach opadów śniegu.
+
+**Zalecenia dla pilota:**
+- Rozważyć opóźnienie lotu do momentu poprawy warunków meteorologicznych.
+- Monitorować prognozy pogody i zmiany w warunkach na trasie oraz na lotniskach.
+- Przygotować plan awaryjny w przypadku nagłego pogorszenia warunków, w tym alternatywne lotnisko. 
+
+Podsumowując, ze względu na niekorzystne warunki meteorologiczne, niską podstawę chmur, obniżoną widoczność oraz ryzyko oblodzenia, lot VFR nie jest zalecany.
+2025-01-12 11:47:19.389 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2025-01-12 11:47:19.390 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 13219.6503ms
+2025-01-12 11:47:19.390 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-01-12 11:47:19.391 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/52 - 200 null application/json; charset=utf-8 13220.7817ms
+2025-01-12 11:48:21.169 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:48:21.171 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:48:21.171 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 2.1442ms
+2025-01-12 11:48:21.173 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:48:21.174 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:48:21.178 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:48:21.179 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-12 11:48:21.330 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-12 11:48:21.334 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 155.1135ms
+2025-01-12 11:48:21.334 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:48:21.335 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 161.5128ms
+2025-01-12 11:48:32.002 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/52 - null null
+2025-01-12 11:48:32.002 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:48:32.003 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/52 - 204 null null 0.9188ms
+2025-01-12 11:48:32.015 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/52 - null null
+2025-01-12 11:48:32.016 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:48:32.017 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-01-12 11:48:32.017 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2025-01-12 11:48:32.109 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2025-01-12 11:48:32.111 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 93.639ms
+2025-01-12 11:48:32.111 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-01-12 11:48:32.111 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/52 - 200 null application/json; charset=utf-8 96.5131ms
+2025-01-12 11:48:32.118 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/52 - null null
+2025-01-12 11:48:32.119 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:48:32.119 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-01-12 11:48:32.120 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2025-01-12 11:48:32.190 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2025-01-12 11:48:32.191 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 70.9762ms
+2025-01-12 11:48:32.191 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-01-12 11:48:32.191 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/52 - 200 null application/json; charset=utf-8 73.144ms
+2025-01-12 11:48:51.746 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:48:51.746 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:48:51.747 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 0.9895ms
+2025-01-12 11:48:51.749 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:48:51.750 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:48:51.750 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:48:51.751 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-12 11:48:51.845 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-12 11:48:51.845 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 94.3343ms
+2025-01-12 11:48:51.845 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:48:51.846 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 96.0635ms
+2025-01-12 11:49:45.680 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:49:45.681 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:49:45.681 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 1.3646ms
+2025-01-12 11:49:45.682 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:49:45.682 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:49:45.684 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:49:45.684 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-12 11:49:45.794 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-12 11:49:45.795 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 110.823ms
+2025-01-12 11:49:45.795 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:49:45.796 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 113.8342ms
+2025-01-12 11:50:11.741 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:50:11.769 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:50:11.771 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 30.6169ms
+2025-01-12 11:50:11.773 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-01-12 11:50:11.782 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:50:11.789 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:50:11.792 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-01-12 11:50:11.904 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-12 11:50:11.906 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 111.7342ms
+2025-01-12 11:50:11.906 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-01-12 11:50:11.906 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 133.1659ms
+2025-01-12 11:50:15.488 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-01-12 11:50:15.488 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:50:15.488 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 0.5346ms
+2025-01-12 11:50:15.489 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-01-12 11:50:15.490 +01:00 [INF] CORS policy execution successful.
+2025-01-12 11:50:15.491 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 11:50:15.491 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-01-12 11:50:15.494 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-01-12 11:50:15.494 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-01-12 11:50:15.496 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-01-12 11:50:15.496 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-12 11:50:15.496 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 5.3406ms
+2025-01-12 11:50:15.496 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 11:50:15.497 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 7.2805ms
