@@ -40,7 +40,10 @@ export class JwtService {
   }
 
 
-  getTokenExpirationDate(token: string): Date | null {
+  getTokenExpirationDate(): Date | null {
+    const token = this.getToken();
+    if (!token) return null;
+
     const decoded = this.decodeToken(token);
     if (decoded.exp === undefined) return null;
 
@@ -49,8 +52,8 @@ export class JwtService {
     return date;
   }
 
-  isTokenExpired(token: string): boolean {
-    const date = this.getTokenExpirationDate(token);
+  isTokenExpired(): boolean {
+    const date = this.getTokenExpirationDate();
     if (date === null) return false;
     return !(date.valueOf() > new Date().valueOf());
   }

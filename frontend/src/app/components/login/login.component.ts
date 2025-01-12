@@ -18,13 +18,13 @@ import gsap from 'gsap';
   standalone: true,
   imports: [
     CommonModule,
-    
+
     MatButton,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatProgressBarModule,
-    
+
     RouterModule,
     ReactiveFormsModule,
   ],
@@ -73,7 +73,11 @@ export class LoginComponent implements OnInit, AfterViewInit {
         next: () => {
           this.errorMessage = null;
           this.isLoading = false;
-          this.router.navigate(['/home']);
+          if (this.authService.isAdmin()) {
+            this.router.navigate(['/admin']);
+          } else {
+            this.router.navigate(['/home']);
+          }
         },
         error: (message) => {
           this.isLoading = false;

@@ -231,3 +231,93 @@ Podsumowując, ze względu na niekorzystne warunki meteorologiczne, niską podst
 2025-01-12 11:50:15.496 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 5.3406ms
 2025-01-12 11:50:15.496 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
 2025-01-12 11:50:15.497 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 7.2805ms
+2025-01-12 12:34:12.507 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-12 12:34:12.508 +01:00 [INF] CORS policy execution successful.
+2025-01-12 12:34:12.509 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 2.4357ms
+2025-01-12 12:34:12.511 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-01-12 12:34:12.512 +01:00 [INF] CORS policy execution successful.
+2025-01-12 12:34:12.514 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 12:34:12.516 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-12 12:34:13.351 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-12 12:34:13.439 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-12 12:34:13.528 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 1011.0328ms
+2025-01-12 12:34:13.528 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 12:34:13.528 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 1017.3592ms
+2025-01-12 13:07:25.630 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-01-12 13:07:25.643 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:07:25.645 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 16.7155ms
+2025-01-12 13:07:25.649 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-01-12 13:07:25.651 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:07:25.659 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 13:07:25.664 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-01-12 13:07:25.692 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-01-12 13:07:25.693 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-01-12 13:07:25.693 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-01-12 13:07:25.697 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-12 13:07:25.698 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 31.8189ms
+2025-01-12 13:07:25.698 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 13:07:25.699 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 50.2902ms
+2025-01-12 13:10:05.032 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-12 13:10:05.034 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:10:05.034 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 2.2982ms
+2025-01-12 13:10:05.036 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-01-12 13:10:05.037 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:10:05.038 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 13:10:05.041 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-12 13:10:06.017 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-12 13:10:06.094 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-12 13:10:06.188 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 1147.3659ms
+2025-01-12 13:10:06.189 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 13:10:06.189 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 1152.6892ms
+2025-01-12 13:10:30.637 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-01-12 13:10:30.638 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:10:30.639 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 2.4895ms
+2025-01-12 13:10:30.641 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-01-12 13:10:30.641 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:10:30.645 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 13:10:30.645 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-01-12 13:10:30.649 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-01-12 13:10:30.650 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-01-12 13:10:30.655 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-01-12 13:10:30.658 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-12 13:10:30.658 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 12.2967ms
+2025-01-12 13:10:30.658 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 13:10:30.659 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 17.6795ms
+2025-01-12 13:10:37.119 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-12 13:10:37.119 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:10:37.120 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 0.7696ms
+2025-01-12 13:10:37.121 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-01-12 13:10:37.121 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:10:37.121 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 13:10:37.122 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-12 13:10:37.580 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-12 13:10:37.663 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-12 13:10:37.745 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 623.5367ms
+2025-01-12 13:10:37.745 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 13:10:37.746 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 625.08ms
+2025-01-12 13:11:14.213 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-01-12 13:11:14.217 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:11:14.217 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 4.3024ms
+2025-01-12 13:11:14.219 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-01-12 13:11:14.220 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:11:14.226 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 13:11:14.233 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-01-12 13:11:14.245 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-01-12 13:11:14.247 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-01-12 13:11:14.248 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-01-12 13:11:14.250 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-01-12 13:11:14.251 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 16.227ms
+2025-01-12 13:11:14.251 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-01-12 13:11:14.252 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 32.8435ms
+2025-01-12 13:11:21.729 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-01-12 13:11:21.729 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:11:21.729 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 0.7084ms
+2025-01-12 13:11:21.730 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-01-12 13:11:21.731 +01:00 [INF] CORS policy execution successful.
+2025-01-12 13:11:21.732 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 13:11:21.732 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-01-12 13:11:22.212 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-01-12 13:11:22.300 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-12 13:11:22.378 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 646.1219ms
+2025-01-12 13:11:22.379 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-01-12 13:11:22.379 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 648.4972ms

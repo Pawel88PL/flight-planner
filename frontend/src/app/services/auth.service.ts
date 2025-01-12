@@ -22,6 +22,11 @@ export class AuthService {
     private jwtService: JwtService,
     private router: Router) { }
 
+  generateNewToken(): Observable<any> {
+    const token = this.jwtService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get(`${this.apiUrl}/refresh`, { headers });
+  }
 
   getName(): string | null {
     const token = this.jwtService.getToken();
@@ -46,12 +51,17 @@ export class AuthService {
 
   isAdmin(): boolean {
     const roles = this.getUserRole();
-    return roles.includes('Administrator');
+    return roles.includes('Admin');
+  }
+
+  isPilot(): boolean {
+    const roles = this.getUserRole();
+    return roles.includes('Pilot');
   }
 
   isLoggedIn(): boolean {
     const token = this.jwtService.getToken();
-    return !!token && !this.jwtService.isTokenExpired(token);
+    return !!token && !this.jwtService.isTokenExpired();
   }
 
   login(username: string, password: string): Observable<any> {

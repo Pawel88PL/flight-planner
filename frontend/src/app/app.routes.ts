@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
+import { AdminComponent } from './components/admin/admin.component';
 import { FlightPlansListComponent } from './components/flight-plans-list/flight-plans-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -9,6 +10,7 @@ import { ResponseComponent } from './components/response/response.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'admin', component: AdminComponent },
     { path: 'flight-plans', component: FlightPlansListComponent },
     { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent },
