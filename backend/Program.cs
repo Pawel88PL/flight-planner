@@ -211,6 +211,7 @@ namespace backend
             services.AddScoped<IFlightPlanRepository, FlightPlanRepository>();
             services.AddScoped<IFlightPlanService, FlightPlanService>();
             services.AddScoped<IOpenAIHelper, OpenAIHelper>();
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IWeatherApiHelper, WeatherApiHelper>();
             services.AddScoped<IWeatherService, WeatherService>();
         }

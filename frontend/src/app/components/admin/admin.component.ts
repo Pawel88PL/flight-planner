@@ -27,7 +27,10 @@ export class AdminComponent implements OnInit {
   }
 
   welcomeAdmin(): void {
-    this.toastr.success('Witaj w panelu administratora!', 'Witaj!');
+    this.toastr.success('Witaj w panelu administratora!', 'Witaj!', {
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right'
+    });
     console.log('Welcome admin');
   }
 }

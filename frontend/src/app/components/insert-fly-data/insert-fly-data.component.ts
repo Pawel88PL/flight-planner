@@ -75,8 +75,6 @@ export class InsertFlyDataComponent implements OnInit {
     this.getUserId();
     this.request = this.dataService.getFlyDataForm();
 
-    console.log(this.authService.getUserRole());
-
     if (this.request && localStorage.getItem('flyDataForm')) {
       this.flyDataForm.setValue({
         departureICAO: this.request.departureICAO,

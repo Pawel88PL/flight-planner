@@ -9,6 +9,7 @@ namespace backend.Models
         public bool IsActive { get; set; }
         public bool TermsAccepted { get; set; }
         public DateTime DateAdded { get; set; }
+        public DateTime? LastSuccessfulLogin { get; set; }
     }
 
     public class UserDTO
@@ -19,6 +20,7 @@ namespace backend.Models
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
         public string? DateAdded { get; set; }
+        public string? LastSuccessfulLogin { get; set; }
         public string? Role { get; set; }
         public bool IsActive { get; set; }
         public bool TermsAccepted { get; set; }
@@ -47,11 +49,5 @@ namespace backend.Models
         public string? NewPassword { get; set; }
         public string? Role { get; set; }
         public bool IsActive { get; set; }
-    }
-
-    public class TwoFactorRequest
-    {
-        public string? Id { get; set; } // Id użytkownika, który próbuje się zalogować
-        public string? Code { get; set; } // Kod 2FA, który użytkownik otrzymał i wprowadził
     }
 }

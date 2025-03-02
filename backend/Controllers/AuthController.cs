@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using backend.Interfaces;
 using backend.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -14,11 +15,16 @@ namespace backend.Controllers
     {
         private readonly IAuthService _authService;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ITokenService _tokenService;
 
-        public AuthController(IAuthService authService, RoleManager<IdentityRole> roleManager)
+        public AuthController(
+            IAuthService authService,
+            RoleManager<IdentityRole> roleManager,
+            ITokenService tokenService)
         {
             _authService = authService;
             _roleManager = roleManager;
+            _tokenService = tokenService;
         }
 
         [Authorize(Roles = "Administrator")]
@@ -68,6 +74,27 @@ namespace backend.Controllers
         {
             await _authService.SignOutAsync();
             return Ok();
+        }
+
+        [Authorize(Roles = "Administrator, Operator")]
+        [HttpGet("refresh")]
+        public async Task<IActionResult> RefreshToken()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return BadRequest("Brak identyfikatora użytkownika w zapytaniu.");
+            }
+
+            var user = await _authService.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return NotFound("Nie znaleziono użytkownika.");
+            }
+
+            var token = _tokenService.GenerateJwtTokenForUser(user);
+
+            return Ok(new { Token = token });
         }
 
         [HttpPost("register")]
