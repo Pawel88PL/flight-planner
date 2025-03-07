@@ -69,7 +69,6 @@ namespace backend.Services
             {
                 Id = flightPlan.Id,
                 DepartureTime = flightPlan.DepartureTime,
-                FlightDay = flightPlan.FlightDay,
                 FlightDuration = flightPlan.FlightDuration,
                 AircraftId = flightPlan.AircraftId,
                 DepartureAirport = flightPlan.DepartureAirport,
@@ -88,7 +87,6 @@ namespace backend.Services
                 Id = f.Id,
                 CreatedAt = f.CreatedAt,
                 DepartureTime = f.DepartureTime,
-                FlightDay = f.FlightDay,
                 FlightDuration = f.FlightDuration,
                 AircraftId = f.AircraftId,
                 DepartureAirport = f.DepartureAirport,

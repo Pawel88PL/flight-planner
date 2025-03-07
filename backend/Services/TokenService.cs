@@ -11,13 +11,11 @@ namespace backend.Services
     public class TokenService : ITokenService
     {
         private readonly IConfiguration _configuration;
-        private readonly IEmailService _emailService;
         private readonly UserManager<User> _userManager;
 
-        public TokenService(IConfiguration config, IEmailService emailService, UserManager<User> userManager)
+        public TokenService(IConfiguration config, UserManager<User> userManager)
         {
             _configuration = config;
-            _emailService = emailService;
             _userManager = userManager;
         }
 
@@ -59,18 +57,6 @@ namespace backend.Services
             await _userManager.UpdateAsync(user);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-
-        public async Task<string> GenerateTwoFactorTokenAsync(User user)
-        {
-            var token = await _userManager.GenerateTwoFactorTokenAsync(user, TokenOptions.DefaultEmailProvider);
-            await _emailService.SendTwoFactorCodeEmail(user.Id, token);
-            return token;
-        }
-
-        public async Task<bool> VerifyTwoFactorTokenAsync(User user, string token)
-        {
-            return await _userManager.VerifyTwoFactorTokenAsync(user, TokenOptions.DefaultEmailProvider, token);
         }
     }
 }

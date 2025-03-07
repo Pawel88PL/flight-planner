@@ -80,7 +80,6 @@ export class InsertFlyDataComponent implements OnInit {
         departureICAO: this.request.departureICAO,
         arrivalICAO: this.request.arrivalICAO,
         departureTime: this.request.departureTime,
-        flightDay: this.request.flightDay,
         flightDuration: this.request.flightDuration,
         aircraftId: this.request.aircraftId
       });
@@ -139,7 +138,6 @@ export class InsertFlyDataComponent implements OnInit {
         Validators.pattern(/^[0-9]{4}$/),
         this.validateTime
       ]],
-      flightDay: ['today', Validators.required],
       flightDuration: ['', [
         Validators.required,
         Validators.minLength(4),
@@ -202,7 +200,6 @@ export class InsertFlyDataComponent implements OnInit {
       departureICAO: this.flyDataForm.value.departureICAO,
       arrivalICAO: this.flyDataForm.value.arrivalICAO,
       departureTime: this.flyDataForm.value.departureTime,
-      flightDay: this.flyDataForm.value.flightDay,
       flightDuration: this.flyDataForm.value.flightDuration,
       aircraftId: this.flyDataForm.value.aircraftId,
       userId: this.userId!

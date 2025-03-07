@@ -15,21 +15,18 @@ namespace backend.Services
     {
         private readonly ApplicationDbContext _context;
         private readonly IConfiguration _configuration;
-        private readonly IEmailService _emailService;
         private readonly SignInManager<User> _signInManager;
         private readonly UserManager<User> _userManager;
 
         public AuthService(
             ApplicationDbContext context,
             IConfiguration configuration,
-            IEmailService emailService,
             SignInManager<User> signInManager,
             UserManager<User> userManager
             )
         {
             _configuration = configuration;
             _context = context;
-            _emailService = emailService;
             _signInManager = signInManager;
             _userManager = userManager;
         }

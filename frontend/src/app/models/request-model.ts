@@ -3,7 +3,6 @@ export interface FlightPlanRequest {
     departureICAO: string;
     arrivalICAO: string;
     departureTime: string;
-    flightDay: string;
     flightDuration: string;
     aircraftId: number;
     userId: string;

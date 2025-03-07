@@ -24,7 +24,6 @@ namespace backend.Services
                     DepartureAirportId = airports[0],
                     ArrivalAirportId = airports[1],
                     DepartureTime = flightPlanRequest.DepartureTime,
-                    FlightDay = flightPlanRequest.FlightDay,
                     FlightDuration = flightPlanRequest.FlightDuration,
                     AircraftId = flightPlanRequest.AircraftId,
                     UserId = flightPlanRequest.UserId

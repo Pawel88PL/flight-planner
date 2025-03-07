@@ -18,7 +18,7 @@ namespace backend.Controllers
             _flightPlanService = flightPlanService;
         }
 
-        [Authorize (Roles = "Pilot")]
+        [Authorize (Roles = "Admin, Pilot")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateFlightPlanAsync(FlightPlanRequest request)
         {

@@ -1,0 +1,300 @@
+2025-03-06 20:22:55.344 +01:00 [FTL] Application startup failed: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAuthService Lifetime: Scoped ImplementationType: backend.Services.AuthService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.) (Error while validating the service descriptor 'ServiceType: backend.Interfaces.ITokenService Lifetime: Scoped ImplementationType: backend.Services.TokenService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.),    at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAuthService Lifetime: Scoped ImplementationType: backend.Services.AuthService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.) (Error while validating the service descriptor 'ServiceType: backend.Interfaces.ITokenService Lifetime: Scoped ImplementationType: backend.Services.TokenService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAuthService Lifetime: Scoped ImplementationType: backend.Services.AuthService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: backend.Interfaces.ITokenService Lifetime: Scoped ImplementationType: backend.Services.TokenService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2025-03-06 20:23:19.124 +01:00 [FTL] Application startup failed: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAuthService Lifetime: Scoped ImplementationType: backend.Services.AuthService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.) (Error while validating the service descriptor 'ServiceType: backend.Interfaces.ITokenService Lifetime: Scoped ImplementationType: backend.Services.TokenService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.),    at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAuthService Lifetime: Scoped ImplementationType: backend.Services.AuthService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.) (Error while validating the service descriptor 'ServiceType: backend.Interfaces.ITokenService Lifetime: Scoped ImplementationType: backend.Services.TokenService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: backend.Interfaces.IAuthService Lifetime: Scoped ImplementationType: backend.Services.AuthService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.AuthService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: backend.Interfaces.ITokenService Lifetime: Scoped ImplementationType: backend.Services.TokenService': Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'backend.Interfaces.IEmailService' while attempting to activate 'backend.Services.TokenService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2025-03-06 20:27:10.700 +01:00 [INF] Application is starting
+2025-03-06 20:27:10.720 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-06 20:27:10.748 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-06 20:27:10.748 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-06 20:27:10.749 +01:00 [INF] Hosting environment: Development
+2025-03-06 20:27:10.749 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-06 20:27:11.461 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-06 20:27:11.507 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 46.129ms
+2025-03-06 20:27:11.938 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-06 20:27:11.938 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-06 20:27:11.938 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - null null
+2025-03-06 20:27:11.941 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.7649ms
+2025-03-06 20:27:11.961 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-03-06 20:27:11.963 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 24.8662ms
+2025-03-06 20:27:11.964 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-06 20:27:11.965 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 26.44ms
+2025-03-06 20:27:12.066 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-06 20:27:12.105 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.0886ms
+2025-03-06 20:28:00.551 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-06 20:28:00.558 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-06 20:28:00.583 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:00.591 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 41.0441ms
+2025-03-06 20:28:00.595 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-06 20:28:00.597 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:00.628 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-06 20:28:00.637 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-06 20:28:01.186 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-06 20:28:01.280 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-06 20:28:01.373 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 734.3502ms
+2025-03-06 20:28:01.374 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-06 20:28:01.379 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 784.7733ms
+2025-03-06 20:28:07.178 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2025-03-06 20:28:07.180 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:07.181 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 2.8202ms
+2025-03-06 20:28:07.182 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 162
+2025-03-06 20:28:07.183 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:07.221 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Pilot)
+2025-03-06 20:28:07.222 +01:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-03-06 20:28:07.222 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 403 0 null 40.7452ms
+2025-03-06 20:28:58.409 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2025-03-06 20:28:58.413 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:58.415 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 5.9799ms
+2025-03-06 20:28:58.416 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 162
+2025-03-06 20:28:58.424 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:58.434 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-03-06 20:28:58.443 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2025-03-06 20:28:58.463 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWR&format=json&taf=true
+2025-03-06 20:28:58.464 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWR&format=json&taf=true
+2025-03-06 20:28:58.479 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWR&format=json&taf=true
+2025-03-06 20:28:58.479 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWR&format=json&taf=true
+2025-03-06 20:28:59.039 +01:00 [INF] Received HTTP response headers after 559.4835ms - 200
+2025-03-06 20:28:59.039 +01:00 [INF] Received HTTP response headers after 574.3099ms - 200
+2025-03-06 20:28:59.040 +01:00 [INF] End processing HTTP request after 561.0852ms - 200
+2025-03-06 20:28:59.040 +01:00 [INF] End processing HTTP request after 577.2795ms - 200
+2025-03-06 20:28:59.631 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-06 20:28:59.634 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 1191.0537ms
+2025-03-06 20:28:59.634 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-03-06 20:28:59.635 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 1219.0573ms
+2025-03-06 20:28:59.651 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/56 - null null
+2025-03-06 20:28:59.652 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:59.652 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/56 - 204 null null 1.1462ms
+2025-03-06 20:28:59.653 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/56 - null null
+2025-03-06 20:28:59.655 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:59.658 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-03-06 20:28:59.663 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2025-03-06 20:28:59.793 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2025-03-06 20:28:59.800 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 136.7093ms
+2025-03-06 20:28:59.800 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-03-06 20:28:59.800 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/56 - 200 null application/json; charset=utf-8 146.5732ms
+2025-03-06 20:28:59.806 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/56 - null null
+2025-03-06 20:28:59.806 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:28:59.807 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-03-06 20:28:59.810 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2025-03-06 20:28:59.991 +01:00 [INF] Zapytanie do AI (PL): Jesteś doświadczonym doradcą lotniczym i ekspertem w analizie warunków pogodowych dla lotów VFR (Visual Flight Rules). Twoim zadaniem jest ocena bezpieczeństwa i możliwości wykonania planowanego lotu w oparciu o:
+
+            1. Aktualne i prognozowane warunki meteorologiczne (METAR/TAF) dla lotnisk startu, docelowego i, w miarę możliwości, lotnisk alternatywnych.
+            2. Minimalne wymogi VFR w zakresie widoczności, podstawy chmur oraz warunków atmosferycznych.
+            3. Ograniczenia statku powietrznego, w tym maksymalną dopuszczalną boczną składową wiatru (crosswind component) określoną przez producenta lub procedury operatora.
+            4. Planowane parametry lotu (czas, data, trasa).
+            5. Możliwe oblodzenie statku powietrznego w trakcie lotu.
+
+            Wynik swojej analizy przedstaw w języku polskim w następującej formie:
+            - Najpierw podaj jednoznaczną decyzję, czy lot VFR jest możliwy, uwzględniając wszystkie podane dane.
+            - Następnie uzasadnij tę decyzję, odnosząc się do konkretnych parametrów pogodowych (widzialność, chmury, wiatr), obowiązujących przepisów VFR oraz ograniczeń samolotu, w tym dopuszczalnego crosswind component.
+            - Na koniec wymień potencjalne zagrożenia, mogące pojawić się w trakcie lotu i wydaj zalecenia dla pilota.
+
+            Twoja odpowiedź powinna być merytoryczna, spójna i uwzględniać kluczowe aspekty bezpieczeństwa.
+            
+            Wyróżnij ją od reszty tekstu, np. poprzez zastosowanie dobrze widocznego nagłówka lub formatowania.
+2025-03-06 20:28:59.992 +01:00 [INF] Zapytanie do AI (PL): Oto dane planowanego lotu do analizy, łącznie z danymi wybranego samolotu (format JSON):
+            {"Czas trwania lotu":"0200","Godzina wylotu":"2000","Kod lotniska startu":"EPPO","Miasto lotniska startu":"","Kraj lotniska startu":"","METAR lotniska startu":"EPPO 061900Z 19003KT 8000 3900W NSC 07/01 Q1019","TAF lotniska startu":"TAF EPPO 061730Z 0618/0718 VRB02KT CAVOK BECMG 0702/0705 2500 BR BECMG 0706/0708 CAVOK","Nazwa lotniska startu":"POZNAN/LAWICA AIRPORT","Kod lotniska lądowania":"EPWR","Miasto lotniska lądowania":"","Kraj lotniska lądowania":"","METAR lotniska lądowania":"EPWR 061900Z 23006KT CAVOK 13/01 Q1021","TAF lotniska lądowania":"TAF EPWR 061730Z 0618/0718 22010KT CAVOK BECMG 0618/0620 VRB02KT PROB40 0703/0706 4000 BR","Nazwa lotniska lądowania":"WROCLAW/STRACHOWICE AIRPORT","Dane samolotu":{"Model samolotu":"Technam P2008","Maksymalny boczny komponent wiatru w knots":15,"Minimalna prędkość przeciągnięcia w konts":39,"Prędkość wznoszenia w ft/min":900,"Maksymalna masa startowa w kg":600,"Zasięg w NM":730,"Prędkość przelotowa w knots":115,"Zużycie paliwa w litrach na godzinę":17,"Minimalna widoczność VFR w km":5,"Minimalna podstawa chmur VFR w ft AGL":1500}}
+
+            Czy lot VFR jest możliwy i bezpieczny? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.
+2025-03-06 20:29:00.016 +01:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2025-03-06 20:29:00.016 +01:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2025-03-06 20:29:10.461 +01:00 [INF] Received HTTP response headers after 10444.681ms - 200
+2025-03-06 20:29:10.461 +01:00 [INF] End processing HTTP request after 10445.3169ms - 200
+2025-03-06 20:29:10.465 +01:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-B8BBt0TaEx4LkVmdUiOZ3PMbvW6S9",
+  "object": "chat.completion",
+  "created": 1741289341,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "### Ocena możliwości lotu VFR\n\n**Decyzja:** Lot VFR jest możliwy, jednak wymaga szczególnej uwagi ze względu na prognozowane warunki atmosferyczne.\n\n**Uzasadnienie:**\n\n1. **Warunki meteorologiczne:**\n   - **Lotnisko startu (EPPO):**\n     - METAR: Widoczność 8000 m, brak chmur (NSC), wiatr 190° przy 3 węzłach, temperatura 7°C, ciśnienie 1019 hPa.\n     - TAF: CAVOK (Clear Air Visibility OK), co oznacza, że nie przewiduje się chmur ani ograniczeń widoczności. W nocy przewidywane są warunki mgły (BR) od 02:00 do 05:00, co może wpłynąć na widoczność.\n   \n   - **Lotnisko lądowania (EPWR):**\n     - METAR: CAVOK, widoczność dobra, wiatr 230° przy 6 węzłach, temperatura 13°C, ciśnienie 1021 hPa.\n     - TAF: Również CAVOK, jednak istnieje prawdopodobieństwo wystąpienia mgły (BR) w godzinach 03:00-06:00, co może ograniczyć widoczność do 4000 m.\n\n2. **Minimalne wymogi VFR:**\n   - Minimalna widoczność VFR wynosi 5 km, co jest spełnione w przypadku obu lotnisk, jednak należy monitorować prognozy dotyczące mgły.\n   - Minimalna podstawa chmur VFR wynosi 1500 ft AGL, co również nie jest problemem, gdyż prognozy wskazują na brak chmur.\n\n3. **Ograniczenia statku powietrznego:**\n   - Samolot Technam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 węzłów. Wiatr na lotnisku startowym wynosi 3 węzły, a na lotnisku lądowania 6 węzłów, co jest w granicach dopuszczalnych wartości.\n\n4. **Planowane parametry lotu:**\n   - Czas trwania lotu wynosi 2 godziny, a planowana godzina wylotu to 20:00. Należy pamiętać, że w nocy mogą wystąpić ograniczenia widoczności z powodu mgły.\n\n5. **Możliwość oblodzenia:**\n   - W podanych warunkach nie przewiduje się ryzyka oblodzenia, ponieważ temperatura powietrza jest powyżej zera.\n\n**Potencjalne zagrożenia:**\n- Możliwość wystąpienia mgły, co może ograniczyć widoczność do 4000 m w godzinach nocnych, co jest poniżej minimalnych wymogów VFR.\n- Nocne loty mogą być bardziej wymagające, zwłaszcza w przypadku ograniczonej widoczności.\n\n**Zalecenia dla pilota:**\n- Monitorować aktualne warunki meteorologiczne przed i w trakcie lotu, szczególnie w odniesieniu do prognozowanej mgły.\n- Rozważyć opóźnienie wylotu do momentu ustabilizowania się warunków pogodowych, jeśli prognozy wskazują na znaczne ograniczenie widoczności.\n- Upewnić się, że plan lotu uwzględnia alternatywne lotniska w przypadku pogorszenia warunków na lotnisku docelowym. \n\nPodsumowując, lot VFR jest możliwy, ale wymaga ostrożności i stałego monitorowania warunków pogodowych.",
+        "refusal": null
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 960,
+    "completion_tokens": 827,
+    "total_tokens": 1787,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_06737a9306"
+}
+
+2025-03-06 20:29:10.516 +01:00 [INF] Uzasadnienie wygenerowane przez AI (PL): ### Ocena możliwości lotu VFR
+
+**Decyzja:** Lot VFR jest możliwy, jednak wymaga szczególnej uwagi ze względu na prognozowane warunki atmosferyczne.
+
+**Uzasadnienie:**
+
+1. **Warunki meteorologiczne:**
+   - **Lotnisko startu (EPPO):**
+     - METAR: Widoczność 8000 m, brak chmur (NSC), wiatr 190° przy 3 węzłach, temperatura 7°C, ciśnienie 1019 hPa.
+     - TAF: CAVOK (Clear Air Visibility OK), co oznacza, że nie przewiduje się chmur ani ograniczeń widoczności. W nocy przewidywane są warunki mgły (BR) od 02:00 do 05:00, co może wpłynąć na widoczność.
+   
+   - **Lotnisko lądowania (EPWR):**
+     - METAR: CAVOK, widoczność dobra, wiatr 230° przy 6 węzłach, temperatura 13°C, ciśnienie 1021 hPa.
+     - TAF: Również CAVOK, jednak istnieje prawdopodobieństwo wystąpienia mgły (BR) w godzinach 03:00-06:00, co może ograniczyć widoczność do 4000 m.
+
+2. **Minimalne wymogi VFR:**
+   - Minimalna widoczność VFR wynosi 5 km, co jest spełnione w przypadku obu lotnisk, jednak należy monitorować prognozy dotyczące mgły.
+   - Minimalna podstawa chmur VFR wynosi 1500 ft AGL, co również nie jest problemem, gdyż prognozy wskazują na brak chmur.
+
+3. **Ograniczenia statku powietrznego:**
+   - Samolot Technam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 węzłów. Wiatr na lotnisku startowym wynosi 3 węzły, a na lotnisku lądowania 6 węzłów, co jest w granicach dopuszczalnych wartości.
+
+4. **Planowane parametry lotu:**
+   - Czas trwania lotu wynosi 2 godziny, a planowana godzina wylotu to 20:00. Należy pamiętać, że w nocy mogą wystąpić ograniczenia widoczności z powodu mgły.
+
+5. **Możliwość oblodzenia:**
+   - W podanych warunkach nie przewiduje się ryzyka oblodzenia, ponieważ temperatura powietrza jest powyżej zera.
+
+**Potencjalne zagrożenia:**
+- Możliwość wystąpienia mgły, co może ograniczyć widoczność do 4000 m w godzinach nocnych, co jest poniżej minimalnych wymogów VFR.
+- Nocne loty mogą być bardziej wymagające, zwłaszcza w przypadku ograniczonej widoczności.
+
+**Zalecenia dla pilota:**
+- Monitorować aktualne warunki meteorologiczne przed i w trakcie lotu, szczególnie w odniesieniu do prognozowanej mgły.
+- Rozważyć opóźnienie wylotu do momentu ustabilizowania się warunków pogodowych, jeśli prognozy wskazują na znaczne ograniczenie widoczności.
+- Upewnić się, że plan lotu uwzględnia alternatywne lotniska w przypadku pogorszenia warunków na lotnisku docelowym. 
+
+Podsumowując, lot VFR jest możliwy, ale wymaga ostrożności i stałego monitorowania warunków pogodowych.
+2025-03-06 20:29:10.686 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2025-03-06 20:29:10.688 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 10878.6029ms
+2025-03-06 20:29:10.688 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-03-06 20:29:10.688 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/56 - 200 null application/json; charset=utf-8 10883.1233ms
+2025-03-06 20:32:29.101 +01:00 [INF] Application is shutting down...
+2025-03-06 20:32:57.366 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2025-03-06 20:33:08.215 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2025-03-06 20:33:21.366 +01:00 [INF] Application is starting
+2025-03-06 20:33:21.385 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-06 20:33:21.409 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-06 20:33:21.410 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-06 20:33:21.410 +01:00 [INF] Hosting environment: Development
+2025-03-06 20:33:21.410 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-06 20:33:21.716 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-06 20:33:21.766 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 50.1004ms
+2025-03-06 20:33:21.786 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-06 20:33:21.795 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 8.8531ms
+2025-03-06 20:33:21.879 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-06 20:33:21.913 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.3302ms
+2025-03-06 20:43:44.202 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-03-06 20:43:44.215 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-06 20:43:44.234 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:43:44.235 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 33.5412ms
+2025-03-06 20:43:44.236 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-03-06 20:43:44.237 +01:00 [INF] CORS policy execution successful.
+2025-03-06 20:43:44.261 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-03-06 20:43:44.271 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-03-06 20:43:44.283 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-03-06 20:43:44.284 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-03-06 20:43:44.285 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-03-06 20:43:44.286 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-03-06 20:43:44.287 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 14.4055ms
+2025-03-06 20:43:44.287 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-03-06 20:43:44.291 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 54.452ms

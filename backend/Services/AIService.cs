@@ -139,7 +139,6 @@ namespace backend.Services
 
             return new Dictionary<string, object>
             {
-                { "Dzień lotu", GetValueOrDefault(flightPlan.FlightDay) },
                 { "Czas trwania lotu", GetValueOrDefault(flightPlan.FlightDuration) },
                 { "Godzina wylotu", GetValueOrDefault(flightPlan.DepartureTime) },
 

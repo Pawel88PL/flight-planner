@@ -9,9 +9,6 @@ namespace backend.Models
         [StringLength(4)]
         public string DepartureTime { get; set; } = string.Empty;
 
-        [StringLength(8)]
-        public string FlightDay { get; set; } = string.Empty;
-
         [StringLength(4)]
         public string FlightDuration { get; set; } = string.Empty;
 
@@ -34,7 +31,6 @@ namespace backend.Models
     public class FlightPlanDto
     {
         public int Id { get; set; }
-        public string FlightDay { get; set; } = string.Empty;
         public string FlightDuration { get; set; } = string.Empty;
         public string DepartureTime { get; set; } = string.Empty;
         public int AircraftId { get; set; }
