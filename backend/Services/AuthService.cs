@@ -98,20 +98,18 @@ namespace backend.Services
             {
                 var roles = await _userManager.GetRolesAsync(user);
 
-                if (roles.Contains("Administrator") || roles.Contains("Operator"))
+                userDTOs.Add(new UserDTO
                 {
-                    userDTOs.Add(new UserDTO
-                    {
-                        UserId = user.Id,
-                        FirstName = user.FirstName ?? string.Empty,
-                        LastName = user.LastName ?? string.Empty,
-                        Email = user.Email ?? string.Empty,
-                        DateAdded = user.DateAdded.ToString("o"),
-                        IsActive = user.IsActive,
-                        TermsAccepted = user.TermsAccepted,
-                        Role = roles.FirstOrDefault() ?? string.Empty,
-                    });
-                }
+                    UserId = user.Id,
+                    FirstName = user.FirstName ?? string.Empty,
+                    LastName = user.LastName ?? string.Empty,
+                    Email = user.Email ?? string.Empty,
+                    DateAdded = user.DateAdded.ToString("o"),
+                    IsActive = user.IsActive,
+                    TermsAccepted = user.TermsAccepted,
+                    Role = roles.FirstOrDefault() ?? string.Empty,
+                });
+
             }
 
             return userDTOs.OrderBy(u => u.DateAdded).ThenBy(u => u.LastName).ThenBy(u => u.FirstName);

@@ -1,7 +1,0 @@
-2024-11-27 19:21:11.299 +01:00 [INF] Application is starting
-2024-11-27 19:21:11.334 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-2024-11-27 19:21:11.375 +01:00 [INF] Now listening on: http://localhost:5139
-2024-11-27 19:21:11.376 +01:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-11-27 19:21:11.376 +01:00 [INF] Hosting environment: Development
-2024-11-27 19:21:11.376 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
-2024-11-27 19:21:50.148 +01:00 [INF] Application is shutting down...
