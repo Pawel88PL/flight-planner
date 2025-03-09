@@ -14,13 +14,13 @@ namespace backend.Models
 
     public class UserDTO
     {
-        public string? UserId { get; set; }
+        public string? Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
-        public string? DateAdded { get; set; }
-        public string? LastSuccessfulLogin { get; set; }
+        public DateTime? DateAdded { get; set; }
+        public DateTime? LastSuccessfulLogin { get; set; }
         public string? Role { get; set; }
         public bool IsActive { get; set; }
         public bool TermsAccepted { get; set; }
@@ -49,5 +49,11 @@ namespace backend.Models
         public string? NewPassword { get; set; }
         public string? Role { get; set; }
         public bool IsActive { get; set; }
+    }
+
+    public class PagedUsers
+    {
+        public int TotalRecords { get; set; }
+        public List<UserDTO> Data { get; set; } = new List<UserDTO>();
     }
 }

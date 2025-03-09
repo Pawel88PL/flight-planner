@@ -1,1 +1,53 @@
 2025-03-09 14:07:34.128 +01:00 [INF] Application is shutting down...
+2025-03-09 14:29:20.983 +01:00 [INF] Application is starting
+2025-03-09 14:29:21.042 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-09 14:29:21.079 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-09 14:29:21.080 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-09 14:29:21.080 +01:00 [INF] Hosting environment: Development
+2025-03-09 14:29:21.080 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-09 14:29:21.438 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-09 14:29:21.480 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 43.1178ms
+2025-03-09 14:29:21.981 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-09 14:29:21.984 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.3081ms
+2025-03-09 14:29:22.053 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-09 14:29:22.090 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.1627ms
+2025-03-09 14:29:57.414 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-09 14:29:57.418 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-09 14:29:57.440 +01:00 [INF] CORS policy execution successful.
+2025-03-09 14:29:57.442 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 28.0811ms
+2025-03-09 14:29:57.443 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-09 14:29:57.444 +01:00 [INF] CORS policy execution successful.
+2025-03-09 14:29:57.471 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-09 14:29:57.481 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-09 14:29:57.706 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-09 14:29:57.727 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-09 14:29:57.839 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 356.1945ms
+2025-03-09 14:29:57.839 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-09 14:29:57.842 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 398.6697ms
+2025-03-09 14:40:18.801 +01:00 [INF] Application is starting
+2025-03-09 14:40:18.818 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-09 14:40:18.841 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-09 14:40:18.842 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-09 14:40:18.842 +01:00 [INF] Hosting environment: Development
+2025-03-09 14:40:18.842 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-09 14:40:19.175 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-09 14:40:19.217 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 42.6232ms
+2025-03-09 14:40:19.770 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-09 14:40:19.775 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 4.5819ms
+2025-03-09 14:40:19.813 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-09 14:40:19.853 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 40.1554ms
+2025-03-09 14:45:33.268 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-03-09 14:45:33.281 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-09 14:45:33.303 +01:00 [INF] CORS policy execution successful.
+2025-03-09 14:45:33.306 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 38.6332ms
+2025-03-09 14:45:33.309 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-03-09 14:45:33.310 +01:00 [INF] CORS policy execution successful.
+2025-03-09 14:45:33.357 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-03-09 14:45:33.372 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-03-09 14:45:33.386 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-03-09 14:45:33.387 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-03-09 14:45:33.388 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-03-09 14:45:33.389 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-03-09 14:45:33.390 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 16.6129ms
+2025-03-09 14:45:33.390 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-03-09 14:45:33.396 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 87.9081ms
