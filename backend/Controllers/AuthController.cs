@@ -1,10 +1,8 @@
-using System.Security.Claims;
 using backend.Interfaces;
 using backend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 namespace backend.Controllers
@@ -65,7 +63,7 @@ namespace backend.Controllers
                 return Unauthorized(new { message });
             }
 
-            var token = _authService.GenerateJwtTokenForUser(user);
+            var token = _tokenService.GenerateJwtTokenForUser(user);
             return Ok(new { Token = token });
         }
 
@@ -74,27 +72,6 @@ namespace backend.Controllers
         {
             await _authService.SignOutAsync();
             return Ok();
-        }
-
-        [Authorize(Roles = "Administrator, Operator")]
-        [HttpGet("refresh")]
-        public async Task<IActionResult> RefreshToken()
-        {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId == null)
-            {
-                return BadRequest("Brak identyfikatora użytkownika w zapytaniu.");
-            }
-
-            var user = await _authService.FindByIdAsync(userId);
-            if (user == null)
-            {
-                return NotFound("Nie znaleziono użytkownika.");
-            }
-
-            var token = _tokenService.GenerateJwtTokenForUser(user);
-
-            return Ok(new { Token = token });
         }
 
         [HttpPost("register")]

@@ -7,7 +7,6 @@ namespace backend.Interfaces
     {
         Task<User?> FindByIdAsync(string userId);
         Task<User> FindByNameAsync(string email);
-        Task<string> GenerateJwtTokenForUser(User user);
         Task<IEnumerable<UserDTO>> GetUsersAsync();
         Task<SignInResult> PasswordSignInAsync(string username, string password);
         Task<IdentityResult> RegisterNewUserAsync(Register userRegisterData);
