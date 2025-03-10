@@ -1,0 +1,82 @@
+.custom-container {
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.add-icon {
+    width: 50px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-icon:hover {
+    transform: scale(1.2);
+}
+
+.delete-icon,
+.user-icon {
+    cursor: pointer;
+    margin: 5px;
+    max-width: 25px;
+    max-height: 25px;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-icon:hover,
+.user-icon:hover {
+    opacity: 0.7;
+    transform: scale(1.15);
+}
+
+
+mat-card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.mat-spinner {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.proceed {
+    height: 40px;
+    width: 100%;
+    margin-top: 7px;
+    font-size: 18px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.proceed:disabled {
+    background: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.proceed:hover:not(:disabled) {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background: #1565c0;
+}
+
+@media (max-width: 600px) {
+    .custom-container {
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    .mat-card {
+        padding: 0;
+    }
+}
