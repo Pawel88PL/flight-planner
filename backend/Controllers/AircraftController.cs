@@ -18,7 +18,7 @@ namespace backend.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost]
+        [HttpPost("add")]
         public async Task<IActionResult> AddAircraft(Aircraft aircraft)
         {
             try
