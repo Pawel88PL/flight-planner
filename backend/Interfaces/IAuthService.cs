@@ -5,6 +5,7 @@ namespace backend.Interfaces
 {
     public interface IAuthService
     {
+        Task<IdentityResult> DeleteUserAsync(string userId);
         Task<User?> FindByIdAsync(string userId);
         Task<User> FindByNameAsync(string email);
         Task<IEnumerable<UserDTO>> GetUsersAsync();

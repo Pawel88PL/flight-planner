@@ -431,3 +431,524 @@
 2025-03-10 19:20:38.094 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 39.3732ms
 2025-03-10 19:20:38.094 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
 2025-03-10 19:20:38.094 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 40.316ms
+2025-03-10 19:24:49.901 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:24:49.903 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:24:49.903 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 2.4582ms
+2025-03-10 19:24:49.904 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:24:49.905 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:24:49.907 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:24:49.907 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:24:49.953 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:24:49.953 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 46.331ms
+2025-03-10 19:24:49.953 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:24:49.954 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 49.1765ms
+2025-03-10 19:25:20.522 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:25:20.523 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:25:20.523 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 1.6101ms
+2025-03-10 19:25:20.524 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:25:20.524 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:25:20.525 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:25:20.525 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:25:20.561 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:25:20.561 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 35.7064ms
+2025-03-10 19:25:20.561 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:25:20.562 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 37.4729ms
+2025-03-10 19:25:27.563 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:25:27.564 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:25:27.564 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 0.7464ms
+2025-03-10 19:25:27.572 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:25:27.572 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:25:27.575 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:25:27.575 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:25:27.608 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:25:27.608 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 33.3295ms
+2025-03-10 19:25:27.608 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:25:27.608 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 36.4151ms
+2025-03-10 19:25:46.533 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:25:46.535 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:25:46.535 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 1.5987ms
+2025-03-10 19:25:46.538 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:25:46.539 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:25:46.540 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:25:46.540 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:25:46.585 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:25:46.585 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 44.9447ms
+2025-03-10 19:25:46.586 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:25:46.586 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 47.7448ms
+2025-03-10 19:26:12.540 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:26:12.542 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:26:12.543 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 2.1351ms
+2025-03-10 19:26:12.549 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:26:12.552 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:26:12.554 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:26:12.555 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:26:12.598 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:26:12.599 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 44.2839ms
+2025-03-10 19:26:12.600 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:26:12.600 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 50.5778ms
+2025-03-10 19:26:43.331 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - null null
+2025-03-10 19:26:43.340 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:26:43.342 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/logout - 204 null null 11.2864ms
+2025-03-10 19:26:43.345 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/logout - application/json 2
+2025-03-10 19:26:43.346 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:26:43.351 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-03-10 19:26:43.352 +01:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:26:43.380 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-03-10 19:26:43.380 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-03-10 19:26:43.380 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-03-10 19:26:43.382 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-03-10 19:26:43.382 +01:00 [INF] Executed action backend.Controllers.AuthController.Logout (backend) in 28.8666ms
+2025-03-10 19:26:43.382 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Logout (backend)'
+2025-03-10 19:26:43.382 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/logout - 200 0 null 37.5716ms
+2025-03-10 19:27:17.313 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-10 19:27:17.315 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:27:17.315 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 2.5525ms
+2025-03-10 19:27:17.318 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-10 19:27:17.319 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:27:17.324 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:27:17.325 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:27:17.492 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 19:27:17.508 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-10 19:27:17.558 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 232.9311ms
+2025-03-10 19:27:17.558 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:27:17.558 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 240.3234ms
+2025-03-10 19:27:19.472 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:27:19.473 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:27:19.473 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 0.6716ms
+2025-03-10 19:27:19.475 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:27:19.476 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:27:19.477 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:27:19.477 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:27:19.518 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:27:19.518 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 41.0548ms
+2025-03-10 19:27:19.518 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:27:19.518 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 42.58ms
+2025-03-10 19:27:31.137 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=email&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:27:31.137 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:27:31.137 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=email&sortDirection=asc&searchQuery= - 204 null null 0.3266ms
+2025-03-10 19:27:31.139 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=email&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:27:31.139 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:27:31.139 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:27:31.139 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:27:31.196 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:27:31.196 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 56.2907ms
+2025-03-10 19:27:31.196 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:27:31.196 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=email&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 57.1383ms
+2025-03-10 19:30:27.889 +01:00 [INF] Application is shutting down...
+2025-03-10 19:30:37.404 +01:00 [INF] Application is starting
+2025-03-10 19:30:37.422 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-10 19:30:37.446 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-10 19:30:37.447 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 19:30:37.447 +01:00 [INF] Hosting environment: Development
+2025-03-10 19:30:37.447 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-10 19:30:38.067 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-10 19:30:38.116 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 49.2131ms
+2025-03-10 19:30:38.365 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - null null
+2025-03-10 19:30:38.365 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-10 19:30:38.367 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.1711ms
+2025-03-10 19:30:38.393 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-10 19:30:38.395 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 29.7393ms
+2025-03-10 19:30:38.492 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-10 19:30:38.527 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.0012ms
+2025-03-10 19:30:46.252 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:30:46.260 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 19:30:46.284 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:30:46.292 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 40.604ms
+2025-03-10 19:30:46.294 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:30:46.296 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:30:46.430 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:30:46.448 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:30:46.741 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:30:46.750 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 299.7262ms
+2025-03-10 19:30:46.750 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:30:46.752 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 457.8939ms
+2025-03-10 19:30:53.380 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:30:53.382 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:30:53.383 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 204 null null 3.1943ms
+2025-03-10 19:30:53.385 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:30:53.386 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:30:53.391 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Administrator|Employee)
+2025-03-10 19:30:53.394 +01:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2025-03-10 19:30:53.394 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 403 0 null 9.3903ms
+2025-03-10 19:31:20.251 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:31:20.254 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:31:20.254 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 3.5446ms
+2025-03-10 19:31:20.255 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:31:20.258 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:31:20.262 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:31:20.295 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:31:20.360 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:31:20.363 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 67.9055ms
+2025-03-10 19:31:20.363 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:31:20.364 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 108.4753ms
+2025-03-10 19:31:23.278 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:31:23.279 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:31:23.279 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 204 null null 1.0407ms
+2025-03-10 19:31:23.281 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:31:23.283 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:31:23.284 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.DeleteUser (backend)'
+2025-03-10 19:31:23.291 +01:00 [INF] Route matched with {action = "DeleteUser", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteUser(System.String) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:31:23.464 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'backend.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_FlightPlans_AspNetUsers_UserId". The conflict occurred in database "flight_planner", table "dbo.FlightPlans", column 'UserId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:575166ac-f387-494d-bc12-3b8f72d11580
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_FlightPlans_AspNetUsers_UserId". The conflict occurred in database "flight_planner", table "dbo.FlightPlans", column 'UserId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:575166ac-f387-494d-bc12-3b8f72d11580
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-03-10 19:31:23.465 +01:00 [ERR] Wystąpił błąd podczas usuwania użytkownika.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_FlightPlans_AspNetUsers_UserId". The conflict occurred in database "flight_planner", table "dbo.FlightPlans", column 'UserId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:575166ac-f387-494d-bc12-3b8f72d11580
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.DeleteAsync(TUser user, CancellationToken cancellationToken)
+   at backend.Services.AuthService.DeleteUserAsync(String userId)
+   at backend.Controllers.AuthController.DeleteUser(String id)
+2025-03-10 19:31:23.466 +01:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-10 19:31:23.467 +01:00 [INF] Executed action backend.Controllers.AuthController.DeleteUser (backend) in 175.59ms
+2025-03-10 19:31:23.467 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.DeleteUser (backend)'
+2025-03-10 19:31:23.467 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 500 null application/json; charset=utf-8 185.9415ms
+2025-03-10 19:34:31.397 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:34:31.404 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:34:31.412 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 14.2441ms
+2025-03-10 19:34:31.423 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:34:31.426 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:34:31.430 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:34:31.451 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:34:31.501 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:34:31.503 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 51.9511ms
+2025-03-10 19:34:31.504 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:34:31.504 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 80.519ms
+2025-03-10 19:34:35.610 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:34:35.611 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:34:35.611 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 204 null null 0.6205ms
+2025-03-10 19:34:35.612 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:34:35.614 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:34:35.615 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.DeleteUser (backend)'
+2025-03-10 19:34:35.621 +01:00 [INF] Route matched with {action = "DeleteUser", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteUser(System.String) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:34:35.676 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'backend.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_FlightPlans_AspNetUsers_UserId". The conflict occurred in database "flight_planner", table "dbo.FlightPlans", column 'UserId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:575166ac-f387-494d-bc12-3b8f72d11580
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_FlightPlans_AspNetUsers_UserId". The conflict occurred in database "flight_planner", table "dbo.FlightPlans", column 'UserId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:575166ac-f387-494d-bc12-3b8f72d11580
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-03-10 19:34:35.678 +01:00 [ERR] Wystąpił błąd podczas usuwania użytkownika.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_FlightPlans_AspNetUsers_UserId". The conflict occurred in database "flight_planner", table "dbo.FlightPlans", column 'UserId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:575166ac-f387-494d-bc12-3b8f72d11580
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.DeleteAsync(TUser user, CancellationToken cancellationToken)
+   at backend.Services.AuthService.DeleteUserAsync(String userId)
+   at backend.Controllers.AuthController.DeleteUser(String id)
+2025-03-10 19:34:35.680 +01:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-10 19:34:35.681 +01:00 [INF] Executed action backend.Controllers.AuthController.DeleteUser (backend) in 59.6648ms
+2025-03-10 19:34:35.681 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.DeleteUser (backend)'
+2025-03-10 19:34:35.681 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 500 null application/json; charset=utf-8 68.6433ms
+2025-03-10 19:35:13.681 +01:00 [INF] Application is starting
+2025-03-10 19:35:13.702 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-10 19:35:13.731 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-10 19:35:13.732 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 19:35:13.732 +01:00 [INF] Hosting environment: Development
+2025-03-10 19:35:13.732 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-10 19:36:18.104 +01:00 [INF] Application is shutting down...
+2025-03-10 19:50:29.305 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2025-03-10 19:50:39.742 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2025-03-10 19:50:50.981 +01:00 [INF] Application is starting
+2025-03-10 19:50:50.998 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-10 19:50:51.029 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-10 19:50:51.030 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-10 19:50:51.030 +01:00 [INF] Hosting environment: Development
+2025-03-10 19:50:51.030 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-10 19:50:51.547 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-10 19:50:51.589 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 42.6015ms
+2025-03-10 19:50:51.623 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-10 19:50:51.624 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.2502ms
+2025-03-10 19:50:51.751 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-10 19:50:51.787 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.9217ms
+2025-03-10 19:51:20.138 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:51:20.143 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-10 19:51:20.196 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:51:20.198 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 62.1216ms
+2025-03-10 19:51:20.199 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:51:20.208 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:51:20.295 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-03-10 19:51:20.331 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-10 19:51:20.333 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-03-10 19:51:20.335 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 19:51:20.335 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 401 0 null 135.9844ms
+2025-03-10 19:51:25.560 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:51:25.563 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:51:25.564 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 4.1257ms
+2025-03-10 19:51:25.565 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:51:25.566 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:51:25.580 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-03-10 19:51:25.580 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-10 19:51:25.582 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-03-10 19:51:25.582 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 19:51:25.583 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 401 0 null 17.3357ms
+2025-03-10 19:52:24.552 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:52:24.556 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:24.557 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 5.3094ms
+2025-03-10 19:52:24.562 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:52:24.569 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:24.581 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-03-10 19:52:24.584 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-10 19:52:24.587 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-03-10 19:52:24.588 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-10 19:52:24.588 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 401 0 null 25.6152ms
+2025-03-10 19:52:40.994 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-10 19:52:40.999 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:41.001 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 7.7664ms
+2025-03-10 19:52:41.004 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-10 19:52:41.007 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:41.012 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:52:41.034 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:52:41.303 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 19:52:41.326 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-10 19:52:41.442 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 406.2291ms
+2025-03-10 19:52:41.442 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:52:41.444 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 440.1044ms
+2025-03-10 19:52:43.285 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:52:43.285 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:43.286 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 0.9845ms
+2025-03-10 19:52:43.288 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:52:43.289 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:43.320 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:52:43.324 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:52:43.596 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:52:43.601 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 276.2278ms
+2025-03-10 19:52:43.601 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:52:43.601 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 313.1071ms
+2025-03-10 19:52:46.425 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:52:46.426 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:46.426 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 204 null null 0.7299ms
+2025-03-10 19:52:46.427 +01:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - null null
+2025-03-10 19:52:46.428 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:46.429 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.DeleteUser (backend)'
+2025-03-10 19:52:46.435 +01:00 [INF] Route matched with {action = "DeleteUser", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteUser(System.String) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:52:46.527 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-03-10 19:52:46.527 +01:00 [INF] Executed action backend.Controllers.AuthController.DeleteUser (backend) in 92.016ms
+2025-03-10 19:52:46.528 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.DeleteUser (backend)'
+2025-03-10 19:52:46.528 +01:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5139/api/auth/delete/a08aa98e-fcc4-4dd0-96a2-4e0497e3d602 - 200 0 null 100.248ms
+2025-03-10 19:52:46.536 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:52:46.537 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:52:46.537 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:52:46.537 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:52:46.570 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:52:46.570 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 32.6653ms
+2025-03-10 19:52:46.570 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:52:46.570 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 33.792ms
+2025-03-10 19:55:17.527 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:55:17.530 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:55:17.531 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 4.1838ms
+2025-03-10 19:55:17.532 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 19:55:17.533 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:55:17.536 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:55:17.538 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 19:55:17.585 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 19:55:17.586 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 46.9194ms
+2025-03-10 19:55:17.586 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 19:55:17.586 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 54.026ms

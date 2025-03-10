@@ -77,7 +77,7 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit(): void {
     this.initialeSearchForm();
-    this.loadEmployees(0, this.pageSize);
+    this.loadUsers(0, this.pageSize);
     this.searchQueryChanges();
   }
 
@@ -101,7 +101,7 @@ export class UsersListComponent implements OnInit {
     }
   }
 
-  loadEmployees(pageIndex: number, pageSize: number, sortColumn?: string, sortDirection?: string, searchQuery?: string): void {
+  loadUsers(pageIndex: number, pageSize: number, sortColumn?: string, sortDirection?: string, searchQuery?: string): void {
     const params = {
       pageNumber: pageIndex + 1,
       pageSize: pageSize,
@@ -129,11 +129,11 @@ export class UsersListComponent implements OnInit {
   deleteUser(userId: string) {
     this.authService.deleteUser(userId).subscribe({
       next: () => {
-        this.toastr.success('Pracownik został usunięty', 'Sukces');
-        this.loadEmployees(this.paginator.pageIndex, this.paginator.pageSize);
+        this.toastr.success('Użytkownik został usunięty', 'Sukces');
+        this.loadUsers(this.paginator.pageIndex, this.paginator.pageSize);
       },
       error: (error) => {
-        this.toastr.error('Wystąpił błąd podczas usuwania pracownika', 'Błąd');
+        this.toastr.error('Wystąpił błąd podczas usuwania użytkownika', 'Błąd');
         console.error(error);
       }
     });
@@ -145,7 +145,7 @@ export class UsersListComponent implements OnInit {
       return;
     }
 
-    let message = 'Czy na pewno chcesz usunąć tego pracownika?';
+    let message = 'Czy na pewno chcesz usunąć tego użytkownika?';
 
     const dialogRef = this.dialog.open(DeleteConfirmationDialogComponent, {
       width: '400px',
@@ -161,17 +161,17 @@ export class UsersListComponent implements OnInit {
   }
 
   onPageChange(event: any): void {
-    this.loadEmployees(event.pageIndex, event.pageSize);
+    this.loadUsers(event.pageIndex, event.pageSize);
     this.rowNumber = event.pageIndex * event.pageSize;
   }
 
   onSearch(query: string): void {
     const searchQuery = query.trim();
-    this.loadEmployees(0, this.pageSize, undefined, undefined, searchQuery);
+    this.loadUsers(0, this.pageSize, undefined, undefined, searchQuery);
   }
 
   onSortChange(event: any): void {
-    this.loadEmployees(this.paginator.pageIndex, this.paginator.pageSize, event.active, event.direction);
+    this.loadUsers(this.paginator.pageIndex, this.paginator.pageSize, event.active, event.direction);
   }
 
   openEditUserComponent(user: User) {
@@ -179,9 +179,6 @@ export class UsersListComponent implements OnInit {
     // this.adminService.setComponent('userEdit');
   }
 
-  openUserAddComponent() {
-    // this.adminService.setComponent('userAdd');
-  }
 
   selectUser(user: User) {
     this.openEditUserComponent(user);

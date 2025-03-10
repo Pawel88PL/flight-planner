@@ -28,6 +28,18 @@ namespace backend.Services
             _userManager = userManager;
         }
 
+        public async Task<IdentityResult> DeleteUserAsync(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return IdentityResult.Failed(new IdentityError { Description = "Nie znaleziono użytkownika." });
+            }
+
+            return await _userManager.DeleteAsync(user);
+        }
+
         public async Task<User?> FindByIdAsync(string userId)
         {
             return await _userManager.FindByIdAsync(userId);

@@ -25,6 +25,32 @@ namespace backend.Controllers
             _tokenService = tokenService;
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            if (id == null)
+            {
+                return BadRequest(new { message = "Brak identyfikatora użytkownika w zapytaniu." });
+            }
+
+            try
+            {
+                var result = await _authService.DeleteUserAsync(id);
+                if (!result.Succeeded)
+                {
+                    return BadRequest(result.Errors);
+                }
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Wystąpił błąd podczas usuwania użytkownika.");
+                return StatusCode(500, new { message = "Wystąpił błąd podczas usuwania użytkownika. " + ex.Message });
+            }
+        }
+
         [Authorize(Roles = "Administrator")]
         [HttpGet("getUsers")]
         public async Task<IActionResult> GetUsers()
@@ -56,7 +82,7 @@ namespace backend.Controllers
                 var message = "Konto jest zablokowane. Skontaktuj się z administratorem.";
                 return Unauthorized(new { message });
             }
-        
+
             if (!signInResult.Succeeded)
             {
                 var message = "Podany identyfikator lub hasło są nieprawidłowe.";

@@ -92,14 +92,7 @@ export class AuthService {
     const token = localStorage.getItem('token');
     if (token) {
       localStorage.removeItem('token');
-      this.http.post(`${this.apiUrl}/logout`, {}).subscribe({
-        next: () => {
-          this.router.navigate(['/home']);
-        },
-        error: (error) => {
-          console.error('Error during logout:', error);
-        }
-      });
+      this.router.navigate(['/home']);
     }
   }
 

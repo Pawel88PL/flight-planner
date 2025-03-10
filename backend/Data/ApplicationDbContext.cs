@@ -40,7 +40,7 @@ namespace backend.Data
                 .HasOne(fp => fp.User)
                 .WithMany()
                 .HasForeignKey(fp => fp.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }
