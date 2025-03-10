@@ -12,16 +12,13 @@ namespace backend.Controllers
     public class AuthController : Controller
     {
         private readonly IAuthService _authService;
-        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ITokenService _tokenService;
 
         public AuthController(
             IAuthService authService,
-            RoleManager<IdentityRole> roleManager,
             ITokenService tokenService)
         {
             _authService = authService;
-            _roleManager = roleManager;
             _tokenService = tokenService;
         }
 

@@ -952,3 +952,72 @@ RolesAuthorizationRequirement:User.IsInRole must be true for one of the followin
 2025-03-10 19:55:17.586 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 46.9194ms
 2025-03-10 19:55:17.586 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
 2025-03-10 19:55:17.586 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 54.026ms
+2025-03-10 19:57:50.251 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - null null
+2025-03-10 19:57:50.254 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:57:50.257 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/register - 204 null null 4.5048ms
+2025-03-10 19:57:50.263 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/register - application/json 165
+2025-03-10 19:57:50.264 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:57:50.264 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-03-10 19:57:50.265 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-10 19:57:50.266 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-03-10 19:57:50.273 +01:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(backend.Models.Register) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:57:50.565 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-03-10 19:57:50.565 +01:00 [INF] Executed action backend.Controllers.AuthController.Register (backend) in 291.3747ms
+2025-03-10 19:57:50.565 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Register (backend)'
+2025-03-10 19:57:50.565 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/register - 200 0 null 302.1434ms
+2025-03-10 19:58:02.614 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-10 19:58:02.614 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:58:02.614 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 0.6787ms
+2025-03-10 19:58:02.617 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 59
+2025-03-10 19:58:02.617 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:58:02.617 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:58:02.617 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:58:02.771 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 19:58:02.787 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-10 19:58:02.833 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 216.1442ms
+2025-03-10 19:58:02.834 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:58:02.834 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 217.6175ms
+2025-03-10 19:58:15.457 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-03-10 19:58:15.457 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:58:15.457 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 0.7666ms
+2025-03-10 19:58:15.459 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-03-10 19:58:15.462 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:58:15.463 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-03-10 19:58:15.467 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-03-10 19:58:15.523 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-10 19:58:15.526 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 58.9357ms
+2025-03-10 19:58:15.526 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-03-10 19:58:15.526 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 67.1341ms
+2025-03-10 19:58:32.036 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-10 19:58:32.036 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:58:32.037 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 1.1565ms
+2025-03-10 19:58:32.038 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-10 19:58:32.039 +01:00 [INF] CORS policy execution successful.
+2025-03-10 19:58:32.039 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:58:32.039 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-10 19:58:32.192 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-10 19:58:32.207 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-10 19:58:32.253 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 213.7742ms
+2025-03-10 19:58:32.253 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-10 19:58:32.253 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 214.9106ms
+2025-03-10 20:00:40.332 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 20:00:40.333 +01:00 [INF] CORS policy execution successful.
+2025-03-10 20:00:40.333 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 1.1322ms
+2025-03-10 20:00:40.334 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-10 20:00:40.335 +01:00 [INF] CORS policy execution successful.
+2025-03-10 20:00:40.336 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 20:00:40.336 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-10 20:00:40.386 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-10 20:00:40.386 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 49.7056ms
+2025-03-10 20:00:40.386 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-10 20:00:40.386 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 52.2521ms
+2025-03-10 20:28:48.981 +01:00 [INF] Application is shutting down...
