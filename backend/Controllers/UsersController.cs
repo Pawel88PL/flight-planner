@@ -18,7 +18,7 @@ namespace backend.Controllers
         }
 
 
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Admin")]
         [HttpGet("paged")]
         public async Task<IActionResult> GetUsersPaged([FromQuery] PagedRequest pagedRequest)
         {

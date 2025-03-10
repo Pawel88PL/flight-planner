@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 body {
     height: 100%;
     font-size: 11px;
@@ -43,4 +45,20 @@ mat-form-field {
     mat-card {
         margin: 1rem;
     }
+}
+
+:root {
+    @include mat.form-field-overrides((container-text-size: 15px));
+
+    @include mat.tooltip-overrides((supporting-text-size: 12px,
+            supporting-text-line-height: 20px));
+
+    @include mat.table-overrides((background-color: white,
+            header-headline-color: rgb(0, 15, 151),
+            header-headline-size: 15px,
+            row-item-label-text-size: 12px));
+
+    @include mat.paginator-overrides((container-background-color:white,
+            container-text-size: 15px,
+            select-trigger-text-size: 15px));
 }

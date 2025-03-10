@@ -1,1 +1,105 @@
-<p>users-list works!</p>
+<div *ngIf="isLoading" class="mat-spinner">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="custom-container">
+    <mat-card>
+        <mat-card-content>
+
+            <form [formGroup]="searchForm">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="text-center mt-3">Lista użytkowników</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Wyszukaj użytkownika</mat-label>
+                            <input matInput type="text" formControlName="query">
+                            <mat-error *ngIf="searchForm.controls['query'].hasError('required')" class="mat-error">
+                                Podaj wyszukiwaną frazę
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </form>
+
+            <hr class="my-4">
+
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                    <!-- Kolumna Numer porządkowy -->
+                    <ng-container matColumnDef="index">
+                        <th mat-header-cell *matHeaderCellDef> # </th>
+                        <td mat-cell *matCellDef="let user; let i = index">
+                            {{ rowNumber + i + 1 }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Imię -->
+                    <ng-container matColumnDef="firstName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Imię </th>
+                        <td mat-cell *matCellDef="let user">{{ user.firstName }}</td>
+                    </ng-container>
+
+                    <!-- Kolumna Nazwisko -->
+                    <ng-container matColumnDef="lastName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nazwisko </th>
+                        <td mat-cell *matCellDef="let user">{{ user.lastName }}</td>
+                    </ng-container>
+
+                    <!-- Kolumna Rola -->
+                    <ng-container matColumnDef="role">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rola </th>
+                        <td mat-cell *matCellDef="let user">{{ user.role }}</td>
+                    </ng-container>
+
+                    <!-- Kolumna Email -->
+                    <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                        <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+                    </ng-container>
+
+
+                    <!-- Kolumna Data ostatniego logowania -->
+                    <ng-container matColumnDef="lastSuccessfulLogin">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ostatnie logowanie </th>
+                        <td mat-cell *matCellDef="let user"> {{ user.lastSuccessfulLogin | date: 'd MMMM yyyy HH:mm' }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Czy użytkownik ma dostęp do programu -->
+                    <ng-container matColumnDef="isActive">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Aktywny </th>
+                        <td mat-cell *matCellDef="let user">
+                            <span *ngIf="user.isActive" class="badge bg-success"> Tak </span>
+                            <span *ngIf="!user.isActive" class="badge bg-danger"> Nie </span>
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Akcje -->
+                    <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef> Akcje </th>
+                        <td mat-cell *matCellDef="let user">
+                            <img src="./images/edit.png" alt="Edytuj" class="user-icon" matTooltip="Edytuj"
+                                matTooltipPosition="above" (click)="selectUser(user)">
+                            <img src="./images/delete.png" alt="Usuń" class="delete-icon" matTooltip="Usuń"
+                                matTooltipPosition="above" (click)="onDeleteUser(user.id)">
+                        </td>
+
+                    </ng-container>
+
+                    <!-- Nagłówki i dane tabeli -->
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+
+            <!-- Paginacja -->
+            <mat-paginator [length]="totalRecords" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20, 50]"
+                showFirstLastButtons (page)="onPageChange($event)">
+            </mat-paginator>
+
+        </mat-card-content>
+    </mat-card>
+</div>

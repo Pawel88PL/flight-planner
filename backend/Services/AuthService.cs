@@ -62,11 +62,11 @@ namespace backend.Services
 
                 userDTOs.Add(new UserDTO
                 {
-                    UserId = user.Id,
+                    Id = user.Id,
                     FirstName = user.FirstName ?? string.Empty,
                     LastName = user.LastName ?? string.Empty,
                     Email = user.Email ?? string.Empty,
-                    DateAdded = user.DateAdded.ToString("o"),
+                    DateAdded = user.DateAdded,
                     IsActive = user.IsActive,
                     TermsAccepted = user.TermsAccepted,
                     Role = roles.FirstOrDefault() ?? string.Empty,

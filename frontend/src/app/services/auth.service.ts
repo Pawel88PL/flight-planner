@@ -103,6 +103,12 @@ export class AuthService {
     }
   }
 
+  deleteUser(id: string): Observable<any> {
+    const token = this.jwtService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.delete(`${this.apiUrl}/delete/${id}`, { headers });
+  }
+
   register(userData: any): Observable<any> {
     const token = this.jwtService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);

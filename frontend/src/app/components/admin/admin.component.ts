@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
-import { ToastrService } from 'ngx-toastr';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -10,27 +10,11 @@ import { ToastrService } from 'ngx-toastr';
   imports: [
     CommonModule,
 
-    MatCardModule
+    MatCardModule,
+    RouterModule
   ],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })
 
-export class AdminComponent implements OnInit {
-
-  constructor(
-    private toastr: ToastrService
-  ) { }
-
-  ngOnInit(): void {
-    this.welcomeAdmin();
-  }
-
-  welcomeAdmin(): void {
-    this.toastr.success('Witaj w panelu administratora!', 'Witaj!', {
-      timeOut: 3000,
-      progressBar: true
-    });
-    console.log('Welcome admin');
-  }
-}
+export class AdminComponent { }
