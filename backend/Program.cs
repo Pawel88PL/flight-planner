@@ -148,7 +148,8 @@ namespace backend
             {
                 options.AddPolicy("AllowSpecificOrigin",
                     builder => builder.WithOrigins(
-                        "https://zion.sigid.pl",
+                        "https://flight-planner.pl",
+                        "https://www.flight-planner.pl",
                         "http://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod()

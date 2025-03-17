@@ -1,0 +1,89 @@
+2025-03-12 21:08:33.629 +01:00 [INF] Application is starting
+2025-03-12 21:08:33.657 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-12 21:08:33.699 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-12 21:08:33.700 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-12 21:08:33.700 +01:00 [INF] Hosting environment: Development
+2025-03-12 21:08:33.700 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-12 21:09:13.982 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-12 21:09:13.997 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-12 21:09:14.006 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:09:14.010 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 29.1939ms
+2025-03-12 21:09:14.011 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-12 21:09:14.013 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:09:14.029 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-12 21:09:14.036 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-12 21:09:14.343 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-12 21:09:14.384 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-12 21:09:14.552 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 514.2292ms
+2025-03-12 21:09:14.552 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-12 21:09:14.555 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 543.4387ms
+2025-03-12 21:09:20.474 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:09:20.475 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:09:20.476 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 2.0862ms
+2025-03-12 21:09:20.477 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:09:20.484 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:09:20.523 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-12 21:09:20.528 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-12 21:09:20.780 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-12 21:09:20.786 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 257.9251ms
+2025-03-12 21:09:20.786 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-12 21:09:20.787 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 309.3652ms
+2025-03-12 21:10:19.114 +01:00 [INF] Application is shutting down...
+2025-03-12 21:23:34.891 +01:00 [INF] Application is starting
+2025-03-12 21:23:34.911 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-12 21:23:34.934 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-12 21:23:34.935 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-12 21:23:34.935 +01:00 [INF] Hosting environment: Development
+2025-03-12 21:23:34.935 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-12 21:23:37.933 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:23:37.942 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-12 21:23:37.951 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:23:37.955 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 23.376ms
+2025-03-12 21:23:37.957 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:23:37.960 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:23:38.001 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 404 0 null 43.6801ms
+2025-03-12 21:23:38.005 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5139/api/aircraft/users/paged, Response status code: 404
+2025-03-12 21:23:45.221 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:23:45.224 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:23:45.224 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 3.097ms
+2025-03-12 21:23:45.225 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:23:45.227 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:23:45.238 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-12 21:23:45.255 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-12 21:23:45.522 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-12 21:23:45.535 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 278.9614ms
+2025-03-12 21:23:45.536 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-12 21:23:45.538 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 312.2755ms
+2025-03-12 21:23:56.249 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:23:56.250 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:23:56.250 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 1.5389ms
+2025-03-12 21:23:56.252 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:23:56.253 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:23:56.257 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 404 0 null 5.0588ms
+2025-03-12 21:23:56.258 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5139/api/aircraft/users/paged, Response status code: 404
+2025-03-12 21:24:08.860 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:24:08.861 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:24:08.862 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 1.9229ms
+2025-03-12 21:24:08.863 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:24:08.864 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:24:08.865 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 404 0 null 1.6258ms
+2025-03-12 21:24:08.865 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5139/api/aircraft/users/paged, Response status code: 404
+2025-03-12 21:24:47.498 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:24:47.507 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:24:47.510 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 14.4605ms
+2025-03-12 21:24:47.512 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:24:47.514 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:24:47.517 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 404 0 null 4.6916ms
+2025-03-12 21:24:47.518 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5139/api/aircraft/users/paged, Response status code: 404
+2025-03-12 21:25:12.880 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:25:12.882 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:25:12.882 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 1.7507ms
+2025-03-12 21:25:12.885 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-12 21:25:12.886 +01:00 [INF] CORS policy execution successful.
+2025-03-12 21:25:12.889 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-12 21:25:12.890 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-12 21:25:12.949 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-12 21:25:12.950 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 60.1311ms
+2025-03-12 21:25:12.950 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-12 21:25:12.951 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 65.662ms
+2025-03-12 21:31:09.921 +01:00 [INF] Application is shutting down...

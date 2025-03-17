@@ -7,3 +7,8 @@ export interface AircraftModel {
     range: number;
     maxCrosswind: number;
 }
+
+export interface AircraftListModel {
+    data: AircraftModel[];
+    totalRecords: number;
+}
