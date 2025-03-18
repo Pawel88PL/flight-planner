@@ -1,0 +1,418 @@
+2025-03-18 17:16:03.733 +01:00 [INF] Application is starting
+2025-03-18 17:16:03.750 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-18 17:16:03.777 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-18 17:16:03.778 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:16:03.779 +01:00 [INF] Hosting environment: Development
+2025-03-18 17:16:03.779 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-18 17:16:04.362 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-18 17:16:04.407 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 45.833ms
+2025-03-18 17:16:04.434 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:16:04.434 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-18 17:16:04.434 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui.css - null null
+2025-03-18 17:16:04.434 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - null null
+2025-03-18 17:16:04.437 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.5003ms
+2025-03-18 17:16:04.455 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-03-18 17:16:04.455 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-03-18 17:16:04.457 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui.css - 200 143943 text/css 22.5183ms
+2025-03-18 17:16:04.457 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 22.7452ms
+2025-03-18 17:16:04.474 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-18 17:16:04.474 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 39.9429ms
+2025-03-18 17:16:04.654 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-18 17:16:04.714 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.7732ms
+2025-03-18 17:16:55.648 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-18 17:16:55.660 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-18 17:16:55.687 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:16:55.688 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 40.1216ms
+2025-03-18 17:16:55.690 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-18 17:16:55.691 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:16:55.725 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-18 17:16:55.739 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-18 17:16:56.008 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-18 17:16:56.029 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:16:56.152 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 411.2891ms
+2025-03-18 17:16:56.152 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-18 17:16:56.155 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 465.2571ms
+2025-03-18 17:16:57.239 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:16:57.242 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:16:57.242 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 3.3587ms
+2025-03-18 17:16:57.244 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:16:57.244 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:16:57.283 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-18 17:16:57.286 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-18 17:16:57.550 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-18 17:16:57.554 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 267.1363ms
+2025-03-18 17:16:57.554 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-18 17:16:57.554 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 310.4544ms
+2025-03-18 17:17:02.275 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:17:02.277 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:17:02.277 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 2.2245ms
+2025-03-18 17:17:02.279 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:17:02.279 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:17:02.281 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 404 0 null 2.2792ms
+2025-03-18 17:17:02.282 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5139/api/aircraft/users/paged, Response status code: 404
+2025-03-18 17:18:35.355 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:18:35.357 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:18:35.358 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 3.698ms
+2025-03-18 17:18:35.359 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:18:35.360 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:18:35.364 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-18 17:18:35.373 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-18 17:18:35.415 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-18 17:18:35.417 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 43.6367ms
+2025-03-18 17:18:35.417 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-18 17:18:35.418 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 58.621ms
+2025-03-18 17:38:50.123 +01:00 [INF] Application is starting
+2025-03-18 17:38:50.140 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-18 17:38:50.166 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-18 17:38:50.166 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:38:50.167 +01:00 [INF] Hosting environment: Development
+2025-03-18 17:38:50.167 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-18 17:40:33.779 +01:00 [INF] Application is shutting down...
+2025-03-18 17:40:43.391 +01:00 [INF] Application is starting
+2025-03-18 17:40:43.408 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-18 17:40:43.432 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-18 17:40:43.433 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:40:43.433 +01:00 [INF] Hosting environment: Development
+2025-03-18 17:40:43.433 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-18 17:40:43.963 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-18 17:40:44.009 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 47.2092ms
+2025-03-18 17:40:44.412 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:40:44.415 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 3.3458ms
+2025-03-18 17:40:44.495 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-18 17:40:44.539 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.3872ms
+2025-03-18 17:41:17.333 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:41:17.363 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-18 17:41:17.385 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:41:17.386 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 53.5941ms
+2025-03-18 17:41:17.388 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:41:17.390 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:41:17.452 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-18 17:41:17.462 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-18 17:41:17.757 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-18 17:41:17.764 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 300.2335ms
+2025-03-18 17:41:17.765 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-18 17:41:17.767 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 379.4827ms
+2025-03-18 17:41:23.284 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:41:23.289 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:41:23.290 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 6.2977ms
+2025-03-18 17:41:23.292 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:41:23.295 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:41:23.298 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:41:23.306 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:41:23.322 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:41:23.323 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:41:23.326 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 19.0443ms
+2025-03-18 17:41:23.326 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:41:23.326 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 34.1724ms
+2025-03-18 17:42:41.977 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:42:41.980 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:42:41.981 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 4.4259ms
+2025-03-18 17:42:41.985 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:42:41.986 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:42:41.992 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:42:41.993 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:42:42.006 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:42:42.008 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:42:42.009 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 16.2537ms
+2025-03-18 17:42:42.009 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:42:42.009 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 24.3337ms
+2025-03-18 17:42:57.970 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:42:57.973 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:42:57.973 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 3.5831ms
+2025-03-18 17:42:57.974 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:42:57.975 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:42:57.978 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:42:57.979 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:42:57.997 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:42:57.997 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:42:57.997 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 18.0408ms
+2025-03-18 17:42:57.998 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:42:57.998 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 23.385ms
+2025-03-18 17:43:09.959 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:43:09.963 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:43:09.964 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 5.3355ms
+2025-03-18 17:43:09.966 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:43:09.967 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:43:09.968 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:43:09.969 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:43:09.974 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:43:09.976 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:43:09.978 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 8.9324ms
+2025-03-18 17:43:09.978 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:43:09.979 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 13.0427ms
+2025-03-18 17:43:18.943 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:43:18.945 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:43:18.946 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 2.7194ms
+2025-03-18 17:43:18.947 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:43:18.948 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:43:18.949 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:43:18.951 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:43:18.954 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:43:18.955 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:43:18.955 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 4.1681ms
+2025-03-18 17:43:18.955 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:43:18.955 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 8.3727ms
+2025-03-18 17:43:21.939 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:43:21.940 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:43:21.940 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:43:21.941 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:43:21.943 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:43:21.944 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:43:21.944 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 3.0667ms
+2025-03-18 17:43:21.944 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:43:21.944 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 4.7808ms
+2025-03-18 17:44:14.040 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:44:14.041 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:44:14.042 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 2.5447ms
+2025-03-18 17:44:14.044 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:44:14.046 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:44:14.066 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:44:14.067 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:44:14.072 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:44:14.073 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:44:14.073 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 6.0035ms
+2025-03-18 17:44:14.075 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:44:14.076 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 31.8222ms
+2025-03-18 17:44:41.082 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:44:41.087 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:44:41.087 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 5.7161ms
+2025-03-18 17:44:41.091 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:44:41.093 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:44:41.122 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:44:41.123 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:44:41.130 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:44:41.131 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:44:41.133 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 8.9221ms
+2025-03-18 17:44:41.133 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:44:41.133 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 41.545ms
+2025-03-18 17:44:53.252 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:44:53.281 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:44:53.293 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 40.6477ms
+2025-03-18 17:44:53.306 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:44:53.313 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:44:53.324 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:44:53.326 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:44:53.331 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:44:53.332 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:44:53.332 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 6.1808ms
+2025-03-18 17:44:53.332 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:44:53.333 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 26.4138ms
+2025-03-18 17:45:38.400 +01:00 [INF] Application is shutting down...
+2025-03-18 17:46:13.574 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2025-03-18 17:46:26.523 +01:00 [FTL] Application startup failed: The host was aborted.,    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at backend.Program.Main(String[] args) in /Users/pawelstaniul/Desktop/Programy/flight-planner/backend/Program.cs:line 42
+2025-03-18 17:46:47.924 +01:00 [INF] Application is starting
+2025-03-18 17:46:47.942 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-18 17:46:47.968 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-18 17:46:47.969 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:46:47.970 +01:00 [INF] Hosting environment: Development
+2025-03-18 17:46:47.970 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-18 17:46:48.410 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-18 17:46:48.455 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 46.6142ms
+2025-03-18 17:46:48.476 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:46:48.479 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 3.252ms
+2025-03-18 17:46:48.536 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-18 17:46:48.573 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.4538ms
+2025-03-18 17:48:30.012 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:48:30.053 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-18 17:48:30.155 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:48:30.157 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 150.2294ms
+2025-03-18 17:48:30.163 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:48:30.164 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:48:30.259 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:48:30.275 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:48:30.482 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:48:30.484 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:48:30.495 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 216.3819ms
+2025-03-18 17:48:30.495 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:48:30.497 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 333.9208ms
+2025-03-18 17:48:43.953 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:48:43.977 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:48:43.977 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 24.2412ms
+2025-03-18 17:48:43.979 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:48:43.979 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:48:43.981 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:48:43.982 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:48:44.007 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:48:44.014 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:48:44.015 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 32.9686ms
+2025-03-18 17:48:44.015 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:48:44.015 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 36.7177ms
+2025-03-18 17:48:48.965 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:48:48.977 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:48:48.982 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:48:48.983 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:48:48.994 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:48:48.995 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:48:48.996 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 13.3112ms
+2025-03-18 17:48:48.996 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:48:48.997 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 32.3675ms
+2025-03-18 17:49:01.953 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:01.955 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:01.955 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 2.9456ms
+2025-03-18 17:49:01.957 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:01.958 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:01.960 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:01.961 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:49:01.964 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:49:01.968 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:49:01.971 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 9.737ms
+2025-03-18 17:49:01.972 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:01.980 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 22.548ms
+2025-03-18 17:49:08.068 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:08.069 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:08.070 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 1.8296ms
+2025-03-18 17:49:08.072 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:08.073 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:08.076 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:08.077 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:49:08.098 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:49:08.102 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:49:08.102 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 24.7358ms
+2025-03-18 17:49:08.102 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:08.102 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 30.3316ms
+2025-03-18 17:49:27.003 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:27.006 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:27.007 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 4.1704ms
+2025-03-18 17:49:27.017 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:27.018 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:27.026 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:27.030 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:49:27.047 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:49:27.048 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:49:27.049 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 18.188ms
+2025-03-18 17:49:27.050 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:27.052 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 33.7458ms
+2025-03-18 17:49:44.196 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:44.199 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:44.200 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 204 null null 4.0324ms
+2025-03-18 17:49:44.206 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:49:44.206 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:49:44.215 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:44.226 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:49:44.244 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:49:44.244 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:49:44.245 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 17.6437ms
+2025-03-18 17:49:44.245 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:49:44.245 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 39.6165ms
+2025-03-18 17:50:29.152 +01:00 [INF] Application is shutting down...
+2025-03-18 17:50:43.647 +01:00 [INF] Application is starting
+2025-03-18 17:50:43.673 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-18 17:50:43.711 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-18 17:50:43.712 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:50:43.712 +01:00 [INF] Hosting environment: Development
+2025-03-18 17:50:43.770 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-18 17:50:43.914 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-18 17:50:43.970 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 56.5574ms
+2025-03-18 17:50:44.025 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-18 17:50:44.072 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.0982ms
+2025-03-18 17:50:52.467 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:50:52.479 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-18 17:50:52.501 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:50:52.504 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 204 null null 37.1723ms
+2025-03-18 17:50:52.509 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:50:52.545 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:50:52.703 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:50:52.713 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:51:47.058 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:51:47.064 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:51:47.130 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 54410.0115ms
+2025-03-18 17:51:47.131 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:51:47.141 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 54634.033ms
+2025-03-18 17:52:02.438 +01:00 [INF] Application is starting
+2025-03-18 17:52:02.455 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-18 17:52:02.478 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-18 17:52:02.479 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-18 17:52:02.479 +01:00 [INF] Hosting environment: Development
+2025-03-18 17:52:02.479 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-18 17:52:02.859 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-18 17:52:02.898 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 39.7301ms
+2025-03-18 17:52:03.337 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:52:03.343 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 5.2829ms
+2025-03-18 17:52:03.375 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-18 17:52:03.462 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.2887ms
+2025-03-18 17:52:45.754 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-18 17:52:45.767 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 12.7303ms
+2025-03-18 17:52:45.790 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:52:45.791 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.7454ms
+2025-03-18 17:52:45.818 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-18 17:52:45.885 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.4718ms
+2025-03-18 17:53:11.402 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:53:11.480 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-18 17:53:11.515 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:53:11.517 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 204 null null 120.0397ms
+2025-03-18 17:53:11.518 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:53:11.519 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:53:11.599 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:53:11.653 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:53:11.754 +01:00 [ERR] Wystąpił błąd podczas pobierania samolotów: No property or field 'ascending' exists in type 'Aircraft'
+2025-03-18 17:53:11.757 +01:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-18 17:53:11.764 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 107.4976ms
+2025-03-18 17:53:11.764 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:53:11.766 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 400 null application/json; charset=utf-8 248.1983ms
+2025-03-18 17:53:50.869 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/index.html - null null
+2025-03-18 17:53:50.883 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/index.html - 200 null text/html;charset=utf-8 14.0018ms
+2025-03-18 17:53:50.894 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-18 17:53:50.897 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.1345ms
+2025-03-18 17:53:50.928 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - null null
+2025-03-18 17:53:50.932 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.484ms
+2025-03-18 17:53:56.828 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:53:56.841 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:53:56.847 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 204 null null 24.1981ms
+2025-03-18 17:53:56.849 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:53:56.887 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:53:56.894 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:53:56.901 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:53:57.050 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedAircrafts'.
+2025-03-18 17:53:57.054 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 153.5485ms
+2025-03-18 17:53:57.055 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:53:57.060 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 211.1917ms
+2025-03-18 17:57:03.323 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=model&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:57:03.326 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:57:03.327 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=model&sortDirection=asc&searchQuery= - 204 null null 4.0712ms
+2025-03-18 17:57:03.329 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=model&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:57:03.330 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:57:03.339 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:57:03.340 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:57:03.416 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedAircrafts'.
+2025-03-18 17:57:03.418 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 76.9641ms
+2025-03-18 17:57:03.418 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:57:03.419 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=model&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 89.7572ms
+2025-03-18 17:57:06.033 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:57:06.034 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:57:06.034 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 204 null null 1.5471ms
+2025-03-18 17:57:06.035 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-18 17:57:06.036 +01:00 [INF] CORS policy execution successful.
+2025-03-18 17:57:06.037 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:57:06.037 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-18 17:57:06.077 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedAircrafts'.
+2025-03-18 17:57:06.077 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 39.8308ms
+2025-03-18 17:57:06.077 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-18 17:57:06.078 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 42.385ms

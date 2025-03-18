@@ -33,6 +33,6 @@ export class AircraftService {
       .set('sortDirection', request.sortDirection)
       .set('searchQuery', request.searchQuery ?? '');
 
-    return this.http.get<AircraftListModel>(`${this.apiUrl}/users/paged`, { headers, params });
+    return this.http.get<AircraftListModel>(`${this.apiUrl}/paged`, { headers, params });
   }
 }

@@ -36,49 +36,24 @@
                     <!-- Kolumna Numer porządkowy -->
                     <ng-container matColumnDef="index">
                         <th mat-header-cell *matHeaderCellDef> # </th>
-                        <td mat-cell *matCellDef="let user; let i = index">
+                        <td mat-cell *matCellDef="let aircraft; let i = index">
                             {{ rowNumber + i + 1 }}
                         </td>
                     </ng-container>
 
-                    <!-- Kolumna Imię -->
-                    <ng-container matColumnDef="firstName">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Imię </th>
-                        <td mat-cell *matCellDef="let user">{{ user.firstName }}</td>
-                    </ng-container>
-
-                    <!-- Kolumna Nazwisko -->
-                    <ng-container matColumnDef="lastName">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nazwisko </th>
-                        <td mat-cell *matCellDef="let user">{{ user.lastName }}</td>
-                    </ng-container>
-
-                    <!-- Kolumna Rola -->
-                    <ng-container matColumnDef="role">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rola </th>
-                        <td mat-cell *matCellDef="let user">{{ user.role }}</td>
-                    </ng-container>
-
-                    <!-- Kolumna Email -->
-                    <ng-container matColumnDef="email">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
-                        <td mat-cell *matCellDef="let user">{{ user.email }}</td>
-                    </ng-container>
-
-
-                    <!-- Kolumna Data ostatniego logowania -->
-                    <ng-container matColumnDef="lastSuccessfulLogin">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ostatnie logowanie </th>
-                        <td mat-cell *matCellDef="let user"> {{ user.lastSuccessfulLogin | date: 'd MMMM yyyy HH:mm' }}
+                    <!-- Kolumna Model -->
+                    <ng-container matColumnDef="model">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Model </th>
+                        <td mat-cell *matCellDef="let aircraft">
+                            {{ aircraft.model }}
                         </td>
                     </ng-container>
 
-                    <!-- Kolumna Czy użytkownik ma dostęp do programu -->
-                    <ng-container matColumnDef="isActive">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Aktywny </th>
-                        <td mat-cell *matCellDef="let user">
-                            <span *ngIf="user.isActive" class="badge bg-success"> Tak </span>
-                            <span *ngIf="!user.isActive" class="badge bg-danger"> Nie </span>
+                    <!-- Kolumna Data dodania -->
+                    <ng-container matColumnDef="dateAdded">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data dodania </th>
+                        <td mat-cell *matCellDef="let aircraft">
+                            {{ aircraft.dateAdded | date: 'dd-MM-yyyy HH:mm' }}
                         </td>
                     </ng-container>
 

@@ -33,5 +33,21 @@ namespace backend.Controllers
                 return BadRequest(new { message });
             }
         }
+
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetAircraftsPaged([FromQuery] PagedRequest pagedRequest)
+        {
+            try
+            {
+                var aircrafts = await _aircraftService.GetAircraftsPaged(pagedRequest);
+                return Ok(aircrafts);
+            }
+            catch (Exception e)
+            {
+                var message = $"Wystąpił błąd podczas pobierania samolotów: {e.Message}";
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
     }
 }

@@ -48,7 +48,7 @@ import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog
 
 export class AircraftsListComponent implements OnInit {
 
-  displayedColumns: string[] = ['index', 'firstName', 'lastName', 'role', 'email', 'lastSuccessfulLogin', 'isActive', 'actions'];
+  displayedColumns: string[] = ['index', 'model','dateAdded', 'actions'];
   dataSource = new MatTableDataSource<User>([]);
   pageIndex: number = 0;
   pageSize: number = 5;
@@ -109,7 +109,7 @@ export class AircraftsListComponent implements OnInit {
     const params = {
       pageNumber: pageIndex + 1,
       pageSize: pageSize,
-      sortColumn: sortColumn || 'role',
+      sortColumn: sortColumn || 'dateAdded',
       sortDirection: sortDirection || 'asc',
       searchQuery: searchQuery || ''
     };
