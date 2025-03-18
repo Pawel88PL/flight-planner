@@ -9,8 +9,8 @@
             <form [formGroup]="searchForm">
                 <div class="row">
                     <div class="col-lg-1">
-                        <div (click)="openUserAddComponent()" matTooltip="Dodaj pracownika" matTooltipPosition="above">
-                            <img src="./images/add-button.png" alt="rozwiń pole" class="add-icon">
+                        <div (click)="openAircraftAddComponent()" matTooltip="Dodaj samolot" matTooltipPosition="above">
+                            <img src="./images/add-button.png" alt="Dodaj samolot" class="add-icon">
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-lg-4">
                         <mat-form-field appearance="outline">
-                            <mat-label>Wyszukaj pracownika</mat-label>
+                            <mat-label>Wyszukaj samolot</mat-label>
                             <input matInput type="text" formControlName="query">
                             <mat-error *ngIf="searchForm.controls['query'].hasError('required')" class="mat-error">
                                 Podaj wyszukiwaną frazę
@@ -61,10 +61,10 @@
                     <ng-container matColumnDef="actions">
                         <th mat-header-cell *matHeaderCellDef> Akcje </th>
                         <td mat-cell *matCellDef="let user">
-                            <img src="./images/edit-info.png" alt="Edytuj" class="user-icon" matTooltip="Edytuj"
-                                matTooltipPosition="above" (click)="selectUser(user)">
+                            <img src="./images/edit.png" alt="Edytuj" class="user-icon" matTooltip="Edytuj"
+                                matTooltipPosition="above" (click)="openAircraftEditComponent(user)">
                             <img src="./images/delete.png" alt="Usuń" class="delete-icon" matTooltip="Usuń"
-                                matTooltipPosition="above" (click)="onDeleteUser(user.id)">
+                                matTooltipPosition="above" (click)="onDeleteAircraft(user.id)">
                         </td>
 
                     </ng-container>

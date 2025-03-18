@@ -9,7 +9,7 @@ namespace backend.Models
         public int CruiseSpeed { get; set; }
         public int Range { get; set; }
         public int MaxCrosswind { get; set; }
-        public DateTime DateAdded { get; set; }
+        public DateTime DateAdded { get; set; } = DateTime.Now;
     }
 
     public class PagedAircrafts

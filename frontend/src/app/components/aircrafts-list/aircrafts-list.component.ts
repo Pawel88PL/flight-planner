@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { debounceTime, distinctUntilChanged } from 'rxjs';
+import { debounceTime, distinctUntilChanged, Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatCardModule } from '@angular/material/card';
@@ -16,12 +16,13 @@ import { MatPaginatorIntlPolish } from '../../classes/mat-paginator-polish';
 
 import { AircraftService } from '../../services/aircraft.service';
 import { AuthService } from '../../services/auth.service';
-import { JwtService } from '../../services/jwt.service';
 import { ToastrService } from 'ngx-toastr';
 
 import { AircraftModel } from '../../models/aircraft.model';
 import { User } from '../../models/user-model';
 import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog/delete-confirmation-dialog.component';
+import { Router } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 
 @Component({
@@ -41,6 +42,9 @@ import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog
     MatTooltip,
 
     ReactiveFormsModule
+  ],
+  providers: [
+    { provide: MatPaginatorIntl, useClass: MatPaginatorIntlPolish }
   ],
   templateUrl: './aircrafts-list.component.html',
   styleUrl: './aircrafts-list.component.css'
@@ -65,18 +69,22 @@ export class AircraftsListComponent implements OnInit {
   searchForm!: FormGroup;
   searchQuery: string = '';
 
+  subscriptions: Subscription = new Subscription();
+
   constructor(
     private aircraftService: AircraftService,
     private authService: AuthService,
+    private dataService: DataService,
     private dialog: MatDialog,
     private formBuilder: FormBuilder,
-    private jwtService: JwtService,
+    private router: Router,
     private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
     this.initialeSearchForm();
-    this.loadEmployees(0, this.pageSize);
+    this.loadAircrafts(0, this.pageSize);
+    this.messageSubscription();
     this.searchQueryChanges();
   }
 
@@ -95,17 +103,12 @@ export class AircraftsListComponent implements OnInit {
       setTimeout(() => {
         this.dataSource.sort = this.sort;
         this.sort.sortChange.subscribe((event) => this.onSortChange(event));
-
-        console.log('Inicializacja sortowania');
-
       }, 500);
       this.isSortInitialized = true;
-    } else {
-      console.log('Sortowanie już zainicjalizowane');
     }
   }
 
-  loadEmployees(pageIndex: number, pageSize: number, sortColumn?: string, sortDirection?: string, searchQuery?: string): void {
+  loadAircrafts(pageIndex: number, pageSize: number, sortColumn?: string, sortDirection?: string, searchQuery?: string): void {
     const params = {
       pageNumber: pageIndex + 1,
       pageSize: pageSize,
@@ -130,26 +133,37 @@ export class AircraftsListComponent implements OnInit {
     });
   }
 
-  deleteUser(userId: string) {
+  deleteAircraft(userId: string) {
     this.authService.deleteUser(userId).subscribe({
       next: () => {
-        this.toastr.success('Pracownik został usunięty', 'Sukces');
-        this.loadEmployees(this.paginator.pageIndex, this.paginator.pageSize);
+        this.toastr.success('Samolot został usunięty', 'Sukces');
+        this.loadAircrafts(this.paginator.pageIndex, this.paginator.pageSize);
       },
       error: (error) => {
-        this.toastr.error('Wystąpił błąd podczas usuwania pracownika', 'Błąd');
+        this.toastr.error('Wystąpił błąd podczas usuwania samolotu', 'Błąd');
         console.error(error);
       }
     });
   }
 
-  onDeleteUser(userId: string): void {
-    if (userId === this.jwtService.getUserId()) {
-      this.toastr.error('Nie możesz usunąć swojego konta', 'Błąd');
-      return;
-    }
+  messageSubscription(): void {
+    this.subscriptions.add(
+      this.dataService.errorMessage$.subscribe(message => {
+        if (message)
+          this.toastr.error(message, 'Błąd');
+      })
+    );
 
-    let message = 'Czy na pewno chcesz usunąć tego pracownika?';
+    this.subscriptions.add(
+      this.dataService.successMessage$.subscribe(message => {
+        if (message)
+          this.toastr.success(message, 'Sukces');
+      })
+    );
+  }
+
+  onDeleteAircraft(userId: string): void {
+    let message = 'Czy na pewno chcesz usunąć ten samolot?';
 
     const dialogRef = this.dialog.open(DeleteConfirmationDialogComponent, {
       width: '400px',
@@ -159,37 +173,33 @@ export class AircraftsListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.deleteUser(userId);
+        this.deleteAircraft(userId);
       }
     });
   }
 
   onPageChange(event: any): void {
-    this.loadEmployees(event.pageIndex, event.pageSize);
+    this.loadAircrafts(event.pageIndex, event.pageSize);
     this.rowNumber = event.pageIndex * event.pageSize;
   }
 
   onSearch(query: string): void {
     const searchQuery = query.trim();
-    this.loadEmployees(0, this.pageSize, undefined, undefined, searchQuery);
+    this.loadAircrafts(0, this.pageSize, undefined, undefined, searchQuery);
   }
 
   onSortChange(event: any): void {
-    this.loadEmployees(this.paginator.pageIndex, this.paginator.pageSize, event.active, event.direction);
+    this.loadAircrafts(this.paginator.pageIndex, this.paginator.pageSize, event.active, event.direction);
   }
 
-  openEditUserComponent(user: User) {
-    // this.adminService.setSelectedUser(user);
-    // this.adminService.setComponent('userEdit');
+  openAircraftEditComponent(id: number) {
+    this.router.navigate(['/aircraft-edit', id]);
   }
 
-  openUserAddComponent() {
-    // this.adminService.setComponent('userAdd');
+  openAircraftAddComponent() {
+    this.router.navigate(['/aircraft-add']);
   }
 
-  selectUser(user: User) {
-    this.openEditUserComponent(user);
-  }
 
   searchQueryChanges() {
     this.searchForm.get('query')?.valueChanges.pipe(
