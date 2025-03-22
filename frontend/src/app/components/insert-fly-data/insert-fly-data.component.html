@@ -108,7 +108,7 @@
                             <mat-label>Wybierz samolot</mat-label>
                             <mat-select formControlName="aircraftId">
                                 <mat-option *ngFor="let aircraft of aircrafts" [value]="aircraft.id">
-                                    {{ aircraft.name }}
+                                    {{ aircraft.manufacturer }} {{ aircraft.model }}
                                 </mat-option>
                             </mat-select>
                             <mat-error *ngIf="flyDataForm.controls['aircraftId'].hasError('required')">

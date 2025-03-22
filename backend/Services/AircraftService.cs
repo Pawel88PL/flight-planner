@@ -28,12 +28,36 @@ namespace backend.Services
             }
         }
 
+        public async Task<Aircraft?> GetAircraftById(int id)
+        {
+            var aircraft = await _context.Aircrafts.FindAsync(id);
+
+            if (aircraft == null)
+            {
+                return null;
+            }
+
+            return aircraft;
+        }
+
+        public async Task<IEnumerable<Aircraft>> GetAircrafts()
+        {
+            var aircrafts = await _context.Aircrafts.ToListAsync();
+            
+            if (aircrafts == null)
+            {
+                return new List<Aircraft>();
+            }
+
+            return aircrafts;
+        }
+
         public async Task<PagedAircrafts> GetAircraftsPaged(PagedRequest request)
         {
             if (request.PageNumber < 1) request.PageNumber = 1;
             if (request.PageSize < 1) request.PageSize = 10;
 
-            var query =  _context.Aircrafts.AsQueryable();
+            var query = _context.Aircrafts.AsQueryable();
 
             if (!string.IsNullOrEmpty(request.SearchQuery))
             {

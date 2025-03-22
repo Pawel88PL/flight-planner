@@ -22,6 +22,18 @@ export class AircraftService {
     return this.http.post(`${this.apiUrl}/add`, request, { headers });
   }
 
+  getAircraftById(id: number): Observable<AircraftModel> {
+    const token = this.jwtService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get<AircraftModel>(`${this.apiUrl}/${id}`, { headers });
+  }
+
+  getAircrafts(): Observable<AircraftModel[]> {
+    const token = this.jwtService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get<AircraftModel[]>(`${this.apiUrl}/all`, { headers });
+  }
+
   getAircraftsPaged(request: PagedRequestParams): Observable<AircraftListModel> {
     const token = this.jwtService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);

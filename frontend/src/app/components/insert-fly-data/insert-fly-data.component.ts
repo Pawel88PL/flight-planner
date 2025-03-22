@@ -21,6 +21,8 @@ import { FlightPlanService } from '../../services/flight-plan.service';
 import { FlightPlanRequest } from '../../models/request-model';
 
 import Swal from 'sweetalert2';
+import { AircraftService } from '../../services/aircraft.service';
+import { AircraftModel } from '../../models/aircraft.model';
 
 @Component({
   selector: 'app-insert-fly-data',
@@ -55,14 +57,10 @@ export class InsertFlyDataComponent implements OnInit {
   errorMessage: string | null = null;
   successMessage: string | null = null;
 
-  aircrafts = [
-    { id: 1, name: 'Tecnam P208' },
-    { id: 2, name: 'Piper PA-28' },
-    { id: 3, name: 'Diamond DA40' },
-    { id: 4, name: 'Cesna 172' }
-  ];
+  aircrafts: AircraftModel[] = [];
 
   constructor(
+    private aircraftService: AircraftService,
     private authService: AuthService,
     private dataService: DataService,
     private fb: FormBuilder,
@@ -71,6 +69,7 @@ export class InsertFlyDataComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getAircrafts();
     this.initializeRegisterForm();
     this.getUserId();
     this.request = this.dataService.getFlyDataForm();
@@ -111,6 +110,17 @@ export class InsertFlyDataComponent implements OnInit {
   clearSuccessMessage() {
     if (this.successMessage)
       this.successMessage = null;
+  }
+
+  getAircrafts(): void {
+    this.aircraftService.getAircrafts().subscribe({
+      next: (response) => {
+        this.aircrafts = response;
+      },
+      error: (error) => {
+        this.errorMessage = error.error.message
+      }
+    });
   }
 
   getUserId(): void {

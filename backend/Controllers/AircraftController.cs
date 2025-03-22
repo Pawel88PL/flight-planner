@@ -34,6 +34,44 @@ namespace backend.Controllers
             }
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAircraftById(int id)
+        {
+            try
+            {
+                var aircraft = await _aircraftService.GetAircraftById(id);
+
+                if (aircraft == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(aircraft);
+            }
+            catch (Exception e)
+            {
+                var message = $"Wystąpił błąd podczas pobierania samolotu: {e.Message}";
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
+
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAircrafts()
+        {
+            try
+            {
+                var aircrafts = await _aircraftService.GetAircrafts();
+                return Ok(aircrafts);
+            }
+            catch (Exception e)
+            {
+                var message = $"Wystąpił błąd podczas pobierania samolotów: {e.Message}";
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
+
         [HttpGet("paged")]
         public async Task<IActionResult> GetAircraftsPaged([FromQuery] PagedRequest pagedRequest)
         {
