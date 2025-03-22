@@ -348,3 +348,173 @@ The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'Encode
 2025-03-22 18:03:18.929 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 145.5921ms
 2025-03-22 18:03:18.929 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
 2025-03-22 18:03:18.930 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 166.2644ms
+2025-03-22 18:21:23.802 +01:00 [INF] Application is starting
+2025-03-22 18:21:23.824 +01:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-03-22 18:21:23.854 +01:00 [INF] Now listening on: http://localhost:5139
+2025-03-22 18:21:23.855 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-22 18:21:23.856 +01:00 [INF] Hosting environment: Development
+2025-03-22 18:21:23.856 +01:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-03-22 18:21:47.457 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-03-22 18:21:47.472 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-03-22 18:21:47.482 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:21:47.485 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 30.6919ms
+2025-03-22 18:21:47.487 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-03-22 18:21:47.490 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:21:47.504 +01:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-22 18:21:47.512 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-03-22 18:21:48.137 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-22 18:21:48.247 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-22 18:21:48.638 +01:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 1123.5943ms
+2025-03-22 18:21:48.639 +01:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-03-22 18:21:48.643 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 1156.0322ms
+2025-03-22 18:22:18.601 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-03-22 18:22:18.605 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:22:18.606 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 5.297ms
+2025-03-22 18:22:18.607 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-03-22 18:22:18.617 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:22:18.657 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-03-22 18:22:18.661 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-03-22 18:22:18.825 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-22 18:22:18.830 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 169.0795ms
+2025-03-22 18:22:18.830 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-03-22 18:22:18.831 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 223.7692ms
+2025-03-22 18:22:49.307 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-22 18:22:49.310 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:22:49.311 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 5.3501ms
+2025-03-22 18:22:49.312 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-22 18:22:49.318 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:22:49.324 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-22 18:22:49.331 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-22 18:22:49.437 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-22 18:22:49.440 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 109.2853ms
+2025-03-22 18:22:49.440 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-22 18:22:49.441 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 129.3641ms
+2025-03-22 18:23:07.187 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2025-03-22 18:23:07.187 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:23:07.188 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 1.0599ms
+2025-03-22 18:23:07.188 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 162
+2025-03-22 18:23:07.189 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:23:07.192 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-03-22 18:23:07.199 +01:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2025-03-22 18:23:07.216 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPKK%2CEPGD&format=json&taf=true
+2025-03-22 18:23:07.216 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPKK%2CEPGD&format=json&taf=true
+2025-03-22 18:23:07.231 +01:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPKK%2CEPGD&format=json&taf=true
+2025-03-22 18:23:07.231 +01:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPKK%2CEPGD&format=json&taf=true
+2025-03-22 18:23:07.640 +01:00 [INF] Received HTTP response headers after 406.2498ms - 200
+2025-03-22 18:23:07.640 +01:00 [INF] End processing HTTP request after 409.3897ms - 200
+2025-03-22 18:23:07.716 +01:00 [INF] Received HTTP response headers after 500.0885ms - 200
+2025-03-22 18:23:07.717 +01:00 [INF] End processing HTTP request after 501.7621ms - 200
+2025-03-22 18:23:08.274 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-22 18:23:08.275 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 1076.3926ms
+2025-03-22 18:23:08.275 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-03-22 18:23:08.275 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 1086.7653ms
+2025-03-22 18:23:08.285 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/59 - null null
+2025-03-22 18:23:08.286 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:23:08.287 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/59 - 204 null null 1.134ms
+2025-03-22 18:23:08.291 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/59 - null null
+2025-03-22 18:23:08.291 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:23:08.296 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-03-22 18:23:08.300 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2025-03-22 18:23:08.427 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2025-03-22 18:23:08.427 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 126.7606ms
+2025-03-22 18:23:08.427 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-03-22 18:23:08.427 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/59 - 200 null application/json; charset=utf-8 136.5876ms
+2025-03-22 18:23:08.433 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/59 - null null
+2025-03-22 18:23:08.434 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:23:08.434 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-03-22 18:23:08.439 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2025-03-22 18:23:08.739 +01:00 [INF] Zapytanie do AI (PL): Oto dane planowanego lotu do analizy, łącznie z danymi wybranego samolotu (format JSON):
+            {"Czas trwania lotu":"0400","Godzina wylotu":"1900","Kod lotniska startu":"EPKK","Miasto lotniska startu":"","Kraj lotniska startu":"","METAR lotniska startu":"EPKK 221700Z 06012KT CAVOK 12/M02 Q1013","TAF lotniska startu":"TAF EPKK 221430Z 2215/2315 08012KT CAVOK TEMPO 2310/2314 4000 RA","Nazwa lotniska startu":"KRAKOW/J PAUL II INTERNATIONAL","Kod lotniska lądowania":"EPGD","Miasto lotniska lądowania":"","Kraj lotniska lądowania":"","METAR lotniska lądowania":"EPGD 221700Z 07008KT CAVOK 09/01 Q1020","TAF lotniska lądowania":"TAF EPGD 221130Z 2212/2312 07015KT CAVOK TEMPO 2212/2218 08020G31KT TEMPO 2214/2215 -SHRA BKN035CB BECMG 2216/2219 13012KT TEMPO 2304/2308 BKN010 TEMPO 2308/2312 11018G30KT","Nazwa lotniska lądowania":"GDANSK/WALESA AIRPORT","Dane samolotu":{"Producent samolotu":"Tecnam","Model samolotu":"P2008","Maksymalny boczny komponent wiatru w knots":15,"Zasięg w NM":514,"Prędkość przelotowa w knots":110}}
+
+            Czy lot VFR jest możliwy i bezpieczny? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.
+2025-03-22 18:23:08.767 +01:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2025-03-22 18:23:08.767 +01:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2025-03-22 18:23:24.915 +01:00 [INF] Received HTTP response headers after 16148.72ms - 200
+2025-03-22 18:23:24.916 +01:00 [INF] End processing HTTP request after 16149.2644ms - 200
+2025-03-22 18:23:24.918 +01:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-BDwqs2vT8gL9DCQEgan67n9GSgp2x",
+  "object": "chat.completion",
+  "created": 1742664190,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "**Analiza możliwości lotu VFR z Krakowa do Gdańska**\n\n**Decyzja:** Lot VFR nie jest możliwy i bezpieczny.\n\n**Uzasadnienie:**\n1. **Warunki meteorologiczne:**\n   - **Lotnisko startowe (EPKK):**\n     - METAR: CAVOK (czyli brak chmur poniżej 5000 stóp, brak opadów, dobra widoczność).\n     - TAF: W prognozie przewidziano opady deszczu (RA) i ograniczenie widoczności do 4000 m w godzinach 10:00-14:00, co może wpływać na warunki lotu.\n   - **Lotnisko lądowania (EPGD):**\n     - METAR: CAVOK, co oznacza dobre warunki do lądowania.\n     - TAF: W prognozie przewidziano silny wiatr (do 20 węzłów z porywami do 31 węzłów) oraz chmury BKN035CB, co może stwarzać dodatkowe zagrożenia.\n\n2. **Wymogi VFR:**\n   - Minimalne wymogi VFR dotyczące widoczności to 5 km oraz chmur na poziomie co najmniej 1500 stóp nad ziemią. W przypadku EPKK, widoczność jest dobra, ale w EPGD przewiduje się chmury na poziomie 3500 stóp oraz silny wiatr, co może być problematyczne.\n   - W przypadku prognozowanych warunków w EPGD, istnieje ryzyko, że warunki mogą nie spełniać wymogów VFR, zwłaszcza w godzinach wieczornych.\n\n3. **Ograniczenia statku powietrznego:**\n   - Samolot Tecnam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 węzłów. W prognozach dla EPGD przewiduje się wiatr o porywach do 31 węzłów, co znacznie przekracza dopuszczalny limit dla tego samolotu.\n   - Zasięg samolotu wynosi 514 NM, co jest wystarczające dla planowanego lotu, jednak w obliczu prognozowanych warunków atmosferycznych, zasięg nie jest kluczowym czynnikiem w tej analizie.\n\n4. **Czas lotu:**\n   - Planowany czas lotu wynosi 4 godziny, co oznacza, że lot będzie się odbywał w godzinach wieczornych, kiedy prognozowane są gorsze warunki w EPGD.\n\n**Potencjalne zagrożenia:**\n- Silny wiatr i porywy mogą prowadzić do trudności w utrzymaniu kontroli nad samolotem podczas startu i lądowania.\n- Możliwość wystąpienia oblodzenia w wyniku opadów deszczu, co może wpłynąć na wydajność samolotu.\n- Zmniejszona widoczność w wyniku opadów deszczu oraz chmur, co może prowadzić do trudności w nawigacji.\n\n**Zalecenia dla pilota:**\n- Rozważyć odłożenie lotu do momentu poprawy warunków pogodowych.\n- Monitorować na bieżąco prognozy i METAR-y dla obu lotnisk.\n- W przypadku decyzji o locie, być przygotowanym na ewentualne zmiany trasy lub lądowania w alternatywnym porcie lotniczym.\n\nPodsumowując, ze względu na prognozowane warunki meteorologiczne, w tym silny wiatr i możliwe opady deszczu, lot VFR z Krakowa do Gdańska nie jest możliwy i bezpieczny.",
+        "refusal": null,
+        "annotations": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 930,
+    "completion_tokens": 845,
+    "total_tokens": 1775,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_b8bc95a0ac"
+}
+
+2025-03-22 18:23:24.947 +01:00 [INF] Uzasadnienie wygenerowane przez AI (PL): **Analiza możliwości lotu VFR z Krakowa do Gdańska**
+
+**Decyzja:** Lot VFR nie jest możliwy i bezpieczny.
+
+**Uzasadnienie:**
+1. **Warunki meteorologiczne:**
+   - **Lotnisko startowe (EPKK):**
+     - METAR: CAVOK (czyli brak chmur poniżej 5000 stóp, brak opadów, dobra widoczność).
+     - TAF: W prognozie przewidziano opady deszczu (RA) i ograniczenie widoczności do 4000 m w godzinach 10:00-14:00, co może wpływać na warunki lotu.
+   - **Lotnisko lądowania (EPGD):**
+     - METAR: CAVOK, co oznacza dobre warunki do lądowania.
+     - TAF: W prognozie przewidziano silny wiatr (do 20 węzłów z porywami do 31 węzłów) oraz chmury BKN035CB, co może stwarzać dodatkowe zagrożenia.
+
+2. **Wymogi VFR:**
+   - Minimalne wymogi VFR dotyczące widoczności to 5 km oraz chmur na poziomie co najmniej 1500 stóp nad ziemią. W przypadku EPKK, widoczność jest dobra, ale w EPGD przewiduje się chmury na poziomie 3500 stóp oraz silny wiatr, co może być problematyczne.
+   - W przypadku prognozowanych warunków w EPGD, istnieje ryzyko, że warunki mogą nie spełniać wymogów VFR, zwłaszcza w godzinach wieczornych.
+
+3. **Ograniczenia statku powietrznego:**
+   - Samolot Tecnam P2008 ma maksymalny boczny komponent wiatru wynoszący 15 węzłów. W prognozach dla EPGD przewiduje się wiatr o porywach do 31 węzłów, co znacznie przekracza dopuszczalny limit dla tego samolotu.
+   - Zasięg samolotu wynosi 514 NM, co jest wystarczające dla planowanego lotu, jednak w obliczu prognozowanych warunków atmosferycznych, zasięg nie jest kluczowym czynnikiem w tej analizie.
+
+4. **Czas lotu:**
+   - Planowany czas lotu wynosi 4 godziny, co oznacza, że lot będzie się odbywał w godzinach wieczornych, kiedy prognozowane są gorsze warunki w EPGD.
+
+**Potencjalne zagrożenia:**
+- Silny wiatr i porywy mogą prowadzić do trudności w utrzymaniu kontroli nad samolotem podczas startu i lądowania.
+- Możliwość wystąpienia oblodzenia w wyniku opadów deszczu, co może wpłynąć na wydajność samolotu.
+- Zmniejszona widoczność w wyniku opadów deszczu oraz chmur, co może prowadzić do trudności w nawigacji.
+
+**Zalecenia dla pilota:**
+- Rozważyć odłożenie lotu do momentu poprawy warunków pogodowych.
+- Monitorować na bieżąco prognozy i METAR-y dla obu lotnisk.
+- W przypadku decyzji o locie, być przygotowanym na ewentualne zmiany trasy lub lądowania w alternatywnym porcie lotniczym.
+
+Podsumowując, ze względu na prognozowane warunki meteorologiczne, w tym silny wiatr i możliwe opady deszczu, lot VFR z Krakowa do Gdańska nie jest możliwy i bezpieczny.
+2025-03-22 18:23:25.168 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2025-03-22 18:23:25.173 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 16734.2134ms
+2025-03-22 18:23:25.173 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-03-22 18:23:25.176 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/59 - 200 null application/json; charset=utf-8 16743.8798ms
+2025-03-22 18:26:39.045 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-03-22 18:26:39.078 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:26:39.079 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 204 null null 34.1596ms
+2025-03-22 18:26:39.081 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - null null
+2025-03-22 18:26:39.082 +01:00 [INF] CORS policy execution successful.
+2025-03-22 18:26:39.086 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-03-22 18:26:39.086 +01:00 [INF] Route matched with {action = "GetFlightPlansForUser", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansForUserAsync() on controller backend.Controllers.FlightPlanController (backend).
+2025-03-22 18:26:39.193 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.FlightPlanDto, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-22 18:26:39.195 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend) in 108.234ms
+2025-03-22 18:26:39.195 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansForUserAsync (backend)'
+2025-03-22 18:26:39.195 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get-flight-plans-by-userId - 200 null application/json; charset=utf-8 114.2036ms

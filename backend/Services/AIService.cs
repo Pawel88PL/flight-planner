@@ -11,17 +11,20 @@ namespace backend.Services
     public class AIService : IAIService
     {
         private readonly IAIRepository _aiRepository;
+        private readonly IAircraftService _aircraftService;
         private readonly IConfiguration _configuration;
         private readonly IFlightPlanService _flightPlanService;
         private readonly IOpenAIHelper _openAIHelper;
 
         public AIService(
             IAIRepository aiRepository,
+            IAircraftService aircraftService,
             IConfiguration configuration,
             IFlightPlanService flightPlanService,
             IOpenAIHelper openAIHelper)
         {
             _aiRepository = aiRepository;
+            _aircraftService = aircraftService;
             _configuration = configuration;
             _flightPlanService = flightPlanService;
             _openAIHelper = openAIHelper;
@@ -41,22 +44,21 @@ namespace backend.Services
             var systemContent =
             @"Jesteś doświadczonym doradcą lotniczym i ekspertem w analizie warunków pogodowych dla lotów VFR (Visual Flight Rules). Twoim zadaniem jest ocena bezpieczeństwa i możliwości wykonania planowanego lotu w oparciu o:
 
-            1. Aktualne i prognozowane warunki meteorologiczne (METAR/TAF) dla lotnisk startu, docelowego i, w miarę możliwości, lotnisk alternatywnych.
+            1. Aktualne i prognozowane warunki meteorologiczne (METAR/TAF) dla lotnisk startu, docelowego.
             2. Minimalne wymogi VFR w zakresie widoczności, podstawy chmur oraz warunków atmosferycznych.
-            3. Ograniczenia statku powietrznego, w tym maksymalną dopuszczalną boczną składową wiatru (crosswind component) określoną przez producenta lub procedury operatora.
+            3. Ograniczenia statku powietrznego, w tym maksymalną dopuszczalną boczną składową wiatru (crosswind component), zasięg statku powietrznego i prędkość przelotową.
             4. Planowane parametry lotu (czas, data, trasa).
             5. Możliwe oblodzenie statku powietrznego w trakcie lotu.
+            6. Inne czynniki, które mogą mieć wpływ na bezpieczeństwo lotu.
 
             Wynik swojej analizy przedstaw w języku polskim w następującej formie:
             - Najpierw podaj jednoznaczną decyzję, czy lot VFR jest możliwy, uwzględniając wszystkie podane dane.
-            - Następnie uzasadnij tę decyzję, odnosząc się do konkretnych parametrów pogodowych (widzialność, chmury, wiatr), obowiązujących przepisów VFR oraz ograniczeń samolotu, w tym dopuszczalnego crosswind component.
+            - Następnie uzasadnij tę decyzję, odnosząc się do konkretnych parametrów pogodowych (widzialność, chmury, wiatr), obowiązujących przepisów VFR oraz ograniczeń samolotu, w tym dopuszczalnego crosswind component, zasięgu i prędkości przelotowej.
             - Na koniec wymień potencjalne zagrożenia, mogące pojawić się w trakcie lotu i wydaj zalecenia dla pilota.
 
             Twoja odpowiedź powinna być merytoryczna, spójna i uwzględniać kluczowe aspekty bezpieczeństwa.
             
             Wyróżnij ją od reszty tekstu, np. poprzez zastosowanie dobrze widocznego nagłówka lub formatowania.";
-
-            Log.Information("Zapytanie do AI (PL): {Request}", systemContent);
 
             var userContent =
             @$"Oto dane planowanego lotu do analizy, łącznie z danymi wybranego samolotu (format JSON):
@@ -121,20 +123,20 @@ namespace backend.Services
         private async Task<Dictionary<string, object>> PrepareAIRequest(int flightPlanId)
         {
             var flightPlan = await _flightPlanService.GetFlightPlan(flightPlanId);
-            var aircraftModel = "Technam P2008";
+            var aircraftModel = await _aircraftService.GetAircraftById(flightPlan.AircraftId);
+
+            if (flightPlan == null || aircraftModel == null)
+            {
+                throw new Exception("Nie znaleziono planu lotu lub samolotu");
+            }
 
             var aircraftData = new Dictionary<string, object>
             {
-                { "Model samolotu", aircraftModel },
-                { "Maksymalny boczny komponent wiatru w knots", 15 },
-                { "Minimalna prędkość przeciągnięcia w konts", 39 },
-                { "Prędkość wznoszenia w ft/min", 900 },
-                { "Maksymalna masa startowa w kg", 600 },
-                { "Zasięg w NM", 730 },
-                { "Prędkość przelotowa w knots", 115 },
-                { "Zużycie paliwa w litrach na godzinę", 17 },
-                { "Minimalna widoczność VFR w km", 5 },
-                { "Minimalna podstawa chmur VFR w ft AGL", 1500 }
+                { "Producent samolotu", GetValueOrDefault(aircraftModel.Manufacturer ) },
+                { "Model samolotu", GetValueOrDefault(aircraftModel.Model) },
+                { "Maksymalny boczny komponent wiatru w knots", GetValueOrDefault(aircraftModel.MaxCrosswind) },
+                { "Zasięg w NM", GetValueOrDefault(aircraftModel.Range) },
+                { "Prędkość przelotowa w knots", GetValueOrDefault(aircraftModel.CruiseSpeed) },
             };
 
             return new Dictionary<string, object>
@@ -160,7 +162,7 @@ namespace backend.Services
             };
         }
 
-        private object GetValueOrDefault(object? value, string defaultValue = "Nie podano")
+        private static object GetValueOrDefault(object? value, string defaultValue = "Nie podano")
         {
             return value ?? defaultValue;
         }
