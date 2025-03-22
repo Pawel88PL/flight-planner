@@ -41,11 +41,51 @@
                         </td>
                     </ng-container>
 
+                    <!-- Kolumna Nazwa skrócona -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nazwa skrócona </th>
+                        <td mat-cell *matCellDef="let aircraft">
+                            {{ aircraft.name }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Producent -->
+                    <ng-container matColumnDef="manufacturer">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Producent </th>
+                        <td mat-cell *matCellDef="let aircraft">
+                            {{ aircraft.manufacturer }}
+                        </td>
+                    </ng-container>
+
                     <!-- Kolumna Model -->
                     <ng-container matColumnDef="model">
                         <th mat-header-cell *matHeaderCellDef mat-sort-header> Model </th>
                         <td mat-cell *matCellDef="let aircraft">
                             {{ aircraft.model }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Prędkość przelotowa -->
+                    <ng-container matColumnDef="cruiseSpeed">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Prędkość przelotowa </th>
+                        <td mat-cell *matCellDef="let aircraft">
+                            {{ aircraft.cruiseSpeed }} knots
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Zasięg -->
+                    <ng-container matColumnDef="range">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Zasięg </th>
+                        <td mat-cell *matCellDef="let aircraft">
+                            {{ aircraft.range }} NM
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Maksymalny komponent wiatru -->
+                    <ng-container matColumnDef="maxCrosswind">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Maksymalny komponent wiatru </th>
+                        <td mat-cell *matCellDef="let aircraft">
+                            {{ aircraft.maxCrosswind }} knots
                         </td>
                     </ng-container>
 

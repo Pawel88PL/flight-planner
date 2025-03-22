@@ -52,7 +52,7 @@ import { DataService } from '../../services/data.service';
 
 export class AircraftsListComponent implements OnInit {
 
-  displayedColumns: string[] = ['index', 'model','dateAdded', 'actions'];
+  displayedColumns: string[] = ['index', 'name', 'manufacturer', 'model', 'cruiseSpeed', 'range', 'maxCrosswind', 'dateAdded', 'actions'];
   dataSource = new MatTableDataSource<User>([]);
   pageIndex: number = 0;
   pageSize: number = 5;
