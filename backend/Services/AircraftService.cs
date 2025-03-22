@@ -28,6 +28,26 @@ namespace backend.Services
             }
         }
 
+        public async Task DeleteAircraft(int id)
+        {
+            var aircraft = await _context.Aircrafts.FindAsync(id);
+
+            if (aircraft == null)
+            {
+                throw new Exception("Aircraft not found");
+            }
+
+            try
+            {
+                _context.Aircrafts.Remove(aircraft);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public async Task<Aircraft?> GetAircraftById(int id)
         {
             var aircraft = await _context.Aircrafts.FindAsync(id);
@@ -43,7 +63,7 @@ namespace backend.Services
         public async Task<IEnumerable<Aircraft>> GetAircrafts()
         {
             var aircrafts = await _context.Aircrafts.ToListAsync();
-            
+
             if (aircrafts == null)
             {
                 return new List<Aircraft>();

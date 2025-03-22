@@ -100,11 +100,11 @@
                     <!-- Kolumna Akcje -->
                     <ng-container matColumnDef="actions">
                         <th mat-header-cell *matHeaderCellDef> Akcje </th>
-                        <td mat-cell *matCellDef="let user">
+                        <td mat-cell *matCellDef="let aircraft">
                             <img src="./images/edit.png" alt="Edytuj" class="user-icon" matTooltip="Edytuj"
-                                matTooltipPosition="above" (click)="openAircraftEditComponent(user)">
+                                matTooltipPosition="above" (click)="openAircraftEditComponent(aircraft)">
                             <img src="./images/delete.png" alt="Usuń" class="delete-icon" matTooltip="Usuń"
-                                matTooltipPosition="above" (click)="onDeleteAircraft(user.id)">
+                                matTooltipPosition="above" (click)="onDeleteAircraft(aircraft.id)">
                         </td>
 
                     </ng-container>

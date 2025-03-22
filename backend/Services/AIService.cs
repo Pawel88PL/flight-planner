@@ -1,10 +1,6 @@
-using backend.Data;
 using backend.Interfaces;
 using backend.Models;
-using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using Polly;
-using Serilog;
 
 namespace backend.Services
 {
@@ -66,8 +62,6 @@ namespace backend.Services
 
             Czy lot VFR jest możliwy i bezpieczny? Proszę podać szczegółowe uzasadnienie w języku polskim, odnosząc się do podanych informacji o pogodzie oraz ograniczeniach samolotu.";
 
-            Log.Information("Zapytanie do AI (PL): {Request}", userContent);
-
             var justificationRequest = new AIRequest
             {
                 model = _configuration["OpenAI:Model"],
@@ -91,7 +85,6 @@ namespace backend.Services
 
             var responseData = await _openAIHelper.SentRequestToOpenAI(justificationRequest);
 
-            Log.Information("Uzasadnienie wygenerowane przez AI (PL): {Response}", responseData);
             return responseData;
         }
 

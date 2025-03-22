@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { debounceTime, distinctUntilChanged, Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
@@ -15,14 +16,11 @@ import { MatTooltip } from '@angular/material/tooltip';
 import { MatPaginatorIntlPolish } from '../../classes/mat-paginator-polish';
 
 import { AircraftService } from '../../services/aircraft.service';
-import { AuthService } from '../../services/auth.service';
+import { DataService } from '../../services/data.service';
 import { ToastrService } from 'ngx-toastr';
 
 import { AircraftModel } from '../../models/aircraft.model';
-import { User } from '../../models/user-model';
 import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog/delete-confirmation-dialog.component';
-import { Router } from '@angular/router';
-import { DataService } from '../../services/data.service';
 
 
 @Component({
@@ -53,7 +51,7 @@ import { DataService } from '../../services/data.service';
 export class AircraftsListComponent implements OnInit {
 
   displayedColumns: string[] = ['index', 'name', 'manufacturer', 'model', 'cruiseSpeed', 'range', 'maxCrosswind', 'dateAdded', 'actions'];
-  dataSource = new MatTableDataSource<User>([]);
+  dataSource = new MatTableDataSource<AircraftModel>([]);
   pageIndex: number = 0;
   pageSize: number = 5;
   rowNumber: number = 0;
@@ -73,7 +71,6 @@ export class AircraftsListComponent implements OnInit {
 
   constructor(
     private aircraftService: AircraftService,
-    private authService: AuthService,
     private dataService: DataService,
     private dialog: MatDialog,
     private formBuilder: FormBuilder,
@@ -133,8 +130,8 @@ export class AircraftsListComponent implements OnInit {
     });
   }
 
-  deleteAircraft(userId: string) {
-    this.authService.deleteUser(userId).subscribe({
+  deleteAircraft(aircraftId: number): void {
+    this.aircraftService.deleteAircraft(aircraftId).subscribe({
       next: () => {
         this.toastr.success('Samolot został usunięty', 'Sukces');
         this.loadAircrafts(this.paginator.pageIndex, this.paginator.pageSize);
@@ -162,7 +159,7 @@ export class AircraftsListComponent implements OnInit {
     );
   }
 
-  onDeleteAircraft(userId: string): void {
+  onDeleteAircraft(aircraftId: number): void {
     let message = 'Czy na pewno chcesz usunąć ten samolot?';
 
     const dialogRef = this.dialog.open(DeleteConfirmationDialogComponent, {
@@ -173,7 +170,7 @@ export class AircraftsListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.deleteAircraft(userId);
+        this.deleteAircraft(aircraftId);
       }
     });
   }

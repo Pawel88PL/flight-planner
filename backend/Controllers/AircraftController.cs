@@ -34,6 +34,23 @@ namespace backend.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteAircraft(int id)
+        {
+            try
+            {
+                await _aircraftService.DeleteAircraft(id);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                var message = $"Wystąpił błąd podczas usuwania samolotu: {e.Message}";
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAircraftById(int id)
         {
