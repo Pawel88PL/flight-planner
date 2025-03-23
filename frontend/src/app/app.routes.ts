@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { AdminComponent } from './components/admin/admin.component';
+import { AdminFlightPlansComponent } from './components/admin-flight-plans/admin-flight-plans.component';
 import { AircraftAddComponent } from './components/aircraft-add/aircraft-add.component';
 import { AircraftEditComponent } from './components/aircraft-edit/aircraft-edit.component';
 import { AircraftsListComponent } from './components/aircrafts-list/aircrafts-list.component';
@@ -15,6 +16,7 @@ import { UsersListComponent } from './components/users-list/users-list.component
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'admin', component: AdminComponent },
+    { path: 'admin-flight-plans', component: AdminFlightPlansComponent },
     { path: 'aircraft-add', component: AircraftAddComponent },
     { path: 'aircraft-edit/:id', component: AircraftEditComponent },
     { path: 'aircrafts-list', component: AircraftsListComponent },

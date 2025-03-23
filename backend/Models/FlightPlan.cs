@@ -34,8 +34,27 @@ namespace backend.Models
         public string FlightDuration { get; set; } = string.Empty;
         public string DepartureTime { get; set; } = string.Empty;
         public int AircraftId { get; set; }
+        public string AircraftName { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
         public DepartureAirport DepartureAirport { get; set; } = new DepartureAirport();
         public ArrivalAirport ArrivalAirport { get; set; } = new ArrivalAirport();
+    }
+
+    public class FlightPlanListDto
+    {
+        public int Id { get; set; }
+        public string FlightDuration { get; set; } = string.Empty;
+        public string DepartureTime { get; set; } = string.Empty;
+        public string AircraftName { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; }
+        public string DepartureAirport { get; set; } = string.Empty;
+        public string ArrivalAirport { get; set; } = string.Empty;
+        public string UserFullName { get; set; } = string.Empty;
+    }
+
+    public class PagedFlightPlans
+    {
+        public int TotalRecords { get; set; }
+        public List<FlightPlanListDto> Data { get; set; } = new List<FlightPlanListDto>();
     }
 }

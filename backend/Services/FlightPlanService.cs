@@ -95,5 +95,12 @@ namespace backend.Services
 
             return flightPlansDto;
         }
+
+        public async Task<PagedFlightPlans> GetFlightPlansPaged(PagedRequest request)
+        {
+            var flightPlans = await _flightPlanRepository.GetFlightPlansPaged(request);
+
+            return flightPlans;
+        }
     }
 }

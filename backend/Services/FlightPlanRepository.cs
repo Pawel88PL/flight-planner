@@ -2,6 +2,7 @@ using backend.Data;
 using backend.Interfaces;
 using backend.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Dynamic.Core; // <-- Konieczne do dynamicznej zmiany sortowania
 using Serilog;
 
 namespace backend.Services
@@ -67,6 +68,77 @@ namespace backend.Services
                 .ToListAsync();
 
             return flightPlans;
+        }
+
+        public async Task<PagedFlightPlans> GetFlightPlansPaged(PagedRequest request)
+        {
+            var query = from plan in _context.FlightPlans.AsNoTracking()
+                        join dep in _context.DepartureAirports on plan.DepartureAirportId equals dep.Id
+                        join arr in _context.ArrivalAirports on plan.ArrivalAirportId equals arr.Id
+                        join aircraft in _context.Aircrafts on plan.AircraftId equals aircraft.Id
+                        join user in _context.Users on plan.UserId equals user.Id
+                        select new
+                        {
+                            FlightPlan = plan,
+                            DepartureAirport = dep,
+                            ArrivalAirport = arr,
+                            Aircraft = aircraft,
+                            User = user
+                        };
+
+            if (!string.IsNullOrEmpty(request.SearchQuery))
+            {
+                query = query.Where(c =>
+                    c.FlightPlan.DepartureAirport.Name!.Contains(request.SearchQuery) ||
+                    c.FlightPlan.ArrivalAirport.Name!.Contains(request.SearchQuery) ||
+                    c.Aircraft.Name!.Contains(request.SearchQuery) ||
+                    c.User.FirstName!.Contains(request.SearchQuery) ||
+                    c.User.LastName!.Contains(request.SearchQuery));
+            }
+
+            if (!string.IsNullOrEmpty(request.SortColumn))
+            {
+                var sortExpression = request.SortColumn switch
+                {
+                    "CreatedAt" => $"FlightPlan.CreatedAt {(request.SortDirection == "desc" ? "descending" : "ascending")}",
+                    "DepartureAirport" => $"DepartureAirport.Name {(request.SortDirection == "desc" ? "descending" : "ascending")}",
+                    "ArrivalAirport" => $"ArrivalAirport.Name {(request.SortDirection == "desc" ? "descending" : "ascending")}",
+                    "Aircraft" => $"Aircraft.Name {(request.SortDirection == "desc" ? "descending" : "ascending")}",
+                    "UserFullName" => $"User.FirstName {(request.SortDirection == "desc" ? "descending" : "ascending")}, User.LastName",
+                    _ => $"FlightPlan.CreatedAt descending"
+                };
+
+                query = query.OrderBy(sortExpression);
+            }
+            else
+            {
+                query = query.OrderByDescending(c => c.FlightPlan.CreatedAt);
+            }
+
+            int totalRecords = await query.CountAsync();
+
+            var flightPlans = await query
+                .Skip((request.PageNumber - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .ToListAsync();
+
+            var flightPlansDTO = flightPlans.Select(item => new FlightPlanListDto
+            {
+                Id = item.FlightPlan.Id,
+                FlightDuration = item.FlightPlan.FlightDuration,
+                DepartureTime = item.FlightPlan.DepartureTime,
+                AircraftName = item.Aircraft.Name,
+                CreatedAt = item.FlightPlan.CreatedAt,
+                DepartureAirport = item.DepartureAirport.Name,
+                ArrivalAirport = item.ArrivalAirport.Name,
+                UserFullName = item.User.FirstName + " " + item.User.LastName
+            }).ToList();
+
+            return new PagedFlightPlans
+            {
+                TotalRecords = totalRecords,
+                Data = flightPlansDTO
+            };
         }
     }
 }

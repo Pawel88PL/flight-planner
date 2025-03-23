@@ -1,0 +1,120 @@
+<div *ngIf="isLoading" class="mat-spinner">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="custom-container">
+    <mat-card>
+        <mat-card-content>
+
+            <form [formGroup]="searchForm">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h2 class="text-center mt-3">Plany lotów</h2>
+                    </div>
+                    <div class="col-lg-3">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Wyszukaj</mat-label>
+                            <input matInput type="text" formControlName="query">
+                            <mat-error *ngIf="searchForm.controls['query'].hasError('required')" class="mat-error">
+                                Podaj wyszukiwaną frazę
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </form>
+
+            <hr class="my-4">
+
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                    <!-- Kolumna Numer porządkowy -->
+                    <ng-container matColumnDef="index">
+                        <th mat-header-cell *matHeaderCellDef> # </th>
+                        <td mat-cell *matCellDef="let plan; let i = index">
+                            {{ rowNumber + i + 1 }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Id -->
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+                        <td mat-cell *matCellDef="let plan">
+                            {{ plan.id }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Data utworzenia -->
+                    <ng-container matColumnDef="createdAt">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data utworzenia </th>
+                        <td mat-cell *matCellDef="let plan">
+                            {{ plan.createdAt | date: 'dd-MM-yyyy HH:mm'}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Lotnisko startu -->
+                    <ng-container matColumnDef="departureAirport">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Lotnisko startu </th>
+                        <td mat-cell *matCellDef="let plan">
+                            {{ plan.departureAirport }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Lotnisko docelowe -->
+                    <ng-container matColumnDef="arrivalAirport">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Lotnisko docelowe </th>
+                        <td mat-cell *matCellDef="let plan">
+                            {{ plan.arrivalAirport }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Start UTC -->
+                    <ng-container matColumnDef="departureTime">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Start UTC </th>
+                        <td mat-cell *matCellDef="let plan">
+                            {{ plan.departureTime }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Samolot -->
+                    <ng-container matColumnDef="aircraftName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Samolot </th>
+                        <td mat-cell *matCellDef="let plan">
+                            {{ plan.aircraftName }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Użytkownik -->
+                    <ng-container matColumnDef="userFullName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Użytkownik </th>
+                        <td mat-cell *matCellDef="let plan">
+                            {{ plan.userFullName }}
+                        </td>
+                    </ng-container>
+
+                    <!-- Kolumna Akcje -->
+                    <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef> Akcje </th>
+                        <td mat-cell *matCellDef="let plan">
+                            <img src="./images/eye.png" alt="Pokaż" class="user-icon" matTooltip="Pokaż"
+                                matTooltipPosition="above" (click)="showFlightPlanDetails(plan.id)">
+                            <img src="./images/delete.png" alt="Usuń" class="delete-icon" matTooltip="Usuń"
+                                matTooltipPosition="above" (click)="onDeleteAircraft(plan.id)">
+                        </td>
+
+                    </ng-container>
+
+                    <!-- Nagłówki i dane tabeli -->
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+
+            <!-- Paginacja -->
+            <mat-paginator [length]="totalRecords" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20, 50]"
+                showFirstLastButtons (page)="onPageChange($event)">
+            </mat-paginator>
+
+        </mat-card-content>
+    </mat-card>
+</div>

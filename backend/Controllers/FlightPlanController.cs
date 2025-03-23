@@ -18,7 +18,7 @@ namespace backend.Controllers
             _flightPlanService = flightPlanService;
         }
 
-        [Authorize (Roles = "Admin, Pilot")]
+        [Authorize(Roles = "Admin, Pilot")]
         [HttpPost("create")]
         public async Task<IActionResult> CreateFlightPlanAsync(FlightPlanRequest request)
         {
@@ -40,7 +40,7 @@ namespace backend.Controllers
             }
         }
 
-        [Authorize (Roles = "Pilot, Admin")]
+        [Authorize(Roles = "Pilot, Admin")]
         [HttpGet("get/{id}")]
         public async Task<IActionResult> GetFlightPlanResponseAsync(int id)
         {
@@ -57,7 +57,7 @@ namespace backend.Controllers
             }
         }
 
-        [Authorize (Roles = "Pilot, Admin")]
+        [Authorize(Roles = "Pilot, Admin")]
         [HttpGet("get-flight-plans-by-userId")]
         public async Task<IActionResult> GetFlightPlansForUserAsync()
         {
@@ -76,6 +76,23 @@ namespace backend.Controllers
             catch (Exception ex)
             {
                 var message = "Wystąpił błąd podczas pobierania planów lotu dla użytkownika. " + ex.Message;
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
+
+        [Authorize(Roles = "Pilot, Admin")]
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetFlightPlansPagedAsync([FromQuery] PagedRequest request)
+        {
+            try
+            {
+                var flightPlans = await _flightPlanService.GetFlightPlansPaged(request);
+                return Ok(flightPlans);
+            }
+            catch (Exception ex)
+            {
+                var message = "Wystąpił błąd podczas pobierania planów lotu. " + ex.Message;
                 Log.Error(message);
                 return BadRequest(new { message });
             }
