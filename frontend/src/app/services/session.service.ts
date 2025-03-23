@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { interval, Observable, Subscription } from 'rxjs';
 import { AuthService } from './auth.service';
 import { ToastrService } from 'ngx-toastr';
 import { JwtService } from './jwt.service';
 import { MatDialog } from '@angular/material/dialog';
+import { Title } from '@angular/platform-browser';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -12,17 +15,21 @@ import { MatDialog } from '@angular/material/dialog';
 
 export class SessionService {
 
+  private apiUrl = `${environment.apiUrl}/token`;
+
   shownAlert: boolean = false;
   private subscription: Subscription | null = null;
 
   constructor(
     private authService: AuthService,
+    private http: HttpClient,
     private jwtService: JwtService,
     private dialog: MatDialog,
+    private titleService: Title,
     private toastr: ToastrService) { }
 
   startTokenExpirationCheck(): void {
-    this.subscription = interval(30000).subscribe(() => {
+    this.subscription = interval(60000).subscribe(() => {
       this.checkTokenExpiration();
     });
   }
@@ -38,10 +45,10 @@ export class SessionService {
 
       console.log(`${minutesDifference} minutes to logout`);
 
-      if (minutesDifference === 0) {
+      if (minutesDifference === 2 && !this.shownAlert) {
         this.shownAlert = true;
         this.showNewTokenAlert();
-      } else if (minutesDifference < 0) {
+      } else if (minutesDifference < 1) {
         this.shownAlert = false;
         this.handleTokenExpiration(this.jwtService.getToken());
       }
@@ -49,39 +56,41 @@ export class SessionService {
   }
 
   handleTokenExpiration(token: string | null): void {
-    if (token && this.jwtService.isTokenExpired()) {
+    if (token) {
       console.log('Token expired');
       this.dialog.closeAll();
       this.authService.logout();
-      this.toastr.error('Twoja sesja wygasła. Zaloguj się ponownie.', 'Sesja wygasła',
+      const toast = this.toastr.error('Twoja sesja wygasła. Zaloguj się ponownie.', 'Sesja wygasła',
         {
-          timeOut: 60000,
-          extendedTimeOut: 6000,
+          timeOut: 600000,
+          extendedTimeOut: 5000,
           positionClass: 'toast-top-right',
           closeButton: true,
           tapToDismiss: true
         }
       );
+
+      localStorage.setItem('sessionExpiredToastId', toast.toastId.toString());
     }
   }
 
   showNewTokenAlert(): void {
+    let remainingTime = 120;
 
-    console.log('Show new token alert');
-
-    let remainingTime = 60;
+    const toastId = 'session-expiration-toast';
 
     const toast = this.toastr.info(
-      `Za ${remainingTime} sekund wygaśnie twoja sesja. Kliknij tutaj, aby ją przedłużyć.`,
+      `Za ${remainingTime} sekund wygaśnie twoja sesja.<br><u>Kliknij tutaj, aby ją przedłużyć.</u>`,
       'Sesja wygaśnie',
       {
         tapToDismiss: false,
-        timeOut: 60000,
+        timeOut: 120000,
         extendedTimeOut: 0,
         progressBar: true,
         closeButton: true,
         enableHtml: true,
         positionClass: 'toast-top-right',
+        toastClass: `ngx-toastr ${toastId}`,
       }
     );
 
@@ -95,12 +104,19 @@ export class SessionService {
 
       remainingTime -= 1;
 
-      const toastElement = document.getElementById(`toast-container`);
+      const toastElement = document.querySelector(`.ngx-toastr.session-expiration-toast`);
       if (toastElement) {
         const messageElement = toastElement.querySelector('.toast-message');
         if (messageElement) {
-          messageElement.innerHTML = `Za ${remainingTime} sekund wygaśnie twoja sesja. Kliknij tutaj, aby ją przedłużyć.`;
+          messageElement.innerHTML = `Za ${remainingTime} sekund wygaśnie twoja sesja.<br><u>Kliknij tutaj, aby ją przedłużyć.</u>`;
         }
+      }
+
+      if (this.jwtService.isLoggedIn()) {
+        this.titleService.setTitle(`Sesja wygaśnie za ${remainingTime} sekund`);
+      } else {
+        clearInterval(intervalId);
+        this.toastr.clear(toast.toastId);
       }
 
       if (remainingTime <= 0) {
@@ -113,10 +129,12 @@ export class SessionService {
       clearInterval(intervalId);
       this.toastr.clear(toast.toastId);
 
-      this.authService.generateNewToken().subscribe({
+      this.generateNewToken().subscribe({
         next: (res) => {
           this.jwtService.setToken(res.token?.result);
           this.toastr.success('Sesja została przedłużona.', 'Sukces');
+          this.titleService.setTitle('Sesja przedłużona');
+          this.shownAlert = false;
           console.log('New token generated');
         },
         error: (error) => {
@@ -125,5 +143,11 @@ export class SessionService {
         },
       });
     });
+  }
+
+  generateNewToken(): Observable<any> {
+    const token = this.jwtService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get(`${this.apiUrl}/refresh`, { headers });
   }
 }
