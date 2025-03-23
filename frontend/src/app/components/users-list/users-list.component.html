@@ -81,8 +81,6 @@
                     <ng-container matColumnDef="actions">
                         <th mat-header-cell *matHeaderCellDef> Akcje </th>
                         <td mat-cell *matCellDef="let user">
-                            <img src="./images/edit.png" alt="Edytuj" class="user-icon" matTooltip="Edytuj"
-                                matTooltipPosition="above" (click)="selectUser(user)">
                             <img src="./images/delete.png" alt="Usuń" class="delete-icon" matTooltip="Usuń"
                                 matTooltipPosition="above" (click)="onDeleteUser(user.id)">
                         </td>

@@ -48,6 +48,32 @@ namespace backend.Services
             }
         }
 
+        public async Task EditAircraft(Aircraft aircraft)
+        {
+            var existingAircraft = await _context.Aircrafts.FindAsync(aircraft.Id);
+
+            if (existingAircraft == null)
+            {
+                throw new Exception("Aircraft not found");
+            }
+
+            try
+            {
+                existingAircraft.Name = aircraft.Name;
+                existingAircraft.Manufacturer = aircraft.Manufacturer;
+                existingAircraft.Model = aircraft.Model;
+                existingAircraft.CruiseSpeed = aircraft.CruiseSpeed;
+                existingAircraft.Range = aircraft.Range;
+                existingAircraft.MaxCrosswind = aircraft.MaxCrosswind;
+
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public async Task<Aircraft?> GetAircraftById(int id)
         {
             var aircraft = await _context.Aircrafts.FindAsync(id);

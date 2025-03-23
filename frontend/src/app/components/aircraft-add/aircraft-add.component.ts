@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, AbstractControl, ValidationErrors } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
@@ -9,11 +9,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
-import { DataService } from '../../services/data.service';
-import { JwtService } from '../../services/jwt.service';
-import { ToastrService } from 'ngx-toastr';
+
 import { AircraftService } from '../../services/aircraft.service';
-import { range } from 'rxjs';
+import { DataService } from '../../services/data.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-aircraft-add',
@@ -34,6 +33,7 @@ import { range } from 'rxjs';
   templateUrl: './aircraft-add.component.html',
   styleUrl: './aircraft-add.component.css'
 })
+
 export class AircraftAddComponent implements OnInit {
 
   isLoading: boolean = false;
@@ -84,9 +84,9 @@ export class AircraftAddComponent implements OnInit {
           this.isLoading = false;
           this.errorMessage = error.error.message;
           if (this.errorMessage) {
-            this.toastr.error(this.errorMessage, 'Błąd rejestracji');
+            this.toastr.error(this.errorMessage, 'Błąd');
           } else {
-            this.toastr.error('Wystąpił błąd podczas dodawania samolotu', 'Błąd rejestracji');
+            this.toastr.error('Wystąpił błąd podczas dodawania samolotu', 'Błąd');
           }
           console.error(error);
         }

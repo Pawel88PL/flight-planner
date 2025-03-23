@@ -51,6 +51,23 @@ namespace backend.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpPut("edit")]
+        public async Task<IActionResult> EditAircraft(Aircraft aircraft)
+        {
+            try
+            {
+                await _aircraftService.EditAircraft(aircraft);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                var message = $"Wystąpił błąd podczas edytowania samolotu: {e.Message}";
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAircraftById(int id)
         {

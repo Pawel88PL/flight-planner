@@ -1,1 +1,115 @@
-<p>aircraft-edit works!</p>
+<div *ngIf="isLoading" class="mat-spinner">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="custom-container">
+    <mat-card>
+        <mat-card-content>
+            <h3 class="text-center">
+                <img src="./images/airplane2.png" alt="Dodaj nowy samolot" class="icon">
+                Edytuj samolot
+            </h3>
+
+            <hr class="mb-5">
+
+            <form [formGroup]="aircraftEditForm">
+                <div class="row mt-4">
+                    <div class="col-sm-6">
+                        <mat-form-field appearance="outline" class="mb-4">
+                            <mat-label>Nazwa skrócona</mat-label>
+                            <input matInput type="text" formControlName="name">
+                            <mat-error *ngIf="aircraftEditForm.controls['name'].hasError('required')">
+                                Nazwa skrócona jest wymagana
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['name'].hasError('minlength')">
+                                Nazwa skrócona jest za krótka
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['name'].hasError('maxlength')">
+                                Nazwa skrócona może zawierać maksymalnie 50 znaków
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="mb-4">
+                            <mat-label>Marka</mat-label>
+                            <input matInput type="text" formControlName="manufacturer">
+                            <mat-error *ngIf="aircraftEditForm.controls['manufacturer'].hasError('required')">
+                                Marka jest wymagana
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['manufacturer'].hasError('minlength')">
+                                Marka jest za krótka
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['manufacturer'].hasError('maxlength')">
+                                Marka może zawierać maksymalnie 50 znaków
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="mb-4">
+                            <mat-label>Model</mat-label>
+                            <input matInput type="text" formControlName="model">
+                            <mat-error *ngIf="aircraftEditForm.controls['model'].hasError('required')">
+                                Model jest wymagany
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['model'].hasError('minlength')">
+                                Model jest za krótki
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['model'].hasError('maxlength')">
+                                Model może zawierać maksymalnie 50 znaków
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <mat-form-field appearance="outline" class="mb-4">
+                            <mat-label>Prędkość przelotowa</mat-label>
+                            <input matInput type="number" formControlName="cruiseSpeed">
+                            <mat-error *ngIf="aircraftEditForm.controls['cruiseSpeed'].hasError('required')">
+                                Prędkość przelotowa jest wymagana
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['cruiseSpeed'].hasError('min')">
+                                Prędkość przelotowa jest za niska
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['cruiseSpeed'].hasError('max')">
+                                Prędkość przelotowa jest za wysoka
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="mb-4">
+                            <mat-label>Zasięg</mat-label>
+                            <input matInput type="number" formControlName="range">
+                            <mat-error *ngIf="aircraftEditForm.controls['range'].hasError('required')">
+                                Zasięg jest wymagany
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['range'].hasError('min')">
+                                Zasięg jest za niski
+                            </mat-error>
+                            <mat-error *ngIf="aircraftEditForm.controls['range'].hasError('max')">
+                                Zasięg jest za wysoki
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="mb-4">
+                            <mat-label>Maksymalny komponent wiatru</mat-label>
+                            <input matInput type="number" formControlName="maxCrosswind">
+                            <mat-error *ngIf="aircraftEditForm.controls['maxCrosswind'].hasError('required')">
+                                Komponent wiatru jest wymagany
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button class="go-back" [disabled]="isLoading" (click)="goBack()">
+                        Powrót
+                    </button>
+                    <button class="proceed" [disabled]="isLoading" type="submit" (click)="onSubmit()">
+                        <span *ngIf="isLoading" class="loading-spinner"></span>
+                        <span *ngIf="!isLoading">
+                            Zapisz
+                        </span>
+                    </button>
+                </div>
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

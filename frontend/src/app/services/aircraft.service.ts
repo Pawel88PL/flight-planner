@@ -28,6 +28,12 @@ export class AircraftService {
     return this.http.delete(`${this.apiUrl}/delete/${id}`, { headers });
   }
 
+  editAircraft(request: AircraftModel): Observable<any> {
+    const token = this.jwtService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.put(`${this.apiUrl}/edit`, request, { headers });
+  }
+
   getAircraftById(id: number): Observable<AircraftModel> {
     const token = this.jwtService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
