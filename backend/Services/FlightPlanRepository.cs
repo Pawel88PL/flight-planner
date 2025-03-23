@@ -43,6 +43,20 @@ namespace backend.Services
             }
         }
 
+        public async Task DeleteFlightPlan(int id)
+        {
+            var flightPlan = await _context.FlightPlans.FindAsync(id);
+
+            if (flightPlan == null)
+            {
+                throw new Exception("Flight plan not found.");
+            }
+
+            _context.FlightPlans.Remove(flightPlan);
+
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<FlightPlan> GetFlightPlan(int id)
         {
             var flightPlan = await _context.FlightPlans

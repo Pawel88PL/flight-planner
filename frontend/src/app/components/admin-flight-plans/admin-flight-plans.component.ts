@@ -129,14 +129,14 @@ export class AdminFlightPlansComponent {
     });
   }
 
-  deleteAircraft(aircraftId: number): void {
-    this.aircraftService.deleteAircraft(aircraftId).subscribe({
+  deleteFlightPlan(id: number): void {
+    this.flightPlanService.deleteFlightPlan(id).subscribe({
       next: () => {
-        this.toastr.success('Samolot został usunięty', 'Sukces');
+        this.toastr.success('Plan lotu został usunięty', 'Sukces');
         this.loadFlightPlans(this.paginator.pageIndex, this.paginator.pageSize);
       },
       error: (error) => {
-        this.toastr.error('Wystąpił błąd podczas usuwania samolotu', 'Błąd');
+        this.toastr.error('Wystąpił błąd podczas usuwania planu lotu', 'Błąd');
         console.error(error);
       }
     });
@@ -158,8 +158,8 @@ export class AdminFlightPlansComponent {
     );
   }
 
-  onDeleteAircraft(aircraftId: number): void {
-    let message = 'Czy na pewno chcesz usunąć ten samolot?';
+  onDeleteFlightPlan(id: number): void {
+    let message = 'Czy na pewno chcesz usunąć ten plan lotu?';
 
     const dialogRef = this.dialog.open(DeleteConfirmationDialogComponent, {
       width: '400px',
@@ -169,7 +169,7 @@ export class AdminFlightPlansComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.deleteAircraft(aircraftId);
+        this.deleteFlightPlan(id);
       }
     });
   }

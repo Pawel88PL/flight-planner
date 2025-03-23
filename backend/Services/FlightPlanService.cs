@@ -61,6 +61,11 @@ namespace backend.Services
             }
         }
 
+        public async Task DeleteFlightPlan(int id)
+        {
+            await _flightPlanRepository.DeleteFlightPlan(id);
+        }
+
         public async Task<FlightPlanDto> GetFlightPlan(int id)
         {
             var flightPlan = await _flightPlanRepository.GetFlightPlan(id);

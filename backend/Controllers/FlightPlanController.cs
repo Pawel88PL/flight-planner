@@ -40,6 +40,23 @@ namespace backend.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteFlightPlanAsync(int id)
+        {
+            try
+            {
+                await _flightPlanService.DeleteFlightPlan(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                var message = "Wystąpił błąd podczas usuwania planu lotu. " + ex.Message;
+                Log.Error(message);
+                return BadRequest(new { message });
+            }
+        }
+
         [Authorize(Roles = "Pilot, Admin")]
         [HttpGet("get/{id}")]
         public async Task<IActionResult> GetFlightPlanResponseAsync(int id)

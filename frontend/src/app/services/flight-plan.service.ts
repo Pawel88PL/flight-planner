@@ -24,6 +24,12 @@ export class FlightPlanService {
     return this.http.post<any>(`${this.apiUrl}/create`, request, { headers });
   }
 
+  deleteFlightPlan(id: number): Observable<any> {
+    const token = this.jwtService.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.delete<any>(`${this.apiUrl}/delete/${id}`, { headers });
+  }
+
   getFlightPlanById(id: string): Observable<FlightPlanResponse> {
     const token = this.jwtService.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
