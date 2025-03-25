@@ -732,3 +732,151 @@ The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'Encode
 2025-03-25 21:05:31.231 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 44.1542ms
 2025-03-25 21:05:31.235 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
 2025-03-25 21:05:31.237 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 53.4872ms
+2025-03-25 21:07:12.078 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:07:12.079 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:07:12.080 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 2.3385ms
+2025-03-25 21:07:12.081 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:07:12.082 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:07:12.084 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:07:12.085 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:07:12.104 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:07:12.105 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 19.301ms
+2025-03-25 21:07:12.105 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:07:12.105 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 23.8795ms
+2025-03-25 21:07:40.277 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:07:40.279 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:07:40.279 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 3.3655ms
+2025-03-25 21:07:40.280 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:07:40.281 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:07:40.284 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:07:40.285 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:07:40.314 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:07:40.316 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 29.8642ms
+2025-03-25 21:07:40.316 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:07:40.316 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 35.6958ms
+2025-03-25 21:09:21.898 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:09:21.900 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:09:21.900 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 2.3529ms
+2025-03-25 21:09:21.901 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:09:21.901 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:09:21.903 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:09:21.904 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:09:21.930 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:09:21.930 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 25.5581ms
+2025-03-25 21:09:21.930 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:09:21.930 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 29.2165ms
+2025-03-25 21:09:25.639 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:09:25.641 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:09:25.642 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:09:25.642 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:09:25.660 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:09:25.660 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 17.5832ms
+2025-03-25 21:09:25.660 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:09:25.660 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 21.3897ms
+2025-03-25 21:09:45.521 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:09:45.522 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:09:45.522 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 1.521ms
+2025-03-25 21:09:45.524 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:09:45.524 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:09:45.525 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:09:45.526 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:09:45.545 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:09:45.545 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 18.668ms
+2025-03-25 21:09:45.545 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:09:45.545 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 21.6931ms
+2025-03-25 21:10:04.688 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:10:04.689 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:04.690 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 1.8551ms
+2025-03-25 21:10:04.691 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:10:04.691 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:04.699 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:10:04.700 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:10:04.726 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:10:04.729 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 28.6858ms
+2025-03-25 21:10:04.729 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:10:04.730 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 38.975ms
+2025-03-25 21:10:33.165 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-25 21:10:33.166 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:33.166 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 204 null null 0.9677ms
+2025-03-25 21:10:33.167 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - null null
+2025-03-25 21:10:33.167 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:33.169 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-25 21:10:33.169 +01:00 [INF] Route matched with {action = "GetAircraftsPaged", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircraftsPaged(backend.Models.PagedRequest) on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:10:33.204 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedAircrafts'.
+2025-03-25 21:10:33.205 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircraftsPaged (backend) in 36.4062ms
+2025-03-25 21:10:33.206 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircraftsPaged (backend)'
+2025-03-25 21:10:33.206 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/paged?pageNumber=1&pageSize=5&sortColumn=dateAdded&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 38.8479ms
+2025-03-25 21:10:34.526 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - null null
+2025-03-25 21:10:34.526 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:34.526 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - 204 null null 0.3883ms
+2025-03-25 21:10:34.527 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - null null
+2025-03-25 21:10:34.528 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:34.528 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansPagedAsync (backend)'
+2025-03-25 21:10:34.528 +01:00 [INF] Route matched with {action = "GetFlightPlansPaged", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansPagedAsync(backend.Models.PagedRequest) on controller backend.Controllers.FlightPlanController (backend).
+2025-03-25 21:10:34.573 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedFlightPlans'.
+2025-03-25 21:10:34.573 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansPagedAsync (backend) in 44.8633ms
+2025-03-25 21:10:34.573 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansPagedAsync (backend)'
+2025-03-25 21:10:34.574 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - 200 null application/json; charset=utf-8 46.2993ms
+2025-03-25 21:10:40.090 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - null null
+2025-03-25 21:10:40.090 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:40.091 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - 204 null null 0.5774ms
+2025-03-25 21:10:40.093 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - null null
+2025-03-25 21:10:40.093 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:40.094 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansPagedAsync (backend)'
+2025-03-25 21:10:40.094 +01:00 [INF] Route matched with {action = "GetFlightPlansPaged", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlansPagedAsync(backend.Models.PagedRequest) on controller backend.Controllers.FlightPlanController (backend).
+2025-03-25 21:10:40.133 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedFlightPlans'.
+2025-03-25 21:10:40.133 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlansPagedAsync (backend) in 39.3647ms
+2025-03-25 21:10:40.134 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlansPagedAsync (backend)'
+2025-03-25 21:10:40.134 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/paged?pageNumber=1&pageSize=5&sortColumn=createdAt&sortDirection=asc&searchQuery=&userId=b9abbd47-b29d-490e-92ed-c8da18a528cb - 200 null application/json; charset=utf-8 40.9682ms
+2025-03-25 21:10:46.833 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/61 - null null
+2025-03-25 21:10:46.834 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:46.835 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/61 - 204 null null 1.271ms
+2025-03-25 21:10:46.836 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/61 - null null
+2025-03-25 21:10:46.836 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:46.838 +01:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-03-25 21:10:46.846 +01:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2025-03-25 21:10:46.934 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2025-03-25 21:10:46.937 +01:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 91.041ms
+2025-03-25 21:10:46.937 +01:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-03-25 21:10:46.937 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/61 - 200 null application/json; charset=utf-8 101.3803ms
+2025-03-25 21:10:46.942 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/61 - null null
+2025-03-25 21:10:46.942 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:10:46.942 +01:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-03-25 21:10:46.945 +01:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2025-03-25 21:10:46.968 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2025-03-25 21:10:46.970 +01:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 24.8639ms
+2025-03-25 21:10:46.970 +01:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-03-25 21:10:46.970 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/61 - 200 null application/json; charset=utf-8 28.0019ms
+2025-03-25 21:11:01.594 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:11:01.594 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:11:01.594 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 0.762ms
+2025-03-25 21:11:01.595 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:11:01.596 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:11:01.596 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:11:01.596 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:11:01.614 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:11:01.614 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 17.4921ms
+2025-03-25 21:11:01.614 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:11:01.614 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 18.8056ms
+2025-03-25 21:11:12.430 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:11:12.431 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:11:12.431 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 1.1344ms
+2025-03-25 21:11:12.433 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-25 21:11:12.433 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:11:12.433 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:11:12.433 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-25 21:11:12.448 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-25 21:11:12.449 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 15.2514ms
+2025-03-25 21:11:12.449 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-25 21:11:12.449 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 16.4261ms
+2025-03-25 21:11:26.740 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-25 21:11:26.740 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:11:26.740 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 204 null null 0.444ms
+2025-03-25 21:11:26.743 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - null null
+2025-03-25 21:11:26.744 +01:00 [INF] CORS policy execution successful.
+2025-03-25 21:11:26.745 +01:00 [INF] Executing endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-25 21:11:26.754 +01:00 [INF] Route matched with {action = "GetUsersPaged", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUsersPaged(backend.Models.PagedRequest) on controller backend.Controllers.UsersController (backend).
+2025-03-25 21:11:26.817 +01:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.PagedUsers'.
+2025-03-25 21:11:26.829 +01:00 [INF] Executed action backend.Controllers.UsersController.GetUsersPaged (backend) in 74.8827ms
+2025-03-25 21:11:26.829 +01:00 [INF] Executed endpoint 'backend.Controllers.UsersController.GetUsersPaged (backend)'
+2025-03-25 21:11:26.829 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/users/paged?pageNumber=1&pageSize=5&sortColumn=role&sortDirection=asc&searchQuery= - 200 null application/json; charset=utf-8 86.6135ms
