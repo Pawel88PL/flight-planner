@@ -3243,3 +3243,4 @@ The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'Encode
 2025-03-23 20:36:52.837 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 114.1997ms
 2025-03-23 20:36:52.837 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
 2025-03-23 20:36:52.837 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 153.0448ms
+2025-03-23 20:50:00.500 +01:00 [INF] Application is shutting down...

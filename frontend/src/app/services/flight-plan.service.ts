@@ -51,7 +51,8 @@ export class FlightPlanService {
         .set('pageSize', request.pageSize)
         .set('sortColumn', request.sortColumn)
         .set('sortDirection', request.sortDirection)
-        .set('searchQuery', request.searchQuery ?? '');
+        .set('searchQuery', request.searchQuery ?? '')
+        .set('userId', request.userId ?? '')
   
       return this.http.get(`${this.apiUrl}/paged`, { headers, params });
     }

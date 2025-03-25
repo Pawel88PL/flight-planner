@@ -15,14 +15,11 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatTooltip } from '@angular/material/tooltip';
 import { MatPaginatorIntlPolish } from '../../classes/mat-paginator-polish';
 
-import { AircraftService } from '../../services/aircraft.service';
 import { DataService } from '../../services/data.service';
 import { FlightPlanService } from '../../services/flight-plan.service';
 import { ToastrService } from 'ngx-toastr';
 
-import { AircraftModel } from '../../models/aircraft.model';
 import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog/delete-confirmation-dialog.component';
-
 
 @Component({
   selector: 'app-admin-flight-plans',
@@ -42,10 +39,14 @@ import { DeleteConfirmationDialogComponent } from '../delete-confirmation-dialog
 
     ReactiveFormsModule
   ],
+  providers: [
+    { provide: MatPaginatorIntl, useClass: MatPaginatorIntlPolish }
+  ],
   templateUrl: './admin-flight-plans.component.html',
   styleUrl: './admin-flight-plans.component.css'
 })
-export class AdminFlightPlansComponent {
+
+export class AdminFlightPlansComponent implements OnInit {
 
   displayedColumns: string[] = ['index', 'id', 'createdAt', 'departureAirport', 'arrivalAirport', 'departureTime', 'aircraftName', 'userFullName', 'actions'];
 
@@ -68,7 +69,6 @@ export class AdminFlightPlansComponent {
   subscriptions: Subscription = new Subscription();
 
   constructor(
-    private aircraftService: AircraftService,
     private dataService: DataService,
     private dialog: MatDialog,
     private formBuilder: FormBuilder,

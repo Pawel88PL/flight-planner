@@ -100,6 +100,11 @@ namespace backend.Services
                             User = user
                         };
 
+            if (!string.IsNullOrWhiteSpace(request.UserId))
+            {
+                query = query.Where(x => x.FlightPlan.UserId == request.UserId);
+            }
+
             if (!string.IsNullOrEmpty(request.SearchQuery))
             {
                 query = query.Where(c =>
