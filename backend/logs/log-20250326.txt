@@ -1,0 +1,22 @@
+2025-03-26 15:10:07.132 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-03-26 15:10:07.146 +01:00 [INF] CORS policy execution successful.
+2025-03-26 15:10:07.147 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 14.9416ms
+2025-03-26 15:10:07.148 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-03-26 15:10:07.148 +01:00 [INF] CORS policy execution successful.
+2025-03-26 15:10:07.152 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-03-26 15:10:07.155 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-03-26 15:10:07.155 +01:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-26 15:10:07.157 +01:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-03-26 15:10:07.330 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-26 15:10:07.330 +01:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 173.7869ms
+2025-03-26 15:10:07.331 +01:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-03-26 15:10:07.331 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 182.9732ms

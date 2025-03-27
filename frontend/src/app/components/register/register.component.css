@@ -3,18 +3,6 @@
     width: 90%;
 }
 
-.btn-proceed {
-    height: 4vh;
-    font-size: 1.3rem;
-    color: white;
-    background-color: green;
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-proceed:hover {
-    transform: scale(1.1);
-}
-
 .container {
     max-width: 800px;
     margin: 80px auto;
@@ -31,4 +19,29 @@
 
 p {
     font-size: 1.3rem;
+}
+
+.proceed {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.proceed:disabled {
+    background: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.proceed:hover:not(:disabled) {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background: #1565c0;
+}
+
+mat-card {
+    border-radius: 5px;
 }
