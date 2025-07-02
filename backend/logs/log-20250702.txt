@@ -1,0 +1,343 @@
+2025-07-02 15:58:56.085 +02:00 [INF] Application is starting
+2025-07-02 15:58:56.221 +02:00 [INF] User profile is available. Using '/Users/pawelstaniul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-07-02 15:58:56.317 +02:00 [INF] Now listening on: http://localhost:5139
+2025-07-02 15:58:56.320 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-02 15:58:56.320 +02:00 [INF] Hosting environment: Development
+2025-07-02 15:58:56.320 +02:00 [INF] Content root path: /Users/pawelstaniul/Desktop/Programy/flight-planner/backend
+2025-07-02 15:59:16.785 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-07-02 15:59:16.806 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-07-02 15:59:16.857 +02:00 [INF] CORS policy execution successful.
+2025-07-02 15:59:16.865 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 87.261ms
+2025-07-02 15:59:16.869 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-07-02 15:59:16.877 +02:00 [INF] CORS policy execution successful.
+2025-07-02 15:59:16.908 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-07-02 15:59:16.930 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-07-02 15:59:16.933 +02:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 15:59:16.953 +02:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-07-02 15:59:17.941 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-02 15:59:17.953 +02:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 998.6535ms
+2025-07-02 15:59:17.953 +02:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 15:59:17.957 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 1087.8247ms
+2025-07-02 16:00:27.845 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:00:27.850 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:00:27.851 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 5.4934ms
+2025-07-02 16:00:27.852 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:00:27.855 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:00:27.864 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-07-02 16:00:27.876 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-07-02 16:00:27.888 +02:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:00:27.909 +02:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-07-02 16:00:43.035 +02:00 [ERR] An error occurred using the connection to database 'flight_planner' on server '87.106.167.108,1433'.
+2025-07-02 16:00:43.068 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'backend.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, Int32 optionValue)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, Int32 optionValue)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2025-07-02 16:00:43.072 +02:00 [ERR] Wystąpił błąd podczas pobierania samolotów: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+2025-07-02 16:00:43.081 +02:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 16:00:43.093 +02:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 15179.7006ms
+2025-07-02 16:00:43.094 +02:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:00:43.095 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 400 null application/json; charset=utf-8 15242.5882ms
+2025-07-02 16:01:00.328 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:01:00.332 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:01:00.334 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 12.6099ms
+2025-07-02 16:01:00.377 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:01:00.380 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:01:00.451 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-07-02 16:01:00.455 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-07-02 16:01:00.455 +02:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:01:00.456 +02:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-07-02 16:01:15.550 +02:00 [ERR] An error occurred using the connection to database 'flight_planner' on server '87.106.167.108,1433'.
+2025-07-02 16:01:15.558 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'backend.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, Int32 optionValue)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+ ---> System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'System.Net.Sockets.Socket'.
+   at System.Net.Sockets.Socket.SetSocketOption(SocketOptionLevel optionLevel, SocketOptionName optionName, Int32 optionValue)
+   at Microsoft.Data.SqlClient.SNI.SNITCPHandle..ctor(String serverName, Int32 port, Int64 timerExpire, Boolean parallel, SqlConnectionIPAddressPreference ipPreference, String cachedFQDN, SQLDNSInfo& pendingDNSInfo, Boolean tlsFirst, String hostNameInCertificate, String serverCertificateFilename)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+2025-07-02 16:01:15.563 +02:00 [ERR] Wystąpił błąd podczas pobierania samolotów: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 35 - An internal exception was caught)
+2025-07-02 16:01:15.565 +02:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 16:01:15.566 +02:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 15109.9686ms
+2025-07-02 16:01:15.567 +02:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:01:15.568 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 400 null application/json; charset=utf-8 15221.9082ms
+2025-07-02 16:02:26.634 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:02:26.637 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:02:26.637 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 3.9277ms
+2025-07-02 16:02:26.639 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:02:26.650 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:02:26.653 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-07-02 16:02:26.656 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-07-02 16:02:26.656 +02:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:02:26.658 +02:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-07-02 16:02:26.960 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-02 16:02:26.963 +02:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 305.1917ms
+2025-07-02 16:02:26.964 +02:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:02:26.964 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 325.2228ms
+2025-07-02 16:04:23.620 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:04:23.660 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:04:23.662 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 42.7876ms
+2025-07-02 16:04:23.664 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:04:23.665 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:04:23.681 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-07-02 16:04:23.684 +02:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-07-02 16:04:23.684 +02:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:04:23.685 +02:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-07-02 16:04:23.811 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-02 16:04:23.812 +02:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 126.6408ms
+2025-07-02 16:04:23.812 +02:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:04:23.813 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 148.8847ms
+2025-07-02 16:05:00.657 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - null null
+2025-07-02 16:05:00.659 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:00.661 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/auth/login - 204 null null 4.4347ms
+2025-07-02 16:05:00.666 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/auth/login - application/json 55
+2025-07-02 16:05:00.672 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:00.676 +02:00 [INF] Executing endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-07-02 16:05:00.738 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(backend.Models.Login) on controller backend.Controllers.AuthController (backend).
+2025-07-02 16:05:01.240 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-07-02 16:05:01.289 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Threading.Tasks.Task`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 16:05:01.488 +02:00 [INF] Executed action backend.Controllers.AuthController.Login (backend) in 749.5715ms
+2025-07-02 16:05:01.488 +02:00 [INF] Executed endpoint 'backend.Controllers.AuthController.Login (backend)'
+2025-07-02 16:05:01.488 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/auth/login - 200 null application/json; charset=utf-8 822.492ms
+2025-07-02 16:05:04.402 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:05:04.402 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - null null
+2025-07-02 16:05:04.402 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:04.402 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/aircraft/all - 204 null null 0.6972ms
+2025-07-02 16:05:04.402 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:04.403 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/create - 204 null null 0.774ms
+2025-07-02 16:05:04.405 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - application/json 162
+2025-07-02 16:05:04.405 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/aircraft/all - null null
+2025-07-02 16:05:04.406 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:04.407 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:04.439 +02:00 [INF] Executing endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:05:04.440 +02:00 [INF] Route matched with {action = "GetAircrafts", controller = "Aircraft"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAircrafts() on controller backend.Controllers.AircraftController (backend).
+2025-07-02 16:05:04.444 +02:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-07-02 16:05:04.446 +02:00 [INF] Route matched with {action = "CreateFlightPlan", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateFlightPlanAsync(backend.Models.FlightPlanRequest) on controller backend.Controllers.FlightPlanController (backend).
+2025-07-02 16:05:04.468 +02:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWA&format=json&taf=true
+2025-07-02 16:05:04.468 +02:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/metar?ids=EPPO%2CEPWA&format=json&taf=true
+2025-07-02 16:05:04.484 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[backend.Models.Aircraft, backend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-02 16:05:04.484 +02:00 [INF] Executed action backend.Controllers.AircraftController.GetAircrafts (backend) in 44.5578ms
+2025-07-02 16:05:04.484 +02:00 [INF] Executed endpoint 'backend.Controllers.AircraftController.GetAircrafts (backend)'
+2025-07-02 16:05:04.484 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/aircraft/all - 200 null application/json; charset=utf-8 79.6058ms
+2025-07-02 16:05:04.489 +02:00 [INF] Start processing HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWA&format=json&taf=true
+2025-07-02 16:05:04.489 +02:00 [INF] Sending HTTP request GET https://aviationweather.gov/api/data/airport?ids=EPPO%2CEPWA&format=json&taf=true
+2025-07-02 16:05:04.825 +02:00 [INF] Received HTTP response headers after 332.139ms - 200
+2025-07-02 16:05:04.826 +02:00 [INF] End processing HTTP request after 337.0741ms - 200
+2025-07-02 16:05:05.019 +02:00 [INF] Received HTTP response headers after 550.5372ms - 200
+2025-07-02 16:05:05.019 +02:00 [INF] End processing HTTP request after 552.1368ms - 200
+2025-07-02 16:05:05.364 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-02 16:05:05.366 +02:00 [INF] Executed action backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend) in 920.1411ms
+2025-07-02 16:05:05.367 +02:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.CreateFlightPlanAsync (backend)'
+2025-07-02 16:05:05.367 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5139/api/flight-plan/create - 200 null application/json; charset=utf-8 961.9423ms
+2025-07-02 16:05:05.381 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/76 - null null
+2025-07-02 16:05:05.381 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:05.382 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5139/api/flight-plan/get/76 - 204 null null 0.6053ms
+2025-07-02 16:05:05.382 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/76 - null null
+2025-07-02 16:05:05.384 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:05.385 +02:00 [INF] Executing endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-07-02 16:05:05.390 +02:00 [INF] Route matched with {action = "GetFlightPlanResponse", controller = "FlightPlan"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFlightPlanResponseAsync(Int32) on controller backend.Controllers.FlightPlanController (backend).
+2025-07-02 16:05:05.465 +02:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.FlightPlanDto'.
+2025-07-02 16:05:05.469 +02:00 [INF] Executed action backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend) in 78.6855ms
+2025-07-02 16:05:05.469 +02:00 [INF] Executed endpoint 'backend.Controllers.FlightPlanController.GetFlightPlanResponseAsync (backend)'
+2025-07-02 16:05:05.469 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/flight-plan/get/76 - 200 null application/json; charset=utf-8 86.6189ms
+2025-07-02 16:05:05.474 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5139/api/ai-response/get/76 - null null
+2025-07-02 16:05:05.474 +02:00 [INF] CORS policy execution successful.
+2025-07-02 16:05:05.474 +02:00 [INF] Executing endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-07-02 16:05:05.477 +02:00 [INF] Route matched with {action = "GetAIResponseByFlightPlanId", controller = "AIResponse"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAIResponseByFlightPlanId(Int32) on controller backend.Controllers.AIResponseController (backend).
+2025-07-02 16:05:05.652 +02:00 [INF] Start processing HTTP request POST https://api.openai.com/v1/chat/completions
+2025-07-02 16:05:05.652 +02:00 [INF] Sending HTTP request POST https://api.openai.com/v1/chat/completions
+2025-07-02 16:05:18.710 +02:00 [INF] Received HTTP response headers after 13057.7034ms - 200
+2025-07-02 16:05:18.711 +02:00 [INF] End processing HTTP request after 13059.1918ms - 200
+2025-07-02 16:05:18.722 +02:00 [INF] OpenAI API response: {
+  "id": "chatcmpl-BosN80TwAuXRjB6a84sd5P8gvOAfj",
+  "object": "chat.completion",
+  "created": 1751465106,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "### Analiza możliwości lotu VFR\n\n**Decyzja:** Lot VFR jest możliwy i bezpieczny.\n\n**Uzasadnienie:**\n1. **Warunki meteorologiczne:**\n   - **Lotnisko startu (EPPO):** METAR wskazuje na warunki CAVOK (Clear Air Visibility OK), co oznacza, że widoczność jest dobra, a podstawa chmur jest powyżej 5000 stóp. Wiatr z kierunku 180° przy prędkości 6 węzłów, zmieniający się w zakresie 150°-250°, nie stanowi zagrożenia.\n   - **Lotnisko lądowania (EPWA):** Również METAR wskazuje na CAVOK, co zapewnia dobre warunki widoczności i brak chmur. Wiatr zmienny o prędkości 2 węzły, co również nie wpływa negatywnie na bezpieczeństwo lotu.\n\n2. **Wymogi VFR:**\n   - Minimalne wymogi dla lotów VFR to widoczność co najmniej 5 km oraz podstawa chmur powyżej 1500 stóp. W obu przypadkach (EPPO i EPWA) warunki te są spełnione, co czyni lot zgodnym z przepisami VFR.\n\n3. **Ograniczenia statku powietrznego:**\n   - **Maksymalny boczny komponent wiatru:** Samolot Tecnam P2008 ma maksymalny dopuszczalny boczny komponent wiatru wynoszący 15 węzłów. W warunkach prognozowanych na trasie (wiatr w EPPO 6 węzłów, w EPWA 2 węzły), nie przekracza to limitu, co oznacza, że pilot będzie mógł bezpiecznie lądować i startować.\n   - **Zasięg:** Zasięg samolotu wynoszący 514 NM jest wystarczający na planowany lot, który nie przekracza tej odległości.\n   - **Prędkość przelotowa:** Prędkość przelotowa wynosząca 110 węzłów również jest odpowiednia dla planowanego czasu lotu (2 godziny), co pozwala na dotarcie do celu w bezpiecznym czasie.\n\n4. **Potencjalne zagrożenia:**\n   - **Oblodzenie:** Na podstawie podanych danych meteorologicznych nie ma wskazań na ryzyko oblodzenia, ponieważ warunki są CAVOK i nie przewiduje się opadów.\n   - **Zmiany w warunkach pogodowych:** Należy monitorować prognozy TAF, które wskazują na możliwe zmiany w wietrze, szczególnie w godzinach późniejszych. Warto zwrócić uwagę na prognozowane wzrosty wiatru do 15 węzłów oraz porywy do 30 węzłów.\n\n**Zalecenia dla pilota:**\n- Monitorować aktualne warunki meteorologiczne przed i w trakcie lotu.\n- Utrzymywać komunikację z kontrolą ruchu lotniczego oraz być gotowym do zmiany trasy w przypadku nagłych zmian pogodowych.\n- Zachować czujność na ewentualne zmiany wiatru, szczególnie przy lądowaniu, w związku z prognozowanymi porywami.\n\nPodsumowując, lot VFR z Poznania do Warszawy jest możliwy i bezpieczny, pod warunkiem ścisłego przestrzegania zasad bezpieczeństwa i monitorowania warunków atmosferycznych.",
+        "refusal": null,
+        "annotations": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 919,
+    "completion_tokens": 803,
+    "total_tokens": 1722,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "service_tier": "default",
+  "system_fingerprint": "fp_34a54ae93c"
+}
+
+2025-07-02 16:05:18.869 +02:00 [INF] Executing OkObjectResult, writing value of type 'backend.Models.AIResponseDto'.
+2025-07-02 16:05:18.870 +02:00 [INF] Executed action backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend) in 13393.2665ms
+2025-07-02 16:05:18.870 +02:00 [INF] Executed endpoint 'backend.Controllers.AIResponseController.GetAIResponseByFlightPlanId (backend)'
+2025-07-02 16:05:18.871 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5139/api/ai-response/get/76 - 200 null application/json; charset=utf-8 13397.0906ms
